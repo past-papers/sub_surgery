@@ -404,1338 +404,165 @@
             },
             {
                 main: "Neurosurgery", color: "purple", subtopics: [
-                    { t: "Neuroanatomy", qs: [ 
+                    { t: "Neuroanatomy", qs: [
                         { 
                             q: "Which is a wrong combination:", 
                             opts: [
-                                {text: "Corneal reflex: CN V & CN VII", exp: "Correct combination; afferent CN V, efferent CN VII."}, 
-                                {text: "Cough reflex: CN X", exp: "Correct; vagus nerve mediates the cough reflex."}, 
-                                {text: "Gag reflex: CN IX & X", exp: "Correct combination; afferent IX, efferent X."}, 
-                                {text: "Vestibulo-ocular reflex: CN II & III", isCorrect: true, exp: "Wrong combination; the reflex involves CN VIII (vestibular) and CN III, IV, VI, not CN II."}, 
-                                {text: "Salivary reflex: CN VII", exp: "Correct; facial nerve mediates salivation via chorda tympani."}
+                                {text: "Corneal reflex: CN V & CN VII", exp: "Correct combination. Afferent is trigeminal (V), efferent is facial (VII) causing orbicularis oculi contraction."}, 
+                                {text: "Cough reflex: CN X", exp: "Correct. Vagal afferents from larynx and trachea mediate cough."}, 
+                                {text: "Gag reflex: CN IX & X", exp: "Correct. Afferent glossopharyngeal (IX), efferent vagus (X)."}, 
+                                {text: "Vestibulo-ocular reflex: CN II & III", isCorrect: true, exp: "Incorrect combination. VOR is mediated by vestibular nerve (CN VIII) afferent and oculomotor, trochlear, abducens (III, IV, VI) efferents. CN II is not part of VOR."}, 
+                                {text: "Salivary reflex: CN VII", exp: "Correct. Reflex salivation involves facial nerve innervation of salivary glands."}
                             ], 
-                            eval: "The answer is correct. The vestibulo-ocular reflex does not use CN II." 
+                            eval: "The answer is correct. Vestibulo-ocular reflex involves CN VIII, not CN II, making this the wrong combination." 
                         },
                         { 
                             q: "With the eyeball adducted (turned inward), the depression or downward movement of the eyeball is mediated through:", 
                             opts: [
-                                {text: "Superior oblique muscle", isCorrect: true, exp: "Correct; when the eye is adducted, the superior oblique acts as the primary depressor."}, 
-                                {text: "Inferior oblique muscle", exp: "Incorrect; in adduction, it elevates the eye."}, 
-                                {text: "Inferior rectus muscle", exp: "Incorrect; it depresses the eye mainly when abducted."}, 
-                                {text: "Medial rectus muscle", exp: "Incorrect; it adducts, does not depress."}, 
-                                {text: "Lateral rectus muscle", exp: "Incorrect; it abducts."}
+                                {text: "Superior oblique muscle", isCorrect: true, exp: "Correct. When the eye is adducted, the superior oblique acts as the primary depressor due to the line of pull of its tendon through the trochlea."}, 
+                                {text: "Inferior oblique muscle", exp: "Incorrect. The inferior oblique elevates the adducted eye, not depresses."}, 
+                                {text: "Inferior rectus muscle", exp: "Incorrect. The inferior rectus depresses the eye most effectively when it is in abduction, not adduction."}, 
+                                {text: "Medial rectus muscle", exp: "Incorrect. It adducts the eye but does not cause depression."}, 
+                                {text: "Lateral rectus muscle", exp: "Incorrect. It abducts the eye, and plays no role in depression."}
                             ], 
-                            eval: "The answer is correct. In adduction, the superior oblique is the main downward mover." 
+                            eval: "The answer is correct. The superior oblique is the depressor of the adducted eye." 
                         },
                         { 
                             q: "Which of the following is not a branch from the external carotid artery?", 
                             opts: [
-                                {text: "Ophthalmic artery", isCorrect: true, exp: "Correct answer; it is a branch of the internal carotid artery."}, 
-                                {text: "Ascending pharyngeal artery", exp: "Branch of external carotid."}, 
-                                {text: "Lingual artery", exp: "Branch of external carotid."}, 
-                                {text: "Facial artery", exp: "Branch of external carotid."}, 
-                                {text: "Superior thyroid artery", exp: "Branch of external carotid."}
+                                {text: "Ophthalmic artery", isCorrect: true, exp: "Correct answer (not a branch). It arises from the internal carotid artery."}, 
+                                {text: "Ascending pharyngeal artery", exp: "Incorrect. It is a branch of the external carotid."}, 
+                                {text: "Lingual artery", exp: "Incorrect. Branch of external carotid."}, 
+                                {text: "Facial artery", exp: "Incorrect. Branch of external carotid."}, 
+                                {text: "Superior thyroid artery", exp: "Incorrect. Branch of external carotid."}
                             ], 
-                            eval: "The answer is correct." 
+                            eval: "The answer is correct. The ophthalmic artery is a branch of the internal carotid artery." 
                         },
                         { 
                             q: "The part of the neuron that receives messages from other cells is called:", 
                             opts: [
-                                {text: "Axon", exp: "Incorrect; sends impulses away from the cell body."}, 
-                                {text: "Soma", exp: "Incorrect; cell body integrates, but dendrites are the primary receiving structures."}, 
-                                {text: "Schwann cell", exp: "Incorrect; a glial cell, not a neuronal part for receiving signals."}, 
-                                {text: "Dendrites", isCorrect: true, exp: "Correct; specialized to receive synaptic inputs."}, 
-                                {text: "End plate", exp: "Incorrect; motor end plate is a region on the muscle fiber receiving the neural signal, not a neuronal part."}
+                                {text: "Axon", exp: "Incorrect. The axon transmits impulses away from the cell body."}, 
+                                {text: "Soma", exp: "Incorrect. The soma (cell body) contains the nucleus and integrates signals, but dendrites are the primary receptive structures."}, 
+                                {text: "Schwann cell", exp: "Incorrect. A Schwann cell forms myelin sheaths in the peripheral nervous system, not a receiving part."}, 
+                                {text: "Dendrites", isCorrect: true, exp: "Correct. Dendrites are the branched projections that receive signals from other neurons."}, 
+                                {text: "End plate", exp: "Incorrect. Motor end plate is the postsynaptic membrane at the neuromuscular junction, not a general neural receiving structure."}
                             ], 
-                            eval: "The answer is correct." 
+                            eval: "The answer is correct. Dendrites are specialized for receiving synaptic inputs." 
                         },
                         { 
                             q: "All of the following are complications of vagal nerve stimulation, except:", 
                             opts: [
-                                {text: "Dysphonia", exp: "Complication; due to recurrent laryngeal nerve involvement."}, 
-                                {text: "Dysphasia", isCorrect: true, exp: "Not a typical complication; it is a language disorder from cortical damage, not vagal stimulation."}, 
-                                {text: "Dyspnea", exp: "Can occur due to vagal effects on respiration."}, 
-                                {text: "Cough", exp: "Common during stimulation."}, 
-                                {text: "Hoarseness", exp: "Common due to vocal cord adduction."}
+                                {text: "Dysphonia", exp: "Incorrect. Vagus nerve stimulation can alter laryngeal muscle function, causing voice difficulties like dysphonia."}, 
+                                {text: "Dysphasia", isCorrect: true, exp: "Correct (exception). Dysphasia is a language disorder resulting from cortical dysfunction, not a direct side effect of vagal nerve stimulation."}, 
+                                {text: "Dyspnea", exp: "Incorrect. Respiratory changes including dyspnea can occur with vagal stimulation."}, 
+                                {text: "Cough", exp: "Incorrect. Vagal afferent activation can trigger cough."}, 
+                                {text: "Hoarseness", exp: "Incorrect. Hoarseness is a common side effect due to laryngeal muscle involvement."}
                             ], 
-                            eval: "The answer is correct. Dysphasia is not a direct vagus nerve stimulation effect." 
+                            eval: "The answer is correct. Dysphasia is a cortical language impairment and is not a typical complication of vagal nerve stimulation." 
                         },
                         { 
-                            q: "Nerve supply of abductor pollicis brevis", 
+                            q: "Nerve supply of abductor pollicis brevis:", 
                             opts: [
-                                {text: "Median", isCorrect: true, exp: "Correct; innervated by the recurrent branch of the median nerve."}, 
-                                {text: "Ulnar", exp: "Incorrect; supplies most intrinsic hand muscles but not this one."}, 
-                                {text: "Radial", exp: "Incorrect; supplies extensors, not thenar muscles."}, 
-                                {text: "Musculocutaneous", exp: "Incorrect; supplies anterior arm muscles."}, 
-                                {text: "Axillary", exp: "Incorrect; supplies deltoid and teres minor."}
+                                {text: "Median", isCorrect: true, exp: "Correct. The abductor pollicis brevis is innervated by the recurrent branch of the median nerve."}, 
+                                {text: "Ulnar", exp: "Incorrect. Ulnar nerve supplies most other intrinsic hand muscles but not abductor pollicis brevis."}, 
+                                {text: "Radial", exp: "Incorrect. Radial nerve supplies extrinsic extensors, not this thenar muscle."}, 
+                                {text: "Musculocutaneous", exp: "Incorrect. Musculocutaneous nerve innervates anterior arm muscles (biceps, brachialis), not hand muscles."}, 
+                                {text: "Axillary", exp: "Incorrect. Axillary nerve supplies deltoid and teres minor."}
                             ], 
-                            eval: "The answer is correct." 
+                            eval: "The answer is correct. The median nerve innervates abductor pollicis brevis." 
                         },
                         { 
                             q: "Which one of the following cranial nerves carry parasympathetic fibers?", 
                             opts: [
-                                {text: "Facial nerve VII", isCorrect: true, exp: "Correct; carries parasympathetic fibers to lacrimal, submandibular, and sublingual glands."}, 
-                                {text: "Vestibulocochlear nerve VIII", exp: "Incorrect; purely sensory."}, 
-                                {text: "Hypoglossal nerve XII", exp: "Incorrect; motor to tongue."}, 
-                                {text: "Abducens nerve VI", exp: "Incorrect; motor to lateral rectus."}, 
-                                {text: "Trochlear nerve IV", exp: "Incorrect; motor to superior oblique."}
+                                {text: "Facial nerve VII", isCorrect: true, exp: "Correct. It carries parasympathetic fibers via the greater petrosal nerve (lacrimal/nasal glands) and chorda tympani (submandibular/sublingual glands)."}, 
+                                {text: "Vestibulocochlear nerve VIII", exp: "Incorrect. It is purely a special sensory nerve for hearing and balance."}, 
+                                {text: "Hypoglossal nerve XII", exp: "Incorrect. It is a pure motor nerve to the tongue."}, 
+                                {text: "Abducens nerve VI", exp: "Incorrect. It is a pure somatic motor nerve to lateral rectus."}, 
+                                {text: "Trochlear nerve IV", exp: "Incorrect. It is a pure somatic motor nerve to superior oblique."}
                             ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "All can cause dilated nonresponsive pupil, except:", 
-                            opts: [
-                                {text: "Optic nerve injury", exp: "Can cause a dilated nonreactive pupil due to loss of the afferent limb of the light reflex."}, 
-                                {text: "Brain stem herniation", exp: "May compress oculomotor nerve and cause a fixed dilated pupil."}, 
-                                {text: "Oculomotor nerve injury", exp: "Disrupts parasympathetic fibers, leading to a dilated nonresponsive pupil."}, 
-                                {text: "Abducent nerve injury", isCorrect: true, exp: "Does not affect pupil size; only causes lateral rectus weakness."}, 
-                                {text: "Sympathetic tone loss", isCorrect: true, exp: "Causes miosis (Horner syndrome), not mydriasis; therefore does not produce a dilated pupil."}
-                            ], 
-                            eval: "The answer is correct. Both abducent nerve injury and sympathetic tone loss are exceptions that do not cause a dilated nonresponsive pupil." 
+                            eval: "The answer is correct. Only CN VII among the list carries parasympathetic outflow." 
                         },
                         { 
                             q: "One of the following is correct about cerebral circulation:", 
                             opts: [
-                                {text: "Cerebral circulation is controlled mainly by ANS", exp: "Incorrect; autoregulation and metabolic factors (CO₂, O₂) are dominant, ANS plays a minor role."}, 
-                                {text: "Cerebral vasoconstriction occurs when blood pressure rises", isCorrect: true, exp: "Correct; this is part of autoregulation (myogenic constriction) to maintain constant blood flow."}, 
-                                {text: "Cerebral blood flow is directly proportional to mean arterial pressure over a wide range", isAi: true, exp: "Incorrect, because autoregulation keeps flow constant over a range of ~50–150 mmHg MAP."}, 
-                                {text: "Cerebral arteries are richly innervated by parasympathetic fibers that dominate control", isAi: true, exp: "Incorrect, parasympathetic innervation is sparse and not the dominant controller."}, 
-                                {text: "Hypoxia causes cerebral vasoconstriction", isAi: true, exp: "Incorrect, hypoxia is a potent cerebral vasodilator."}
+                                {text: "Cerebral circulation is controlled mainly by ANS", isCorrect: true, exp: "Given as the correct answer. Although cerebral autoregulation relies heavily on local metabolic and myogenic mechanisms, some textbooks describe a modulatory role for autonomic innervation. This option reflects the source’s intended answer."}, 
+                                {text: "Cerebral vasoconstriction occurs when blood pressure rises", exp: "This statement is physiologically true (myogenic autoregulation), but the source considers the ANS option as the single correct choice."}, 
+                                {text: "Cerebral blood flow is independent of arterial CO2 levels", isAi: true, exp: "Incorrect; CO2 is a potent cerebral vasodilator."}, 
+                                {text: "Cerebral blood flow increases linearly with mean arterial pressure", isAi: true, exp: "Incorrect; autoregulation maintains relatively constant flow within a range of 50–150 mmHg."}, 
+                                {text: "The circle of Willis ensures uniform perfusion across all brain regions", isAi: true, exp: "Incorrect; the circle provides collateral flow but perfusion is regional and controlled by arteriolar resistance."}
                             ], 
-                            eval: "The answer is correct. The statement accurately describes cerebral autoregulation." 
+                            eval: "The answer as provided appears to be incorrect. In standard physiology, “Cerebral vasoconstriction occurs when blood pressure rises” is correct (myogenic autoregulation), while “Cerebral circulation is controlled mainly by ANS” is not; autoregulation is dominated by local chemical and myogenic factors. The better answer would be the vasoconstriction statement." 
                         }
-                     ] }, { t: "Meningitis", qs: [] }, { t: "Head Injury", qs: [
+                    ]},
+                    { t: "Meningitis", qs: [
                         { 
-                            q: "Head trauma in RTAs is:", 
+                            q: "In a patient with a high clinical suspicion of acute bacterial meningitis which of the following is NOT a contraindication for doing lumbar puncture when brain neuroimaging is not available?", 
                             opts: [
-                                {text: "20%", exp: "Underestimation; the proportion in road traffic accidents is higher."}, 
-                                {text: "40%", exp: "Still lower than the widely cited figure."}, 
-                                {text: "60%", isCorrect: true, exp: "Correct; about 60% of head trauma cases result from RTAs."}, 
-                                {text: "80%", exp: "Overestimation."}, 
-                                {text: "90%", exp: "Clearly too high."}
+                                {text: "Daily aspirin use", isCorrect: true, exp: "Correct (not a contraindication). Antiplatelet therapy like aspirin is not a contraindication to lumbar puncture; the risk of spinal hematoma is low compared with anticoagulants."}, 
+                                {text: "Papilledema", exp: "Incorrect. Papilledema suggests raised intracranial pressure, a contraindication to LP without imaging."}, 
+                                {text: "Seizures occurring during the illness", exp: "Incorrect. New-onset seizures may indicate a mass lesion or elevated ICP, making LP risky without imaging."}, 
+                                {text: "Right sided hemiparesis developing during the illness", exp: "Incorrect. Focal neurological signs suggest a structural lesion with potential mass effect, contraindicated without imaging."}, 
+                                {text: "Decreased level of consciousness", exp: "Incorrect. Altered consciousness raises concern for impending herniation, a contraindication to LP without prior neuroimaging."}
                             ], 
-                            eval: "The answer appears correct according to epidemiological data used in many exam sources." 
+                            eval: "The answer is correct. Aspirin use does not contraindicate urgent LP in suspected bacterial meningitis." 
                         },
                         { 
-                            q: "The best modality for evaluation of head injury:", 
+                            q: "A lumbar puncture showing a clear CSF with normal pressure, 20 WBC (mainly lymphocytes), protein = 63 mg% ...", 
                             opts: [
-                                {text: "CT scan", isCorrect: true, exp: "Gold standard in acute head injury; fast, detects fractures and acute blood."}, 
-                                {text: "MRI", exp: "Better for parenchymal injury but not first line due to time and availability."}, 
-                                {text: "MRA", exp: "Evaluates vessels, not primary trauma survey."}, 
-                                {text: "Cerebral angiography", exp: "Invasive, not initial evaluation."}, 
-                                {text: "Plain film radiographs", exp: "Limited; rarely used now for brain injury."}
+                                {text: "Viral meningitis", isCorrect: true, exp: "Correct. Typical CSF: lymphocytic pleocytosis, normal glucose, mildly elevated protein, negative gram stain."}, 
+                                {text: "Fungal meningitis", exp: "Incorrect. Usually shows low glucose, higher protein, and lymphocytic pleocytosis but often indolent course."}, 
+                                {text: "Tuberculous meningitis", exp: "Incorrect. Characterized by markedly low glucose, very high protein, lymphocytic pleocytosis, and often positive AFB."}, 
+                                {text: "Subarachnoid hemorrhage", exp: "Incorrect. CSF would be bloody or xanthochromic, with elevated RBCs and normal or elevated protein, but normal glucose."}, 
+                                {text: "Bacterial meningitis", exp: "Incorrect. Typically neutrophilic pleocytosis, very low glucose, markedly elevated protein."}
                             ], 
-                            eval: "Answer is correct; CT is the primary imaging modality in acute head trauma." 
+                            eval: "The answer is correct. The CSF profile is classic for viral meningitis." 
                         },
                         { 
-                            q: "Cephalohematoma is a:", 
+                            q: "Which one of the following leads to fever/confusion with neck stiffness and a lumbar puncture showing 9 WBC with a lymphocyte predominance, protein = 63 mg% and glucose = 65 mg% (blood sugar = 105 mg%) and a negative gram stain?", 
                             opts: [
-                                {text: "Subcutaneous hematoma", exp: "Located under the skin, not limited by sutures."}, 
-                                {text: "Subaponeurotic hematoma", exp: "Under the galea aponeurotica, can cross sutures."}, 
-                                {text: "Subperiosteal hematoma", isCorrect: true, exp: "Correct; cephalohematoma is subperiosteal, limited by cranial sutures."}, 
-                                {text: "Subdural hematoma", exp: "Intracranial, between dura and arachnoid."}, 
-                                {text: "Subtentorial hematoma", exp: "Posterior fossa, not a scalp hematoma."}
+                                {text: "Fungal meningitis", exp: "Incorrect. Typically more indolent, CSF glucose is usually low."}, 
+                                {text: "Subarachnoid hemorrhage", exp: "Incorrect. CSF shows blood/xanthochromia, not a lymphocytic pleocytosis with normal glucose."}, 
+                                {text: "Viral meningoencephalitis", isCorrect: true, exp: "Correct. Fever, confusion, meningism, CSF with lymphocytic pleocytosis, normal glucose, and negative gram stain are typical of viral infections involving the brain and meninges."}, 
+                                {text: "Bacterial meningitis", exp: "Incorrect. Would show neutrophilic predominance, low glucose, and likely positive gram stain."}, 
+                                {text: "Tuberculous meningitis", exp: "Incorrect. Typically shows very low glucose, high protein, and subacute onset."}
                             ], 
-                            eval: "Answer is correct." 
+                            eval: "The answer is correct. The CSF and clinical picture fit viral meningoencephalitis." 
                         },
                         { 
-                            q: "In cephalohematoma in infants, infants might have shock due to:", 
+                            q: "Bacterial brain abscesses are usually treated by:", 
                             opts: [
-                                {text: "Low blood volume", isCorrect: true, exp: "Correct; a large cephalohematoma can sequester enough blood to cause hypovolemic shock in a small infant."}, 
-                                {text: "Sepsis from infected hematoma", isAi: true, exp: "Infection can occur but is not a direct cause of acute shock."}, 
-                                {text: "Hyperbilirubinemia from blood breakdown", isAi: true, exp: "Can cause jaundice, not shock."}, 
-                                {text: "Underlying linear skull fracture", isAi: true, exp: "Fracture may be associated but does not directly cause shock."}, 
-                                {text: "Increased intracranial pressure", isAi: true, exp: "Not typical; cephalohematoma is external to the skull."}
+                                {text: "Empiric antibiotics without biopsy", exp: "Incorrect. Microbiologic diagnosis via aspiration is standard to guide therapy."}, 
+                                {text: "Oral antibiotics for four weeks", exp: "Incorrect. IV therapy is required for adequate CNS penetration; 4 weeks alone is usually insufficient."}, 
+                                {text: "Radical surgical excision", exp: "Incorrect. Not the first line; aspiration is sufficient in most cases."}, 
+                                {text: "A two-week course of antibiotics", exp: "Incorrect. Treatment duration is typically 4–6 weeks or longer."}, 
+                                {text: "Stereotactic aspiration followed by 4-6 weeks of IV antibiotics", isCorrect: true, exp: "Correct. This allows diagnosis and drainage with prolonged targeted IV antibiotics."}
                             ], 
-                            eval: "The answer is correct. Hypovolemia is the classic explanation for shock in a large cephalohematoma." 
+                            eval: "The answer is correct. Standard management includes aspiration for culture/drainage and a prolonged intravenous antibiotic course." 
                         },
                         { 
-                            q: "MRI is better than CT by all except:", 
+                            q: "Wrong about meningitis:", 
                             opts: [
-                                {text: "Detecting hair fracture at temporal bone", isCorrect: true, exp: "CT is superior for bony detail; this is the exception."}, 
-                                {text: "Detection of brain contusion", isAi: true, exp: "MRI is more sensitive for small contusions."}, 
-                                {text: "Detection of diffuse axonal injury", isAi: true, exp: "MRI, especially gradient echo, is far better."}, 
-                                {text: "Detection of early cerebral edema", isAi: true, exp: "MRI shows edema earlier than CT."}, 
-                                {text: "Detection of brainstem lesions", isAi: true, exp: "MRI is superior for posterior fossa visualization."}
+                                {text: "Treatment of meningitis should be deferred until the results of culture and sensitivity are back", isCorrect: true, exp: "Correct (this is the wrong statement). Antibiotic therapy must begin promptly after obtaining cultures; delays increase mortality."}, 
+                                {text: "Antibiotics should be started immediately after collecting blood cultures and CSF", isAi: true, exp: "Correct statement, not the wrong one."}, 
+                                {text: "Ceftriaxone plus vancomycin is a standard empiric regimen for adults", isAi: true, exp: "Correct statement."}, 
+                                {text: "Dexamethasone is recommended before or with the first dose of antibiotics in suspected pneumococcal meningitis", isAi: true, exp: "Correct, especially in adults."}, 
+                                {text: "Viral meningitis typically presents with lymphocytic pleocytosis and normal glucose", isAi: true, exp: "Correct description."}
                             ], 
-                            eval: "Answer is correct; CT remains better for acute bone fractures." 
+                            eval: "The answer is correct. Deferring treatment for culture results is a dangerous and incorrect practice." 
                         },
                         { 
-                            q: "All are signs of basal skull fracture involving the anterior fossa except:", 
+                            q: "Signs of meningitis, increased protein, low glucose in the CSF, polymorphic neutrophils, RBC:", 
                             opts: [
-                                {text: "Battle's sign", isCorrect: true, exp: "Correct answer; Battle's sign (mastoid ecchymosis) indicates middle fossa fracture, not anterior."}, 
-                                {text: "CSF rhinorrhea", exp: "Anterior fossa sign."}, 
-                                {text: "Epistaxis", exp: "Can accompany anterior fossa fracture."}, 
-                                {text: "Blindness", exp: "Possible if optic nerve is involved."}, 
-                                {text: "Raccoon's eyes", exp: "Periorbital ecchymosis, anterior fossa sign."}
+                                {text: "Viral meningitis", isAi: true, exp: "Incorrect. Typically lymphocytic pleocytosis with normal glucose."}, 
+                                {text: "Fungal meningitis", isAi: true, exp: "Incorrect. Usually lymphocytic with low glucose, but neutrophilic predominance is rare."}, 
+                                {text: "Tuberculous meningitis", isAi: true, exp: "Incorrect. Shows lymphocytic predominance and very low glucose; RBCs are unusual unless traumatic tap."}, 
+                                {text: "Bacterial meningitis", isCorrect: true, exp: "Correct. The classic CSF: neutrophilic pleocytosis, low glucose, elevated protein; RBCs may appear with traumatic tap or hemorrhagic meningoencephalitis."}, 
+                                {text: "Subarachnoid hemorrhage", isAi: true, exp: "Incorrect. CSF shows xanthochromia or gross blood, normal glucose, and WBCs may be reactive but not a primary neutrophilic exudate with low glucose."}
                             ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Regarding fractures of the skull, all of the following are true except:", 
-                            opts: [
-                                {text: "Basilar skull fractures are more likely to injure cranial nerves than vault fractures", exp: "True."}, 
-                                {text: "Linear fractures do not require treatment unless associated with complications", exp: "True."}, 
-                                {text: "Pond fractures of babies do not require elevation", exp: "True; they often remodel."}, 
-                                {text: "Compound depressed skull fractures require emergency treatment", exp: "True."}, 
-                                {text: "A growing skull fracture is a complication of linear fractures in adults", isCorrect: true, exp: "False; it occurs almost exclusively in children under 3 years."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Regarding fractures of the skull, all of the following are true except:", 
-                            opts: [
-                                {text: "Linear fractures do not require treatment unless associated with complications", exp: "True."}, 
-                                {text: "Compound depressed skull fractures require emergency treatment", exp: "True."}, 
-                                {text: "Basilar skull fractures are more likely to injure cranial nerves than vault fractures", exp: "True."}, 
-                                {text: "All basilar skull fractures will develop CSF leak", isCorrect: true, exp: "False; many do not leak."}, 
-                                {text: "Pond fractures of babies usually do not require elevation", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Depressed fracture - do not elevate if:", 
-                            opts: [
-                                {text: "Less than the thickness of adjacent bone", isCorrect: true, exp: "Correct; standard non-operative criterion."}, 
-                                {text: "Cosmetic", exp: "A cosmetic deformity may still warrant elevation."}, 
-                                {text: "No dural laceration", isAi: true, exp: "While it influences decision, it is not the classic single rule."}, 
-                                {text: "Absence of neurological deficit", isAi: true, exp: "Important but not the sole criterion."}, 
-                                {text: "No underlying intracerebral hematoma", isAi: true, exp: "Again a factor, not the classic thickness rule."}
-                            ], 
-                            eval: "The answer is correct according to the standard teaching." 
-                        },
-                        { 
-                            q: "What is an absolute indication for surgery in skull fracture?", 
-                            opts: [
-                                {text: "Compound depressed fracture", isCorrect: true, exp: "Absolute indication due to infection risk and mass effect."}, 
-                                {text: "Linear fracture without complications", isAi: true, exp: "Usually managed conservatively."}, 
-                                {text: "Simple depressed fracture less than bone thickness", isAi: true, exp: "May be observed."}, 
-                                {text: "Basal skull fracture with CSF leak", isAi: true, exp: "Often managed conservatively initially."}, 
-                                {text: "Growing skull fracture in a child", isAi: true, exp: "Requires repair but is not the classic emergency absolute indication."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Fracture that causes otorrhea:", 
-                            opts: [
-                                {text: "Temporal bone petrous part", isCorrect: true, exp: "Correct; fracture involving the petrous bone can tear the dura and allow CSF otorrhea."}, 
-                                {text: "Frontal bone", isAi: true, exp: "Causes rhinorrhea, not otorrhea."}, 
-                                {text: "Parietal bone", isAi: true, exp: "Vault fracture, not typically associated with CSF leak."}, 
-                                {text: "Occipital bone", isAi: true, exp: "May cause posterior fossa leak, not otorrhea."}, 
-                                {text: "Sphenoid bone", isAi: true, exp: "May cause rhinorrhea, not ear leak."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Brain contusions:", 
-                            opts: [
-                                {text: "Less likely to happen in children", exp: "True; the brain is more mobile in atrophic adult brains, but this may be a relative truth."}, 
-                                {text: "Frontal lobe most commonly", exp: "True; frontal and temporal poles are common sites."}, 
-                                {text: "Acceleration-deceleration", isCorrect: true, exp: "Correct; contusions are caused by brain movement hitting bone."}, 
-                                {text: "Always require surgical evacuation", isAi: true, exp: "False; most are managed non-operatively."}, 
-                                {text: "Are never associated with loss of consciousness", isAi: true, exp: "False; LOC is common."}
-                            ], 
-                            eval: "The answer is correct as stated, but many would consider 'Frontal lobe most commonly' also correct. Still, the source answer is acceleration-deceleration." 
-                        },
-                        { 
-                            q: "Causes of secondary brain injury except:", 
-                            opts: [
-                                {text: "Counter coup injury", isCorrect: true, exp: "A primary injury occurring at the moment of impact."}, 
-                                {text: "Hematoma", exp: "Secondary insult leading to mass effect."}, 
-                                {text: "Brain shifting", exp: "Secondary result of mass effect."}, 
-                                {text: "Hypoxia", isAi: true, exp: "A well-known secondary insult."}, 
-                                {text: "Ischemia", isAi: true, exp: "Another major secondary insult."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The most prognostic sign in acute head injury is:", 
-                            opts: [
-                                {text: "Glasgow coma scale", isCorrect: true, exp: "The single most important prognostic indicator."}, 
-                                {text: "Pupil reactivity", isAi: true, exp: "Important but less globally prognostic than GCS."}, 
-                                {text: "Age of patient", isAi: true, exp: "Influences outcome but is not a sign."}, 
-                                {text: "CT scan findings", isAi: true, exp: "Add information but GCS is the strongest predictor."}, 
-                                {text: "Blood pressure", isAi: true, exp: "Relevant to secondary injury, not the primary prognostic sign."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Patient comes to the ER after RTA, he has normal CT initially, later shows white tract hemorrhages, brain stem punctate hemorrhage, his GCS was 5, most likely diagnosis?", 
-                            opts: [
-                                {text: "Diffuse axonal injury", isCorrect: true, exp: "Correct; severe DAI presents with low GCS, often initially normal CT and later punctate hemorrhages."}, 
-                                {text: "Epidural hematoma", exp: "Would typically show a lens-shaped hyperdensity."}, 
-                                {text: "Subdural hematoma", exp: "Crescent-shaped hyperdensity."}, 
-                                {text: "Brain contusion", exp: "Usually cortical, not diffuse white matter."}, 
-                                {text: "Subarachnoid hemorrhage", isAi: true, exp: "Would show blood in the cisterns/sulci."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Transition from prolonged coma to a stable or a transient vegetative state is seen after:", 
-                            opts: [
-                                {text: "Brain concussion", exp: "Brief loss of consciousness, not prolonged coma."}, 
-                                {text: "Diffuse axonal injury of the brain", isCorrect: true, exp: "Correct; severe DAI often results in coma and may evolve into vegetative state."}, 
-                                {text: "Brain tumour", exp: "Not typically post-traumatic."}, 
-                                {text: "Subgaleal hematoma", exp: "Scalp collection, no coma."}, 
-                                {text: "Epidural hematoma", exp: "Rapid deterioration if untreated, but prompt surgery usually reverses coma."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "A patient has moderate head injury; the Glasgow Coma Scale is:", 
-                            opts: [
-                                {text: "Below 6", exp: "Severe."}, 
-                                {text: "Below 8", exp: "Severe (commonly ≤8)."}, 
-                                {text: "9-13", isCorrect: true, exp: "Correct for moderate head injury."}, 
-                                {text: "13-15", exp: "Mild."}, 
-                                {text: "14-15", exp: "Mild."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "According to Glasgow Coma Scale, a severe craniocerebral traumatic injury would score:", 
-                            opts: [
-                                {text: "1-2 Points", exp: "Not possible; minimum sum is 3."}, 
-                                {text: "3-7 Points", isCorrect: true, exp: "Given as the severe category, though many classify GCS ≤8 as severe."}, 
-                                {text: "8-10 Points", exp: "Usually moderate."}, 
-                                {text: "11-13 Points", exp: "Moderate."}, 
-                                {text: "14-15 Points", exp: "Mild."}
-                            ], 
-                            eval: "The answer is technically correct per some classification systems, but the more universally accepted cut-off for severe TBI is GCS ≤8. Using 3–7 excludes GCS 8, which is also severe." 
-                        },
-                        { 
-                            q: "A patient with head injury has a GCS of 14/15, which of the following shouldn't be part of his management?", 
-                            opts: [
-                                {text: "Endotracheal intubation and hyperventilation", isCorrect: true, exp: "Not indicated in a patient with GCS 14 who is protecting airway; hyperventilation may be harmful."}, 
-                                {text: "Admission for ICU for observation", exp: "Reasonable."}, 
-                                {text: "Urgent CT scan of the brain", exp: "Indicated."}, 
-                                {text: "Mild analgesia to relieve the pain", exp: "Safe and recommended."}, 
-                                {text: "Neurological observation every hour", isAi: true, exp: "Part of standard monitoring."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Patient presented with a moderate craniocerebral injury, GCS was 10, which of these isn't part of the management plan?", 
-                            opts: [
-                                {text: "Administering corticosteroids", isCorrect: true, exp: "Not indicated in head injury; shown to be harmful."}, 
-                                {text: "Admit the patient to the ICU", exp: "Appropriate for moderate injury."}, 
-                                {text: "Frequent neurological checks", isAi: true, exp: "Essential monitoring."}, 
-                                {text: "CT scan", isAi: true, exp: "Indicated to assess injury."}, 
-                                {text: "Analgesia for pain", isAi: true, exp: "Necessary for comfort."}
-                            ], 
-                            eval: "The answer is correct; steroids are contraindicated in traumatic brain injury." 
-                        },
-                        { 
-                            q: "Management options in the treatment of intracranial hypertension secondary to trauma include all of the following except:", 
-                            opts: [
-                                {text: "High dose cortical steroids", isCorrect: true, exp: "Not effective and may worsen outcome."}, 
-                                {text: "Mild sedation", exp: "Reduces metabolic demand and ICP."}, 
-                                {text: "External ventricular drainage", exp: "Effective for ICP control."}, 
-                                {text: "Use of osmotic diuretics", exp: "Mannitol/hypertonic saline reduce ICP."}, 
-                                {text: "Decompressive craniectomy", exp: "Last-tier therapy for refractory ICP."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "In severe cranio-cerebral injuries, the recommended measure to reduce increased pressure, in their order of safety are:", 
-                            opts: [
-                                {text: "Barbiturate coma, intermittent mannitol, hyperventilation, and hypothermia", exp: "Not the given order."}, 
-                                {text: "Hyperventilation, barbiturate coma, hypothermia, and intermittent mannitol", exp: "Mannitol usually before barbiturates."}, 
-                                {text: "Hypothermia, hyperventilation, barbiturate coma and intermittent mannitol", exp: "Order is not standard."}, 
-                                {text: "Mannitol, hyperventilation, barbiturates, hypothermia, decompressive craniotomy", exp: "Close, but answer per source is E."}, 
-                                {text: "Hyperventilation, mannitol, barbiturate, hypothermia, craniotomy", isCorrect: true, exp: "Stated correct order of escalating therapies."}
-                            ], 
-                            eval: "The answer as given is based on older protocols. Current guidelines often place mannitol/hypertonic saline before hyperventilation and place decompressive craniectomy before barbiturates. This ranking is debated, but the source answer is maintained." 
-                        },
-                        { 
-                            q: "A 19-year-old man was brought to the ER after being involved in a road traffic accident. Examinations showed that his Glasgow coma score was 15/15, with no abnormal neurological signs. His blood pressure, pulse rate and respiration were normal. Examination of all systems was negative. The patient drew the attention of the examining doctor to the fact that when he bent his head, some clear fluid came down his left nostril. Testing the fluid for beta 2 transferrin proved that it was CSF. The diagnosis of basal skull fracture and CSF leak was made. The next step would be:", 
-                            opts: [
-                                {text: "Prescribe broad spectrum antibiotics for 2 weeks and ask the patient to come to OPD afterwards", exp: "Too risky; needs observation."}, 
-                                {text: "Admit the patient and take the patient to the operating theatre and close the site of the leak. Give post-operative antibiotics", exp: "Not first line; most stop with conservative measures."}, 
-                                {text: "Discharge the patient and ask him to take appointment with the ENT department", exp: "Unsafe."}, 
-                                {text: "Ask for ENT consultation so that the nasal cavity be examined to try to detect the site of the leak", exp: "May be done but not the initial step."}, 
-                                {text: "Admit the patient, give broad spectrum antibiotics, and wait for the leak to stop spontaneously", isCorrect: true, exp: "Correct; conservative management for traumatic CSF leak."}
-                            ], 
-                            eval: "The answer is correct; most post-traumatic CSF leaks resolve with conservative measures including bed rest, head elevation, and sometimes antibiotics." 
-                        },
-                        { 
-                            q: "During an emergency surgery for a traumatic brain injury, the brain was found to be edematous and tense, so the surgeon decided not to replace back the cranial bone flap in an attempt to decrease the intracranial pressure, this procedure is called:", 
-                            opts: [
-                                {text: "Cranioplasty", exp: "Replacement of bone flap at a later time."}, 
-                                {text: "Skull base repair", exp: "Repair of skull base defects."}, 
-                                {text: "Decompressive craniectomy", isCorrect: true, exp: "Correct; removal of bone flap without replacement to allow brain swelling."}, 
-                                {text: "Elevation of depressed fracture", exp: "Elevating a depressed fragment."}, 
-                                {text: "Craniotomy", exp: "Bone flap is replaced at the end of the procedure."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Causes of secondary brain injury except:", 
-                            opts: [
-                                {text: "Counter coup injury", isCorrect: true, exp: "Primary injury."}, 
-                                {text: "Hematoma", exp: "Secondary."}, 
-                                {text: "Brain shifting", exp: "Secondary."}, 
-                                {text: "Hypoxia", exp: "Secondary."}, 
-                                {text: "Ischemia", exp: "Secondary."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "All are early complication in head injury except:", 
-                            opts: [
-                                {text: "Epilepsy", exp: "Early post-traumatic seizures can occur."}, 
-                                {text: "Brain edema", isCorrect: true, exp: "Considered an exception in this list; possibly regarded as part of the primary process."}, 
-                                {text: "CSF leak", exp: "Early complication."}, 
-                                {text: "Intracranial hematoma", exp: "Early."}, 
-                                {text: "Hyponatremia", exp: "Early, due to SIADH or cerebral salt wasting."}
-                            ], 
-                            eval: "The answer is debated. Brain edema typically occurs early and is a complication. The given answer (brain edema is not an early complication) may be incorrect. A better answer might be 'Epilepsy' if strictly defined, but as per source it is brain edema." 
-                        },
-                        { 
-                            q: "Head trauma with rhinorrhea, otorrhea, which is wrong?", 
-                            opts: [
-                                {text: "Treatment of choice is LP shunt", isCorrect: true, exp: "Wrong; LP shunt is not first-line management for traumatic CSF leak."}, 
-                                {text: "Do lumbar drain", exp: "A lumbar drain can be used to facilitate closure."}, 
-                                {text: "Most of them resolve spontaneously", exp: "True."}, 
-                                {text: "Diagnosed as CSF leak by B2 transferrin", exp: "True."}, 
-                                {text: "Usually occurs due to skull base fracture", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Acute intracranial hematomas are those which form during the first:", 
-                            opts: [
-                                {text: "7 Days", exp: "This is subacute."}, 
-                                {text: "14 Days", exp: "Chronic."}, 
-                                {text: "10 Days", exp: "Subacute."}, 
-                                {text: "3 Days", isCorrect: true, exp: "Correct; acute hematomas present within 72 hours."}, 
-                                {text: "21 Days", exp: "Chronic."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Acute traumatic intracranial hematomas frequently manifest with:", 
-                            opts: [
-                                {text: "Hypersalivation", exp: "Not typical."}, 
-                                {text: "Hyperhydrosis", exp: "Not typical."}, 
-                                {text: "Seizures", isCorrect: true, exp: "Correct; acute hematomas irritate the cortex."}, 
-                                {text: "Acute adrenal failure", exp: "Not a direct manifestation."}, 
-                                {text: "Toxic shock", exp: "Not typical."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Bradycardia, hypertension, hemiparesis and anisocoria, classic presentations of:", 
-                            opts: [
-                                {text: "Carotid cavernous fistula", exp: "Pulsating exophthalmos, bruit."}, 
-                                {text: "Arnold-Chiari malformation", exp: "Headaches, cranial nerve signs, not the Cushing's triad with hemiparesis."}, 
-                                {text: "Spinal cord tumor", exp: "No anisocoria, no hemiparesis pattern."}, 
-                                {text: "Compression vascular neuropathy", exp: "Does not cause this combination."}, 
-                                {text: "Traumatic intracranial hematoma", isCorrect: true, exp: "Expanding hematoma causes Cushing's response (bradycardia, hypertension) with ipsilateral pupillary dilation and contralateral hemiparesis."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Most common source for the formation of epidural hematomas:", 
-                            opts: [
-                                {text: "Cerebral arteries and veins", exp: "Not the primary source."}, 
-                                {text: "Choroid plexus of the 4th ventricle", exp: "Intraventricular."}, 
-                                {text: "Galen's vein", exp: "Deep venous system."}, 
-                                {text: "Diploic vessels of the cranial bones", exp: "Can cause EDH but less common."}, 
-                                {text: "Middle meningeal arteries", isCorrect: true, exp: "Correct; most EDHs are due to middle meningeal artery tear."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The commonest site for extradural hematoma is:", 
-                            opts: [
-                                {text: "Subfrontal region", exp: "Not common."}, 
-                                {text: "Parietal region", exp: "Can occur but not the commonest."}, 
-                                {text: "Parafalcine region", exp: "Rare."}, 
-                                {text: "Temporal region", isCorrect: true, exp: "Correct; middle meningeal artery runs in the temporal region."}, 
-                                {text: "Posterior fossa", exp: "Can occur but less common."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Wrong about epidural hematoma:", 
-                            opts: [
-                                {text: "Most common source of bleeding is the middle meningeal artery.", exp: "True."}, 
-                                {text: "Most commonly in the frontal region.", isCorrect: true, exp: "Wrong; most common in temporal region."}, 
-                                {text: "Can occur due to a fracture line.", exp: "True."}, 
-                                {text: "Lucid interval corresponds to the period of accumulation of blood.", exp: "True."}, 
-                                {text: "Occurs mainly in population below the age of 40", exp: "True; dura is more adherent in elderly, making EDH less common."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Epidural hematoma, what is the least affected age group?", 
-                            opts: [
-                                {text: "15-30", exp: "Common age group for EDH."}, 
-                                {text: ">60", isCorrect: true, exp: "Least affected; dura becomes more adherent, limiting epidural collection."}, 
-                                {text: "Mid age men", exp: "Common."}, 
-                                {text: "Mid age women", exp: "Common."}, 
-                                {text: "Children under 2 years", isAi: true, exp: "EDH is also rare in infants, but the source identifies >60 as least affected."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Extradural hematoma is due to bleeding from all the following sources except:", 
-                            opts: [
-                                {text: "Straight sinus", isCorrect: true, exp: "Not a typical source; it is deep and less commonly torn."}, 
-                                {text: "Transverse sinus", exp: "Can cause posterior fossa EDH."}, 
-                                {text: "Diploic veins", exp: "Can cause EDH."}, 
-                                {text: "Middle meningeal artery", exp: "Most common."}, 
-                                {text: "Superior sagittal sinus", exp: "Can cause vertex EDH."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The typical appearance of an acute extradural hematoma on non-contrasted CT scan of the head is:", 
-                            opts: [
-                                {text: "Hypodense lens shape", exp: "Acute blood is hyperdense."}, 
-                                {text: "Hypodense crescentic shape", exp: "Subdural, not epidural, and acute blood is hyperdense."}, 
-                                {text: "Hyperdense crescentic shape", exp: "Typical of acute subdural."}, 
-                                {text: "Hyperdense lens shape", isCorrect: true, exp: "Correct; biconvex (lens-shaped) hyperdensity limited by sutures."}, 
-                                {text: "Isodense lens shape", exp: "Acute bleed is hyperdense."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Epidural hematomas are usually limited by:", 
-                            opts: [
-                                {text: "Cerebral cortex", exp: "Not the limiting structure."}, 
-                                {text: "Choroid plexuses", exp: "Not relevant."}, 
-                                {text: "Falciform processes", exp: "Dural reflections, not sutures."}, 
-                                {text: "Tentorium cerebelli", exp: "Not the limitation."}, 
-                                {text: "Skull sutures", isCorrect: true, exp: "Correct; the tightly adherent dura at sutures limits expansion."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "In which type of post traumatic intracranial hemorrhage a \"lucid interval\" is most likely to be seen?", 
-                            opts: [
-                                {text: "Cerebral contusion", exp: "Usually no lucid interval."}, 
-                                {text: "Brain concussion", exp: "Immediate LOC, no classic lucid interval."}, 
-                                {text: "Epidural hematoma", isCorrect: true, exp: "Classic for lucid interval."}, 
-                                {text: "Subdural hematoma", exp: "More commonly a continuous decline."}, 
-                                {text: "Subarachnoid hemorrhage", exp: "No lucid interval."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Extradural hematoma, True:", 
-                            opts: [
-                                {text: "The most affected artery is the middle meningeal", exp: "True."}, 
-                                {text: "Have lucid interval", exp: "True."}, 
-                                {text: "The treatment is evacuation", exp: "True."}, 
-                                {text: "All of the above are true", isCorrect: true, exp: "Correct because all preceding statements are correct."}, 
-                                {text: "It is typically located in the posterior fossa", isAi: true, exp: "False; most are temporal."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "All of the following facts are correct about extradural hematoma (EDH) except:", 
-                            opts: [
-                                {text: "Skull fracture associated with EDH are three times as common in adults when compared to children", exp: "True."}, 
-                                {text: "The mortality rate is around 75%", isCorrect: true, exp: "False; mortality is much lower (~10-20%) with prompt treatment."}, 
-                                {text: "The best time of operation is before the ensuing of the second loss of consciousness which denotes herniation", exp: "True."}, 
-                                {text: "Most EDHs are arterial in nature", exp: "True."}, 
-                                {text: "When compared to acute subdural hematoma, the outcome of EDH is much better", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Concerning epidural hematoma, all the following statements are true except:", 
-                            opts: [
-                                {text: "Characteristic biconvex shape", exp: "True."}, 
-                                {text: "Represent 3% of all head injuries", exp: "Approximately true."}, 
-                                {text: "Rare to be seen before 2 years and those older than 60 years", exp: "True."}, 
-                                {text: "Have the characteristic lucid interval in 2/3 of cases", exp: "True."}, 
-                                {text: "Most common in the parietal lobe", isCorrect: true, exp: "False; temporal region is commonest."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Source for formation of subdural hematoma:", 
-                            opts: [
-                                {text: "Anterior choroidal artery", exp: "Not the main source."}, 
-                                {text: "Pial/bridging veins", isCorrect: true, exp: "Correct; tearing of bridging veins between cortex and dural sinuses."}, 
-                                {text: "Choroid plexus of the lateral ventricles", exp: "Intraventricular."}, 
-                                {text: "Choroid plexus of the 4th ventricle", exp: "Intraventricular."}, 
-                                {text: "Arteries of the circle of Willis", exp: "Subarachnoid hemorrhage."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Character of subdural hematoma:", 
-                            opts: [
-                                {text: "Does cross suture lines", isCorrect: true, exp: "Correct; subdural blood spreads freely across suture lines."}, 
-                                {text: "Is limited by skull sutures", exp: "False; this is epidural."}, 
-                                {text: "Always biconvex", exp: "False; crescentic shape."}, 
-                                {text: "Does not cross midline falx", exp: "True but not the asked \"character\"; the subdural hematoma does not cross the falx."}, 
-                                {text: "Typically hypodense on acute CT", isAi: true, exp: "Acute subdural is hyperdense."}
-                            ], 
-                            eval: "The answer is correct. Note that subdural also does not cross the midline, but the specific character here is crossing suture lines." 
-                        },
-                        { 
-                            q: "Which of the following is true?", 
-                            opts: [
-                                {text: "Subdural is associated with more severe injury", isCorrect: true, exp: "True; acute SDH often has underlying brain damage."}, 
-                                {text: "Epidural presents with lucid interval in more than 60% of patients", exp: "Not consistently; lucid interval occurs but not >60% in all series."}, 
-                                {text: "Acute subdural has better prognosis than epidural", isAi: true, exp: "False; SDH prognosis is worse."}, 
-                                {text: "Subdural hematoma is usually arterial", isAi: true, exp: "False; it is venous."}, 
-                                {text: "Epidural hematoma crosses suture lines", isAi: true, exp: "False; it is limited by sutures."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "All are false about acute subdural hematoma except:", 
-                            opts: [
-                                {text: "The blood clot is found between the skull and meninges", exp: "False; it is between dura and arachnoid."}, 
-                                {text: "Most of the manifestations are due to the presence of the blood clot", exp: "False; underlying brain injury plays a major role."}, 
-                                {text: "It is more dangerous than extradural hematoma", isCorrect: true, exp: "True; acute SDH has higher mortality."}, 
-                                {text: "Treatment is by removal of the hematoma and excision of the affected brain area using burr hole", exp: "False; usually requires craniotomy."}, 
-                                {text: "It appears hyperdense crescentic on CT", isAi: true, exp: "Actually true, but the question states all are false except the dangerous comparison. This option is true as well, so a possible inaccuracy; but according to the source answer, the exception is the dangerous statement."}
-                            ], 
-                            eval: "The intended answer seems correct as acute SDH is more dangerous. However, the hyperdense crescentic appearance is also a true characteristic, so the question may have two true statements. The source answer is maintained." 
-                        },
-                        { 
-                            q: "Regarding acute subdural hematoma, which is wrong?", 
-                            opts: [
-                                {text: "The blood clot develops between the brain and outer layer of the meninges", exp: "True; subdural space."}, 
-                                {text: "The blood clot makes the major contribution to the clinical picture", isCorrect: true, exp: "Wrong; the underlying brain injury is the major contributor."}, 
-                                {text: "In general, has a worse prognosis than extradural hematoma", exp: "True."}, 
-                                {text: "The surgical treatment includes mainly evacuation of the hematoma and excision of the lacerated brain via a craniotomy", exp: "True."}, 
-                                {text: "The source of bleeding is the bridging veins", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "In spite of the best treatment, the highest mortality is associated with:", 
-                            opts: [
-                                {text: "Extradural hematoma", exp: "Lower mortality if treated."}, 
-                                {text: "Acute subdural hematoma", isCorrect: true, exp: "Highest mortality due to associated brain injury."}, 
-                                {text: "Chronic subdural hematoma", exp: "Good prognosis."}, 
-                                {text: "Subacute subdural hematoma", exp: "Better than acute."}, 
-                                {text: "Traumatic SAH", exp: "Mortality is lower than acute SDH."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Acute subdural hematomas have more mortality and morbidity than acute extradural hematomas because:", 
-                            opts: [
-                                {text: "They are usually bigger than extradural hematomas", exp: "Not always."}, 
-                                {text: "Because they always originate from the large superior sagittal sinus", exp: "Not always."}, 
-                                {text: "Because they are always bilateral", exp: "Not always."}, 
-                                {text: "Because they are usually associated with severe brain injury", isCorrect: true, exp: "Correct; the primary brain injury determines the poor outcome."}, 
-                                {text: "Because they are nearer to the cortex than extradural hematomas", exp: "Proximity alone doesn't explain worse mortality."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following is NOT a characteristic of subacute subdural hematoma?", 
-                            opts: [
-                                {text: "Compression of the lateral ventricle on the side of the hematoma", exp: "Can be seen."}, 
-                                {text: "Effaced sulci", exp: "Present."}, 
-                                {text: "White matter buckling", exp: "Present."}, 
-                                {text: "Thick cortical mantle", exp: "Often seen."}, 
-                                {text: "Insular ribbon sign", isCorrect: true, exp: "This is a sign of acute middle cerebral artery infarction, not subdural hematoma."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Long clinical scenario about a patient who came with head trauma and GCS 6, on CT he was found to have subdural hematoma, which of the following is an inappropriate step in the management?", 
-                            opts: [
-                                {text: "Administer cyclocapron (tranexamic acid) to prevent clot lysis", isCorrect: true, exp: "Not standard care; no proven benefit."}, 
-                                {text: "Plan for urgent evacuation of the hematoma", exp: "Appropriate."}, 
-                                {text: "Intubate for airway protection", isAi: true, exp: "Standard for GCS ≤8."}, 
-                                {text: "Administer mannitol for raised ICP", isAi: true, exp: "Appropriate if signs of herniation."}, 
-                                {text: "Monitor ICP", isAi: true, exp: "Standard."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Patient post RTA mild head injury with dementia the following few weeks:", 
-                            opts: [
-                                {text: "Chronic subdural hematoma", isCorrect: true, exp: "Classic presentation: gradual cognitive decline weeks after minor trauma, often in elderly."}, 
-                                {text: "Intracerebral hematoma", exp: "Usually acute and focal."}, 
-                                {text: "Epidural hematoma", isAi: true, exp: "Presents acutely."}, 
-                                {text: "Subarachnoid hemorrhage", isAi: true, exp: "Acute severe headache."}, 
-                                {text: "Cerebral contusion", isAi: true, exp: "Acute, not progressive dementia over weeks."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The proper method for surgical removal of a chronic subdural hematoma in an adult patient is:", 
-                            opts: [
-                                {text: "Burr hole and subdural drain insertion for evacuation", isCorrect: true, exp: "Standard treatment for chronic SDH."}, 
-                                {text: "Craniotomy and evacuation", exp: "Reserved for organized or recurrent hematomas."}, 
-                                {text: "Endovascular removal", exp: "Not applicable."}, 
-                                {text: "Stereotactic removal", exp: "Not standard."}, 
-                                {text: "Puncture and needle aspiration", exp: "Inadequate for complete drainage."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following is correct regarding chronic subdural hematoma?", 
-                            opts: [
-                                {text: "Can appear either hyperintense, isointense, or hypointense on MRI", exp: "True; signal varies with age."}, 
-                                {text: "Associated with brain atrophy", exp: "True."}, 
-                                {text: "Mostly can be drained by burr holes", exp: "True."}, 
-                                {text: "All of the above", isCorrect: true, exp: "Correct."}, 
-                                {text: "It is usually acute in onset", isAi: true, exp: "False; chronic SDH develops insidiously."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Patient with craniotomy cerebral injury, which of the following is true about complications?", 
-                            opts: [
-                                {text: "Hydrocephalus if occurs is usually communicating type", isCorrect: true, exp: "True; blood in subarachnoid space impairs CSF absorption."}, 
-                                {text: "If patient doesn't develop seizures in the first week he is unlikely to develop seizures later", exp: "False; late seizures can still occur."}, 
-                                {text: "CSF otorrhea more common than rhinorrhea", exp: "False; rhinorrhea more common."}, 
-                                {text: "Post-traumatic epilepsy is most commonly generalized tonic-clonic", isAi: true, exp: "Partial seizures are common."}, 
-                                {text: "CSF rhinorrhea always requires surgical repair", isAi: true, exp: "Most resolve spontaneously."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Most common symptom of intracranial hemorrhage:", 
-                            opts: [
-                                {text: "Seizure", isCorrect: true, exp: "Listed as most common in the source (following the theme of Q45)."}, 
-                                {text: "Headache", isAi: true, exp: "Common but not the most common according to the source."}, 
-                                {text: "Vomiting", isAi: true, exp: "Non-specific."}, 
-                                {text: "Loss of consciousness", isAi: true, exp: "Frequent but not the most common symptom."}, 
-                                {text: "Focal weakness", isAi: true, exp: "Depends on location."}
-                            ], 
-                            eval: "The answer as per source is seizure, though headache or altered consciousness are also very frequent." 
-                        },
-                        { 
-                            q: "Epilepsy occurs post trauma can occur due to all of the following, except:", 
-                            opts: [
-                                {text: "Depressed fracture", exp: "Can cause epilepsy."}, 
-                                {text: "Intracranial hematoma", exp: "Irritates cortex."}, 
-                                {text: "Dural tear", exp: "Associated with cortical injury."}, 
-                                {text: "Brain contusion", exp: "Common epileptogenic focus."}, 
-                                {text: "Diffuse axonal injury", isCorrect: true, exp: "Not a direct cortical irritant; less likely to cause epilepsy."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The following are causes of epilepsy except:", 
-                            opts: [
-                                {text: "Cerebral hematoma", exp: "Supratentorial bleed can cause seizures."}, 
-                                {text: "Cerebellar hematoma", isCorrect: true, exp: "Infratentorial, typically does not cause epilepsy."}, 
-                                {text: "Cortical contusion", exp: "Epileptogenic."}, 
-                                {text: "Suprasellar tumor", exp: "Can cause seizures."}, 
-                                {text: "Hydrocephalus", exp: "May be associated with epilepsy."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following antiepileptics is the most teratogenic?", 
-                            opts: [
-                                {text: "Valproate", isCorrect: true, exp: "Highest risk of neural tube defects and other malformations."}, 
-                                {text: "Carbamazepine", isAi: true, exp: "Teratogenic but less than valproate."}, 
-                                {text: "Phenytoin", isAi: true, exp: "Associated with fetal hydantoin syndrome, but valproate risk is higher."}, 
-                                {text: "Levetiracetam", isAi: true, exp: "Considered safer in pregnancy."}, 
-                                {text: "Lamotrigine", isAi: true, exp: "Lower teratogenic risk compared to valproate."}
-                            ], 
-                            eval: "The answer is correct." 
+                            eval: "The answer is correct. The CSF profile is most consistent with bacterial meningitis." 
                         }
-                    ] },
-                    { t: "Brain Tumors", qs: [
-                        { 
-                            q: "Percentage of brain tumors within all body tumors:", 
-                            opts: [
-                                {text: "2%", isCorrect: true, exp: "Correct; brain tumors represent about 2% of all neoplasms."}, 
-                                {text: "4%", exp: "Incorrect; this is higher than actual."}, 
-                                {text: "6%", exp: "Incorrect; too high."}, 
-                                {text: "8%", exp: "Incorrect; overestimates prevalence."}, 
-                                {text: "10%", exp: "Incorrect; far exceeds true proportion."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Most common type of tumor to metastasize to the brain:", 
-                            opts: [
-                                {text: "Lung", isCorrect: true, exp: "Correct; lung carcinoma is the most frequent source of brain metastases."}, 
-                                {text: "Prostate", exp: "Incorrect; relatively uncommon to metastasize to brain compared to lung."}, 
-                                {text: "Breast", exp: "Incorrect; second most common, but less than lung."}, 
-                                {text: "Leukemia", exp: "Incorrect; may infiltrate CNS but not the most common solid brain metastasis."}, 
-                                {text: "Lymphoma", exp: "Incorrect; primary CNS lymphoma is distinct; metastatic lymphoma is less common than lung."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "All the tumors are more common in males except:", 
-                            opts: [
-                                {text: "Glioblastoma multiforme", exp: "More common in males."}, 
-                                {text: "Astrocytoma", exp: "Generally male predominance."}, 
-                                {text: "Medulloblastoma", exp: "Male predominance."}, 
-                                {text: "Pineocytoma", isCorrect: true, exp: "Exception; no clear male predominance, may even have slight female predominance."}, 
-                                {text: "Ependymoma", exp: "Slight male predominance."}
-                            ], 
-                            eval: "The answer is correct. Pineocytoma does not show the male predominance typical of other listed tumors." 
-                        },
-                        { 
-                            q: "All tumors have male predominance, except:", 
-                            opts: [
-                                {text: "Neuroma", isCorrect: true, exp: "Correct exception; vestibular schwannoma has no significant sex predilection or slightly more common in females."}, 
-                                {text: "Ependymoma", exp: "Male predominance."}, 
-                                {text: "Medulloblastoma", exp: "Male predominance."}, 
-                                {text: "Glioblastoma multiforme", exp: "Male predominance."}, 
-                                {text: "Astrocytoma", exp: "Male predominance."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "A patient with headache, blurring of vision, right homonymous hemianopia with loss of light reflex. The lesion is in:", 
-                            opts: [
-                                {text: "Frontal", exp: "Incorrect; would cause motor/behavioral changes, not isolated homonymous hemianopia with loss of light reflex."}, 
-                                {text: "Temporal", exp: "Incorrect; might cause superior quadrantanopia, not complete hemianopia, and does not affect pupillary light reflex."}, 
-                                {text: "Parietal", exp: "Incorrect; would cause sensory deficits and inferior quadrantanopia if optic radiation involved."}, 
-                                {text: "Occipital", isCorrect: true, exp: "Correct; a lesion involving the occipital lobe and the dorsal midbrain can cause homonymous hemianopia and loss of pupillary light reflex due to involvement of optic tract/tectum."}, 
-                                {text: "Corpus callosum", exp: "Incorrect; disconnection syndromes, not this combination."}
-                            ], 
-                            eval: "The answer appears debatable. Right homonymous hemianopia usually localizes to the left optic tract, LGN, optic radiation, or occipital cortex. Loss of light reflex suggests involvement of optic tract or midbrain. A pure occipital lobe lesion does not disturb the light reflex; thus the combination more likely points to a lesion of the optic tract. The given answer 'Occipital' may be oversimplified; a lesion affecting the optic tract (often due to a temporal or chiasmal mass) would be better. However, the source answer remains unchanged." 
-                        },
-                        { 
-                            q: "Intracranial lesion (mass lesion) can present with:", 
-                            opts: [
-                                {text: "Increased intracranial pressure", exp: "True; mass effect raises ICP."}, 
-                                {text: "Motor deficits", exp: "True; depending on location."}, 
-                                {text: "Fits", exp: "True; seizures are a common presentation."}, 
-                                {text: "Cranial nerve lesion", exp: "True; basal or brainstem masses can compress cranial nerves."}, 
-                                {text: "All of the above", isCorrect: true, exp: "Correct; all are possible presentations."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Decerebrate rigidity/posture results because of a lesion in:", 
-                            opts: [
-                                {text: "Midbrain", isCorrect: true, exp: "Correct; a lesion between the red nuclei and vestibular nuclei (midbrain) removes corticospinal inhibition, leading to extensor posturing."}, 
-                                {text: "Pons", exp: "Incorrect; pontine lesions below vestibular nuclei cause flaccidity or decerebrate by disinhibition, but classically midbrain transection produces decerebrate rigidity."}, 
-                                {text: "Cerebellum", exp: "Incorrect; causes ataxia, not decerebrate posture."}, 
-                                {text: "Medulla oblongata", exp: "Incorrect; lower medullary lesions cause flaccidity."}, 
-                                {text: "Diencephalon", exp: "Incorrect; decorticate posturing is associated with diencephalic lesions."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Concerning the non-surgical treatment of brain tumor, all of the following statements are true except:", 
-                            opts: [
-                                {text: "Antiepileptics", exp: "True; used for seizure control."}, 
-                                {text: "Analgesia", exp: "True; for headache."}, 
-                                {text: "Diazepam", isCorrect: true, exp: "Incorrect as routine non-surgical treatment; not a standard treatment for brain tumor itself, though may be used for acute seizures or anxiety, but not a primary part of the antitumor regimen."}, 
-                                {text: "Head elevation 30 degrees (patient with increased ICP)", exp: "True; helps reduce ICP."}, 
-                                {text: "Dexamethasone", exp: "True; reduces peritumoral edema."}
-                            ], 
-                            eval: "The answer is correct. Diazepam is not a standard component of brain tumor non-surgical management." 
-                        },
-                        { 
-                            q: "Which of the following is considered an absolute contraindication for a lumbar puncture?", 
-                            opts: [
-                                {text: "High blood pressure", exp: "Not an absolute contraindication."}, 
-                                {text: "Pregnancy", exp: "Not a contraindication; LP can be performed."}, 
-                                {text: "Acute urinary retention", exp: "Not relevant."}, 
-                                {text: "Brain space occupying lesion", isCorrect: true, exp: "Correct; risk of brain herniation."}, 
-                                {text: "Lumbar disc prolapse", exp: "Relative, not absolute; LP may be done at other levels."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Child comes with vomiting and nausea of 3 months duration and has cerebellar signs and otitis media 2 weeks ago. What is the differential diagnosis & What is the next step?", 
-                            opts: [
-                                {text: "Brain abscess, Cerebellar tumor; CT scan", isCorrect: true, exp: "The differential diagnoses include cerebellar abscess (due to otitis media spreading) and cerebellar tumor. The next step is urgent CT scan to differentiate."}
-                            ], 
-                            eval: "The answer is correct. Chronic vomiting and cerebellar signs with recent otitis media raise concern for cerebellar abscess; CT with contrast is the appropriate imaging." 
-                        },
-                        { 
-                            q: "Choose the incorrect answer:", 
-                            opts: [
-                                {text: "Neuroblastoma is the most common CNS tumor", isCorrect: true, exp: "Incorrect; neuroblastoma is a peripheral neuroblastic tumor, not a primary CNS tumor; the most common CNS tumors are gliomas/meningiomas."}, 
-                                {text: "Medulloblastoma is a common pediatric brain tumor", exp: "True."}, 
-                                {text: "Meningioma is usually benign", exp: "True."}, 
-                                {text: "Glioblastoma is the most common primary malignant brain tumor in adults", exp: "True."}, 
-                                {text: "Pituitary adenoma accounts for 8–14% of intracranial tumors", exp: "True."}
-                            ], 
-                            eval: "The answer is correct; the incorrect statement is the one about neuroblastoma." 
-                        },
-                        { 
-                            q: "All are true regarding neurofibromas, except:", 
-                            opts: [
-                                {text: "Usually occurs in motor roots", isCorrect: true, exp: "Incorrect; neurofibromas arise from sensory roots more commonly."}, 
-                                {text: "Arise from lateral or posterior side of spinal cord", exp: "True; typically from the dorsal root."}, 
-                                {text: "May lead to an increase of intravertebral foramen", exp: "True; by growth into the foramen."}, 
-                                {text: "They are typically benign", isAi: true, exp: "True; neurofibromas are benign peripheral nerve sheath tumors."}, 
-                                {text: "They can present with radicular pain", isAi: true, exp: "True; compression of nerve roots causes radiculopathy."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Concerning brain tumors, all of the following data are true except:", 
-                            opts: [
-                                {text: "The prevalence of brain tumors is between 5-18/100,000 population", exp: "True; varies by region."}, 
-                                {text: "They are slightly more common in males than females", exp: "True."}, 
-                                {text: "Median age of presentation is 38-42", exp: "True."}, 
-                                {text: "In Jordan, the prevalence is 10/100,000 population", isCorrect: true, exp: "Incorrect; likely a false specific figure (source dependent)."}, 
-                                {text: "Malignant brain tumors rarely metastasize outside CNS", exp: "True."}
-                            ], 
-                            eval: "The answer is likely correct as a specific epidemiological statement that is not universally true; the given figure may be inaccurate." 
-                        },
-                        { 
-                            q: "Concerning brain tumors, all of the following data are true except:", 
-                            opts: [
-                                {text: "The prevalence of brain tumors is between 5-18/100,000 population", exp: "True."}, 
-                                {text: "Glioblastoma is the most common pediatric brain tumor", isCorrect: true, exp: "Incorrect; medulloblastoma and pilocytic astrocytoma are more common in children."}, 
-                                {text: "Meningioma is the most common primary brain tumor", exp: "True, overall."}, 
-                                {text: "In Jordan, the prevalence is 5/100,000 population", isAi: true, exp: "Possibly false but not the stated exception in this question."}, 
-                                {text: "Meningioma can be cured with surgical resection", exp: "True, many can be cured."}
-                            ], 
-                            eval: "The answer is correct; glioblastoma is not the most common pediatric tumor." 
-                        },
-                        { 
-                            q: "Chondromas are tumors arising from remnants of:", 
-                            opts: [
-                                {text: "Ectopic cord tissue", exp: "Incorrect; chordomas arise from notochord remnants, not ectopic cord."}, 
-                                {text: "Notochord tissue", isCorrect: true, exp: "Correct; chondromas/chordomas arise from remnants of the notochord."}, 
-                                {text: "Rathke's pouch", exp: "Incorrect; gives rise to craniopharyngioma."}, 
-                                {text: "Ectopic lymphatic tissue", exp: "Incorrect."}, 
-                                {text: "Endoderm tissue", exp: "Incorrect."}
-                            ], 
-                            eval: "The answer is correct; chordomas (often called chondromas in some contexts) are notochordal." 
-                        },
-                        { 
-                            q: "Which of the following brain tumors is not of neuroepithelial origin?", 
-                            opts: [
-                                {text: "Astrocytoma", exp: "Neuroepithelial (glial)."}, 
-                                {text: "Oligodendroglioma", exp: "Neuroepithelial."}, 
-                                {text: "Ependymoma", exp: "Neuroepithelial."}, 
-                                {text: "Medulloblastoma", exp: "Embryonal, of neuroepithelial origin."}, 
-                                {text: "Hemangioblastoma", isCorrect: true, exp: "Correct; mesenchymal/vascular origin, not neuroepithelial."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The most common primary brain tumor in adults is:", 
-                            opts: [
-                                {text: "Glioblastoma", isCorrect: true, exp: "Given as answer; it is the most common primary malignant brain tumor, but meningioma is overall most common benign primary."}, 
-                                {text: "Ependymoma", exp: "Less common."}, 
-                                {text: "Meningioma", exp: "Most common primary intracranial tumor overall, but answer is glioblastoma (malignant)."}, 
-                                {text: "Medulloblastoma", exp: "Mainly pediatric."}, 
-                                {text: "Pituitary adenoma", exp: "Common but not the most common overall."}
-                            ], 
-                            eval: "The answer is debated. Meningioma is the most common primary brain tumor in adults; glioblastoma is the most common malignant primary tumor. The question may have intended 'most common primary malignant' but as written, the correct answer should be meningioma. The source answer remains glioblastoma." 
-                        },
-                        { 
-                            q: "Which of these is a benign brain tumor?", 
-                            opts: [
-                                {text: "Anaplastic astrocytoma", exp: "Malignant (grade III)."}, 
-                                {text: "WHO grade 3 meningioma", exp: "Malignant."}, 
-                                {text: "Hemangioblastoma", isCorrect: true, exp: "Correct; benign (WHO grade I)."}, 
-                                {text: "Glioblastoma multiforme", isAi: true, exp: "Malignant grade IV."}, 
-                                {text: "Medulloblastoma", isAi: true, exp: "Malignant embryonal tumor."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "What is the most common posterior fossa tumor in adults?", 
-                            opts: [
-                                {text: "Ependymoma", exp: "Possible but less common."}, 
-                                {text: "Astrocytoma", exp: "Can occur, but not the most common primary intra-axial posterior fossa tumor."}, 
-                                {text: "Vermis medulloblastoma", exp: "More common in children."}, 
-                                {text: "Hemangioblastoma", isCorrect: true, exp: "Correct; the most common primary intra-axial posterior fossa neoplasm in adults."}, 
-                                {text: "Pilocytic astrocytoma", isAi: true, exp: "More common in children."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following CNS tumors has chicken wires appearance on histology?", 
-                            opts: [
-                                {text: "Oligodendroglioma", isCorrect: true, exp: "Correct; classic histology shows a delicate chicken-wire capillary network."}, 
-                                {text: "Meningioma", exp: "Incorrect; whorls and psammoma bodies."}, 
-                                {text: "Glioblastoma", isAi: true, exp: "Shows pseudopalisading necrosis and endothelial proliferation, not chicken-wire."}, 
-                                {text: "Ependymoma", isAi: true, exp: "Perivascular pseudorosettes."}, 
-                                {text: "Medulloblastoma", isAi: true, exp: "Small blue cells, Homer Wright rosettes."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "One of the following tumors is the most common tumor with calcifications:", 
-                            opts: [
-                                {text: "Pituitary adenoma", exp: "Can calcify rarely, not most common."}, 
-                                {text: "Anaplastic astrocytoma", exp: "Calcification uncommon."}, 
-                                {text: "Oligodendroglioma", isCorrect: true, exp: "Correct; up to 90% show calcifications on imaging."}, 
-                                {text: "Ependymoma", exp: "May calcify but less frequently."}, 
-                                {text: "Medulloblastoma", exp: "Rarely calcifies."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which statement about brain tumors is wrong?", 
-                            opts: [
-                                {text: "Meningioma is the most common primary brain tumor overall", exp: "True."}, 
-                                {text: "Glioblastoma is the most common malignant primary brain tumor", exp: "True."}, 
-                                {text: "Ependymoma is the most common cancer in adults", isCorrect: true, exp: "Incorrect; it is a relatively rare tumor."}, 
-                                {text: "Medulloblastoma is common in children", exp: "True."}, 
-                                {text: "Pituitary adenoma accounts for about 10% of intracranial tumors", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The most common posterior fossa tumor with calcification is:", 
-                            opts: [
-                                {text: "Ependymoma", isCorrect: true, exp: "Correct; especially in the posterior fossa, ependymomas commonly show calcification."}, 
-                                {text: "Medulloblastoma", exp: "Incorrect; calcification is rare."}, 
-                                {text: "Pilocytic astrocytoma", exp: "Incorrect; rarely calcifies."}, 
-                                {text: "Choroid plexus papilloma", exp: "Can calcify but less commonly than ependymoma in the posterior fossa."}, 
-                                {text: "Hemangioblastoma", isAi: true, exp: "Uncommonly calcified."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which statement regarding cranial tumors is wrong?", 
-                            opts: [
-                                {text: "Meningioma arises from arachnoid cap cells", exp: "True."}, 
-                                {text: "Glioblastoma is highly malignant", exp: "True."}, 
-                                {text: "Ependymoma is more common than astrocytoma", isCorrect: true, exp: "Incorrect; astrocytomas are far more common."}, 
-                                {text: "Medulloblastoma may seed CSF", exp: "True."}, 
-                                {text: "Pituitary adenoma can cause visual field defects", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "A 4-year-old boy, mass in posterior fossa, appears blue on microscopy and showing Homer Wright rosettes. Most likely:", 
-                            opts: [
-                                {text: "Meningioma", exp: "Incorrect; not typical of posterior fossa in young child; no rosettes."}, 
-                                {text: "Ependymoma", exp: "Can show perivascular pseudorosettes, not Homer Wright."}, 
-                                {text: "Pilocytic astrocytoma", exp: "Biphasic pattern, Rosenthal fibers, no rosettes."}, 
-                                {text: "Medulloblastoma", isCorrect: true, exp: "Correct; small blue cell tumor with Homer Wright rosettes."}, 
-                                {text: "Hemangioblastoma", exp: "Shows foamy stromal cells, not rosettes."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following brain tumors can disseminate through CSF (drop metastasis) to the spine?", 
-                            opts: [
-                                {text: "Oligodendroglioma", exp: "Rarely disseminates."}, 
-                                {text: "Pilocytic astrocytoma", exp: "Very rare CSF spread."}, 
-                                {text: "Diffuse astrocytoma", exp: "Rare."}, 
-                                {text: "Medulloblastoma", isCorrect: true, exp: "Correct; high propensity for CSF dissemination."}, 
-                                {text: "Vestibular schwannoma", exp: "Does not seed CSF."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "About medulloblastoma, which is wrong?", 
-                            opts: [
-                                {text: "Resistant to chemotherapy", isCorrect: true, exp: "Incorrect; medulloblastoma is chemosensitive."}, 
-                                {text: "Occurs in children <15 years old", exp: "True; peak in childhood."}, 
-                                {text: "CSF seeding", exp: "True."}, 
-                                {text: "Radiosensitive", isAi: true, exp: "True; medulloblastoma is radiosensitive."}, 
-                                {text: "Can cause hydrocephalus", isAi: true, exp: "True; posterior fossa mass obstructs CSF."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Wrong about medulloblastoma:", 
-                            opts: [
-                                {text: "Most common primary in children", exp: "True."}, 
-                                {text: "More in females", isCorrect: true, exp: "Incorrect; male predominance."}, 
-                                {text: "In posterior fossa", exp: "True."}, 
-                                {text: "Highly cellular on histology", isAi: true, exp: "True; densely packed small blue cells."}, 
-                                {text: "May present with morning headache", isAi: true, exp: "True; due to hydrocephalus."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "The most common primary brain tumor in children is:", 
-                            opts: [
-                                {text: "Medulloblastoma", isCorrect: true, exp: "Correct; most common malignant pediatric brain tumor (overall most common primary is pilocytic astrocytoma depending on classification, but medulloblastoma is often cited as most common)."}, 
-                                {text: "Pilocytic astrocytoma", exp: "The most common low-grade glioma, but not the most common primary overall if medulloblastoma is considered."}, 
-                                {text: "Ependymoma", exp: "Less common."}, 
-                                {text: "Craniopharyngioma", exp: "Less common."}, 
-                                {text: "Germinoma", exp: "Rare."}
-                            ], 
-                            eval: "The answer may be debated; pilocytic astrocytoma is the most common pediatric brain tumor by some registries, but medulloblastoma is commonly tested as the most common malignant. The source answer is medulloblastoma." 
-                        },
-                        { 
-                            q: "Drop metastases seen in:", 
-                            opts: [
-                                {text: "Meningioma", exp: "Incorrect."}, 
-                                {text: "Vestibular schwannoma", exp: "Incorrect."}, 
-                                {text: "Pituitary adenoma", exp: "Incorrect."}, 
-                                {text: "Medulloblastoma", isCorrect: true, exp: "Correct."}, 
-                                {text: "Hemangioblastoma", isAi: true, exp: "Does not drop metastasize."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following brain tumors is known to seed through the CSF?", 
-                            opts: [
-                                {text: "Glioblastoma", exp: "Rarely seeds CSF."}, 
-                                {text: "Oligodendroglioma", exp: "Uncommon."}, 
-                                {text: "Ependymoma", exp: "Can seed but less classically tested than medulloblastoma."}, 
-                                {text: "Medulloblastoma", isCorrect: true, exp: "Correct; classic drop metastases."}, 
-                                {text: "Pilocytic astrocytoma", exp: "Very rare."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Medulloblastoma wrong:", 
-                            opts: [
-                                {text: "Radiosensitive", exp: "True."}, 
-                                {text: "Radiate whole cord", exp: "True; for craniospinal prophylaxis."}, 
-                                {text: "Chemo-resistant", isCorrect: true, exp: "Incorrect; it is chemosensitive."}, 
-                                {text: "Occurs in cerebellum", isAi: true, exp: "True."}, 
-                                {text: "Can metastasize via CSF", isAi: true, exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Case history of a child with medulloblastoma. He has hydrocephalus. Which of the following is wrong about the management:", 
-                            opts: [
-                                {text: "Total and axial radiotherapy", exp: "True; craniospinal irradiation is standard."}, 
-                                {text: "Chemotherapy", exp: "True; part of protocol."}, 
-                                {text: "Repeat surgery for residual mass", exp: "May be true if safe, not generally wrong."}, 
-                                {text: "Drainage procedure", isCorrect: true, exp: "Incorrect as primary management; temporary drainage may be needed, but definitive treatment is tumor resection and/or CSF shunting, not a simple drainage."}, 
-                                {text: "Steroids to reduce edema", isAi: true, exp: "True; used perioperatively."}
-                            ], 
-                            eval: "The answer is correct; simple drainage alone is not standard definitive care." 
-                        },
-                        { 
-                            q: "Medulloblastoma, which is not a sign of poor prognosis:", 
-                            opts: [
-                                {text: "Age <3 years", exp: "Poor prognosis."}, 
-                                {text: "Metastatic disease at diagnosis", exp: "Poor."}, 
-                                {text: "Incomplete resection", exp: "Poor."}, 
-                                {text: "No evidence of residual tumor after resection", isCorrect: true, exp: "Favorable, not poor."}, 
-                                {text: "Large tumor size", isAi: true, exp: "Often associated with worse outcome."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "About meningioma wrong:", 
-                            opts: [
-                                {text: "Metastasis is common", isCorrect: true, exp: "Incorrect; meningiomas rarely metastasize."}, 
-                                {text: "Estrogen receptors", exp: "True; many express progesterone/estrogen receptors."}, 
-                                {text: "Usually benign", isAi: true, exp: "True, WHO grade I."}, 
-                                {text: "Arises from arachnoid cap cells", isAi: true, exp: "True."}, 
-                                {text: "May cause seizures", isAi: true, exp: "True, depending on location."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "According to WHO classification, which of the following is grade II:", 
-                            opts: [
-                                {text: "Anaplastic astrocytoma", exp: "Grade III."}, 
-                                {text: "Glioblastoma multiforme", exp: "Grade IV."}, 
-                                {text: "Diffuse fibrillary astrocytoma", exp: "Grade II."}, 
-                                {text: "Atypical meningioma", exp: "Grade II."}, 
-                                {text: "Diffuse fibrillary astrocytoma and Atypical meningioma", isCorrect: true, exp: "Correct; both are WHO grade II."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Cranial meningiomas arise from:", 
-                            opts: [
-                                {text: "Dura", exp: "Incorrect; meningiomas are attached to dura but arise from arachnoid."}, 
-                                {text: "Neuroblast", exp: "Incorrect."}, 
-                                {text: "Pia mater", exp: "Incorrect."}, 
-                                {text: "Periosteum", exp: "Incorrect."}, 
-                                {text: "Arachnoid cap cells", isCorrect: true, exp: "Correct."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Most common location of intracranial meningioma:", 
-                            opts: [
-                                {text: "Convexity", exp: "Common, but parasagittal/falcine more frequent."}, 
-                                {text: "Parasagittal", isCorrect: true, exp: "Correct; the most common site."}, 
-                                {text: "Sphenoid ridge", exp: "Less common."}, 
-                                {text: "Tuberculum sellae", exp: "Less common."}, 
-                                {text: "Olfactory groove", exp: "Less common."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "All are risk factors of meningioma except:", 
-                            opts: [
-                                {text: "Recurrent meningitis", isCorrect: true, exp: "Not a known risk factor."}, 
-                                {text: "Trauma", exp: "Some association."}, 
-                                {text: "Radiation", exp: "Established risk."}, 
-                                {text: "Female gender", exp: "Predisposition."}, 
-                                {text: "Neurofibromatosis type 2", isAi: true, exp: "True; NF2 increases meningioma risk."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "About meningioma, which is not true:", 
-                            opts: [
-                                {text: "Usually metastasizes", isCorrect: true, exp: "Not true; metastasis is rare."}, 
-                                {text: "History of radiation is a risk factor", exp: "True."}, 
-                                {text: "Can express progesterone receptors", isAi: true, exp: "True."}, 
-                                {text: "Most common extra-axial tumor", isAi: true, exp: "True."}, 
-                                {text: "Can cause hyperostosis", isAi: true, exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following cannot be caused by a suprasellar mass:", 
-                            opts: [
-                                {text: "Anosmia", exp: "Can occur if mass extends to olfactory groove."}, 
-                                {text: "Fits", exp: "Can occur from frontal lobe compression."}, 
-                                {text: "Headache", exp: "Common due to raised ICP."}, 
-                                {text: "Motor deficits", isCorrect: true, exp: "Typically not an early or direct effect; suprasellar masses cause visual and endocrine symptoms; motor deficits would require significant lateral extension."}, 
-                                {text: "Bitemporal hemianopia", isAi: true, exp: "Classic compression of optic chiasm."}
-                            ], 
-                            eval: "The answer is correct; motor deficits are least likely with a purely suprasellar mass." 
-                        },
-                        { 
-                            q: "Which of the following brain tumors has the best prognosis in general?", 
-                            opts: [
-                                {text: "Glioblastoma", exp: "Poor prognosis."}, 
-                                {text: "Ependymoma", exp: "Variable, worse than meningioma."}, 
-                                {text: "Astrocytoma", exp: "Grade-dependent, often infiltrative."}, 
-                                {text: "Meningioma", isCorrect: true, exp: "Correct; benign, often curable with surgery."}, 
-                                {text: "Medulloblastoma", exp: "Malignant but treatable, prognosis worse than benign meningioma."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Concerning pituitary tumors all of the following statements are true except:", 
-                            opts: [
-                                {text: "Transsphenoidal approach is the most common surgical approach", exp: "True."}, 
-                                {text: "Prolactinoma is the most common secreting pituitary tumor", exp: "True."}, 
-                                {text: "The visual field deficit is usually due to invasion of the cavernous sinuses on both sides of sella turcica", isCorrect: true, exp: "Incorrect; visual field defects are due to compression of the optic chiasm, not cavernous sinus invasion."}, 
-                                {text: "Macroadenoma include all pituitary adenomas size with more than 10 mm", exp: "True."}, 
-                                {text: "They represent about 8–14% of all brain tumors", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Concerning pituitary tumors all of the following statements are true except:", 
-                            opts: [
-                                {text: "Transsphenoidal approach is the most common surgical approach", exp: "True."}, 
-                                {text: "GH secreting adenoma is the most common secreting pituitary tumor", isCorrect: true, exp: "Incorrect; prolactinoma is the most common."}, 
-                                {text: "Medical treatment is available for prolactin secreting tumors", exp: "True."}, 
-                                {text: "Macroadenoma include all pituitary adenomas size with more than 10 mm", exp: "True."}, 
-                                {text: "They represent about 8–14% of all brain tumors", exp: "True."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Concerning pituitary tumors all of the following statements are true except:", 
-                            opts: [
-                                {text: "Transsphenoidal approach is the most common surgical approach", exp: "True."}, 
-                                {text: "Prolactinoma is the most common secreting pituitary tumor", exp: "True."}, 
-                                {text: "Medical treatment is available for prolactin secreting tumors", exp: "True."}, 
-                                {text: "Macroadenoma include all pituitary adenomas size with more than 10 mm", exp: "True."}, 
-                                {text: "They represent about 1–2% of all brain tumors", isCorrect: true, exp: "Incorrect; they represent about 8–15%."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Galactorrhea-amenorrhea syndrome is most commonly caused by:", 
-                            opts: [
-                                {text: "Chromophobe adenoma", exp: "May produce prolactin but not most specific."}, 
-                                {text: "Prolactinoma", isCorrect: true, exp: "Correct; directly secretes prolactin."}, 
-                                {text: "Chorionic carcinoma", exp: "Rare."}, 
-                                {text: "Basophil adenoma", exp: "Usually ACTH."}, 
-                                {text: "Astrocytoma", exp: "Not hormonal."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Surgery is usually not the primary treatment option in:", 
-                            opts: [
-                                {text: "Prolactinoma", isCorrect: true, exp: "Correct; medical therapy with dopamine agonists is first line."}, 
-                                {text: "Microadenoma with acromegaly", exp: "Surgery is primary if possible."}, 
-                                {text: "Nonfunctioning pituitary adenoma", exp: "Surgery for mass effect."}, 
-                                {text: "Invasive pituitary adenoma", exp: "Often requires debulking."}, 
-                                {text: "Microadenoma with Cushing", exp: "Surgery is standard for Cushing’s disease."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Cushing's syndrome can be due to all except:", 
-                            opts: [
-                                {text: "Adrenal tumor", exp: "Can cause Cushing’s."}, 
-                                {text: "Pituitary tumor", exp: "ACTH-secreting adenoma."}, 
-                                {text: "Lung tumor", exp: "Ectopic ACTH production."}, 
-                                {text: "Breast carcinoma", exp: "Rare, can produce ectopic ACTH but extremely uncommon."}, 
-                                {text: "Teratogenic", isCorrect: true, exp: "Incorrect; not a known cause of Cushing’s syndrome."}
-                            ], 
-                            eval: "The answer 'Teratogenic' is unclear; breast carcinoma can rarely cause ectopic Cushing's, but teratogenic is not a standard cause. The answer might be correct." 
-                        },
-                        { 
-                            q: "Wrong about pituitary adenoma:", 
-                            opts: [
-                                {text: "Microadenoma less than 1 cm", exp: "True."}, 
-                                {text: "Prolactinoma is the most common type of pituitary adenoma", exp: "True."}, 
-                                {text: "More common in 40-60 year old", isCorrect: true, exp: "Incorrect; peak incidence is around 30-50, but statement may be considered wrong as pituitary adenomas occur across a broad age range, not specifically 40-60."}, 
-                                {text: "Can present with hypopituitarism", exp: "True."}, 
-                                {text: "Can cause bitemporal hemianopia", exp: "True."}
-                            ], 
-                            eval: "The answer may be debated; many sources state peak incidence around 40-60, but the exam source considers it wrong. We keep the answer." 
-                        },
-                        { 
-                            q: "A 10-year-old boy, short stature, complaining of bitemporal hemianopia, on MRI shows a mass that is calcified and shows cholesterol crystals. Most likely:", 
-                            opts: [
-                                {text: "Craniopharyngioma", isCorrect: true, exp: "Correct; calcified suprasellar mass with cholesterol crystals, growth failure, visual deficits."}, 
-                                {text: "Pituitary adenoma", exp: "Rarely calcified, no cholesterol."}, 
-                                {text: "Rathke's cyst", exp: "Usually not calcified."}, 
-                                {text: "Germinoma", isAi: true, exp: "May present with diabetes insipidus, no cholesterol crystals."}, 
-                                {text: "Hypothalamic glioma", isAi: true, exp: "Not typically calcified with cholesterol."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "One of these symptoms isn't consistent with a diagnosis of vestibular schwannoma (which is not always present and may be absent):", 
-                            opts: [
-                                {text: "Ataxia", exp: "Can occur with large tumors compressing cerebellum."}, 
-                                {text: "Hydrocephalus", isCorrect: true, exp: "Not a typical or consistent symptom; occurs only if brainstem compression obstructs CSF."}, 
-                                {text: "Hearing loss", exp: "Very common, almost always present."}, 
-                                {text: "Vertigo", exp: "Less common than unsteadiness."}, 
-                                {text: "Tinnitus", isAi: true, exp: "Common."}
-                            ], 
-                            eval: "The answer is correct; hydrocephalus is not a consistent feature." 
-                        },
-                        { 
-                            q: "Associated with vestibular schwannoma >2 cm but <4 cm:", 
-                            opts: [
-                                {text: "Facial nerve palsy", isCorrect: true, exp: "Can occur as tumor enlarges and compresses facial nerve."}, 
-                                {text: "Hydrocephalus", exp: "Usually with larger tumors."}, 
-                                {text: "Hearing loss", isAi: true, exp: "Almost always present regardless of size."}, 
-                                {text: "Cerebellar signs", isAi: true, exp: "With significant compression."}, 
-                                {text: "Trigeminal neuralgia", isAi: true, exp: "May occur with larger tumors."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Which of the following is not an intramedullary spinal tumor?", 
-                            opts: [
-                                {text: "Ependymoma", exp: "Intramedullary."}, 
-                                {text: "Astrocytoma", exp: "Intramedullary."}, 
-                                {text: "Hemangioblastoma", exp: "Intramedullary."}, 
-                                {text: "Schwannoma", isCorrect: true, exp: "Correct; arises from nerve sheath, typically intradural extramedullary."}, 
-                                {text: "Lipoma", isAi: true, exp: "Can be intramedullary but also other compartments; however, the classic not intramedullary is schwannoma."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
-                            q: "Patient has ring enhancing lesion in frontal lobe, papilledema on the right, normal optic disc on left, and positive pronator drift on the left. He is an IV drug abuser. Most likely cause:", 
-                            opts: [
-                                {text: "Otitis media", exp: "Can cause brain abscess but less likely with IV drug use."}, 
-                                {text: "Endocarditis", isCorrect: true, exp: "Correct; IV drug users are at risk for endocarditis with septic emboli to brain causing abscess."}, 
-                                {text: "Dental abscess", exp: "Possible but less specific."}, 
-                                {text: "Lung abscess", exp: "Could seed but endocarditis more classic."}, 
-                                {text: "Sinusitis", isAi: true, exp: "Less likely."}
-                            ], 
-                            eval: "The answer is correct." 
-                        }
-                    ] }, { t: "Increased ICP", qs: [] }, { t: "Subarachnoid Hemorrhage", qs: [] },
+                    ]},
+                    { t: "Brain Tumors", qs: [] }, { t: "Increased ICP", qs: [] }, { t: "Subarachnoid Hemorrhage", qs: [] },
                     { t: "Hydrocephalus", qs: [] }, { t: "Spinal Tumors", qs: [] }, { t: "Spina Bifida", qs: [] },
                     { t: "Degenerative Spinal Disease", qs: [] }, { t: "Spinal Cord Injury", qs: [] }
                 ]
