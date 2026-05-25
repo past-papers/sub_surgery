@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GW7LMR7HSJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GW7LMR7HSJ');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub-Surgery Past Papers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        .scale-up { animation: scaleUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes scaleUp { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+        .dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+        
+        /* Modern Colorful Background for Home */
+        .home-bg {
+            background-color: #f8fafc;
+            background-image: radial-gradient(at 0% 0%, hsla(217,100%,94%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(280,100%,96%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, hsla(180,100%,94%,1) 0, transparent 50%), 
+                              radial-gradient(at 0% 100%, hsla(34,100%,94%,1) 0, transparent 50%);
+        }
+        .dark .home-bg {
+            background-color: #0f172a;
+            background-image: radial-gradient(at 0% 0%, hsla(217,50%,15%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(280,50%,15%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, hsla(180,50%,15%,1) 0, transparent 50%), 
+                              radial-gradient(at 0% 100%, hsla(34,50%,15%,1) 0, transparent 50%);
+        }
+
+        /* Distinct Modern Colorful Background for Quiz */
+        .quiz-bg {
+            background-color: #f8fafc;
+            background-image: radial-gradient(at 100% 0%, hsla(200,100%,92%,1) 0, transparent 50%), 
+                              radial-gradient(at 0% 100%, hsla(250,100%,95%,1) 0, transparent 50%);
+        }
+        .dark .quiz-bg {
+            background-color: #0f172a;
+            background-image: radial-gradient(at 100% 0%, hsla(200,50%,15%,1) 0, transparent 50%), 
+                              radial-gradient(at 0% 100%, hsla(250,50%,18%,1) 0, transparent 50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const topicsData = [
+            {
+                main: "Ophthalmology",
+                color: "blue",
+                subtopics: [
+                    { t: "Optics & refraction", qs: [
+                        { 
+                            q: "Myopia can be associated with:", 
+                            opts: [
+                                {text: "Closed angle glaucoma", exp: "Myopic eyes usually have deeper anterior chambers, making angle closure less likely; this is not a typical association."}, 
+                                {text: "Open angle glaucoma", isCorrect: true, exp: "Correct. Myopia is a well-established risk factor for primary open angle glaucoma."}, 
+                                {text: "Pigment dispersion glaucoma", isAi: true, exp: "This is also associated with myopia (especially young myopic males), but the single best answer here is open angle glaucoma as the classic association."}, 
+                                {text: "Normal tension glaucoma", isAi: true, exp: "Myopia is a risk factor here as well, but open angle glaucoma is the broader, more direct association taught."}, 
+                                {text: "Steroid-induced glaucoma", isAi: true, exp: "Not specifically linked to myopia; it is a response to corticosteroid use."}
+                            ], 
+                            eval: "The answer seems correct. Myopia is a known risk factor for open angle glaucoma." 
+                        },
+                        { 
+                            q: "Which of the following does NOT cause hypermetropia?", 
+                            opts: [
+                                {text: "Short axial length", exp: "A classic cause; the eye is too short, focusing light behind the retina (hypermetropia)."}, 
+                                {text: "Flat cornea", exp: "Decreased corneal curvature reduces refractive power, leading to hypermetropia."}, 
+                                {text: "Keratoconus", isCorrect: true, exp: "Causes progressive corneal steepening and irregular myopic astigmatism, not hypermetropia. Correct for “does NOT cause.”"}, 
+                                {text: "Aphakia", isAi: true, exp: "Absence of the crystalline lens results in high hypermetropia (requires strong plus correction)."}, 
+                                {text: "Posterior dislocation of the lens", isAi: true, exp: "Displacing the lens posteriorly reduces its effective power, causing hypermetropia."}
+                            ], 
+                            eval: "The answer is correct. Keratoconus produces myopia and irregular astigmatism, not hypermetropia." 
+                        },
+                        { 
+                            q: "Major contributor to the total refractive power of the eye is:", 
+                            opts: [
+                                {text: "Axial length of the eyeball", exp: "Determines where the focused image lands but is not a refractive power component itself."}, 
+                                {text: "Curvature of the cornea", exp: "Contributes to the refractive power, but the air–tear interface is the major source."}, 
+                                {text: "Refractive power of the cornea", isCorrect: true, exp: "Correct. The cornea provides about 43 diopters, roughly two-thirds of the eye’s total refractive power, mainly due to the air–tear film interface."}, 
+                                {text: "Lens", exp: "Contributes about 15–20 D, less than the cornea."}, 
+                                {text: "Corneal thickness", isAi: true, exp: "Not a major determinant of refractive power; curvature and refractive index differences matter far more."}
+                            ], 
+                            eval: "The answer is correct. The air–cornea interface is the single largest contributor to the eye's refractive power." 
+                        },
+                        { 
+                            q: "Cylindrical lenses are prescribed for:", 
+                            opts: [
+                                {text: "Astigmatism", isCorrect: true, exp: "Correct. Cylindrical lenses correct the uneven corneal curvature that defines astigmatism."}, 
+                                {text: "Presbyopia", exp: "Treated with convex (plus) spherical lenses or multifocals, not cylinders."}, 
+                                {text: "Hypermetropia", exp: "Corrected with convex spherical lenses."}, 
+                                {text: "Myopia", exp: "Corrected with concave spherical lenses."}, 
+                                {text: "Squint", exp: "Managed with prisms, surgery, or refraction, not primarily cylindrical lenses."}
+                            ], 
+                            eval: "The answer is correct. Astigmatism is the only condition that specifically requires a cylindrical correction." 
+                        },
+                        { 
+                            q: "Not associated with hypermetropia:", 
+                            opts: [
+                                {text: "Presbyopia", exp: "Often superimposed on hypermetropia; latent hypermetropia can manifest as early presbyopic symptoms."}, 
+                                {text: "Keratoconus", isCorrect: true, exp: "Correct for “not associated.” It causes myopic astigmatism, not hypermetropia."}, 
+                                {text: "Accommodative esotropia", isAi: true, exp: "Strongly linked to uncorrected hypermetropia in children."}, 
+                                {text: "Short axial length", isAi: true, exp: "A primary anatomical cause of hypermetropia."}, 
+                                {text: "Flat cornea", isAi: true, exp: "Reduced corneal curvature leads to hypermetropia."}
+                            ], 
+                            eval: "The answer is correct. Keratoconus does not cause hypermetropia." 
+                        },
+                        { 
+                            q: "Regarding myopia, all of the following are true except:", 
+                            opts: [
+                                {text: "It is corrected with concave lenses", exp: "True. Minus lenses diverge light to focus it on the retina."}, 
+                                {text: "Biconvex lenses are used for correction", isCorrect: true, exp: "False; biconvex lenses are plus lenses used for hypermetropia. This is the exception."}, 
+                                {text: "Axial length may be increased", exp: "True; axial elongation is the most common cause of myopia."}, 
+                                {text: "It is a risk factor for retinal detachment", exp: "True, especially in high myopia."}, 
+                                {text: "It can be associated with open-angle glaucoma", exp: "True; myopia is a known risk factor."}
+                            ], 
+                            eval: "The answer is correct. Myopia is corrected with concave (minus) lenses, not biconvex." 
+                        },
+                        { 
+                            q: "A patient complains that distant objects appear blurry while near objects are clear. This condition is called:", 
+                            opts: [
+                                {text: "Myopia", isCorrect: true, exp: "Correct. The eye is too powerful/long, so distant objects are blurred, near is clear."}, 
+                                {text: "Hypermetropia", exp: "Near objects are blurred first (accommodation may clear distance)."}, 
+                                {text: "Presbyopia", exp: "Age-related loss of accommodation; near blur, distance clear."}, 
+                                {text: "Astigmatism", exp: "Blur at all distances."}, 
+                                {text: "Amblyopia", exp: "Reduced vision not correctable by refraction, not a refractive error."}
+                            ], 
+                            eval: "The description is classic for myopia." 
+                        },
+                        { 
+                            q: "Which of the following is NOT a risk factor for myopia?", 
+                            opts: [
+                                {text: "Old age", isCorrect: true, exp: "Correct. Myopia usually develops in childhood/young adulthood; old age is associated with presbyopia and hypermetropic shift."}, 
+                                {text: "Long axial length", exp: "Key anatomical risk factor for myopia."}, 
+                                {text: "Post cataract surgery", exp: "Can induce a myopic shift if a powerful IOL is placed or if the lens is absent (aphakia with a plus lens, but pseudophakic myopia possible)."}, 
+                                {text: "Keratoconus", exp: "Produces progressive myopia and astigmatism."}, 
+                                {text: "Excessive near work", isAi: true, exp: "Epidemiological risk factor for myopia development."}
+                            ], 
+                            eval: "The answer is correct. Old age itself is not a risk factor for developing myopia." 
+                        }
+                    ]},
+                    { t: "Lens and Cataract", qs: [
+                        { 
+                            q: "A patient complains of glare and decreased contrast sensitivity. This is most likely due to:", 
+                            opts: [
+                                {text: "Nuclear sclerotic cataract", exp: "More associated with gradual blurring and myopic shift, less with glare."}, 
+                                {text: "Cortical cataract", exp: "May cause glare from light scattering by spoke opacities, but posterior subcapsular is classic for glare."}, 
+                                {text: "Posterior subcapsular cataract", isCorrect: true, exp: "Correct. Due to its central location at the nodal point, it disproportionately causes glare and reduced contrast sensitivity, especially in bright light."}, 
+                                {text: "Anterior subcapsular cataract", isAi: true, exp: "Less common; may cause glare but posterior subcapsular is the classic."}, 
+                                {text: "Mature cataract", isAi: true, exp: "Causes severe visual loss, but the specific early symptom of glare points to posterior subcapsular."}
+                            ], 
+                            eval: "Glare and poor contrast sensitivity are hallmark symptoms of posterior subcapsular cataract." 
+                        },
+                        { 
+                            q: "Which of the following cannot be used to correct the vision of a patient with one aphakic eye?", 
+                            opts: [
+                                {text: "Contact lens", exp: "Can provide good optical correction with minimal aniseikonia; acceptable."}, 
+                                {text: "Intraocular lens (secondary implantation)", exp: "Ideal; secondary IOL eliminates aniseikonia."}, 
+                                {text: "Spectacles (glasses)", isCorrect: true, exp: "Correct. A high plus spectacle lens in one aphakic eye causes unacceptable aniseikonia (image size difference ~30%) and diplopia, so not used."}, 
+                                {text: "Epikeratophakia", isAi: true, exp: "Surgical onlay can correct aphakia but is rarely used; still an option."}, 
+                                {text: "Refractive lens exchange in the fellow eye", isAi: true, exp: "Could balance but is not a primary choice for the aphakic eye itself; the question focuses on correcting the aphakic eye, and spectacles remain the one that “cannot be used” due to aniseikonia."}
+                            ], 
+                            eval: "Spectacle correction of unilateral aphakia causes disabling aniseikonia and is not prescribed." 
+                        }
+                    ]},
+                    { t: "Cornea & sclera", qs: [
+                        { 
+                            q: "All of the following surgeries commonly cause astigmatism except:", 
+                            opts: [
+                                {text: "Retinal detachment surgery", isCorrect: true, exp: "The intended exception. Scleral buckling can induce astigmatism, but if the question refers to vitrectomy without buckle, it may not. The source marks it as the one that does not cause astigmatism."}, 
+                                {text: "Pterygium surgery", exp: "Removal can alter corneal contour and induce astigmatism."}, 
+                                {text: "Cataract surgery", exp: "Corneal incisions (especially extracapsular or large limbal) induce astigmatism."}, 
+                                {text: "Penetrating keratoplasty", isAi: true, exp: "Almost always results in significant postoperative astigmatism."}, 
+                                {text: "Trabeculectomy", isAi: true, exp: "Can induce astigmatism due to scleral flap and wound healing."}
+                            ], 
+                            eval: "While scleral buckling can induce it, simple vitrectomy often does not. This is typically the intended answer." 
+                        },
+                        { 
+                            q: "All of the following are indications for corneal transplant except:", 
+                            opts: [
+                                {text: "High myopia", isCorrect: true, exp: "Correct exception. High myopia is treated with refractive procedures (LASIK, phakic IOL) or clear lens extraction, not keratoplasty."}, 
+                                {text: "Pseudophakic bullous keratopathy", exp: "A leading indication for endothelial keratoplasty."}, 
+                                {text: "Aphakic bullous keratopathy", exp: "Corneal decompensation after cataract removal without IOL is an indication."}, 
+                                {text: "Severe keratoconus", exp: "When contact lenses fail, keratoplasty is indicated."}, 
+                                {text: "Corneal scarring", exp: "Opacities from trauma or infection are common transplant indications."}
+                            ], 
+                            eval: "High myopia alone is not an indication for corneal grafting." 
+                        },
+                        { 
+                            q: "The most common complication after LASIK surgery is:", 
+                            opts: [
+                                {text: "Endophthalmitis", exp: "Extremely rare after LASIK."}, 
+                                {text: "Infection", exp: "Uncommon; dry eye is far more frequent."}, 
+                                {text: "Blepharitis", exp: "Can predispose to dryness but is not the most common post-LASIK complication."}, 
+                                {text: "Dryness", isCorrect: true, exp: "Correct. Dry eye syndrome is the most common complaint after LASIK due to corneal nerve disruption."}, 
+                                {text: "Glaucoma", exp: "Steroid-induced IOP rise can occur but is not the most common."}
+                            ], 
+                            eval: "Post-LASIK dryness is exceedingly common." 
+                        },
+                        { 
+                            q: "Contraindication for LASIK surgery?", 
+                            opts: [
+                                {text: "26-year-old pregnant lady", isCorrect: true, exp: "Correct. Pregnancy causes hormonal refractive fluctuations and is an absolute contraindication."}, 
+                                {text: "Mild dryness", exp: "Relative contraindication; can be optimized but not an absolute stop."}, 
+                                {text: "22-year-old medical student", exp: "Young age with stable refraction is typically fine."}, 
+                                {text: "40-year-old businessman", exp: "Acceptable if presbyopia is discussed and refraction stable."}, 
+                                {text: "Myopia of -3.00 D, stable for 2 years", isAi: true, exp: "Actually a prerequisite, not a contraindication."}
+                            ], 
+                            eval: "Pregnancy is a clear temporary contraindication for LASIK due to refractive fluctuations." 
+                        },
+                        { 
+                            q: "Regarding corneal grafting, one statement is false:", 
+                            opts: [
+                                {text: "Rejection is a type 2 hypersensitivity reaction", isCorrect: true, exp: "False. Corneal graft rejection is predominantly a type 4 (cell-mediated) hypersensitivity. Type 2 is antibody-mediated. This is the incorrect statement."}, 
+                                {text: "Most common indication worldwide is pseudophakic bullous keratopathy", exp: "True in many developed countries; globally, corneal scar/infection may lead, but the statement is often accepted."}, 
+                                {text: "Rejection can occur in all layers of the cornea", exp: "True; epithelial, stromal, and endothelial rejection are recognized."}, 
+                                {text: "Graft rejection can often be treated with topical corticosteroids", isAi: true, exp: "True, high-dose topical steroids are the mainstay."}, 
+                                {text: "Endothelial decompensation is a common cause of late graft failure", isAi: true, exp: "True, late failure is often due to chronic endothelial cell loss."}
+                            ], 
+                            eval: "Graft rejection is type 4 (cell-mediated), not type 2 hypersensitivity." 
+                        },
+                        { 
+                            q: "Which of the following is a wrong statement?", 
+                            opts: [
+                                {text: "The most common indication for penetrating keratoplasty is corneal ectasia", isCorrect: true, exp: "Wrong as a global statement; in many settings, pseudophakic bullous keratopathy or corneal scars outnumber ectasia. The source indicates this is the false statement."}, 
+                                {text: "Pseudophakic bullous keratopathy is the most common indication worldwide", exp: "Often stated as true in modern practice."}, 
+                                {text: "Keratoconus is a frequent indication in young patients", exp: "True; it is a common indication in that age group."}, 
+                                {text: "Corneal scarring from infection is a leading indication in developing countries", exp: "True; infectious keratitis remains a major indication."}, 
+                                {text: "Immunologic rejection is a leading cause of graft failure", exp: "True."}
+                            ], 
+                            eval: "Pseudophakic bullous keratopathy often overtakes ectasia globally." 
+                        }
+                    ]},
+                    { t: "Strabismus", qs: [
+                        { 
+                            q: "Esotropia in a young child can be caused by all of the following except:", 
+                            opts: [
+                                {text: "Posterior communicating artery aneurysm", isCorrect: true, exp: "Correct exception. It typically causes a third nerve palsy with exotropia and pupil involvement, not esotropia."}, 
+                                {text: "Hypermetropia", exp: "Accommodative esotropia is a common cause in children."}, 
+                                {text: "Optic atrophy", exp: "Poor vision in one eye can disrupt fusion and lead to sensory esotropia."}, 
+                                {text: "Corneal opacity", exp: "Same mechanism as optic atrophy; sensory deprivation esotropia."}, 
+                                {text: "Sixth cranial nerve palsy", isAi: true, exp: "Causes lateral rectus weakness and an incomitant esotropia."}
+                            ], 
+                            eval: "PCA aneurysm causes third nerve palsy and exotropia, not esotropia." 
+                        },
+                        { 
+                            q: "Which of the following are yoke muscles?", 
+                            opts: [
+                                {text: "Right medial rectus and left lateral rectus", isCorrect: true, exp: "Correct. These are contralateral synergists for leftward gaze."}, 
+                                {text: "Right medial rectus and left medial rectus", exp: "Both adductors; they are antagonists in horizontal gaze, not yoke."}, 
+                                {text: "Right superior rectus and left superior oblique", exp: "Not a yoke pair for any cardinal gaze."}, 
+                                {text: "Right superior oblique and left inferior rectus", isAi: true, exp: "These are yoke muscles for depression to the right (dextrodepression). Though a valid yoke pair, the classic single best answer usually expected is the horizontal yoke, so A remains the intended choice."}, 
+                                {text: "Right inferior oblique and left superior rectus", isAi: true, exp: "Yoke for elevation to the left (levoelevation). Again a real yoke pair, but the source selects the horizontal pair."}
+                            ], 
+                            eval: "These are contralateral synergists for leftward gaze." 
+                        },
+                        { 
+                            q: "A 2-month-old baby with eyes deviated inwardly. One correct statement is:", 
+                            opts: [
+                                {text: "Presence of epicanthal folds rules out serious condition", exp: "Incorrect; epicanthus can mimic esotropia (pseudoesotropia) but does not exclude true pathology."}, 
+                                {text: "Obtaining family history isn’t important", exp: "Incorrect; family history of strabismus is highly relevant."}, 
+                                {text: "Presence of paralytic squint at 2 months isn’t possible", exp: "Incorrect; congenital nerve palsies can present early."}, 
+                                {text: "Fundoscopy is a must", isCorrect: true, exp: "Correct. A red reflex and fundus exam are essential to rule out retinoblastoma or other organic causes of esotropia."}, 
+                                {text: "Reassure mom", exp: "Incorrect without proper examination; true strabismus at this age needs evaluation."}
+                            ], 
+                            eval: "Fundoscopy is mandatory to rule out life-/vision-threatening conditions." 
+                        },
+                        { 
+                            q: "If you want to look up and to the right side, what combination of muscles is used?", 
+                            opts: [
+                                {text: "Right superior rectus & left superior oblique", exp: "Right SR elevates, but left SO depresses; not coordinated for up-right."}, 
+                                {text: "Right inferior rectus & right superior oblique", exp: "Both depressors; for down-gaze."}, 
+                                {text: "Right superior rectus & left inferior oblique", isCorrect: true, exp: "Correct. Right SR elevates and adducts; left IO elevates and abducts; together they move the eyes up and right."}, 
+                                {text: "Right inferior rectus & right inferior oblique", exp: "Mixed vertical actions; not a yoke pair for up-right."}, 
+                                {text: "Right superior rectus & right inferior oblique", exp: "Both act on the right eye; not a contralateral yoke pair."}
+                            ], 
+                            eval: "Classic yoke pair for dextroelevation." 
+                        },
+                        { 
+                            q: "In infantile esotropia, which is wrong?", 
+                            opts: [
+                                {text: "Similar to injury of both 6th cranial nerves", exp: "True; bilateral lateral rectus palsy produces an esotropia with cross-fixation, mimicking infantile esotropia."}, 
+                                {text: "Might be associated with hypermetropia", isCorrect: true, exp: "Usually infantile esotropia shows little or no significant refractive error; accommodative esotropia is hypermetropia-related. Many textbooks say it is not associated with high hypermetropia, so this could be wrong."}, 
+                                {text: "Amblyopia is common", exp: "True; cross-fixation can lead to amblyopia if one eye is preferred."}, 
+                                {text: "Happens in the first year of life", exp: "True; onset is typically before 6 months."}, 
+                                {text: "Treatment is only surgical", exp: "Also potentially wrong; treatment includes occlusion for amblyopia, glasses if there is significant hypermetropia, and surgery. It is not 'only' surgical. Both can be considered false depending on the exact source."}
+                            ], 
+                            eval: "Commonly, infantile esotropia is not associated with high hypermetropia." 
+                        },
+                        { 
+                            q: "About infantile esotropia, what is true?", 
+                            opts: [
+                                {text: "Presents by child’s 2nd birthday", exp: "Incorrect; true onset is within the first 6 months."}, 
+                                {text: "Amblyopia is rare", exp: "Incorrect; amblyopia occurs in 17–50%."}, 
+                                {text: "Ocular fixation (cross-fixation)", isCorrect: true, exp: "Correct. Children often use the left eye to look right and right eye to look left."}, 
+                                {text: "Associated with refractive error like hypermetropia", exp: "Incorrect; infantile esotropia usually has no significant hypermetropia."}, 
+                                {text: "Surgery is rarely needed", isAi: true, exp: "Incorrect; surgery is the mainstay after addressing amblyopia."}
+                            ], 
+                            eval: "Cross-fixation is a hallmark of infantile esotropia." 
+                        },
+                        { 
+                            q: "All are causes of esotropia (both eyes adducted) except:", 
+                            opts: [
+                                {text: "3rd nerve palsy", isCorrect: true, exp: "Correct exception. Third nerve palsy causes exotropia (eye deviated down and out), not esotropia."}, 
+                                {text: "Hypermetropia", exp: "Accommodative esotropia."}, 
+                                {text: "Nystagmus", exp: "Nystagmus blockage syndrome can produce esotropia."}, 
+                                {text: "Infantile esotropia", exp: "Classic bilateral adduction."}, 
+                                {text: "Tumors (brainstem)", exp: "Brainstem tumors (e.g., pontine glioma) can cause bilateral esotropia by affecting the abducens nuclei."}
+                            ], 
+                            eval: "Third nerve palsy causes exotropia, not esotropia." 
+                        },
+                        { 
+                            q: "Most common cause of strabismus in a child under 1 year:", 
+                            opts: [
+                                {text: "Accommodative esotropia", exp: "Usually appears later (2–5 years), after hypermetropia-driven accommodation."}, 
+                                {text: "Infantile esotropia syndrome", isCorrect: true, exp: "Correct. Onset before 6 months; most common ocular misalignment in infancy."}, 
+                                {text: "Hypertropia", exp: "Much less common."}, 
+                                {text: "Congenital fourth nerve palsy", isAi: true, exp: "Causes hypertropia, not the most common overall strabismus."}, 
+                                {text: "Duane retraction syndrome", isAi: true, exp: "A congenital cranial dysinnervation disorder, far less common than infantile esotropia."}
+                            ], 
+                            eval: "Infantile esotropia is the most frequent strabismus in the first year." 
+                        },
+                        { 
+                            q: "A 20-year-old female patient with esotropia and amblyopia. All of the following can be done except:", 
+                            opts: [
+                                {text: "Measure angle of deviation", exp: "Essential for planning."}, 
+                                {text: "Use glasses to correct any refractive error", exp: "Always indicated."}, 
+                                {text: "Cover/uncover test", exp: "Part of the strabismus evaluation."}, 
+                                {text: "Total occlusion of the good eye to stimulate vision in the amblyopic eye", isCorrect: true, exp: "Not indicated at age 20; amblyopia treatment is effective only during the critical period. Patching an adult can cause intractable diplopia and does not improve vision. This is the exception."}, 
+                                {text: "Surgery for cosmetic improvement", exp: "Can be offered for alignment."}
+                            ], 
+                            eval: "Total occlusion of the normal eye is contraindicated in an adult with established amblyopia." 
+                        },
+                        { 
+                            q: "All are possible causes of esotropia in a 4-year-old child except:", 
+                            opts: [
+                                {text: "Falling down (head trauma)", exp: "Trauma can cause sixth nerve palsy (esotropia)."}, 
+                                {text: "Cerebellar astrocytoma", exp: "Can cause increased ICP or direct brainstem compression leading to esotropia."}, 
+                                {text: "Hypermetropia", exp: "Classic accommodative esotropia at this age."}, 
+                                {text: "Idiopathic intracranial hypertension", exp: "Can produce sixth nerve palsy as a false localizing sign, causing esotropia."}, 
+                                {text: "Posterior communicating artery aneurysm", isCorrect: true, exp: "Correct exception. Presents with painful third nerve palsy and exotropia, extremely rare in a child, and not a cause of esotropia."}
+                            ], 
+                            eval: "PCA aneurysm causes exotropia, not esotropia." 
+                        },
+                        { 
+                            q: "A 2-month-old child with bilateral medial deviation of the eyes. What is true?", 
+                            opts: [
+                                {text: "Fundoscopy is a must", isCorrect: true, exp: "Correct. Must exclude retinoblastoma and other posterior segment pathology."}, 
+                                {text: "Epicanthal folds rule out serious causes", exp: "Incorrect; pseudoesotropia can coexist with true strabismus or intraocular disease."}, 
+                                {text: "This presentation in adults is never due to a serious cause", exp: "Incorrect; acute esotropia in adults can signal neurological disease."}, 
+                                {text: "Reassurance is adequate", isAi: true, exp: "Dangerous without examination."}, 
+                                {text: "Immediate surgery is required", isAi: true, exp: "Not true; work-up comes first."}
+                            ], 
+                            eval: "Fundus examination is mandatory in any infant with apparent strabismus." 
+                        },
+                        { 
+                            q: "Which of the following is the least likely cause of exotropia?", 
+                            opts: [
+                                {text: "3rd CN palsy", exp: "Severe medial rectus weakness leads to exotropia."}, 
+                                {text: "Posterior communicating artery aneurysm", exp: "Classic cause of compressive third nerve palsy with exotropia."}, 
+                                {text: "Craniosynostosis", exp: "Syndromic forms (Crouzon) often present with exotropia."}, 
+                                {text: "Myopia", isCorrect: true, exp: "High myopia may be associated with exophoria or exotropia, but it is considered a weaker etiological link compared to the others. The source marks it as the least cause."}, 
+                                {text: "Fatigue", exp: "Decompensating intermittent exotropia often manifests with fatigue."}
+                            ], 
+                            eval: "Myopia can be linked to divergence excess exotropia, but it's the weakest link here." 
+                        }
+                    ]},
+                    { t: "Diabetic Retinopathy", qs: [] },
+                    { t: "Glaucoma", qs: [] },
+                    { t: "Uveitis", qs: [] },
+                    { t: "Eye injuries", qs: [] },
+                    { t: "Loss of vision", qs: [] },
+                    { t: "Lids and Lacrimal systems", qs: [] },
+                    { t: "The orbit", qs: [] },
+                    { t: "Anatomy and others", qs: [] }
+                ]
+            },
+            {
+                main: "Neurosurgery", color: "purple", subtopics: [
+                    { t: "Neuroanatomy", qs: [] }, { t: "Meningitis", qs: [] }, { t: "Head Injury", qs: [] },
+                    { t: "Brain Tumors", qs: [] }, { t: "Increased ICP", qs: [] }, { t: "Subarachnoid Hemorrhage", qs: [] },
+                    { t: "Hydrocephalus", qs: [] }, { t: "Spinal Tumors", qs: [] }, { t: "Spina Bifida", qs: [] },
+                    { t: "Degenerative Spinal Disease", qs: [] }, { t: "Spinal Cord Injury", qs: [] }
+                ]
+            },
+            {
+                main: "Ent", color: "teal", subtopics: [
+                    { t: "External Ear Conditions", qs: [] }, { t: "Acute Otitis Media", qs: [] }, { t: "Chronic Otitis Media", qs: [] },
+                    { t: "Tinnitus", qs: [] }, { t: "Vertigo", qs: [] }, { t: "Hearing Assessment in Children", qs: [] },
+                    { t: "Hearing loss", qs: [] }, { t: "Epistaxis & Nasal Trauma", qs: [] }, { t: "Rhinosinusitis", qs: [] },
+                    { t: "Adeno-Tonsillar Disease", qs: [] }, { t: "Stridor & Tracheostomy", qs: [] }, { t: "Neck Masses", qs: [] },
+                    { t: "Head and Neck & Oncology", qs: [] }
+                ]
+            },
+            {
+                main: "Urology", color: "orange", subtopics: [
+                    { t: "Prostate", qs: [] }, { t: "Hematuria", qs: [] }, { t: "Trauma", qs: [] },
+                    { t: "Infertility", qs: [] }, { t: "Scrotal Pathologies", qs: [] }, { t: "Bladder Cancer", qs: [] },
+                    { t: "Testicular Tumors", qs: [] }, { t: "Stones", qs: [] }, { t: "Kidney Transplant", qs: [] },
+                    { t: "Peds Urology", qs: [] }, { t: "Incontinence and Urodynamics", qs: [] }, { t: "UTI", qs: [] },
+                    { t: "Renal Tumors", qs: [] }, { t: "Intro (First 3 Lecs) + Misc.", qs: [] }
+                ]
+            },
+            {
+                main: "Orthopedics", color: "rose", subtopics: [
+                    { t: "Anatomy", qs: [] }, { t: "Bone Tumors", qs: [] }, { t: "Bone Healing", qs: [] },
+                    { t: "Gait", qs: [] }, { t: "Peripheral Nerve Injuries", qs: [] }, { t: "Principles of Fractures", qs: [] },
+                    { t: "Upper Limb Fractures", qs: [] }, { t: "Lower Limp Fractures", qs: [] }, { t: "Hip Fractures", qs: [] },
+                    { t: "Spinal Fractures", qs: [] }, { t: "Fractures in Pediatric Skeleton", qs: [] }, { t: "Pediatric Spinal Deformity", qs: [] },
+                    { t: "Paediatric Hip", qs: [] }, { t: "Pediatric Foot", qs: [] }, { t: "Shoulder Disorders", qs: [] },
+                    { t: "Hand Disorders", qs: [] }, { t: "Knee Disorders", qs: [] }, { t: "Sports Injuries", qs: [] },
+                    { t: "Musculoskeletal Infections", qs: [] }, { t: "Osteoarthritis", qs: [] }, { t: "Osteoporosis and Osteomalacia", qs: [] },
+                    { t: "Low Back Pain", qs: [] }, { t: "Scoliosis", qs: [] }, { t: "Orthopaedic Rehabilitation", qs: [] }
+                ]
+            }
+        ];
+
+        const colorsMap = {
+            blue: { gradient: 'bg-gradient-to-r from-blue-600 to-indigo-600', text: 'text-blue-800 dark:text-blue-300', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-800', btn: 'bg-blue-600 hover:bg-blue-700', progressBg: 'bg-blue-200/30', progressFill: 'bg-white' },
+            purple: { gradient: 'bg-gradient-to-r from-purple-600 to-fuchsia-600', text: 'text-purple-800 dark:text-purple-300', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', btn: 'bg-purple-600 hover:bg-purple-700', progressBg: 'bg-purple-200/30', progressFill: 'bg-white' },
+            teal: { gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600', text: 'text-teal-800 dark:text-teal-300', bg: 'bg-teal-50 dark:bg-teal-900/20', border: 'border-teal-200 dark:border-teal-800', btn: 'bg-teal-600 hover:bg-teal-700', progressBg: 'bg-teal-200/30', progressFill: 'bg-white' },
+            orange: { gradient: 'bg-gradient-to-r from-orange-500 to-amber-600', text: 'text-orange-800 dark:text-orange-300', bg: 'bg-orange-50 dark:bg-orange-900/20', border: 'border-orange-200 dark:border-orange-800', btn: 'bg-orange-500 hover:bg-orange-600', progressBg: 'bg-orange-200/30', progressFill: 'bg-white' },
+            rose: { gradient: 'bg-gradient-to-r from-rose-500 to-red-600', text: 'text-rose-800 dark:text-rose-300', bg: 'bg-rose-50 dark:bg-rose-900/20', border: 'border-rose-200 dark:border-rose-800', btn: 'bg-rose-600 hover:bg-rose-700', progressBg: 'bg-rose-200/30', progressFill: 'bg-white' },
+            slate: { gradient: 'bg-gradient-to-r from-slate-600 to-slate-700', text: 'text-slate-800 dark:text-slate-300', bg: 'bg-slate-50 dark:bg-slate-900/20', border: 'border-slate-200 dark:border-slate-800', btn: 'bg-slate-600 hover:bg-slate-700', progressBg: 'bg-slate-200/30', progressFill: 'bg-white' }
+        };
+
+        const flatQuestions = [];
+        let globalIdCounter = 0;
+        topicsData.forEach((mainTopic) => {
+            mainTopic.subtopics.forEach((sub) => {
+                sub.qs.forEach(q => {
+                    const o = q.opts.map(opt => opt.text);
+                    const a = q.opts.findIndex(opt => opt.isCorrect);
+                    const aiOptIndices = q.opts.reduce((acc, opt, i) => { if (opt.isAi) acc.push(i); return acc; }, []);
+                    const oExp = q.opts.map(opt => opt.exp);
+                    flatQuestions.push({
+                        id: `q_${globalIdCounter++}`,
+                        main: mainTopic.main,
+                        color: mainTopic.color,
+                        t: sub.t,
+                        q: q.q,
+                        o,
+                        a,
+                        aiOptIndices,
+                        oExp,
+                        evaluation: q.eval
+                    });
+                });
+            });
+        });
+
+        const TOTAL_QUESTIONS = flatQuestions.length;
+        const BADGES = [
+            { id: 1, req: 1, icon: "🐑", label: "First Correct", msg: "Eid Mubarak! May every year find you in good health and happiness." },
+            { id: 2, req: Math.ceil(TOTAL_QUESTIONS * 0.10), icon: "🍀", label: "10% Master", msg: "" },
+            { id: 3, req: Math.ceil(TOTAL_QUESTIONS * 0.30), icon: "🎖️", label: "30% Master", msg: "" },
+            { id: 4, req: Math.ceil(TOTAL_QUESTIONS * 0.60), icon: "👑", label: "60% Master", msg: "" },
+            { id: 5, req: TOTAL_QUESTIONS, icon: "6️⃣", label: "100% Master", msg: "Congrats on making it to the sixth year! You just got through the toughest year of med school. Be incredibly proud of yourself and have an amazing vacation. Wish you all the best!\n\nBest regards,\nMahmoud Ismail" }
+        ];
+
+        const ChatGPTIcon = ({ className }) => (
+            <svg className={className} viewBox="0 0 24 24" fill="currentColor"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.073zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.5973 8.3829l2.02-1.1686a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.3927-.6813zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L8.909 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1686a.0804.0804 0 0 1-.038-.0567V6.055a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.44a.7948.7948 0 0 0-.3927.6813v6.7417zm1.0826-1.1212v-3.3685L12.3119 6.7l2.9228 1.6734v3.3685L12.3119 13.415l-2.9228-1.6734z"/></svg>
+        );
+
+        const BookmarkIcon = ({ className }) => (
+            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+        );
+
+        const { useState, useEffect } = React;
+
+        const App = () => {
+            const [view, setView] = useState('menu'); 
+            const [activeQuiz, setActiveQuiz] = useState([]);
+            const [currentQIndex, setCurrentQIndex] = useState(0);
+            const [quizTitle, setQuizTitle] = useState("");
+            const [activeColorTheme, setActiveColorTheme] = useState('blue');
+            const [isDarkMode, setIsDarkMode] = useState(false);
+            const [showExplanation, setShowExplanation] = useState(false);
+
+            const [globalAnswers, setGlobalAnswers] = useState(() => JSON.parse(localStorage.getItem('globalAnswers')) || {});
+            const [hardIds, setHardIds] = useState(() => JSON.parse(localStorage.getItem('hardIds')) || []);
+            const [markedIds, setMarkedIds] = useState(() => JSON.parse(localStorage.getItem('markedIds')) || []);
+            const [earnedBadgeIds, setEarnedBadgeIds] = useState(() => JSON.parse(localStorage.getItem('earnedBadgeIds')) || []);
+            
+            const [pendingBadgeAlerts, setPendingBadgeAlerts] = useState([]);
+            const [showBadgeModal, setShowBadgeModal] = useState(false);
+            
+            const [expandedTopic, setExpandedTopic] = useState(null);
+
+            // Session states
+            const [isResolveSession, setIsResolveSession] = useState(false);
+            const [isMarkedSession, setIsMarkedSession] = useState(false);
+            const [sessionAnswers, setSessionAnswers] = useState({});
+
+            const [dialog, setDialog] = useState({ isOpen: false, message: '', type: 'alert', onConfirm: null });
+            
+            // Show welcome message only once
+            useEffect(() => {
+                const hasVisited = localStorage.getItem('hasVisitedSubSurgery');
+                if (!hasVisited) {
+                    showAlert("Welcome to the website 👋🏻\n\nThe questions are copy-pasted from the files. Keep an eye on the WhatsApp group; any updates will be posted there.");
+                    localStorage.setItem('hasVisitedSubSurgery', 'true');
+                }
+            }, []);
+
+            useEffect(() => {
+                localStorage.setItem('globalAnswers', JSON.stringify(globalAnswers));
+                localStorage.setItem('hardIds', JSON.stringify(hardIds));
+                localStorage.setItem('markedIds', JSON.stringify(markedIds));
+                localStorage.setItem('earnedBadgeIds', JSON.stringify(earnedBadgeIds));
+            }, [globalAnswers, hardIds, markedIds, earnedBadgeIds]);
+
+            useEffect(() => {
+                if (isDarkMode) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+            }, [isDarkMode]);
+
+            // SAFELY count to avoid negative un-answered questions
+            const validAnswerIds = Object.keys(globalAnswers).filter(id => flatQuestions.some(q => q.id === id));
+            const totalAnswered = validAnswerIds.length;
+
+            const correctIds = validAnswerIds.filter(id => {
+                const q = flatQuestions.find(fq => fq.id === id);
+                return q && globalAnswers[id] === q.a && !hardIds.includes(id);
+            });
+            const wrongIds = validAnswerIds.filter(id => {
+                const q = flatQuestions.find(fq => fq.id === id);
+                return q && (globalAnswers[id] !== q.a || hardIds.includes(id));
+            });
+            
+            const unansweredCount = Math.max(0, TOTAL_QUESTIONS - totalAnswered);
+            const hardOrWrongIds = Array.from(new Set([...wrongIds, ...hardIds]));
+
+            useEffect(() => {
+                if(TOTAL_QUESTIONS === 0) return;
+                const newlyEarned = [];
+                BADGES.forEach(badge => {
+                    if (!earnedBadgeIds.includes(badge.id)) {
+                        if (correctIds.length >= badge.req) newlyEarned.push(badge);
+                    }
+                });
+                if (newlyEarned.length > 0) {
+                    setEarnedBadgeIds(prev => [...prev, ...newlyEarned.map(b => b.id)]);
+                    setPendingBadgeAlerts(prev => [...prev, ...newlyEarned]);
+                }
+            }, [correctIds.length]);
+
+            const triggerBadgeModalIfAny = () => {
+                if (pendingBadgeAlerts.length > 0) setShowBadgeModal(true);
+            };
+
+            const closeBadgeModal = () => {
+                setShowBadgeModal(false);
+                setPendingBadgeAlerts([]);
+            };
+
+            const showAlert = (message) => setDialog({ isOpen: true, message, type: 'alert', onConfirm: null });
+            const showConfirm = (message, onConfirm) => setDialog({ isOpen: true, message, type: 'confirm', onConfirm });
+            const nextBadge = BADGES.find(b => !earnedBadgeIds.includes(b.id)) || null;
+
+            const startQuiz = (questions, title, startIdx = 0, color = 'slate') => {
+                const qWithShuffledOptions = questions.map(q => {
+                    const indices = q.o.map((_, i) => i).sort(() => 0.5 - Math.random());
+                    return { ...q, shuffledIndices: indices };
+                });
+                setActiveQuiz(qWithShuffledOptions);
+                setQuizTitle(title);
+                setActiveColorTheme(color);
+                setCurrentQIndex(startIdx);
+                setShowExplanation(false);
+                setView('quiz');
+            };
+
+            const startSubtopic = (mainIdx, subIdx) => {
+                const topic = topicsData[mainIdx];
+                let qs = flatQuestions.filter(fq => fq.main === topic.main && fq.t === topic.subtopics[subIdx].t);
+                let unsolvedQs = qs.filter(q => globalAnswers[q.id] === undefined);
+                if (unsolvedQs.length === 0) {
+                    showAlert("You have solved all questions in this subtopic!");
+                    return;
+                }
+                unsolvedQs = [...unsolvedQs].sort(() => 0.5 - Math.random());
+                setIsResolveSession(false);
+                setIsMarkedSession(false);
+                startQuiz(unsolvedQs, `${topic.main}: ${topic.subtopics[subIdx].t}`, 0, topic.color);
+            };
+
+            const startRandomMaster = () => {
+                const unsolvedQs = flatQuestions.filter(q => globalAnswers[q.id] === undefined);
+                if(unsolvedQs.length === 0) {
+                    showAlert("You have solved all questions! Reset the quiz if you want to start over.");
+                    return;
+                }
+                const shuffled = [...unsolvedQs].sort(() => 0.5 - Math.random());
+                setIsResolveSession(false);
+                setIsMarkedSession(false);
+                startQuiz(shuffled, "Random Master Quiz", 0, 'slate');
+            };
+
+            const startTopicRandomMaster = (mainIdx) => {
+                const topic = topicsData[mainIdx];
+                const unsolvedQs = flatQuestions.filter(q => q.main === topic.main && globalAnswers[q.id] === undefined);
+                if(unsolvedQs.length === 0) {
+                    showAlert("You have solved all questions in this topic!");
+                    return;
+                }
+                const shuffled = [...unsolvedQs].sort(() => 0.5 - Math.random());
+                setIsResolveSession(false);
+                setIsMarkedSession(false);
+                startQuiz(shuffled, `${topic.main}: Random Master`, 0, topic.color);
+            };
+
+            const reviewSolvedQuestions = () => {
+                const solvedQs = flatQuestions.filter(q => globalAnswers[q.id] !== undefined);
+                if(solvedQs.length === 0) {
+                    showAlert("You haven't solved any questions yet!");
+                    return;
+                }
+                setIsResolveSession(false);
+                setIsMarkedSession(false);
+                startQuiz(solvedQs, "Review: Solved History", 0, 'slate');
+            };
+
+            const reviewMainTopic = (mainIdx) => {
+                const topic = topicsData[mainIdx];
+                const solvedQs = flatQuestions.filter(q => q.main === topic.main && globalAnswers[q.id] !== undefined);
+                if(solvedQs.length === 0) {
+                    showAlert("You haven't solved any questions in this topic yet!");
+                    return;
+                }
+                setIsResolveSession(false);
+                setIsMarkedSession(false);
+                startQuiz(solvedQs, `Review: ${topic.main}`, 0, topic.color);
+            };
+
+            const resolveReviewQuestions = () => {
+                if (hardOrWrongIds.length === 0) return;
+                const reviewQs = flatQuestions.filter(q => hardOrWrongIds.includes(q.id)).sort(() => 0.5 - Math.random());
+                setIsResolveSession(true);
+                setIsMarkedSession(false);
+                setSessionAnswers({});
+                startQuiz(reviewQs, "Review: Hard & Incorrect Questions", 0, 'slate');
+            };
+
+            const resolveMainTopic = (mainIdx) => {
+                const topic = topicsData[mainIdx];
+                const hwIds = Array.from(new Set([...wrongIds, ...hardIds]));
+                const reviewQs = flatQuestions.filter(q => q.main === topic.main && hwIds.includes(q.id)).sort(() => 0.5 - Math.random());
+                if (reviewQs.length === 0) {
+                    showAlert("No hard or wrong questions to review in this topic!");
+                    return;
+                }
+                setIsResolveSession(true);
+                setIsMarkedSession(false);
+                setSessionAnswers({});
+                startQuiz(reviewQs, `Re-solve: ${topic.main} (Hard/Wrong)`, 0, topic.color);
+            };
+
+            const reviewMarkedQuestions = () => {
+                if (markedIds.length === 0) return;
+                const mQs = flatQuestions.filter(q => markedIds.includes(q.id)).sort(() => 0.5 - Math.random());
+                setIsMarkedSession(true);
+                setIsResolveSession(false);
+                setSessionAnswers({});
+                startQuiz(mQs, "Review: Marked Questions", 0, 'slate');
+            };
+
+            const resetAll = () => {
+                showConfirm("Are you sure you want to reset EVERYTHING? This clears all progress, badges, and saves.", () => {
+                    setGlobalAnswers({});
+                    setHardIds([]);
+                    setMarkedIds([]);
+                    setEarnedBadgeIds([]);
+                    localStorage.clear();
+                    localStorage.setItem('hasVisitedSubSurgery', 'true');
+                });
+            };
+
+            const resetMainTopic = (e, mainIdx) => {
+                e.stopPropagation();
+                const topic = topicsData[mainIdx];
+                showConfirm(`Are you sure you want to reset all progress for ${topic.main}?`, () => {
+                    const idsToReset = flatQuestions.filter(q => q.main === topic.main).map(q => q.id);
+                    setGlobalAnswers(prev => {
+                        const newAnswers = { ...prev };
+                        idsToReset.forEach(id => delete newAnswers[id]);
+                        return newAnswers;
+                    });
+                    setHardIds(prev => prev.filter(id => !idsToReset.includes(id)));
+                    setMarkedIds(prev => prev.filter(id => !idsToReset.includes(id)));
+                });
+            };
+
+            const resetSubtopic = (e, mainIdx, subIdx) => {
+                e.stopPropagation();
+                const topic = topicsData[mainIdx];
+                const sub = topic.subtopics[subIdx];
+                showConfirm(`Are you sure you want to reset ${sub.t}?`, () => {
+                    const idsToReset = flatQuestions.filter(q => q.main === topic.main && q.t === sub.t).map(q => q.id);
+                    setGlobalAnswers(prev => {
+                        const newAnswers = { ...prev };
+                        idsToReset.forEach(id => delete newAnswers[id]);
+                        return newAnswers;
+                    });
+                    setHardIds(prev => prev.filter(id => !idsToReset.includes(id)));
+                    setMarkedIds(prev => prev.filter(id => !idsToReset.includes(id)));
+                });
+            };
+
+            const reviewSubtopic = (e, mainIdx, subIdx) => {
+                e.stopPropagation();
+                const topic = topicsData[mainIdx];
+                const sub = topic.subtopics[subIdx];
+                const solvedQs = flatQuestions.filter(q => q.main === topic.main && q.t === sub.t && globalAnswers[q.id] !== undefined);
+                if(solvedQs.length === 0) {
+                    showAlert("You haven't solved any questions in this subtopic yet!");
+                    return;
+                }
+                setIsResolveSession(false);
+                setIsMarkedSession(false);
+                startQuiz(solvedQs, `Review: ${sub.t}`, 0, topic.color);
+            };
+
+            const handleOptionClick = (origIdx) => {
+                const currentQ = activeQuiz[currentQIndex];
+                
+                if (isMarkedSession) {
+                    if (sessionAnswers[currentQ.id] !== undefined) return;
+                    setSessionAnswers(prev => ({ ...prev, [currentQ.id]: origIdx }));
+                    return;
+                }
+
+                if (isResolveSession) {
+                    if (sessionAnswers[currentQ.id] !== undefined) return;
+                    setSessionAnswers(prev => ({ ...prev, [currentQ.id]: origIdx }));
+                    setGlobalAnswers(prev => ({ ...prev, [currentQ.id]: origIdx }));
+                    if (hardIds.includes(currentQ.id)) setHardIds(prev => prev.filter(id => id !== currentQ.id));
+                    return;
+                }
+                
+                if (globalAnswers[currentQ.id] !== undefined) return;
+                setGlobalAnswers(prev => ({ ...prev, [currentQ.id]: origIdx }));
+                if (hardIds.includes(currentQ.id)) setHardIds(prev => prev.filter(id => id !== currentQ.id));
+            };
+
+            const toggleHard = () => {
+                const qId = activeQuiz[currentQIndex].id;
+                if (hardIds.includes(qId)) setHardIds(prev => prev.filter(id => id !== qId));
+                else setHardIds(prev => [...prev, qId]);
+            };
+
+            const toggleMark = (e) => {
+                const qId = activeQuiz[currentQIndex].id;
+                if (markedIds.includes(qId)) setMarkedIds(prev => prev.filter(id => id !== qId));
+                else setMarkedIds(prev => [...prev, qId]);
+            };
+
+            const askChatGPTPerQuestion = () => {
+                const q = activeQuiz[currentQIndex];
+                const optionsText = q.o.map((opt, i) => `${String.fromCharCode(65+i)}. ${opt}`).join('\n');
+                const prompt = `Question: ${q.q}\n\nOptions:\n${optionsText}\n\nExplain this question in detail, including why the correct answer is correct and why the other options are wrong. At the end, write a high-yield summary note to remember.`;
+                window.open(`https://chatgpt.com/?q=${encodeURIComponent(prompt)}`, '_blank');
+            };
+
+            const generateTutorialWithChatGPT = (targetQs = null) => {
+                const reviewQs = targetQs || flatQuestions.filter(q => hardOrWrongIds.includes(q.id));
+                if(reviewQs.length === 0) return;
+
+                let prompt = "I found these questions hard to solve. Instead of discussing each question separately, please create a well-organized and structured tutorial based on the information in these questions, along with the relevant basics, so I can read and learn\n\n";
+                reviewQs.forEach((q, i) => {
+                    const optionsText = q.o.map((opt, idx) => `${String.fromCharCode(65+idx)}. ${opt}`).join('\n');
+                    prompt += `Q${i+1}: ${q.q}\nOptions:\n${optionsText}\n\n`;
+                });
+
+                navigator.clipboard.writeText(prompt).then(() => {
+                    window.open('https://chatgpt.com/', '_blank');
+                    showAlert('✅ Prompt copied to clipboard!\n\nChatGPT is opening — just paste (Ctrl+V) into the chat box.');
+                }).catch(() => {
+                    const ta = document.createElement('textarea');
+                    ta.value = prompt;
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.focus();
+                    ta.select();
+                    try {
+                        document.execCommand('copy');
+                        window.open('https://chatgpt.com/', '_blank');
+                        showAlert('✅ Prompt copied to clipboard!\n\nChatGPT is opening — just paste (Ctrl+V) into the chat box.');
+                    } catch(e) {
+                        window.open('https://chatgpt.com/', '_blank');
+                        showAlert('⚠️ Could not auto-copy.\n\nChatGPT is opening. Please manually copy your questions and paste them.');
+                    }
+                    document.body.removeChild(ta);
+                });
+            };
+
+            const chatGptMainTopic = (mainIdx) => {
+                const topic = topicsData[mainIdx];
+                const hwIds = Array.from(new Set([...wrongIds, ...hardIds]));
+                const targetQs = flatQuestions.filter(q => q.main === topic.main && hwIds.includes(q.id));
+                if (targetQs.length === 0) {
+                    showAlert(`You don't have any hard/wrong questions in ${topic.main} to generate a tutorial.`);
+                    return;
+                }
+                generateTutorialWithChatGPT(targetQs);
+            };
+
+            const navigateHome = () => {
+                setIsResolveSession(false);
+                setIsMarkedSession(false);
+                setView('menu');
+                triggerBadgeModalIfAny();
+            };
+
+            const nextQuestion = () => {
+                if (currentQIndex < activeQuiz.length - 1) {
+                    setCurrentQIndex(currentQIndex + 1);
+                    setShowExplanation(false);
+                } else {
+                    setIsResolveSession(false);
+                    setIsMarkedSession(false);
+                    setSessionAnswers({});
+                    setView('results');
+                    triggerBadgeModalIfAny();
+                }
+            };
+
+            const prevQuestion = () => {
+                if (currentQIndex > 0) {
+                    setCurrentQIndex(currentQIndex - 1);
+                    setShowExplanation(false);
+                }
+            };
+
+            const getPercentage = (val, total) => total > 0 ? Math.round((val / total) * 100) : 0;
+            const tColor = colorsMap[activeColorTheme] || colorsMap['slate'];
+
+            return (
+                <div className={`min-h-screen transition-colors pb-12 font-sans relative ${view === 'menu' ? 'home-bg' : (view === 'quiz' ? 'quiz-bg' : 'bg-slate-50 dark:bg-slate-900')} text-slate-800 dark:text-slate-100`}>
+                    
+                    {/* HEADER */}
+                    <header className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 shadow-sm sticky top-0 z-10 transition-colors">
+                        <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center text-slate-800 dark:text-slate-100">
+                            <h1 className="text-xl font-bold flex items-center gap-2">
+                                <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                                Sub-Surgery Past Papers
+                            </h1>
+                            <div className="flex items-center gap-4">
+                                <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                                    {isDarkMode ? 
+                                        <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" /></svg>
+                                        : 
+                                        <svg className="w-5 h-5 text-slate-500" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>
+                                    }
+                                </button>
+                                {view !== 'menu' && (
+                                    <button onClick={navigateHome} className="text-sm font-bold bg-slate-200 dark:bg-slate-700 px-3 py-1.5 rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition">
+                                        Back Home
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    </header>
+
+                    <main className="max-w-4xl mx-auto px-4 mt-8">
+                        {/* VIEW: MENU / DASHBOARD */}
+                        {view === 'menu' && (
+                            <div className="fade-in text-slate-800 dark:text-slate-100">
+                                <div className="inline-block bg-black text-white px-4 py-2 rounded-lg text-sm font-semibold mb-6 shadow-sm">
+                                    designed by Mahmoud Ismail
+                                </div>
+
+                                {/* DASHBOARD WIDGET */}
+                                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-6 mb-8 transition-colors">
+                                    <h2 className="text-xl font-bold mb-4">📚 Your Dashboard</h2>
+                                    
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                                        <div className="bg-slate-50 dark:bg-slate-700 p-4 rounded-xl text-center border border-slate-100 dark:border-slate-600">
+                                            <div className="text-2xl font-black text-blue-600 dark:text-blue-400">
+                                                {totalAnswered} <span className="text-sm text-slate-400 font-normal">({getPercentage(totalAnswered, TOTAL_QUESTIONS)}%)</span>
+                                            </div>
+                                            <div className="text-xs font-semibold text-slate-500 dark:text-slate-300 uppercase mt-1">Completed</div>
+                                        </div>
+                                        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl text-center border border-green-100 dark:border-green-800">
+                                            <div className="text-2xl font-black text-green-600 dark:text-green-400">
+                                                {correctIds.length} <span className="text-sm font-normal opacity-70">({getPercentage(correctIds.length, TOTAL_QUESTIONS)}%)</span>
+                                            </div>
+                                            <div className="text-xs font-semibold text-green-600 dark:text-green-500 uppercase mt-1">Right</div>
+                                        </div>
+                                        <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-xl text-center border border-red-100 dark:border-red-800">
+                                            <div className="text-2xl font-black text-red-600 dark:text-red-400">
+                                                {wrongIds.length} <span className="text-sm font-normal opacity-70">({getPercentage(wrongIds.length, TOTAL_QUESTIONS)}%)</span>
+                                            </div>
+                                            <div className="text-xs font-semibold text-red-600 dark:text-red-500 uppercase mt-1">Wrong</div>
+                                        </div>
+                                        <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-xl text-center border border-orange-100 dark:border-orange-800">
+                                            <div className="text-2xl font-black text-orange-600 dark:text-orange-400">
+                                                {unansweredCount} <span className="text-sm font-normal opacity-70">({getPercentage(unansweredCount, TOTAL_QUESTIONS)}%)</span>
+                                            </div>
+                                            <div className="text-xs font-semibold text-orange-600 dark:text-orange-500 uppercase mt-1">Unanswered</div>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* BADGES DISPLAY */}
+                                    <div className="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                                        <div className="flex flex-col sm:flex-row justify-between text-sm font-semibold text-slate-600 dark:text-slate-400 mb-3 gap-2">
+                                            <span>Badges Collection</span>
+                                            {nextBadge && (
+                                                <span className="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 px-3 py-1 rounded-full text-xs">
+                                                    Target: <strong>{nextBadge.req - correctIds.length}</strong> more correct answers for next badge!
+                                                </span>
+                                            )}
+                                        </div>
+                                        <div className="flex items-center gap-3 overflow-x-auto pb-2">
+                                            {BADGES.map((b, i) => {
+                                                const earned = earnedBadgeIds.includes(b.id);
+                                                return earned ? (
+                                                    <div key={i} className="flex-shrink-0 w-20 h-20 flex flex-col items-center justify-center p-2 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 shadow-sm transition-transform hover:scale-105" title={`${b.label}`}>
+                                                        <span className="text-4xl drop-shadow-sm mb-1 animate-bounce">{b.icon}</span>
+                                                    </div>
+                                                ) : (
+                                                    <div key={i} className="flex-shrink-0 w-20 h-20 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-600 flex items-center justify-center opacity-40">
+                                                        <span className="text-xs font-bold text-center">{b.label}</span>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="mb-4">
+                                    <h2 className="text-2xl font-bold mb-2">Global Actions</h2>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <button onClick={startRandomMaster} className="flex-1 p-6 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-sm hover:shadow-md transition text-left group">
+                                        <div className="flex justify-between items-center">
+                                            <div>
+                                                <h3 className="text-xl font-bold text-white mb-1">Random Master Quiz</h3>
+                                                <p className="text-blue-100 text-sm">Continue all unsolved questions</p>
+                                            </div>
+                                            <div className="bg-white/20 p-3 rounded-full group-hover:bg-white/30 transition">
+                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button onClick={reviewSolvedQuestions} className="flex-1 p-6 bg-gradient-to-r from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 rounded-2xl shadow-sm hover:shadow-md transition text-left group">
+                                        <div className="flex justify-between items-center">
+                                            <div>
+                                                <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-1">Review Solved Qs</h3>
+                                                <p className="text-slate-600 dark:text-slate-300 text-sm">See answers for completed questions</p>
+                                            </div>
+                                            <div className="bg-white/50 dark:bg-black/20 p-3 rounded-full group-hover:bg-white/70 dark:group-hover:bg-black/40 transition">
+                                                <svg className="w-6 h-6 text-slate-700 dark:text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                {hardOrWrongIds.length > 0 && (
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                        <button onClick={resolveReviewQuestions} className="flex-1 p-5 bg-gradient-to-r from-rose-500 to-red-600 rounded-2xl shadow-sm hover:shadow-md transition text-left group">
+                                            <div className="flex justify-between items-center">
+                                                <div>
+                                                    <h3 className="text-lg font-bold text-white mb-1">Re-solve Hard/Wrong</h3>
+                                                    <p className="text-red-100 text-sm">{hardOrWrongIds.length} question(s) to review</p>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <button onClick={() => generateTutorialWithChatGPT(null)} className="flex-1 p-5 bg-[#10a37f] dark:bg-[#0d8a6a] rounded-2xl shadow-sm hover:shadow-md transition group text-white flex items-center justify-between">
+                                            <div>
+                                                <h3 className="text-lg font-bold mb-1 flex items-center gap-2">
+                                                    <ChatGPTIcon className="w-6 h-6 text-white"/> ChatGPT Tutorial
+                                                </h3>
+                                                <p className="text-emerald-100 text-sm opacity-90">Generate guide for Hard/Wrong Qs</p>
+                                            </div>
+                                        </button>
+                                    </div>
+                                )}
+
+                                {markedIds.length > 0 && (
+                                    <button onClick={reviewMarkedQuestions} className="w-full p-5 mb-4 bg-amber-500 rounded-2xl shadow-sm hover:bg-amber-600 transition text-left text-white flex justify-between items-center">
+                                        <div>
+                                            <h3 className="text-lg font-bold mb-1 flex items-center gap-2">
+                                                <BookmarkIcon className="w-5 h-5"/> Review Marked Questions ({markedIds.length})
+                                            </h3>
+                                            <p className="text-amber-100 text-sm">Questions you saved for later review (Practice mode)</p>
+                                        </div>
+                                    </button>
+                                )}
+
+                                {/* SMALL RESET ALL BUTTON */}
+                                <div className="flex justify-end mb-8">
+                                    <button onClick={resetAll} className="text-xs font-semibold text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 flex items-center gap-1 px-4 py-2 bg-red-50 hover:bg-red-100 dark:bg-red-900/10 dark:hover:bg-red-900/20 rounded-lg transition border border-red-100 dark:border-red-900/30">
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                                        Reset All Progress
+                                    </button>
+                                </div>
+
+                                <div className="mb-4">
+                                    <h2 className="text-2xl font-bold mb-2">Main Subjects</h2>
+                                </div>
+
+                                <div className="flex flex-col gap-4 mb-8">
+                                    {topicsData.map((topic, mainIdx) => {
+                                        const topicQIds = flatQuestions.filter(q => q.main === topic.main).map(q => q.id);
+                                        const totalQs = topicQIds.length;
+                                        const answeredInTopic = topicQIds.filter(id => globalAnswers[id] !== undefined).length;
+                                        const isExpanded = expandedTopic === mainIdx;
+                                        const colorTheme = colorsMap[topic.color];
+
+                                        return (
+                                            <div key={mainIdx} className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm transition overflow-hidden">
+                                                <button onClick={() => setExpandedTopic(isExpanded ? null : mainIdx)} className={`w-full p-5 text-left flex justify-between items-center transition ${colorTheme.gradient} text-white`}>
+                                                    <div className="flex-grow">
+                                                        <h3 className="font-bold text-xl mb-1 drop-shadow-sm">{topic.main}</h3>
+                                                        <div className="flex items-center text-sm text-white/90 gap-4 font-medium">
+                                                            <span>{answeredInTopic} / {totalQs} Answered</span>
+                                                        </div>
+                                                        <div className={`w-full ${colorTheme.progressBg} h-1.5 mt-3 rounded-full overflow-hidden max-w-sm shadow-inner`}>
+                                                            <div className={`h-1.5 ${colorTheme.progressFill}`} style={{width: `${getPercentage(answeredInTopic, totalQs)}%`}}></div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex-shrink-0 ml-4">
+                                                        <svg className={`w-6 h-6 transform transition-transform ${isExpanded ? 'rotate-180 text-white' : 'text-white/80'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                                    </div>
+                                                </button>
+
+                                                {isExpanded && (
+                                                    <div className={`border-t border-slate-200 dark:border-slate-700 fade-in ${colorTheme.bg}`}>
+                                                        {/* Main Topic Controls */}
+                                                        <div className="p-4 flex flex-wrap gap-2 border-b border-white/20 dark:border-slate-700/30">
+                                                            <button onClick={() => startTopicRandomMaster(mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 hover:shadow-sm transition">
+                                                                🎲 Random Solve
+                                                            </button>
+                                                            <button onClick={() => reviewMainTopic(mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 hover:shadow-sm transition">
+                                                                👀 Review Solved
+                                                            </button>
+                                                            <button onClick={() => resolveMainTopic(mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 hover:shadow-sm transition text-red-600 dark:text-red-400">
+                                                                🔥 Re-solve Hard
+                                                            </button>
+                                                            <button onClick={() => chatGptMainTopic(mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-[#10a37f] text-white hover:bg-[#0e906f] transition flex items-center gap-1">
+                                                                <ChatGPTIcon className="w-4 h-4"/> Ask ChatGPT
+                                                            </button>
+                                                            <div className="flex-grow"></div>
+                                                            <button onClick={(e) => resetMainTopic(e, mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition">
+                                                                Reset Topic
+                                                            </button>
+                                                        </div>
+
+                                                        {/* Subtopics List */}
+                                                        <div className="divide-y divide-white/40 dark:divide-slate-700/40">
+                                                            {topic.subtopics.map((sub, subIdx) => {
+                                                                const subQs = flatQuestions.filter(q => q.main === topic.main && q.t === sub.t);
+                                                                const subTotal = subQs.length;
+                                                                const subAns = subQs.filter(q => globalAnswers[q.id] !== undefined).length;
+                                                                
+                                                                return (
+                                                                    <div key={subIdx} className="p-4 hover:bg-white/40 dark:hover:bg-slate-800/40 transition flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                                                        <div className="flex-grow">
+                                                                            <h4 className={`font-semibold ${colorTheme.text.split(' ')[0]} dark:text-slate-200`}>{sub.t}</h4>
+                                                                            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{subAns} / {subTotal} questions answered</p>
+                                                                        </div>
+                                                                        <div className="flex flex-wrap items-center gap-2">
+                                                                            <button onClick={() => startSubtopic(mainIdx, subIdx)} disabled={subTotal === 0} className={`text-xs font-bold px-4 py-2 rounded-lg text-white transition ${subTotal === 0 ? 'bg-slate-300 dark:bg-slate-600 cursor-not-allowed' : colorTheme.btn}`}>
+                                                                                Solve
+                                                                            </button>
+                                                                            {subAns > 0 && (
+                                                                                <>
+                                                                                    <button onClick={(e) => reviewSubtopic(e, mainIdx, subIdx)} className="text-xs font-semibold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 hover:shadow-sm transition">
+                                                                                        Review
+                                                                                    </button>
+                                                                                    <button onClick={(e) => resetSubtopic(e, mainIdx, subIdx)} className="text-xs font-semibold px-3 py-2 rounded-lg text-red-600 bg-red-50 hover:bg-red-100 dark:text-red-400 dark:bg-red-900/20 dark:hover:bg-red-900/40 transition">
+                                                                                        Reset
+                                                                                    </button>
+                                                                                </>
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* VIEW: QUIZ */}
+                        {view === 'quiz' && activeQuiz.length > 0 && (
+                            <div className="fade-in max-w-3xl mx-auto">
+                                <div className="mb-6">
+                                    <p className={`text-sm font-bold uppercase tracking-wider mb-1 ${tColor.text}`}>
+                                        {quizTitle} {isMarkedSession && "(Practice Mode)"}
+                                    </p>
+                                    <h2 className="text-2xl font-bold">
+                                        Question {currentQIndex + 1} <span className="text-slate-400 text-lg font-normal">of {activeQuiz.length}</span>
+                                    </h2>
+                                </div>
+
+                                <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-8 overflow-hidden shadow-inner">
+                                    <div className={`h-2 transition-all duration-300 ease-out ${tColor.btn.split(' ')[0]}`} style={{ width: `${((currentQIndex + 1) / activeQuiz.length) * 100}%` }}></div>
+                                </div>
+
+                                <div className={`bg-white dark:bg-slate-800 border-2 rounded-2xl p-6 md:p-8 shadow-sm mb-6 transition-colors ${tColor.border}`}>
+                                    <h3 className="text-lg md:text-xl font-medium leading-relaxed mb-6">
+                                        {activeQuiz[currentQIndex].q}
+                                    </h3>
+
+                                    <div className="space-y-4">
+                                        {activeQuiz[currentQIndex].shuffledIndices.map((origIdx, renderIdx) => {
+                                            const currentQ = activeQuiz[currentQIndex];
+                                            const currentQId = currentQ.id;
+                                            
+                                            // Determine answered state based on session type
+                                            const isAnswered = (isResolveSession || isMarkedSession) ? sessionAnswers[currentQId] !== undefined : globalAnswers[currentQId] !== undefined;
+                                            const isSelected = (isResolveSession || isMarkedSession) ? sessionAnswers[currentQId] === origIdx : globalAnswers[currentQId] === origIdx;
+                                            const isCorrect = currentQ.a === origIdx;
+                                            const optionText = currentQ.o[origIdx];
+                                            
+                                            let btnClass = "w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-start gap-3 ";
+                                            
+                                            if (!isAnswered) {
+                                                btnClass += "border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-600 cursor-pointer";
+                                            } else {
+                                                if (isCorrect) {
+                                                    btnClass += "border-green-500 bg-green-50 dark:bg-green-900/30 text-green-900 dark:text-green-100";
+                                                } else if (isSelected) {
+                                                    btnClass += "border-red-400 bg-red-50 dark:bg-red-900/30 text-red-900 dark:text-red-100";
+                                                } else {
+                                                    btnClass += "border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 opacity-50";
+                                                }
+                                            }
+
+                                            return (
+                                                <div key={renderIdx} className="flex flex-col gap-1">
+                                                    <button onClick={() => handleOptionClick(origIdx)} className={btnClass} disabled={isAnswered}>
+                                                        <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold border ${isAnswered ? (isCorrect ? 'bg-green-500 border-green-500 text-white' : (isSelected ? 'bg-red-500 border-red-500 text-white' : 'border-slate-300 dark:border-slate-600 text-slate-400')) : 'border-slate-300 dark:border-slate-500 text-slate-500 dark:text-slate-300'}`}>
+                                                            {String.fromCharCode(65 + renderIdx)}
+                                                        </span>
+                                                        <span className="mt-0.5 leading-snug">{optionText}</span>
+                                                    </button>
+                                                    
+                                                    {isAnswered && showExplanation && currentQ.oExp && currentQ.oExp[origIdx] && (
+                                                        <div className="pl-12 pr-4 text-sm fade-in mt-1">
+                                                            <div className={`p-3 rounded-lg border ${isCorrect ? 'bg-green-50/50 border-green-100 dark:bg-green-900/10 dark:border-green-800/50' : (isSelected ? 'bg-red-50/50 border-red-100 dark:bg-red-900/10 dark:border-red-800/50' : 'bg-slate-50 border-slate-100 dark:bg-slate-800 dark:border-slate-700')}`}>
+                                                                <span className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                                                                    {currentQ.aiOptIndices && currentQ.aiOptIndices.includes(origIdx) && (
+                                                                        <span className="text-purple-600 dark:text-purple-400 font-bold mr-1">✨ AI option: </span>
+                                                                    )}
+                                                                    {currentQ.oExp[origIdx]}
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+
+                                    {/* Evaluation Automatically displays if answered */}
+                                    {((isResolveSession || isMarkedSession) ? sessionAnswers[activeQuiz[currentQIndex].id] !== undefined : globalAnswers[activeQuiz[currentQIndex].id] !== undefined) && activeQuiz[currentQIndex].evaluation && (
+                                        <div className="mt-6 p-4 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-xl text-sm text-indigo-900 dark:text-indigo-200 fade-in shadow-sm">
+                                            <strong className="block mb-1 text-indigo-700 dark:text-indigo-400">📝 Evaluation:</strong> {activeQuiz[currentQIndex].evaluation}
+                                        </div>
+                                    )}
+
+                                    {((isResolveSession || isMarkedSession) ? sessionAnswers[activeQuiz[currentQIndex].id] !== undefined : globalAnswers[activeQuiz[currentQIndex].id] !== undefined) && (
+                                        <div className="mt-4 flex justify-between items-center border-t border-slate-100 dark:border-slate-700 pt-4">
+                                            <button onClick={() => setShowExplanation(!showExplanation)} className={`text-sm font-bold ${tColor.text} hover:opacity-80 transition flex items-center gap-1`}>
+                                                {showExplanation ? 'Hide Explanations ▲' : 'Show Explanations ▼'}
+                                            </button>
+                                            <button onClick={askChatGPTPerQuestion} className="text-sm font-bold text-[#10a37f] dark:text-[#0d8a6a] hover:opacity-80 transition flex items-center gap-1">
+                                                <ChatGPTIcon className="w-4 h-4"/> Ask ChatGPT
+                                            </button>
+                                        </div>
+                                    )}
+
+                                    <div className="mt-6 flex items-center gap-2">
+                                        <input type="checkbox" id="markLater" checked={markedIds.includes(activeQuiz[currentQIndex].id)} onChange={toggleMark} className="w-5 h-5 text-amber-500 bg-slate-100 border-slate-300 rounded focus:ring-amber-500 dark:focus:ring-amber-600 dark:ring-offset-slate-800 dark:bg-slate-700 dark:border-slate-600 cursor-pointer"/>
+                                        <label htmlFor="markLater" className="text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-pointer select-none">
+                                            Mark this question to review later
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-wrap sm:flex-nowrap justify-between items-center gap-4">
+                                    <button onClick={prevQuestion} disabled={currentQIndex === 0} className="px-4 py-3 font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 disabled:opacity-30 transition">
+                                        &larr; Previous
+                                    </button>
+                                    
+                                    <div className="flex gap-2 w-full sm:w-auto">
+                                        <button onClick={toggleHard} className={`px-4 py-3 rounded-xl font-bold border transition flex items-center gap-2 flex-1 sm:flex-none justify-center ${hardIds.includes(activeQuiz[currentQIndex].id) ? 'bg-slate-800 text-white border-slate-800 dark:bg-white dark:text-slate-900 dark:border-white' : 'bg-white text-slate-500 border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-700'}`}>
+                                            {hardIds.includes(activeQuiz[currentQIndex].id) ? 'Hard (Added)' : 'Mark Hard'}
+                                        </button>
+                                        <button onClick={nextQuestion} className={`px-6 py-3 rounded-xl font-bold transition shadow-sm flex-1 sm:flex-none justify-center flex items-center text-white ${tColor.btn}`}>
+                                            {currentQIndex === activeQuiz.length - 1 ? 'Finish' : 'Next'} &rarr;
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* VIEW: RESULTS */}
+                        {view === 'results' && (
+                            <div className="fade-in max-w-2xl mx-auto py-8">
+                                <div className="text-center mb-8">
+                                    <div className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 ${tColor.bg}`}>
+                                        <svg className={`w-10 h-10 ${tColor.text.split(' ')[0]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                    </div>
+                                    <h2 className="text-3xl font-bold mb-1">Session Completed!</h2>
+                                </div>
+                                <div className="flex justify-center">
+                                    <button onClick={navigateHome} className="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 font-bold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-sm">
+                                        Back to Dashboard
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* BADGE MODAL */}
+                        {showBadgeModal && pendingBadgeAlerts.length > 0 && (
+                            <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 fade-in">
+                                <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl scale-up border border-slate-200 dark:border-slate-700 relative">
+                                    <button onClick={closeBadgeModal} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
+                                    </button>
+                                    <div className="text-6xl mb-4 drop-shadow-md animate-bounce">
+                                        {pendingBadgeAlerts[pendingBadgeAlerts.length - 1].icon}
+                                    </div>
+                                    <h3 className="text-2xl font-black text-slate-800 dark:text-white mb-2">Congratulations! 🎉</h3>
+                                    <p className="text-slate-600 dark:text-slate-300 font-medium mb-4">
+                                        You unlocked the <strong className="text-blue-600 dark:text-blue-400">{pendingBadgeAlerts[pendingBadgeAlerts.length - 1].label}</strong> badge!
+                                    </p>
+                                    
+                                    {pendingBadgeAlerts[pendingBadgeAlerts.length - 1].msg && (
+                                        <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-sm text-blue-800 dark:text-blue-200 text-left italic">
+                                            {pendingBadgeAlerts[pendingBadgeAlerts.length - 1].msg.split('\n').map((line, idx) => (
+                                                <span key={idx}>{line}<br/></span>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    <button onClick={closeBadgeModal} className="w-full py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-sm">
+                                        Awesome!
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* GLOBAL DIALOG */}
+                        {dialog.isOpen && (
+                            <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 fade-in">
+                                <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 max-w-sm w-full shadow-2xl scale-up border border-slate-200 dark:border-slate-700">
+                                    <p className="text-lg font-semibold text-slate-800 dark:text-white mb-6 whitespace-pre-wrap">
+                                        {dialog.message}
+                                    </p>
+                                    <div className="flex justify-end gap-3">
+                                        {dialog.type === 'confirm' && (
+                                            <button onClick={() => setDialog({ ...dialog, isOpen: false })} className="px-4 py-2 font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl transition">
+                                                Cancel
+                                            </button>
+                                        )}
+                                        <button onClick={() => { if (dialog.onConfirm) dialog.onConfirm(); setDialog({ ...dialog, isOpen: false }); }} className="px-4 py-2 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-sm">
+                                            {dialog.type === 'confirm' ? 'Confirm' : 'OK'}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </main>
+                </div>
+            );
+        };
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
