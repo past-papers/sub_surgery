@@ -404,7 +404,107 @@
             },
             {
                 main: "Neurosurgery", color: "purple", subtopics: [
-                    { t: "Neuroanatomy", qs: [] }, { t: "Meningitis", qs: [] }, { t: "Head Injury", qs: [] },
+                    { t: "Neuroanatomy", qs: [ 
+                        { 
+                            q: "Which is a wrong combination:", 
+                            opts: [
+                                {text: "Corneal reflex: CN V & CN VII", exp: "Correct combination; afferent CN V, efferent CN VII."}, 
+                                {text: "Cough reflex: CN X", exp: "Correct; vagus nerve mediates the cough reflex."}, 
+                                {text: "Gag reflex: CN IX & X", exp: "Correct combination; afferent IX, efferent X."}, 
+                                {text: "Vestibulo-ocular reflex: CN II & III", isCorrect: true, exp: "Wrong combination; the reflex involves CN VIII (vestibular) and CN III, IV, VI, not CN II."}, 
+                                {text: "Salivary reflex: CN VII", exp: "Correct; facial nerve mediates salivation via chorda tympani."}
+                            ], 
+                            eval: "The answer is correct. The vestibulo-ocular reflex does not use CN II." 
+                        },
+                        { 
+                            q: "With the eyeball adducted (turned inward), the depression or downward movement of the eyeball is mediated through:", 
+                            opts: [
+                                {text: "Superior oblique muscle", isCorrect: true, exp: "Correct; when the eye is adducted, the superior oblique acts as the primary depressor."}, 
+                                {text: "Inferior oblique muscle", exp: "Incorrect; in adduction, it elevates the eye."}, 
+                                {text: "Inferior rectus muscle", exp: "Incorrect; it depresses the eye mainly when abducted."}, 
+                                {text: "Medial rectus muscle", exp: "Incorrect; it adducts, does not depress."}, 
+                                {text: "Lateral rectus muscle", exp: "Incorrect; it abducts."}
+                            ], 
+                            eval: "The answer is correct. In adduction, the superior oblique is the main downward mover." 
+                        },
+                        { 
+                            q: "Which of the following is not a branch from the external carotid artery?", 
+                            opts: [
+                                {text: "Ophthalmic artery", isCorrect: true, exp: "Correct answer; it is a branch of the internal carotid artery."}, 
+                                {text: "Ascending pharyngeal artery", exp: "Branch of external carotid."}, 
+                                {text: "Lingual artery", exp: "Branch of external carotid."}, 
+                                {text: "Facial artery", exp: "Branch of external carotid."}, 
+                                {text: "Superior thyroid artery", exp: "Branch of external carotid."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The part of the neuron that receives messages from other cells is called:", 
+                            opts: [
+                                {text: "Axon", exp: "Incorrect; sends impulses away from the cell body."}, 
+                                {text: "Soma", exp: "Incorrect; cell body integrates, but dendrites are the primary receiving structures."}, 
+                                {text: "Schwann cell", exp: "Incorrect; a glial cell, not a neuronal part for receiving signals."}, 
+                                {text: "Dendrites", isCorrect: true, exp: "Correct; specialized to receive synaptic inputs."}, 
+                                {text: "End plate", exp: "Incorrect; motor end plate is a region on the muscle fiber receiving the neural signal, not a neuronal part."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following are complications of vagal nerve stimulation, except:", 
+                            opts: [
+                                {text: "Dysphonia", exp: "Complication; due to recurrent laryngeal nerve involvement."}, 
+                                {text: "Dysphasia", isCorrect: true, exp: "Not a typical complication; it is a language disorder from cortical damage, not vagal stimulation."}, 
+                                {text: "Dyspnea", exp: "Can occur due to vagal effects on respiration."}, 
+                                {text: "Cough", exp: "Common during stimulation."}, 
+                                {text: "Hoarseness", exp: "Common due to vocal cord adduction."}
+                            ], 
+                            eval: "The answer is correct. Dysphasia is not a direct vagus nerve stimulation effect." 
+                        },
+                        { 
+                            q: "Nerve supply of abductor pollicis brevis", 
+                            opts: [
+                                {text: "Median", isCorrect: true, exp: "Correct; innervated by the recurrent branch of the median nerve."}, 
+                                {text: "Ulnar", exp: "Incorrect; supplies most intrinsic hand muscles but not this one."}, 
+                                {text: "Radial", exp: "Incorrect; supplies extensors, not thenar muscles."}, 
+                                {text: "Musculocutaneous", exp: "Incorrect; supplies anterior arm muscles."}, 
+                                {text: "Axillary", exp: "Incorrect; supplies deltoid and teres minor."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which one of the following cranial nerves carry parasympathetic fibers?", 
+                            opts: [
+                                {text: "Facial nerve VII", isCorrect: true, exp: "Correct; carries parasympathetic fibers to lacrimal, submandibular, and sublingual glands."}, 
+                                {text: "Vestibulocochlear nerve VIII", exp: "Incorrect; purely sensory."}, 
+                                {text: "Hypoglossal nerve XII", exp: "Incorrect; motor to tongue."}, 
+                                {text: "Abducens nerve VI", exp: "Incorrect; motor to lateral rectus."}, 
+                                {text: "Trochlear nerve IV", exp: "Incorrect; motor to superior oblique."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All can cause dilated nonresponsive pupil, except:", 
+                            opts: [
+                                {text: "Optic nerve injury", exp: "Can cause a dilated nonreactive pupil due to loss of the afferent limb of the light reflex."}, 
+                                {text: "Brain stem herniation", exp: "May compress oculomotor nerve and cause a fixed dilated pupil."}, 
+                                {text: "Oculomotor nerve injury", exp: "Disrupts parasympathetic fibers, leading to a dilated nonresponsive pupil."}, 
+                                {text: "Abducent nerve injury", isCorrect: true, exp: "Does not affect pupil size; only causes lateral rectus weakness."}, 
+                                {text: "Sympathetic tone loss", isCorrect: true, exp: "Causes miosis (Horner syndrome), not mydriasis; therefore does not produce a dilated pupil."}
+                            ], 
+                            eval: "The answer is correct. Both abducent nerve injury and sympathetic tone loss are exceptions that do not cause a dilated nonresponsive pupil." 
+                        },
+                        { 
+                            q: "One of the following is correct about cerebral circulation:", 
+                            opts: [
+                                {text: "Cerebral circulation is controlled mainly by ANS", exp: "Incorrect; autoregulation and metabolic factors (CO₂, O₂) are dominant, ANS plays a minor role."}, 
+                                {text: "Cerebral vasoconstriction occurs when blood pressure rises", isCorrect: true, exp: "Correct; this is part of autoregulation (myogenic constriction) to maintain constant blood flow."}, 
+                                {text: "Cerebral blood flow is directly proportional to mean arterial pressure over a wide range", isAi: true, exp: "Incorrect, because autoregulation keeps flow constant over a range of ~50–150 mmHg MAP."}, 
+                                {text: "Cerebral arteries are richly innervated by parasympathetic fibers that dominate control", isAi: true, exp: "Incorrect, parasympathetic innervation is sparse and not the dominant controller."}, 
+                                {text: "Hypoxia causes cerebral vasoconstriction", isAi: true, exp: "Incorrect, hypoxia is a potent cerebral vasodilator."}
+                            ], 
+                            eval: "The answer is correct. The statement accurately describes cerebral autoregulation." 
+                        }
+                     ] }, { t: "Meningitis", qs: [] }, { t: "Head Injury", qs: [] },
                     { t: "Brain Tumors", qs: [] }, { t: "Increased ICP", qs: [] }, { t: "Subarachnoid Hemorrhage", qs: [] },
                     { t: "Hydrocephalus", qs: [] }, { t: "Spinal Tumors", qs: [] }, { t: "Spina Bifida", qs: [] },
                     { t: "Degenerative Spinal Disease", qs: [] }, { t: "Spinal Cord Injury", qs: [] }
