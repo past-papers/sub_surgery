@@ -7626,7 +7626,406 @@
             },
             {
                 main: "Urology", color: "orange", subtopics: [
-                    { t: "Prostate", qs: [] }, { t: "Hematuria", qs: [] }, { t: "Trauma", qs: [] },
+                    { t: "Prostate Cancer & BPH", qs: [
+                        { 
+                            q: "Diagnosis of prostate cancer is confirmed by:", 
+                            opts: [
+                                {text: "MRI", exp: "Provides excellent anatomical detail and helps in staging, but tissue confirmation is still required; it does not definitively diagnose cancer."}, 
+                                {text: "CT scan with IV contrast", exp: "Useful for staging (lymph nodes, metastases) but cannot confirm the histological diagnosis."}, 
+                                {text: "TRUS (Transrectal ultrasound)", exp: "Used to guide biopsy and assess volume, but imaging alone is not diagnostic."}, 
+                                {text: "Urine cytology", exp: "Not a standard tool for prostate cancer diagnosis; it is used mainly for bladder cancer."}, 
+                                {text: "Core needle biopsy", isCorrect: true, exp: "Correct. Histopathological examination of prostate tissue via core needle biopsy (usually TRUS-guided) is the gold standard for diagnosis."}
+                            ], 
+                            eval: "The answer is correct. Only core needle biopsy provides histological confirmation." 
+                        },
+                        { 
+                            q: "Hashem is a 70-year-old, retired policeman. He had long-standing BPH. He presented to JUH urology clinic with severe right testicular pain for 3 days. Scrotal US showed enlarged right testicular and epididymal size. On physical, he has a high-grade fever, right side scrotal swelling, redness, hotness, and tenderness. Best management?", 
+                            opts: [
+                                {text: "Percutaneous drainage", exp: "Not the primary management for acute epididymo-orchitis; reserved for abscess formation."}, 
+                                {text: "Surgical excision and drainage", exp: "Not indicated unless there is an abscess or testicular infarction."}, 
+                                {text: "Observation", exp: "Inappropriate in the setting of systemic infection."}, 
+                                {text: "Discharge on pain-killers", exp: "Inadequate; the patient has signs of severe infection requiring intravenous antibiotics."}, 
+                                {text: "Admission for IV antibiotics", isCorrect: true, exp: "Correct. High fever with epididymo-orchitis in an elderly patient indicates systemic infection needing inpatient intravenous antibiotics."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is a uro-selective α-adrenergic blocker?", 
+                            opts: [
+                                {text: "None", exp: "Incorrect; uroselective agents exist."}, 
+                                {text: "Terazosin", exp: "Non-uroselective α1-blocker; also lowers blood pressure."}, 
+                                {text: "Doxazosin", exp: "Similar to terazosin, it is a non-uroselective α1-adrenoceptor antagonist."}, 
+                                {text: "Sildenafil", exp: "A phosphodiesterase-5 inhibitor, not an α-blocker."}, 
+                                {text: "Tamsulosin", isCorrect: true, exp: "Correct. Tamsulosin preferentially blocks α1A and α1D receptors in the prostate and bladder neck, making it uroselective."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "PSA normal, DRE no nodules, repeated PSA = same number, what to do?", 
+                            opts: [
+                                {text: "Observe yearly", isCorrect: true, exp: "Correct. With normal PSA, benign DRE, and a persistently normal repeat PSA, the risk of cancer is low; annual monitoring is appropriate."}, 
+                                {text: "TURP", exp: "Not indicated for a normal prostate evaluation without obstruction."}, 
+                                {text: "Transrectal U/S", exp: "Not necessary as a screening tool with low suspicion."}, 
+                                {text: "CT of pelvis and abdomen (Multiparametric)", exp: "Not indicated without elevated PSA or abnormal DRE."}, 
+                                {text: "MRI + Biopsy", exp: "Overly invasive given the low risk profile."}
+                            ], 
+                            eval: "The answer is correct. With a stable normal assessment, annual screening is standard." 
+                        },
+                        { 
+                            q: "One of these isn't used in the treatment of BPH:", 
+                            opts: [
+                                {text: "Alpha 1 blockers", exp: "First-line medical therapy for BPH."}, 
+                                {text: "Phosphodiesterase 5 inhibitor", exp: "Can be used for BPH with or without erectile dysfunction."}, 
+                                {text: "Lifestyle modification", exp: "Recommended as part of conservative management."}, 
+                                {text: "TURP", exp: "Surgical standard of care for moderate to severe BPH."}, 
+                                {text: "Radical prostatectomy", isCorrect: true, exp: "Correct. It is a treatment for localized prostate cancer, not for BPH."}
+                            ], 
+                            eval: "The answer is correct. Radical prostatectomy removes the entire prostate and seminal vesicles for cancer control." 
+                        },
+                        { 
+                            q: "50-year-old patient, PSA was 12 ng/ml, no hard nodules on DRE, PSA was repeated after 6 weeks with the same result, most appropriate next step:", 
+                            opts: [
+                                {text: "KUB", exp: "Does not evaluate the prostate; insufficient."}, 
+                                {text: "Multiparametric MRI", isCorrect: true, exp: "Correct. With elevated PSA and benign DRE, mpMRI is the recommended next step to identify suspicious areas and guide possible biopsy."}, 
+                                {text: "CT without contrast", exp: "Poor soft-tissue resolution for prostate."}, 
+                                {text: "CT cystoscopy", exp: "Not a standard procedure; CT urography evaluates upper tracts, not prostate."}, 
+                                {text: "Repeat PSA in 3 months", isAi: true, exp: "Delays diagnosis; an elevated persistent PSA warrants further investigation now."}
+                            ], 
+                            eval: "The answer is correct. mpMRI is the appropriate next investigation." 
+                        },
+                        { 
+                            q: "Which of the following is not a routine test in diagnosing benign prostatic hyperplasia?", 
+                            opts: [
+                                {text: "Transrectal ultrasound", exp: "Can be used to assess prostate volume and post-void residual, often part of work-up."}, 
+                                {text: "Digital rectal examination", exp: "Routine to assess size, consistency, and nodularity."}, 
+                                {text: "Urodynamic studies", exp: "Used selectively, e.g., when neurologic disease is suspected, not routine."}, 
+                                {text: "Cystoscopy", exp: "Indicated for hematuria or suspected urethral stricture, not routine in uncomplicated BPH diagnosis."}, 
+                                {text: "Urine cytology", isCorrect: true, exp: "Correct. It is not a routine test for BPH; it is used to evaluate for bladder cancer, especially in patients with hematuria."}
+                            ], 
+                            eval: "The answer is correct. Urine cytology is not part of the routine BPH work-up; the least routine among these choices is urine cytology." 
+                        },
+                        { 
+                            q: "A 62-year-old male presents with complaints of difficulty urinating and a weak stream. On digital rectal examination, a nodular mass is detected. His PSA level is found to be 6 ng/mL. Urine analysis shows no evidence of bacteria or infection. What is the most appropriate next step?", 
+                            opts: [
+                                {text: "Prescribe alpha-blockers to alleviate urinary symptoms", exp: "Would relieve LUTS but ignores a palpable nodule and elevated PSA; diagnosis must come first."}, 
+                                {text: "Perform a prostatectomy to remove the nodular mass", exp: "Radical prostatectomy is not performed without a tissue diagnosis."}, 
+                                {text: "Prescribe antibiotics and follow up", exp: "No evidence of infection; antibiotics would not address the nodule."}, 
+                                {text: "Perform a guided biopsy of the nodular mass", isCorrect: true, exp: "Correct. Nodule plus elevated PSA requires histological diagnosis; TRUS-guided biopsy is indicated."}, 
+                                {text: "Schedule a repeat PSA in 6 months", isAi: true, exp: "An unacceptable delay when a nodule is present; biopsy is urgent."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Prostate blood supply is derived primarily from which artery?", 
+                            opts: [
+                                {text: "Superior vesical artery", isAi: true, exp: "Supplies the bladder dome and distal ureter; not the main supply to the prostate."}, 
+                                {text: "Middle rectal artery", isAi: true, exp: "Supplies the rectum; gives small branches to prostate but not the main supply."}, 
+                                {text: "Internal pudendal artery", isAi: true, exp: "Supplies the perineum and external genitalia; not the primary arterial supply."}, 
+                                {text: "Inferior vesical artery", isCorrect: true, exp: "Correct. It is the main arterial supply to the prostate, branching from the internal iliac artery."}, 
+                                {text: "Penile artery", isAi: true, exp: "Terminal branch of internal pudendal; supplies the penis, not prostate."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient with LUTS and signs of BPH, stable with no deterioration of renal function. What is the most appropriate next step in management?", 
+                            opts: [
+                                {text: "Start alpha-blocker", isCorrect: true, exp: "Correct. In symptomatic BPH with no complications, an alpha-blocker is the first-line pharmacotherapy."}, 
+                                {text: "Start 5-alpha reductase inhibitor", isAi: true, exp: "Indicated for larger prostates (>40-50cc) or to reduce progression, but alpha-blocker gives faster symptom relief."}, 
+                                {text: "Perform TURP", isAi: true, exp: "Too invasive for initial management without complications."}, 
+                                {text: "Observation with follow-up", isAi: true, exp: "Reasonable for mild symptoms, but the question implies bothersome LUTS requiring treatment."}, 
+                                {text: "Urodynamic studies", isAi: true, exp: "Not routinely needed before medical therapy."}
+                            ], 
+                            eval: "The answer is appropriate. Starting an alpha-blocker is standard initial management for symptomatic BPH without renal impairment." 
+                        },
+                        { 
+                            q: "A patient with BPH and deteriorating renal function. What is the most appropriate next step in management?", 
+                            opts: [
+                                {text: "Start alpha-blocker", isAi: true, exp: "Insufficient alone when renal function is compromised due to obstruction."}, 
+                                {text: "Insert a urethral catheter and observe", isAi: true, exp: "Catheterisation relieves retention temporarily but definitive surgery is needed."}, 
+                                {text: "TURP", isCorrect: true, exp: "Correct. Obstructive uropathy with renal impairment is a strong indication for immediate surgical relief via TURP."}, 
+                                {text: "Start 5-alpha reductase inhibitor", isAi: true, exp: "Acts too slowly to salvage renal function."}, 
+                                {text: "Suprapubic cystostomy alone", isAi: true, exp: "Temporises but does not address obstruction definitively."}
+                            ], 
+                            eval: "The answer is correct. Renal failure due to BPH obstruction mandates urgent surgery." 
+                        },
+                        { 
+                            q: "A patient with a hard prostate on DRE. What is the best thing to do?", 
+                            opts: [
+                                {text: "TRUS biopsy", isCorrect: true, exp: "Correct. A hard area on DRE raises high suspicion for prostate cancer; a TRUS-guided biopsy is mandatory for tissue diagnosis."}, 
+                                {text: "Multiparametric MRI", isAi: true, exp: "Useful as an adjunct but does not replace biopsy in the setting of a palpable abnormality."}, 
+                                {text: "Follow PSA in 3 months", isAi: true, exp: "Dangerous delay; a hard nodule requires immediate histological evaluation."}, 
+                                {text: "Start antibiotics", isAi: true, exp: "Unnecessary without evidence of prostatitis."}, 
+                                {text: "TURP", isAi: true, exp: "Could resect cancer but is not the diagnostic standard for a focal nodule."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "What is the primary purpose of digital rectal examination in men with lower urinary tract symptoms?", 
+                            opts: [
+                                {text: "Assess prostate size", isAi: true, exp: "DRE provides a rough estimate but the primary goal is to detect cancer-suspicious findings."}, 
+                                {text: "Assess anal sphincter tone", isAi: true, exp: "Part of the neurological examination, not the main objective in LUTS."}, 
+                                {text: "Look for prostate nodularity", isCorrect: true, exp: "Correct. DRE is crucial to identify nodules, induration, or asymmetry that raise concern for malignancy."}, 
+                                {text: "Evaluate for haemorrhoids", isAi: true, exp: "Not the purpose of DRE in this context."}, 
+                                {text: "Check for rectal carcinoma", isAi: true, exp: "A secondary benefit, but not the primary intent in LUTS evaluation."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient with BPH, elevated creatinine, chronic urinary retention, and multiple visits to the ER. What is the appropriate management?", 
+                            opts: [
+                                {text: "Start catheterization and alpha-blocker", isAi: true, exp: "May be temporizing but definitive surgery is indicated with renal failure."}, 
+                                {text: "Do TURP", isCorrect: true, exp: "Correct. Chronic retention with renal impairment is a clear surgical indication."}, 
+                                {text: "Continue observation", isAi: true, exp: "Not appropriate; this is complicated BPH."}, 
+                                {text: "Suprapubic catheter placement only", isAi: true, exp: "Only temporises; does not definitively treat obstruction."}, 
+                                {text: "Start finasteride and review in 6 months", isAi: true, exp: "Too slow; the renal dysfunction requires immediate relief."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is NOT part of the IPSS (International Prostate Symptom Score)?", 
+                            opts: [
+                                {text: "Incomplete emptying", isAi: true, exp: "One of the seven IPSS questions."}, 
+                                {text: "Frequency", isAi: true, exp: "Included in IPSS."}, 
+                                {text: "Intermittency", isAi: true, exp: "Included in IPSS."}, 
+                                {text: "Urgency", isAi: true, exp: "Included in IPSS (urinary urgency)."}, 
+                                {text: "Incontinence", isCorrect: true, exp: "Correct. Urinary incontinence is not part of the IPSS questionnaire."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "From which zone does BPH originate?", 
+                            opts: [
+                                {text: "Periurethral", exp: "BPH nodules can arise from periurethral glands, contributing to the lateral lobe enlargement."}, 
+                                {text: "Central", exp: "Rarely gives rise to BPH; it is more commonly the zone of origin for some cancers."}, 
+                                {text: "Transitional", isCorrect: true, exp: "The primary zone of BPH origin; most nodules develop here."}, 
+                                {text: "Peripheral", exp: "The most common site for prostate cancer, not BPH."}, 
+                                {text: "Anterior fibromuscular stroma", isAi: true, exp: "Does not contain glandular tissue; not a source of BPH."}
+                            ], 
+                            eval: "The original answer is ambiguous (A+C). Most textbooks state that BPH originates predominantly from the transitional zone, with some contribution from periurethral glands." 
+                        },
+                        { 
+                            q: "Concerning chronic urinary retention, all of the following are true except:", 
+                            opts: [
+                                {text: "It can lead to hydronephrosis", isAi: true, exp: "True; chronic high-pressure retention can cause upper tract dilatation."}, 
+                                {text: "It may cause overflow incontinence", isAi: true, exp: "True; bladder overdistension leads to involuntary leakage."}, 
+                                {text: "It is often painless", isAi: true, exp: "True; chronic retention is usually painless, unlike acute retention."}, 
+                                {text: "Kidney function is always normal", isCorrect: true, exp: "False and therefore the exception. Chronic retention can significantly impair renal function over time."}, 
+                                {text: "Post-void residual is elevated", isAi: true, exp: "True by definition."}
+                            ], 
+                            eval: "The answer is correct. Chronic retention can cause post-renal kidney injury." 
+                        },
+                        { 
+                            q: "What is PSA (prostate-specific antigen) specific for?", 
+                            opts: [
+                                {text: "Prostate CA", exp: "PSA is not specific for cancer; it is elevated in many conditions."}, 
+                                {text: "Prostatitis", exp: "PSA can be high in prostatitis, but it is not specific for it."}, 
+                                {text: "BPH", exp: "PSA levels correlate with prostate volume, but not specific for BPH."}, 
+                                {text: "None of the above", isCorrect: true, exp: "Correct. PSA is organ-specific (prostate tissue) but not disease-specific."}, 
+                                {text: "All of the above", isAi: true, exp: "Incorrect; PSA cannot reliably distinguish between these entities on its own."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following are classical symptoms of BPH except:", 
+                            opts: [
+                                {text: "Frequency", exp: "Common storage symptom in BPH."}, 
+                                {text: "Urgency", exp: "Often present due to detrusor overactivity."}, 
+                                {text: "Nocturia", exp: "Very common in BPH."}, 
+                                {text: "Dysuria", isCorrect: true, exp: "Correct. Dysuria (painful urination) is not a classical BPH symptom; it suggests infection or inflammation."}, 
+                                {text: "Weak stream flow", exp: "Classic voiding symptom of BPH."}
+                            ], 
+                            eval: "The answer is correct. Dysuria points more towards infection or cystitis." 
+                        },
+                        { 
+                            q: "Which drug has been proven to prevent urinary retention in BPH?", 
+                            opts: [
+                                {text: "Finasteride", isCorrect: true, exp: "Correct. 5α-reductase inhibitors like finasteride reduce prostate volume and have been shown to decrease the risk of acute urinary retention."}, 
+                                {text: "Tamsulosin", exp: "Improves symptoms but does not prevent disease progression or retention."}, 
+                                {text: "Doxazosin", isAi: true, exp: "Alpha-blocker, symptom relief only, no proven effect on preventing retention."}, 
+                                {text: "Alfuzosin", isAi: true, exp: "Alpha-blocker, similar to above."}, 
+                                {text: "Sildenafil", isAi: true, exp: "PDE5 inhibitor, used for LUTS/ED, not for retention prevention."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One is not an indication for prostatectomy:", 
+                            opts: [
+                                {text: "Overflow incontinence", exp: "Indication; it reflects chronic retention needing surgery."}, 
+                                {text: "Residual urine > 1000 ml", exp: "Massive residual volume is an indication for surgery."}, 
+                                {text: "Uremia", exp: "Renal failure from BPH is a strong surgical indication."}, 
+                                {text: "Hydronephrosis", exp: "Upper tract dilatation due to obstruction mandates prostatectomy."}, 
+                                {text: "Flow meter < 9 cc/min", isCorrect: true, exp: "Low flow alone, if asymptomatic and without complications, may not be an absolute indication compared to structural or functional decompensation."}
+                            ], 
+                            eval: "The answer is not explicitly given in the text, but low flow rate without other criteria is the least absolute indication among the choices." 
+                        },
+                        { 
+                            q: "BPH will have all of the following except:", 
+                            opts: [
+                                {text: "Poor stream", exp: "Typical voiding symptom."}, 
+                                {text: "Dripping", exp: "Post-micturition dribbling is common."}, 
+                                {text: "Frequency", exp: "Storage symptom."}, 
+                                {text: "Hesitancy", exp: "Delayed initiation is classic."}, 
+                                {text: "Loin pain", isCorrect: true, exp: "Correct. Loin pain is not a feature of BPH; it suggests upper urinary tract pathology like stones or pyelonephritis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Prostate cancer bone metastasis is:", 
+                            opts: [
+                                {text: "Osteoblastic", isCorrect: true, exp: "Correct. Prostate cancer metastases are characteristically osteoblastic (bone-forming)."}, 
+                                {text: "Osteolytic", exp: "Typical of other cancers (e.g., lung, breast), not prostate."}, 
+                                {text: "Osteonecrosis", exp: "Not a metastatic pattern."}, 
+                                {text: "Mixed osteoblastic/osteolytic", isAi: true, exp: "Although some lesions may have mixed features, the classic and predominant pattern is osteoblastic."}, 
+                                {text: "Pathologic fracture pattern", isAi: true, exp: "Describes a complication, not the radiological nature of the metastasis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is not used in routine screening for BPH?", 
+                            opts: [
+                                {text: "Ultrasound and postvoidal residual volume", exp: "Used to assess bladder emptying and prostate volume."}, 
+                                {text: "Urine analysis", exp: "Part of basic evaluation to rule out infection."}, 
+                                {text: "Urine culture", exp: "Often sent if UTI is suspected, may be part of initial panel."}, 
+                                {text: "Digital rectal examination", isAi: true, exp: "DRE is a routine part of BPH assessment; thus it is used, so this is not the correct answer for 'not used'."}, 
+                                {text: "Multi-planar MRI", isCorrect: true, exp: "Correct. MRI is not a routine screening tool for BPH; it is reserved for cancer suspicion."}
+                            ], 
+                            eval: "The answer is correct. Multi-planar MRI is not a baseline or routine screening modality for BPH." 
+                        },
+                        { 
+                            q: "A patient presented with LUTS, previously diagnosed with BPH, prostate volume is 60cc, PVR= 70ml, normal creatinine levels, how do you manage this patient?", 
+                            opts: [
+                                {text: "Alpha blocker", isCorrect: true, exp: "Rapid symptom relief. Appropriate first choice, especially if symptoms are bothersome."}, 
+                                {text: "5-alpha reductase inhibitor", isCorrect: true, exp: "For prostates >40-50cc, a 5-ARI can be used alone or added to an alpha-blocker, but it works slowly."}, 
+                                {text: "TURBT", exp: "Not indicated for BPH; TURP is the surgical option, not TURBT."}, 
+                                {text: "Combination therapy (alpha blocker + 5-ARI)", isAi: true, exp: "Often recommended for larger prostates with bothersome symptoms, but the original text points to an ambiguous choice between A and B."}, 
+                                {text: "Watchful waiting", isAi: true, exp: "Acceptable for mild symptoms, but the question implies active management."}
+                            ], 
+                            eval: "The original answer is ambiguous (A vs B). Guidelines support single-agent alpha blockers for immediate relief or 5-ARIs for long-term reduction of volume." 
+                        },
+                        { 
+                            q: "Which one of the following is a definition of PSA density?", 
+                            opts: [
+                                {text: "Ratio of free/total PSA", exp: "Defines free-to-total PSA ratio, not density."}, 
+                                {text: "Ratio total/free PSA", exp: "Inverse and not a standard term."}, 
+                                {text: "Rate of change of serum PSA over time", exp: "This is PSA velocity."}, 
+                                {text: "The ratio of PSA to gland volume", isCorrect: true, exp: "Correct. PSA density = serum PSA / prostate volume (usually by TRUS)."}, 
+                                {text: "Age-specific PSA reference range", isAi: true, exp: "Refers to age-adjusted normal PSA values, not density."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                    { t: "Hematuria", qs: [
+                        { 
+                            q: "Patients presenting with gross hematuria in the absence of recent trauma or concurrent infection who are on anticoagulation medications should be evaluated with:", 
+                            opts: [
+                                {text: "CT urogram, with cystoscopy only if symptomatic. Cystoscopy is a must always", exp: "Incorrect; gross hematuria always requires full evaluation including cystoscopy even if asymptomatic."}, 
+                                {text: "Assessment of anticoagulation status, and evaluation only if supratherapeutic. We still need to vote out with full workup", exp: "Incorrect; anticoagulation does not obviate full workup; hematuria may be from a tumor."}, 
+                                {text: "No evaluation is necessary", exp: "Dangerous, as it may miss cancer."}, 
+                                {text: "Urinalysis, urine cytology, and cystoscopy only. Evaluate lower tract only", exp: "Incomplete; the upper tract must also be imaged."}, 
+                                {text: "Urine cytology, cystoscopy, and CT urogram", isCorrect: true, exp: "Correct. Full hematuria workup includes upper tract imaging (CT urogram) and lower tract evaluation (cystoscopy + cytology)."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "55-year-old male, heavy smoker, with intermittent painless gross hematuria. The most likely diagnosis is:", 
+                            opts: [
+                                {text: "Prostatic obstruction", exp: "Can cause hematuria but painless gross hematuria in a smoker is classic for urothelial malignancy."}, 
+                                {text: "Tuberculous epididymo-orchitis", exp: "Usually presents with scrotal swelling, not isolated painless hematuria."}, 
+                                {text: "Bladder carcinoma", isCorrect: true, exp: "Correct. Painless gross hematuria in an older smoker is the typical presentation of bladder cancer."}, 
+                                {text: "Cystitis", exp: "Typically associated with dysuria, frequency, and urgency."}, 
+                                {text: "Bladder stone", exp: "Often causes terminal hematuria and pain."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Terminal hematuria (blood at the end of urination) is most suggestive of:", 
+                            opts: [
+                                {text: "Bladder calculi", exp: "Can cause terminal hematuria but often associated with pain and interrupted stream."}, 
+                                {text: "Kidney stones", exp: "Usually cause total hematuria with loin pain."}, 
+                                {text: "Urethral strictures", exp: "May cause initial hematuria, not typically terminal."}, 
+                                {text: "Prostate or bladder neck inflammation", isCorrect: true, exp: "Correct. Terminal hematuria classically originates from the bladder neck or prostatic urethra."}, 
+                                {text: "Prostate cancer", isAi: true, exp: "Can cause hematuria but is not the classic cause of terminal hematuria."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All present with hematuria except:", 
+                            opts: [
+                                {text: "Prostate Ca can cause Hematuria", exp: "Prostate Ca can cause hematuria."}, 
+                                {text: "Bladder instability (urgency, frequency, nocturia, but no hematuria)", isCorrect: true, exp: "Correct. Overactive bladder causes storage symptoms without hematuria; thus it is the exception."}, 
+                                {text: "Stones", exp: "Commonly cause hematuria."}, 
+                                {text: "Hemorrhagic cystitis", exp: "By definition presents with hematuria."}, 
+                                {text: "Renal cell carcinoma", isAi: true, exp: "Classic triad includes hematuria; so it does present with hematuria, making it a true cause."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "What is the most common cause of hematuria in patients aged 50 and above?", 
+                            opts: [
+                                {text: "BPH", isAi: true, exp: "Can cause hematuria but not the most common pathological cause in this age group."}, 
+                                {text: "Bladder cancer", isCorrect: true, exp: "Correct. In patients over 50 with hematuria, bladder cancer is a leading concern."}, 
+                                {text: "Urinary tract infection", isAi: true, exp: "Common but usually associated with symptoms of infection."}, 
+                                {text: "Urolithiasis", isAi: true, exp: "Common, but painless hematuria in older patients warrants exclusion of malignancy."}, 
+                                {text: "Renal cell carcinoma", isAi: true, exp: "Less common than urothelial carcinoma of the bladder."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which finding differentiates hematuria from hemoglobinuria?", 
+                            opts: [
+                                {text: "Red urine color", isAi: true, exp: "Both can cause red urine."}, 
+                                {text: "Positive dipstick for blood", isAi: true, exp: "Dipstick detects heme; both hematuria and hemoglobinuria will test positive."}, 
+                                {text: "Erythrocytes on microscopy", isCorrect: true, exp: "Correct. The presence of intact RBCs on microscopy confirms hematuria; in hemoglobinuria, dipstick is positive but no RBCs are seen."}, 
+                                {text: "Cloudy urine", isAi: true, exp: "Not a differentiating feature."}, 
+                                {text: "Elevated urobilinogen", isAi: true, exp: "Not relevant to hematuria vs hemoglobinuria."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Presentation of intermittent, painless gross hematuria is most indicative of:", 
+                            opts: [
+                                {text: "Bladder Injury", exp: "Would be associated with trauma history."}, 
+                                {text: "Uretheral Injury", exp: "History of instrumentation or trauma, often painful."}, 
+                                {text: "Bladder Cancer", isCorrect: true, exp: "Correct. Intermittent, painless gross hematuria is the hallmark presentation."}, 
+                                {text: "Ureteral Stone", exp: "Typically causes severe flank pain with hematuria."}, 
+                                {text: "Prostate cancer", isAi: true, exp: "Can cause hematuria, but the classic presentation of bladder cancer is painless hematuria."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient complains of red urine; on U/A he had a large number of RBCs; he is medically free. Which of the following management options is incorrect?", 
+                            opts: [
+                                {text: "Don't do cystoscopy if he's on anticoagulants", isCorrect: true, exp: "Incorrect approach. Anticoagulation does not justify skipping cystoscopy; the workup must proceed."}, 
+                                {text: "Do urine cytology", exp: "Correct; part of the standard evaluation."}, 
+                                {text: "Do cystoscopy even if CT results were normal", exp: "Correct; upper tract imaging alone may miss bladder lesions."}, 
+                                {text: "No need for cystoscopy if cytology results were negative", exp: "This statement is also incorrect/debated, but standard choice points to option A as the primary incorrect management step."}, 
+                                {text: "CT urography should be performed", isAi: true, exp: "Correct; CT urography is part of the hematuria workup; therefore this is not the incorrect statement."}
+                            ], 
+                            eval: "The answer given is A, which is indeed an incorrect management approach." 
+                        },
+                        { 
+                            q: "A 63-year-old male presented with painless gross hematuria for 3 months. He also has urinary frequency and urgency but no dysuria. Urine analysis revealed no bacteria with >3 RBCs per HPF. Which of the following is wrong regarding the management of this patient?", 
+                            opts: [
+                                {text: "CT urography should be ordered", exp: "Correct; it is essential to evaluate the upper tracts."}, 
+                                {text: "Cystoscopy should be performed even if the cytology is negative", exp: "Correct; cytology alone cannot exclude bladder cancer."}, 
+                                {text: "Give antibiotics and follow up after 2 weeks (No evidence of infection)", isCorrect: true, exp: "Incorrect. No evidence of infection; antibiotics are not indicated and delay proper workup."}, 
+                                {text: "Order urine cytology", exp: "Correct; part of the evaluation."}, 
+                                {text: "Refer for urologic evaluation and cystoscopy", isAi: true, exp: "Correct management; thus it is not the wrong statement."}
+                            ], 
+                            eval: "The answer is correct. Empiric antibiotics without indication delays diagnosis." 
+                        },
+                        { 
+                            q: "56-year-old patient presents with hematuria, no bacterial growth in culture. Which of the following management steps is wrong?", 
+                            opts: [
+                                {text: "Give antibiotics for 2 weeks and then repeat the test", isCorrect: true, exp: "Wrong. In the absence of infection, antibiotics are not indicated and delay proper diagnosis."}, 
+                                {text: "Do cystoscopy even if urine cytology was negative", exp: "Correct; bladder visualization is mandatory."}, 
+                                {text: "Do cystoscopy even if CT was normal", exp: "Correct; upper tract imaging cannot rule out bladder tumor."}, 
+                                {text: "Perform CT urography", isAi: true, exp: "Correct standard of care; thus it is not the wrong step."}, 
+                                {text: "Refer for cystoscopy", isAi: true, exp: "Correct; urologic evaluation with cystoscopy is necessary."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]} , { t: "Hematuria", qs: [] }, { t: "Trauma", qs: [] },
                     { t: "Infertility", qs: [] }, { t: "Scrotal Pathologies", qs: [] }, { t: "Bladder Cancer", qs: [] },
                     { t: "Testicular Tumors", qs: [] }, { t: "Stones", qs: [] }, { t: "Kidney Transplant", qs: [] },
                     { t: "Peds Urology", qs: [] }, { t: "Incontinence and Urodynamics", qs: [] }, { t: "UTI", qs: [] },
