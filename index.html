@@ -9067,7 +9067,875 @@
                             ], 
                             eval: "The answer is correct." 
                         }
+                    ]},{ t: "Renal Transplantation", qs: [
+                        { 
+                            q: "Kidney transplant survival rates are poorest for which donor categories?", 
+                            opts: [
+                                {text: "Parents.", exp: "Incorrect. Living donor kidneys (parents) have better long-term survival than deceased donor kidneys."}, 
+                                {text: "Expanded criteria deceased donors.", isCorrect: true, exp: "Correct. ECD kidneys come from older donors or those with comorbidities, and have the lowest graft survival rates."}, 
+                                {text: "Siblings.", exp: "Incorrect. Well-matched living donor transplants have excellent survival."}, 
+                                {text: "Standard criteria deceased donors.", exp: "Incorrect. SCD kidneys have better survival than ECD, but less than living donor transplants."}, 
+                                {text: "Spouse", exp: "Incorrect. Spousal living donation, though often less well-matched, still has better outcomes than ECD kidneys."}
+                            ], 
+                            eval: "The answer is correct. Expanded criteria deceased donor kidneys have the poorest transplant survival rates." 
+                        },
+                        { 
+                            q: "Not cause of chronic renal transplant rejection:", 
+                            opts: [
+                                {text: "candida albican", isCorrect: true, exp: "Correct answer (not a cause). Candida infection is not a direct immune driver of chronic rejection; chronic rejection is an immune-mediated fibrotic process."}, 
+                                {text: "Recurrent acute rejections", exp: "Incorrect; repeated acute rejections are a major risk factor for chronic rejection."}, 
+                                {text: "Small immune trauma", exp: "Incorrect; continuous low-grade immune injury contributes to chronic allograft nephropathy."}, 
+                                {text: "Persistent HTN", exp: "Incorrect; hypertension promotes glomerular damage and accelerates chronic rejection."}, 
+                                {text: "Persistent comorbidity (DM,..)", exp: "Incorrect; diabetes and other comorbidities worsen graft fibrosis and loss."}
+                            ], 
+                            eval: "The answer is correct. Fungal infection is not a typical cause of chronic antibody- or T-cell-mediated rejection." 
+                        },
+                        { 
+                            q: "About renal transplant hyperacute rejection .. true", 
+                            opts: [
+                                {text: "caused by preformed antibodies", isCorrect: true, exp: "Correct. Hyperacute rejection is mediated by preformed recipient antibodies against donor HLA or ABO antigens."}, 
+                                {text: "happens during 3-5 days", exp: "Incorrect. Hyperacute rejection occurs within minutes to hours; 3–5 days suggests accelerated acute rejection."}, 
+                                {text: "we can predict it by measuring something", exp: "Incorrect as a standalone true statement. We can predict risk using crossmatch, but the statement is vague; the most definite truth is the preformed antibody mechanism."}, 
+                                {text: "It is mediated by T-cells", isAi: true, exp: "Incorrect. Hyperacute rejection is antibody-mediated, not T-cell-mediated."}, 
+                                {text: "It can be reversed with high-dose steroids", isAi: true, exp: "Incorrect. Hyperacute rejection is usually irreversible and leads to rapid graft loss."}
+                            ], 
+                            eval: "The answer seems correct. The hallmark of hyperacute rejection is the presence of preformed antibodies. The '(Not Sure)' note in the source may reflect the incomplete phrasing of option C; nevertheless, A remains the best true statement." 
+                        },
+                        { 
+                            q: "One of these is NOT an absolute contraindication to renal transplantation:", 
+                            opts: [
+                                {text: "Past transplant with graft failure.", isCorrect: true, exp: "Correct (NOT an absolute contraindication). Retransplantation is possible after graft failure if the patient is otherwise suitable."}, 
+                                {text: "Life expectancy less than 2 years.", exp: "Incorrect; this is an absolute contraindication due to insufficient benefit."}, 
+                                {text: "Neuropsychiatric illness.", exp: "Incorrect; severe, uncontrolled neuropsychiatric disease that precludes compliance is an absolute contraindication."}, 
+                                {text: "Active malignancy", exp: "Incorrect; untreated active malignancy is an absolute contraindication because of immunosuppression risk."}, 
+                                {text: "Severe irreversible cardiovascular disease", isAi: true, exp: "Incorrect; it is an absolute contraindication when it limits life expectancy or surgical fitness."}
+                            ], 
+                            eval: "The answer is correct. Previous graft failure alone does not absolutely contraindicate transplantation." 
+                        },
+                        { 
+                            q: "Which of the following is not an absolute contraindication for renal transplantation?", 
+                            opts: [
+                                {text: "Expected life expectancy less than 10 years", isCorrect: true, exp: "Correct (not an absolute contraindication). Some patients with limited life expectancy may still benefit; it is a relative consideration."}, 
+                                {text: "Active malignancy", exp: "Incorrect; is an absolute contraindication unless definitively treated."}, 
+                                {text: "Parkinson's disease", exp: "Incorrect; severe neurodegenerative disease is typically an absolute contraindication due to inability to comply and poor prognosis."}, 
+                                {text: "Persistent substance abuse", exp: "Incorrect; active addiction is an absolute contraindication."}, 
+                                {text: "Refractory congestive heart failure", exp: "Incorrect; end-stage heart failure makes transplantation prohibitive."}
+                            ], 
+                            eval: "The answer is correct. Life expectancy under 10 years is generally a relative, not absolute, contraindication in many guidelines." 
+                        },
+                        { 
+                            q: "One of the following is an absolute contraindication for renal transplant:", 
+                            opts: [
+                                {text: "Life expectancy less than 10 years", exp: "Incorrect; as previously noted, this is usually a relative contraindication."}, 
+                                {text: "Neuropsychiatric illness", isCorrect: true, exp: "Correct. Severe, uncontrolled neuropsychiatric illness that prevents adherence is an absolute contraindication."}, 
+                                {text: "Mild cardiovascular disease", exp: "Incorrect; mild disease is not a contraindication."}, 
+                                {text: "Treated malignancy", exp: "Incorrect; treated malignancy with sufficient recurrence-free interval may be acceptable."}, 
+                                {text: "Uncontrolled active infection", isAi: true, exp: "Incorrect; it is an absolute contraindication but not the correct answer here as the question asks for one specific option; B is the designated answer."}
+                            ], 
+                            eval: "The answer is reasonable, though some guidelines list active infection and active substance abuse as more classic absolute contraindications. Neuropsychiatric illness is accepted as absolute when it severely impacts compliance." 
+                        }
                     ]},
+{ t: "Miscellaneous (Embryology, Anatomy, Physiology)", qs: [
+                        { 
+                            q: "Which radiotracer is ideally suited for imaging renal scarring?", 
+                            opts: [
+                                {text: "99mTc-MAG3", exp: "Incorrect; primarily used for tubular function and renography."}, 
+                                {text: "99mTc-DTPA", exp: "Incorrect; glomerular filtration agent, not ideal for cortical scarring."}, 
+                                {text: "99mTc-sulfur colloid", exp: "Incorrect; used for lymphoscintigraphy and bone marrow, not renal scarring."}, 
+                                {text: "67Ga-citrate", exp: "Incorrect; used for inflammation and infection imaging, not the best for scars."}, 
+                                {text: "99mTc-DMSA", isCorrect: true, exp: "Correct. DMSA binds to renal tubules and is the gold standard for cortical scar detection."}
+                            ], 
+                            eval: "The answer is correct. DMSA scan is the standard for renal cortical scarring." 
+                        },
+                        { 
+                            q: "Factors important to the testis to descend intrauterine are all the following except:", 
+                            opts: [
+                                {text: "Omphalocele.", isCorrect: true, exp: "Correct (not a factor). Omphalocele is an abdominal wall defect and does not facilitate testicular descent; it may disrupt it."}, 
+                                {text: "Normal growth of the baby.", exp: "Incorrect; general fetal growth is important for descent."}, 
+                                {text: "Preserved normal abdominal pressure of the baby.", exp: "Incorrect; intra-abdominal pressure aids in pushing testes through the inguinal canal."}, 
+                                {text: "Gubernaculum.", exp: "Incorrect; it guides the testis into the scrotum."}, 
+                                {text: "The presence of testosterone.", exp: "Incorrect; androgens drive the descent process."}
+                            ], 
+                            eval: "The answer is correct. An omphalocele is an anomaly, not a physiological factor in descent." 
+                        },
+                        { 
+                            q: "Pregnant lady, U/S showed that fetus has bilateral hydronephrosis. Diagnosis?", 
+                            opts: [
+                                {text: "Posterior urethral valve", isCorrect: true, exp: "Correct. PUV is the most common cause of bilateral hydronephrosis in a male fetus, with dilated bladder and possible keyhole sign."}, 
+                                {text: "Bilateral ureteropelvic junction obstruction", isAi: true, exp: "Incorrect; it can cause bilateral hydronephrosis but is less common and lacks the characteristic bladder changes."}, 
+                                {text: "Vesicoureteral reflux", isAi: true, exp: "Incorrect; severe bilateral reflux could cause hydronephrosis but is usually less prominent prenatally without bladder outlet obstruction signs."}, 
+                                {text: "Prune belly syndrome", isAi: true, exp: "Incorrect; it includes hydronephrosis but is a constellation of anomalies with abdominal wall deficiency, not just isolated bilateral hydronephrosis."}, 
+                                {text: "Neurogenic bladder", isAi: true, exp: "Incorrect; rarely a primary antenatal diagnosis without spinal dysraphism."}
+                            ], 
+                            eval: "The answer is correct. Bilateral hydronephrosis in a male fetus should raise suspicion for posterior urethral valves." 
+                        },
+                        { 
+                            q: "Which of the following is not indication for surgery in VUR", 
+                            opts: [
+                                {text: "Non compliant to medications", exp: "Incorrect; this is an indication for surgery to protect the kidney."}, 
+                                {text: "Recurrent infections despite appropriate prophylactic abx", exp: "Incorrect; breakthrough infections are an indication for surgical correction."}, 
+                                {text: "Father preference cuz he dont want his baby to take abx", isCorrect: true, exp: "Correct (not an indication); parental preference alone, without medical justification, is not a valid indication for surgery."}, 
+                                {text: "High grade hydronephrosis", exp: "Incorrect; high-grade VUR with hydronephrosis often warrants surgical intervention."}, 
+                                {text: "Worsening renal function on follow-up imaging", isAi: true, exp: "Incorrect; this is a strong indication for surgery."}
+                            ], 
+                            eval: "The answer is correct. Personal preference is not a medical indication for antireflux surgery." 
+                        },
+                        { 
+                            q: "What does Fr mean in Foley's:", 
+                            opts: [
+                                {text: "Circumference * 3", exp: "Incorrect; not the definition."}, 
+                                {text: "Circumference / 3", exp: "Incorrect; this would not equal French size."}, 
+                                {text: "Diameter * 3", isCorrect: true, exp: "Correct. French gauge = outer diameter in mm × 3."}, 
+                                {text: "Diameter / 3", exp: "Incorrect; would give a much smaller number."}, 
+                                {text: "Circumference (mm) / 3", isAi: true, exp: "Incorrect; French is based on diameter, not circumference divided by 3."}
+                            ], 
+                            eval: "The answer is correct. Fr = diameter (mm) × 3." 
+                        },
+                        { 
+                            q: "The most common cause of UTI in children is:", 
+                            opts: [
+                                {text: "Streptococcus", exp: "Incorrect; not the most common."}, 
+                                {text: "Staphylococcuss", exp: "Incorrect; Staphylococcus saprophyticus can cause UTI but is not the leading cause in children."}, 
+                                {text: "E.Coli", isCorrect: true, exp: "Correct. Escherichia coli is responsible for the vast majority of pediatric UTIs."}, 
+                                {text: "Proteus, klebsiella", exp: "Incorrect; these are less common pathogens."}, 
+                                {text: "Pseudomonas", isAi: true, exp: "Incorrect; uncommon except in nosocomial or complicated UTIs."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following cause xanthogranulomatous pyelonephritis?", 
+                            opts: [
+                                {text: "E.coli", isCorrect: true, exp: "Correct (per answer). E. coli is one of the organisms associated with XGP, though Proteus is also classic; the given answer designates E. coli."}, 
+                                {text: "MIRBALIS", exp: "Incorrect as the answer, though Proteus is often cited; the source states E. coli."}, 
+                                {text: "klebsela", exp: "Incorrect; Klebsiella can be involved but is less typical."}, 
+                                {text: "Pseudomonas", exp: "Incorrect; uncommon."}, 
+                                {text: "Enterococcus faecalis", isAi: true, exp: "Incorrect; rare cause."}
+                            ], 
+                            eval: "The answer is acceptable. Many sources list both Proteus and E. coli as common; the source answer chooses E. coli." 
+                        },
+                        { 
+                            q: "The presence of bacteriuria without pyuria is", 
+                            opts: [
+                                {text: "colonization", isCorrect: true, exp: "Correct. Bacteriuria without white cells suggests harmless bacterial presence, not tissue invasion."}, 
+                                {text: "Infection", exp: "Incorrect; infection typically involves an inflammatory response with pyuria."}, 
+                                {text: "Contamination", isAi: true, exp: "Incorrect; contamination implies improper collection, which may not be the case."}, 
+                                {text: "Asymptomatic bacteriuria", isAi: true, exp: "Incorrect; asymptomatic bacteriuria is a clinical diagnosis, not defined simply by absence of pyuria alone."}, 
+                                {text: "Urethral syndrome", isAi: true, exp: "Incorrect; that involves symptoms without significant bacteriuria."}
+                            ], 
+                            eval: "The answer is correct. The absence of pyuria distinguishes colonization from active infection." 
+                        },
+                        { 
+                            q: "false about pyelonephritis:", 
+                            opts: [
+                                {text: "Cause perinephric access", exp: "Incorrect (true statement). Pyelonephritis can progress to perinephric abscess."}, 
+                                {text: "Dysuria is rare", isCorrect: true, exp: "Correct (false statement). Dysuria and lower urinary tract symptoms are common in pyelonephritis."}, 
+                                {text: "Loin pain", exp: "Incorrect (true); flank/loin pain is a hallmark."}, 
+                                {text: "May cause stones", exp: "Incorrect (true); infection can lead to struvite stones."}, 
+                                {text: "Can lead to septic shock", isAi: true, exp: "Incorrect (true); urosepsis is a known complication."}
+                            ], 
+                            eval: "The answer is correct. Dysuria is not rare in pyelonephritis." 
+                        },
+                        { 
+                            q: "COLONY how many bacteria per high power field (100000/ml):", 
+                            opts: [
+                                {text: "1", exp: "Incorrect; corresponds to a lower colony count."}, 
+                                {text: "2", exp: "Incorrect."}, 
+                                {text: "5", isCorrect: true, exp: "Correct. Approximately 5 bacteria per HPF on a centrifuged urine sediment correlates with ≥10⁵ CFU/mL."}, 
+                                {text: "8", exp: "Incorrect."}, 
+                                {text: "10", exp: "Incorrect."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Most common cause of cloudy urine:", 
+                            opts: [
+                                {text: "bacterial cystitis", exp: "Incorrect; pyuria can cause cloudiness, but hyperphosphatemia leading to phosphaturia is given as the most common cause here."}, 
+                                {text: "hyperphosphatemia", isCorrect: true, exp: "Correct. Alkaline urine with phosphate precipitation often presents with cloudy urine."}, 
+                                {text: "proteinuria", exp: "Incorrect; severe proteinuria can make urine foamy, not typically cloudy."}, 
+                                {text: "Dehydration", isAi: true, exp: "Incorrect; may concentrate urine but phosphaturia is a more direct cause of cloudiness."}, 
+                                {text: "Urate crystalluria", isAi: true, exp: "Incorrect; can cause pink or cloudy sediment but phosphate is more common."}
+                            ], 
+                            eval: "The answer is plausible, though many sources consider infection (pyuria) or phosphaturia as top causes. The given answer is retained." 
+                        },
+                        { 
+                            q: "Which of the following is the most likely cause of nosocomial UTI?", 
+                            opts: [
+                                {text: "Catheterization", isCorrect: true, exp: "Correct. Indwelling urinary catheters are the predominant risk factor for hospital-acquired UTI."}, 
+                                {text: "Surgery", exp: "Risk factor but not the most direct cause."}, 
+                                {text: "Diabetes", exp: "Predisposes to infection but not specifically nosocomial."}, 
+                                {text: "Prolonged hospitalization", isAi: true, exp: "Incorrect; a general risk factor, but catheterization is the primary direct cause."}, 
+                                {text: "Broad-spectrum antibiotics", isAi: true, exp: "Incorrect; may predispose to candiduria or resistant organisms, but catheter is the leading cause."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following modalities is the preferred to reveal the anatomic features of Urogenital TB:", 
+                            opts: [
+                                {text: "Ultrasound", exp: "Incorrect; non-specific for subtle calyceal changes."}, 
+                                {text: "CT", exp: "Incorrect; valuable but IVU historically shows mucosal detail better."}, 
+                                {text: "IVU", isCorrect: true, exp: "Correct. Intravenous urography demonstrates calyceal distortions, cavities, and infundibular strictures classic for renal TB."}, 
+                                {text: "Retrograde pyelogram", exp: "Incorrect; invasive and not first-line."}, 
+                                {text: "MRI", exp: "Incorrect; expensive and no advantage over CT/IVU for luminal anatomy."}
+                            ], 
+                            eval: "The answer is correct. IVU remains a classical choice for demonstrating anatomic changes of urogenital TB." 
+                        },
+                        { 
+                            q: "Most common cause of cloudy urine -", 
+                            opts: [
+                                {text: "Bacterial cystitis", isCorrect: true, exp: "Correct (as per given answer). Infection with pyuria is a frequent cause of cloudy urine."}, 
+                                {text: "Hyperphosphatemia", isAi: true, exp: "Incorrect; common but the source answer indicates bacterial cystitis."}, 
+                                {text: "Dehydration", isAi: true, exp: "Incorrect; concentrated urine alone may not be the most common cause."}, 
+                                {text: "Urate crystalluria", isAi: true, exp: "Incorrect; less common than infection."}, 
+                                {text: "Pyuria without infection", isAi: true, exp: "Incorrect; sterile pyuria can occur but infection is more typical."}
+                            ], 
+                            eval: "The answer seems correct, though hyperphosphatemia is also frequently cited. The original answer had a question mark, suggesting uncertainty; infection is a common cause and is acceptable." 
+                        },
+                        { 
+                            q: "Acute pyelonephritis", 
+                            opts: [
+                                {text: "Fever, chills, loin pain", isCorrect: true, exp: "Correct. This triad represents the classic presentation of acute pyelonephritis."}, 
+                                {text: "Dysuria and frequency only", isAi: true, exp: "Incorrect; suggests lower UTI, not kidney infection."}, 
+                                {text: "Acute urinary retention", isAi: true, exp: "Incorrect; not typical of pyelonephritis."}, 
+                                {text: "Painless hematuria", isAi: true, exp: "Incorrect; points toward bladder tumor or other causes."}, 
+                                {text: "Nausea and vomiting alone", isAi: true, exp: "Incorrect; gastrointestinal symptoms can accompany but do not define pyelonephritis."}
+                            ], 
+                            eval: "The answer is correct. Systemic symptoms with flank pain characterize upper UTI." 
+                        },
+                        { 
+                            q: "Not urease- producing bacteria?", 
+                            opts: [
+                                {text: "Proteus mirabilis", isAi: true, exp: "Incorrect; it is a strong urease producer."}, 
+                                {text: "Staphylococcus saprophyticus", isAi: true, exp: "Incorrect; produces urease."}, 
+                                {text: "E. coli", isCorrect: true, exp: "Correct. E. coli does not produce urease."}, 
+                                {text: "Klebsiella pneumoniae", isAi: true, exp: "Incorrect; urease positive."}, 
+                                {text: "Ureaplasma urealyticum", isAi: true, exp: "Incorrect; urease positive (hydrolyzes urea)."}
+                            ], 
+                            eval: "The answer is correct. E. coli is urease-negative." 
+                        },
+                        { 
+                            q: "Indication for admission of chronic retention:", 
+                            opts: [
+                                {text: "Presence of UTI or post-obstructive diuresis", isCorrect: true, exp: "Correct. These are acute complications requiring inpatient management."}, 
+                                {text: "Nocturia", isAi: true, exp: "Incorrect; a chronic symptom, not an admission criterion alone."}, 
+                                {text: "Mild hesitancy", isAi: true, exp: "Incorrect; typical symptom, outpatient workup."}, 
+                                {text: "Elevated PSA", isAi: true, exp: "Incorrect; outpatient evaluation unless very high with other concerns."}, 
+                                {text: "Chronic pelvic pain", isAi: true, exp: "Incorrect; usually managed electively."}
+                            ], 
+                            eval: "The answer is correct. UTI and post-obstructive diuresis necessitate admission." 
+                        },
+                        { 
+                            q: "Most common presentation for UTI:", 
+                            opts: [
+                                {text: "Dysuria (painful urination)", isCorrect: true, exp: "Correct. Dysuria is the most common presenting symptom of UTI."}, 
+                                {text: "Frequency", isAi: true, exp: "Incorrect; common but dysuria is more characteristic."}, 
+                                {text: "Urgency", isAi: true, exp: "Incorrect; often accompanies but dysuria is predominant."}, 
+                                {text: "Hematuria", isAi: true, exp: "Incorrect; occurs but not the most common."}, 
+                                {text: "Suprapubic discomfort", isAi: true, exp: "Incorrect; also present but dysuria tops the list."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The kidney is embryologically from", 
+                            opts: [
+                                {text: "endoderm", exp: "Incorrect; endoderm forms gut and bladder epithelium, not kidney."}, 
+                                {text: "intermediate mesoderm", isCorrect: true, exp: "Correct. The nephric structures arise from intermediate mesoderm."}, 
+                                {text: "urachus", exp: "Incorrect; urachus is a remnant of allantois, not kidney origin."}, 
+                                {text: "urogintal sinus", exp: "Incorrect; forms bladder and urethra, not kidneys."}, 
+                                {text: "Paraxial mesoderm", isAi: true, exp: "Incorrect; gives rise to somites, not nephric tissue."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Ectopic kidney, what happens to adrenals:", 
+                            opts: [
+                                {text: "Same original position in the superior retroperitoneum", isCorrect: true, exp: "Correct. Adrenal gland develops separately and remains in its normal position."}, 
+                                {text: "along with the renal artery", exp: "Incorrect; adrenals are not tied to renal arterial migration."}, 
+                                {text: "over the pole of the ectopic kidney", exp: "Incorrect; even in ectopic kidney, the adrenal stays orthotopic."}, 
+                                {text: "absent", exp: "Incorrect; adrenal gland is present."}, 
+                                {text: "Atrophied", isAi: true, exp: "Incorrect; the adrenal is normal in size and position."}
+                            ], 
+                            eval: "The answer is correct. Adrenals remain in the normal suprarenal location." 
+                        },
+                        { 
+                            q: "Kidney weight:", 
+                            opts: [
+                                {text: "1200gm", exp: "Incorrect; far too heavy."}, 
+                                {text: "600gm", exp: "Incorrect; too heavy."}, 
+                                {text: "300gm", exp: "Incorrect; would be enlarged."}, 
+                                {text: "150gm", isCorrect: true, exp: "Correct. The normal adult kidney weighs approximately 150 grams."}, 
+                                {text: "50gm", exp: "Incorrect; too light, atrophic kidney."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Acute tubular necrosis diuretic phase, most dangerous", 
+                            opts: [
+                                {text: "hypernatremia", exp: "Incorrect; may occur but hypokalemia is more immediately dangerous."}, 
+                                {text: "hyponatremia", exp: "Incorrect; can happen, but hypokalemia poses a greater arrhythmia risk."}, 
+                                {text: "hypomagnesemia", exp: "Incorrect; can contribute to arrhythmias but hypokalemia is the classic concern."}, 
+                                {text: "hypokalemia", isCorrect: true, exp: "Correct. During the diuretic phase, massive potassium loss can cause life-threatening arrhythmias."}, 
+                                {text: "hyperkalemia", exp: "Incorrect; typical of the oliguric phase, not diuretic phase."}
+                            ], 
+                            eval: "The answer is correct. Hypokalemia is the most dangerous electrolyte disturbance in the diuretic phase of ATN." 
+                        },
+                        { 
+                            q: "Most common cause of Chronic testicular pain (orchalgia) is", 
+                            opts: [
+                                {text: "Distal ureter stone", exp: "Incorrect alone; referred pain to testis can occur."}, 
+                                {text: "Hydrocele", exp: "Incorrect alone; can cause dull ache but not the sole leading cause."}, 
+                                {text: "Both distal ureter stone and hydrocele", isCorrect: true, exp: "Correct (per given answer). The source states both are implicated as common causes."}, 
+                                {text: "Varicocele", isAi: true, exp: "A cause but not the most common per this source."}, 
+                                {text: "Chronic epididymitis", isAi: true, exp: "Common but source indicates both stone and hydrocele."}
+                            ], 
+                            eval: "The answer “both cause it” is ambiguous. Classically, chronic orchialgia is often idiopathic or post-vasectomy; however, the source answer is retained as given." 
+                        },
+                        { 
+                            q: "Most common source of RENIN is?", 
+                            opts: [
+                                {text: "Kidney", isCorrect: true, exp: "Correct. The juxtaglomerular cells of the kidney are the primary source of renin."}, 
+                                {text: "Liver", exp: "Incorrect; produces angiotensinogen, not renin."}, 
+                                {text: "Lung", exp: "Incorrect; ACE is produced in the lungs, not renin."}, 
+                                {text: "Adrenal gland", isAi: true, exp: "Incorrect; produces aldosterone, not renin."}, 
+                                {text: "Pituitary", isAi: true, exp: "Incorrect; not a renin source."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Female with HTN of 2 years duration. treated with diuretics, BP 150/90 .. Na 135 ...K 2.7 .. Cr 0.8 ..she has:", 
+                            opts: [
+                                {text: "essential HTN", isCorrect: true, exp: "Possible; diuretic-induced hypokalemia can explain the picture entirely."}, 
+                                {text: "hyper aldosteronemia", isCorrect: true, exp: "Possible; hypertension with hypokalemia and normal sodium raises suspicion for primary hyperaldosteronism."}, 
+                                {text: "syndromes ...", exp: "Incomplete alternative path; could hypothetically refer to inherited options like Liddle's syndrome."}, 
+                                {text: "Renal artery stenosis", isAi: true, exp: "Would explain hypertension but typically features renal impairment rather than isolated low K on a diuretic profile."}, 
+                                {text: "Cushing’s syndrome", isAi: true, exp: "Can cause HTN and hypokalemia, but active diuretic background complicates direct tracking."}
+                            ], 
+                            eval: "The answer is ambiguous in the source text. Diuretics safely provoke hypokalemia during essential hypertension management, yet primary hyperaldosteronism independently maps to this profile. Renin and aldosterone tests are required to confirm." 
+                        },
+                        { 
+                            q: "Narrowest part of ureter:", 
+                            opts: [
+                                {text: "Pelviureteric junction", exp: "Incorrect; a narrow point but not the narrowest."}, 
+                                {text: "uretrovesical junction", isCorrect: true, exp: "Correct. The intramural ureter at the vesicoureteric junction is the narrowest part."}, 
+                                {text: "Where it passes the pelvic brim", exp: "Incorrect; another anatomical narrowing but not the narrowest."}, 
+                                {text: "where it passes the ischial spine", exp: "Incorrect; not a typical narrowing."}, 
+                                {text: "Where it crosses the psoas muscle", isAi: true, exp: "Incorrect; not a classic narrow point."}
+                            ], 
+                            eval: "The answer is correct. The ureterovesical junction is the narrowest segment." 
+                        },
+                        { 
+                            q: "Mcc of hemosphermia", 
+                            opts: [
+                                {text: "Idiopathic", isCorrect: true, exp: "Correct. Idiopathic remains the single most common cause identified across large clinical series, especially in patients under 40."}, 
+                                {text: "Prostatitis", isAi: true, exp: "A common inflammatory cause found during screening assessments."}, 
+                                {text: "Urethritis", isAi: true, exp: "Can present with blood in semen but is epidemiologically less frequent."}, 
+                                {text: "Malignancy", isAi: true, exp: "Rare cause overall, primarily screened for in elderly patient populations."}, 
+                                {text: "Seminal vesicle calculi", isAi: true, exp: "An uncommon structural cause."}
+                            ], 
+                            eval: "No final answer was selected in the source text. In standard medical workflows, the vast majority of cases present as benign and self-limiting idiopathic events." 
+                        }
+                    ]},{ t: "Incontinence & Neurogenic Bladder", qs: [
+                        { 
+                            q: "The most likely cause of continuous incontinence:", 
+                            opts: [
+                                {text: "Detrusor hyperreflexia", exp: "Causes urge incontinence with sudden, strong desire to void, not continuous leakage."}, 
+                                {text: "Noncompliant bladder", exp: "Leads to high storage pressures and overflow or urge leakage, not typically continuous dribbling without periods of dryness."}, 
+                                {text: "Enterovesical fistula", exp: "Produces pneumaturia, faecaluria, and recurrent UTIs rather than continuous urine leakage."}, 
+                                {text: "Vesicovaginal fistula", isCorrect: true, exp: "Correct. This creates a direct passage between bladder and vagina, causing constant, unremitting loss of urine regardless of position."}, 
+                                {text: "Sphincteric incompetence", exp: "Produces stress incontinence (leakage with increased abdominal pressure) and may cause total incontinence only when the sphincter is completely destroyed, but continuous leakage in all positions points more to a fistula."}
+                            ], 
+                            eval: "The answer is correct. Vesicovaginal fistula classically presents with continuous incontinence; continuous leak with a full bladder can also occur, but the key is uninterrupted leakage." 
+                        },
+                        { 
+                            q: "Patient with neurogenic bladder (overactive) which of the following is not part of his workup:", 
+                            opts: [
+                                {text: "Serum creatinine", exp: "Part of initial assessment of renal function in neurogenic bladder."}, 
+                                {text: "Urine culture", exp: "Needed to exclude infection as a cause of symptoms."}, 
+                                {text: "Urine analysis", exp: "Basic screening for infection, haematuria, etc."}, 
+                                {text: "Cystoscopy", isCorrect: true, exp: "Not routinely indicated for uncomplicated overactive neurogenic bladder; reserved for haematuria, suspected stones, or other structural concerns."}, 
+                                {text: "U/S for tract from ureter and post void volume", exp: "Essential to evaluate upper tracts and residual urine."}
+                            ], 
+                            eval: "Answer is correct. Cystoscopy is not routine for overactive neurogenic bladder workup." 
+                        },
+                        { 
+                            q: "What of the following is not a risk factor for stress incontinence:", 
+                            opts: [
+                                {text: "Increased age", exp: "Risk factor due to weakening of pelvic floor support."}, 
+                                {text: "Vaginal delivery", exp: "Risk factor; can damage pelvic floor and sphincter."}, 
+                                {text: "Recurrent UTI", isCorrect: true, exp: "Correct answer; not a direct risk factor for stress incontinence (may coexist but does not cause sphincteric weakness)."}, 
+                                {text: "Cough", exp: "Chronic cough raises intra-abdominal pressure repeatedly, predisposing to stress incontinence."}, 
+                                {text: "Obesity", isAi: true, exp: "Increased body weight raises intra-abdominal pressure and is an established risk factor for stress incontinence."}
+                            ], 
+                            eval: "The answer is correct. Recurrent UTI is not a recognised risk factor for stress incontinence." 
+                        },
+                        { 
+                            q: "About coordination: pontine micturition center needs contact with what for coordination between external sphincter during voiding and UB contractions?", 
+                            opts: [
+                                {text: "Frontal lobe", exp: "Exerts voluntary control over micturition but not the direct brainstem–sphincter coordination."}, 
+                                {text: "Basal ganglia", exp: "Modulate motor activity but not the specific sphincter–detrusor coordination."}, 
+                                {text: "Sympathetic", exp: "Sympathetic nerves store urine by relaxing detrusor and contracting internal sphincter, not coordinating the external sphincter during voiding."}, 
+                                {text: "Onuf’s center", isCorrect: true, exp: "Correct. The pontine micturition centre projects to Onuf’s nucleus in the sacral cord, which innervates the external urethral sphincter via the pudendal nerve, coordinating sphincter relaxation with bladder contraction."}, 
+                                {text: "Hypothalamus", isAi: true, exp: "The hypothalamus influences the overall micturition reflex but does not directly synapse for this specific coordination."}
+                            ], 
+                            eval: "The answer is correct. Onuf’s nucleus is the final common pathway for external sphincter control." 
+                        },
+                        { 
+                            q: "One will not cause total incontinence:", 
+                            opts: [
+                                {text: "Prostatic hypertrophy", isCorrect: true, exp: "Causes bladder outlet obstruction; leads to hesitancy, poor stream, overflow incontinence but not total (continuous) incontinence."}, 
+                                {text: "Ectopic ureter", exp: "In females, insertion below sphincter causes continuous dribbling (total incontinence)."}, 
+                                {text: "External sphincter damage", exp: "Complete destruction can cause constant leakage."}, 
+                                {text: "Spina bifida", exp: "May cause denervation and a wide-open bladder neck leading to continuous incontinence."}, 
+                                {text: "Spinal cord lesion", exp: "Depending on level, can produce a non-functioning sphincter and total incontinence."}
+                            ], 
+                            eval: "The answer is correct. BPH does not cause total, constant incontinence." 
+                        },
+                        { 
+                            q: "Patient with long standing outflow obstruction may present with?", 
+                            opts: [
+                                {text: "Stream incontinence", exp: "Not a standard term; may refer to post-void dribble, not the classic presentation."}, 
+                                {text: "Normal continence", exp: "Long-standing obstruction eventually decompensates the bladder, causing retention."}, 
+                                {text: "Overflow incontinence", isCorrect: true, exp: "Correct. Chronic retention leads to bladder overdistension with intermittent or continuous dribbling of urine."}, 
+                                {text: "True incontinence", exp: "Usually refers to continuous leakage from fistula or sphincter damage, not typical of obstruction."}, 
+                                {text: "Urge incontinence", isAi: true, exp: "Urge incontinence is due to detrusor overactivity, not the typical outcome of chronic outlet obstruction with retention."}
+                            ], 
+                            eval: "The answer is correct. Overflow incontinence is the classic presentation of long-term outflow obstruction." 
+                        },
+                        { 
+                            q: "Involuntary continuous leak of urine with a full urinary bladder:", 
+                            opts: [
+                                {text: "Urge Incontinence", exp: "Leakage preceded by a strong desire to void, not continuous."}, 
+                                {text: "Stress Incontinence", exp: "Leakage on coughing, sneezing, etc., not continuous."}, 
+                                {text: "Overflow Incontinence", isCorrect: true, exp: "Occurs with a chronically full bladder, causing constant dribbling when bladder pressure overcomes outlet resistance."}, 
+                                {text: "Vesicovaginal fistula", isCorrect: true, exp: "Also produces continuous, sometimes positional, leakage; bladder may be full if fistula is small but urine exits constantly."}, 
+                                {text: "Neurogenic detrusor overactivity", isAi: true, exp: "Causes urgency and urge incontinence, not continuous leak with a full bladder."}
+                            ], 
+                            eval: "The answer is debated. Overflow incontinence implies retention with overflow, leading to continuous dribbling from a full bladder. A vesicovaginal fistula also causes continuous leakage, and the bladder may be full if the fistula is small. Both are considered plausible." 
+                        },
+                        { 
+                            q: "Regarding Neurogenic bladder, one of these is incorrect:", 
+                            opts: [
+                                {text: "We use Anticholinergic to treat flaccid bladder", isCorrect: true, exp: "Incorrect; anticholinergics are used for overactive (spastic) bladder to reduce uninhibited contractions. Flaccid bladder results in retention and is managed with intermittent catheterisation, not anticholinergics."}, 
+                                {text: "Bladder training is used to treat both spastic and flaccid bladder", exp: "Correct; timed voiding and bladder retraining benefit both types."}, 
+                                {text: "Anticholinergics are used for spastic (overactive) neurogenic bladder", isAi: true, exp: "Correct; they reduce detrusor overactivity."}, 
+                                {text: "Intermittent catheterization is the mainstay for flaccid bladder with retention", isAi: true, exp: "Correct; it empties the bladder effectively."}, 
+                                {text: "Alpha-blockers help bladder neck relaxation in spinal cord injury", isAi: true, exp: "Correct; they reduce outlet resistance and improve voiding."}
+                            ], 
+                            eval: "Answer is correct. The use of anticholinergics in flaccid bladder is wrong." 
+                        },
+                        { 
+                            q: "A patient presents with the complaint of frequent, involuntary intermittent dribbling of urine in the absence of an urge to urinate. Which of the following findings is expected while examining the patient?", 
+                            opts: [
+                                {text: "Leakage of urine while coughing", exp: "Indicates stress incontinence, not passive dribbling without urge."}, 
+                                {text: "Detrusor areflexia", exp: "May be the underlying cause but is a urodynamic finding, not a physical exam sign."}, 
+                                {text: "Palpable bladder", isCorrect: true, exp: "Correct. Dribbling without urge suggests chronic urinary retention with overflow; the distended bladder is palpable."}, 
+                                {text: "Renal tenderness", exp: "Not expected; suggests pyelonephritis or obstruction higher up."}, 
+                                {text: "Positive cough stress test", isAi: true, exp: "This would indicate stress incontinence, not the scenario of overflow dribbling."}
+                            ], 
+                            eval: "Answer is correct. A palpable bladder is the expected physical finding in overflow incontinence." 
+                        },
+                        { 
+                            q: "Which of the following statements describes the role of voiding and retention in bladder health?", 
+                            opts: [
+                                {text: "Retaining urine promotes bladder distention and strengthens bladder muscles", exp: "Incorrect; chronic retention overstretches the detrusor and may cause decompensation."}, 
+                                {text: "Voiding exacerbates bladder dysfunction and urinary incontinence", exp: "Incorrect; appropriate voiding is beneficial, not harmful."}, 
+                                {text: "Retaining urine reduces the risk of urinary tract infections", exp: "Incorrect; stasis of urine promotes bacterial growth and increases UTI risk."}, 
+                                {text: "Voiding helps maintain bladder health and prevents urinary stasis", isCorrect: true, exp: "Correct. Regular voiding flushes out bacteria and prevents stasis."}, 
+                                {text: "Holding urine for long periods has no effect on bladder function", isAi: true, exp: "Incorrect; habitual retention can lead to detrusor underactivity and increased UTIs."}
+                            ], 
+                            eval: "The answer is correct despite the file’s note of confusion. Voiding prevents stasis, which is essential for bladder health." 
+                        },
+                        { 
+                            q: "Classical symptom of neurogenic bladder:", 
+                            opts: [
+                                {text: "Dysuria", exp: "Suggests infection, not the hallmark of neurogenic bladder."}, 
+                                {text: "Frequency/urgency", isCorrect: true, exp: "Correct. Neurogenic bladder, especially the overactive type, presents with frequency, urgency, and often urge incontinence."}, 
+                                {text: "Hesitancy", exp: "More typical of bladder outlet obstruction."}, 
+                                {text: "Incomplete emptying", exp: "Can occur but is not the classic presenting symptom."}, 
+                                {text: "Suprapubic pain", exp: "May be present with retention but not the defining symptom."}
+                            ], 
+                            eval: "Answer is correct. Urinary frequency and urgency are the most common symptoms of neurogenic detrusor overactivity." 
+                        },
+                        { 
+                            q: "Not a risk factor of stress incontinence:", 
+                            opts: [
+                                {text: "Increased age", exp: "Recognised risk factor."}, 
+                                {text: "Vaginal delivery", exp: "Risk factor."}, 
+                                {text: "Obesity", isAi: true, exp: "Increases intra-abdominal pressure and is a known risk factor."}, 
+                                {text: "Recurrent UTI", isCorrect: true, exp: "Correct answer; not a risk factor for stress incontinence."}, 
+                                {text: "Chronic cough", exp: "Risk factor due to repeated pressure rises."}
+                            ], 
+                            eval: "The answer is correct. Recurrent UTI is not a risk factor for stress incontinence." 
+                        },
+                        { 
+                            q: "A patient complains of continuous incontinence that occurs in all positions, what is the most likely diagnosis?", 
+                            opts: [
+                                {text: "Enterovesical fistula", exp: "Presents with faecaluria and pneumaturia, not continuous urine leakage."}, 
+                                {text: "Vesicovaginal fistula", isCorrect: true, exp: "Correct. Urine continuously escapes through the vagina regardless of position."}, 
+                                {text: "Stress incontinence", exp: "Leakage only with physical stress."}, 
+                                {text: "Urge incontinence", exp: "Leakage preceded by sudden urge."}, 
+                                {text: "Neurogenic detrusor overactivity", isAi: true, exp: "Causes urgency and urge incontinence, not continuous loss."}
+                            ], 
+                            eval: "The answer is correct. Constant, position-independent incontinence is classic for vesicovaginal fistula." 
+                        }
+                    ]},
+{ t: "Renal Cell Carcinoma & Upper Tract Tumors", qs: [
+                        { 
+                            q: "In the treatment of renal cancers, in contrast to radical nephrectomy, partial nephrectomy has which of the following advantages?", 
+                            opts: [
+                                {text: "Reduced risk of infection", exp: "Not a particular advantage of partial over radical nephrectomy."}, 
+                                {text: "Decreased postoperative pain", exp: "Pain may be comparable or less, but nephron preservation is the key."}, 
+                                {text: "Nephron preserving", isCorrect: true, exp: "Correct. Partial nephrectomy preserves functioning renal parenchyma, reducing risk of chronic kidney disease."}, 
+                                {text: "Faster recovery time", exp: "May not be substantially different; the primary advantage is preservation of renal function."}, 
+                                {text: "Lower risk of recurrence", isAi: true, exp: "Not true; risk of local recurrence may be slightly higher with partial nephrectomy compared to radical nephrectomy."}
+                            ], 
+                            eval: "Answer is correct. The main benefit of partial nephrectomy is nephron sparing." 
+                        },
+                        { 
+                            q: "Common site of upper urinary tract urothelial cancer is:", 
+                            opts: [
+                                {text: "Renal pelvis & calyces", isCorrect: true, exp: "Correct. Most upper tract urothelial carcinomas arise in the renal pelvis and calyces."}, 
+                                {text: "PUJ", exp: "Less common; the renal pelvis is more frequent."}, 
+                                {text: "Upper ureter", exp: "Occur but less often than the pelvis."}, 
+                                {text: "Mid ureter", exp: "Rarer."}, 
+                                {text: "Lower ureter", exp: "More common than mid but still less than the pelvis."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "The best method to evaluate renal mass is:", 
+                            opts: [
+                                {text: "CT with contrast", isCorrect: true, exp: "Correct. Contrast-enhanced CT is the gold standard for characterising renal masses, assessing enhancement, and staging."}, 
+                                {text: "CT without contrast", exp: "Useful for detecting fat in angiomyolipoma but not definitive for solid masses."}, 
+                                {text: "KUB", exp: "Only shows calcifications; cannot characterise a renal mass."}, 
+                                {text: "IVU", exp: "Outdated; provides limited information on parenchymal masses."}, 
+                                {text: "Ultrasound", isAi: true, exp: "Good initial screening but contrast CT is needed for definitive evaluation."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "The best treatment option for 10 cm Bosniak IV renal cyst is:", 
+                            opts: [
+                                {text: "Partial nephrectomy vs. radical nephrectomy", isCorrect: true, exp: "Correct. Bosniak IV cysts have solid enhancing components and are treated as malignant; surgical excision is the standard."}, 
+                                {text: "Chemotherapy", exp: "Not first-line for localised cystic renal masses."}, 
+                                {text: "Aspiration", exp: "Inadequate; does not remove the solid component."}, 
+                                {text: "Radiotherapy", exp: "RCC is radioresistant; not used as primary treatment."}, 
+                                {text: "Observation", exp: "Inappropriate for a likely malignant lesion."}
+                            ], 
+                            eval: "Answer is correct. Surgical excision is indicated." 
+                        },
+                        { 
+                            q: "RCC (adenocarcinoma) true about it:", 
+                            opts: [
+                                {text: "It is Radiosensitive", exp: "False; RCC is radioresistant."}, 
+                                {text: "Associated with VHL syndrome", isCorrect: true, exp: "Correct. Von Hippel–Lindau disease predisposes to clear cell RCC."}, 
+                                {text: "Usually comes with flank mass", exp: "False; the classic triad (haematuria, pain, mass) is uncommon today; most are found incidentally."}, 
+                                {text: "Often cured by chemotherapy", isAi: true, exp: "False; RCC is chemoresistant."}, 
+                                {text: "Arises from the renal medulla", isAi: true, exp: "False; RCC arises from the renal cortex."}
+                            ], 
+                            eval: "Answer is correct. VHL is a well-known association." 
+                        },
+                        { 
+                            q: "Case of female with kidney urothelial carcinoma what is the treatment:", 
+                            opts: [
+                                {text: "Partial nephrectomy", exp: "Inadequate for urothelial carcinoma; nephroureterectomy is needed."}, 
+                                {text: "Nephrectomy sparing some nephrons", exp: "Not appropriate for urothelial cancer."}, 
+                                {text: "Radical nephrectomy with bladder cuff", isCorrect: true, exp: "Correct. Standard treatment for upper tract urothelial carcinoma is radical nephroureterectomy with excision of a bladder cuff around the ureteric orifice."}, 
+                                {text: "Endoscopic ablation", isAi: true, exp: "May be considered for low-grade small tumours in select patients but not standard for an unqualified case."}, 
+                                {text: "Chemotherapy alone", isAi: true, exp: "Not curative; surgery is primary."}
+                            ], 
+                            eval: "The answer seems correct. Radical nephroureterectomy with bladder cuff is the standard for upper tract urothelial carcinoma." 
+                        },
+                        { 
+                            q: "A patient was found to have a 3 cm soft tissue parenchymal mass, asymptomatic, what is the correct answer:", 
+                            opts: [
+                                {text: "Follow up with CT annually", isCorrect: true, exp: "Could be considered for small, incidental renal masses with low probability of malignancy or in poor surgical candidates."}, 
+                                {text: "Partial nephrectomy (nephron preserving)", isCorrect: true, exp: "Correct standard for small renal masses suspicious for RCC; nephron-sparing surgery is preferred."}, 
+                                {text: "Radical nephrectomy", isAi: true, exp: "Would remove the entire kidney, not first choice for a 3 cm mass."}, 
+                                {text: "Biopsy", isAi: true, exp: "Not routinely required before definitive treatment of a solid enhancing renal mass in a surgical candidate."}, 
+                                {text: "Radiofrequency ablation", isAi: true, exp: "An option for small tumours in non-surgical candidates, but not the first-line in an asymptomatic fit patient."}
+                            ], 
+                            eval: "The answer is debated between Active Surveillance or Partial Nephrectomy. A 3 cm solid renal mass in a healthy patient is typically managed with partial nephrectomy, though active surveillance remains an option in select cohorts." 
+                        },
+                        { 
+                            q: "RCC is associated with:", 
+                            opts: [
+                                {text: "Von Hippel Lindau syndrome", isCorrect: true, exp: "Correct. VHL syndrome leads to clear cell RCC."}, 
+                                {text: "Polycystic kidney disease", exp: "Associated with ADPKD but not directly with RCC (though some increased risk)."}, 
+                                {text: "Tuberous sclerosis", exp: "Associated with angiomyolipomas, not RCC."}, 
+                                {text: "Neurofibromatosis", exp: "NF1 associated with hypertension, not primarily RCC."}, 
+                                {text: "Marfan syndrome", exp: "Not linked to RCC."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "What is the best investigation to rule out renal tumors?", 
+                            opts: [
+                                {text: "Ultrasound", exp: "Useful screening tool but cannot definitively rule out small tumours or characterise them."}, 
+                                {text: "CT with contrast", isCorrect: true, exp: "Correct. The gold-standard imaging for detection and characterisation of renal masses."}, 
+                                {text: "MRI", exp: "Helpful in specific situations (contrast allergy, renal impairment) but CT is first-line."}, 
+                                {text: "IVU", exp: "Obsolete for renal tumours."}, 
+                                {text: "Renal biopsy", exp: "Invasive and not used for ruling out tumours in general; reserved for equivocal cases."}
+                            ], 
+                            eval: "Answer is correct. CT with contrast is the best modality to rule out renal tumours." 
+                        },
+                        { 
+                            q: "Wrong about renal tumors?", 
+                            opts: [
+                                {text: "CT scan can always differentiate between benign and malignant renal tumors", isCorrect: true, exp: "Wrong statement; some benign tumours (e.g., oncocytoma) can mimic RCC on CT."}, 
+                                {text: "Clear cell carcinoma is the most common RCC", exp: "Correct."}, 
+                                {text: "Smoking is a risk factor for RCC", exp: "Correct."}, 
+                                {text: "Renal oncocytoma is a benign tumor", exp: "Correct."}, 
+                                {text: "Angiomyolipoma contains macroscopic fat", exp: "Correct; fat on CT is diagnostic."}
+                            ], 
+                            eval: "Answer is correct. Differentiation is not always possible with CT alone." 
+                        },
+                        { 
+                            q: "Most common type of RCC?", 
+                            opts: [
+                                {text: "Clear cell carcinoma", isCorrect: true, exp: "Correct; accounts for 70–80% of RCC."}, 
+                                {text: "Papillary RCC", exp: "Second most common (~10–15%)."}, 
+                                {text: "Chromophobe RCC", exp: "Less common (~5%)."}, 
+                                {text: "Collecting duct carcinoma", isAi: true, exp: "Very rare, aggressive."}, 
+                                {text: "Medullary carcinoma", isAi: true, exp: "Extremely rare, linked to sickle cell trait."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "Renal cell carcinoma following surgical removal, the most important prognostic factor:", 
+                            opts: [
+                                {text: "Tumor stage", exp: "The most important prognostic factor in RCC is TNM stage; pulmonary metastases indicate stage IV disease."}, 
+                                {text: "Nuclear grade", exp: "Important but stage outweighs grade."}, 
+                                {text: "Histological subtype", exp: "Influences prognosis but not as dominant as stage."}, 
+                                {text: "Presence of pulmonary metastases", isCorrect: true, exp: "This is part of staging (M1) and carries a poor prognosis."}, 
+                                {text: "Lymph node involvement", exp: "Also stage-dependent; distant metastasis is more critical."}
+                            ], 
+                            eval: "The answer “pulmonary mets” implies distant metastasis, which indeed is a poor prognostic factor, but the most important overall prognostic factor is the complete pathological stage." 
+                        },
+                        { 
+                            q: "The most common histologic type of RCC?", 
+                            opts: [
+                                {text: "Clear cell carcinoma", isCorrect: true, exp: "Correct."}, 
+                                {text: "Papillary", exp: "Second."}, 
+                                {text: "Chromophobic", exp: "Less common."}, 
+                                {text: "Oncocytoma", isAi: true, exp: "Benign, not an RCC."}, 
+                                {text: "Collecting duct carcinoma", isAi: true, exp: "Rare."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "A patient presents with hematuria and the CT scan shows 4 cm renal pelvic mass, urine cytology showed high grade urothelial carcinoma, what is the best modality of treatment?", 
+                            opts: [
+                                {text: "Partial nephrectomy", exp: "Not adequate for pelvic urothelial cancer."}, 
+                                {text: "Radical nephrectomy", exp: "Would leave the ureter and bladder cuff, risking recurrence."}, 
+                                {text: "Excision of the tumor with preservation of the kidney", exp: "Not oncologically sound for high-grade urothelial carcinoma."}, 
+                                {text: "Radical nephrectomy with bladder cuff", isCorrect: true, exp: "Correct. Radical nephroureterectomy with bladder cuff excision is the standard treatment for upper tract urothelial carcinoma."}, 
+                                {text: "Endoscopic resection", isAi: true, exp: "May be used for low-grade, small lesions in select cases but not for a 4 cm high-grade tumor."}
+                            ], 
+                            eval: "Answer is correct." 
+                        }
+                    ]},
+{ t: "Erectile Dysfunction & Priapism", qs: [
+                        { 
+                            q: "What is the physiology of ejaculation vs. erection?", 
+                            opts: [
+                                {text: "Both are under sympathetic control", exp: "Incorrect."}, 
+                                {text: "Both are under parasympathetic control", exp: "Incorrect."}, 
+                                {text: "Erection is under sympathetic control, while ejaculation is under parasympathetic control", exp: "Reversed."}, 
+                                {text: "Erection is under parasympathetic control, while ejaculation is under sympathetic control", isCorrect: true, exp: "Correct. Parasympathetic (S2–4) produces erection; sympathetic (T11–L2) controls ejaculation."}, 
+                                {text: "Erection is somatic, ejaculation is sympathetic", isAi: true, exp: "Partially true: somatic nerves contribute to rigid erection via ischiocavernosus, but the primary vasodilatory control is parasympathetic."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "All of these are consistent with a psychogenic cause of erectile dysfunction except:", 
+                            opts: [
+                                {text: "Sudden Onset", exp: "Typical of psychogenic ED."}, 
+                                {text: "Young", exp: "Psychogenic ED common in young men."}, 
+                                {text: "Normal morning erection", exp: "Nocturnal erections preserved in psychogenic ED."}, 
+                                {text: "Erection to a visual stimuli", exp: "Psychogenic ED may still respond to erotic stimuli; inconsistent."}, 
+                                {text: "Gradual onset and continuous", isCorrect: true, exp: "Correct exception. This suggests an organic cause."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "All of following associated with erectile dysfunction of psychological cause except:", 
+                            opts: [
+                                {text: "Sudden onset", exp: "Psychogenic."}, 
+                                {text: "Young age", exp: "More likely psychogenic."}, 
+                                {text: "Erection in night", exp: "Preserved in psychogenic ED."}, 
+                                {text: "Presence of orgasm", exp: "Psychogenic ED usually does not impair orgasm."}, 
+                                {text: "Variety in symptoms / Gradual onset", isCorrect: true, exp: "Psychogenic ED often has variability (situational framework). A true organic clue would be progressive, gradual onset of baseline dysfunction."}
+                            ], 
+                            eval: "The source documentation expresses uncertainty, but clinically, the clear outlier from psychogenic profiles is a gradual, continuous progression." 
+                        },
+                        { 
+                            q: "During a rigid erection, one of the following is not correct:", 
+                            opts: [
+                                {text: "Corporal pressure increase (to several 100 mm of mercury)", exp: "Correct; pressure rises dramatically."}, 
+                                {text: "Sinusoidal relaxation", exp: "Correct; essential for filling."}, 
+                                {text: "Dilation of arteries and arterioles", exp: "Correct."}, 
+                                {text: "Subtunical venous compression reducing venous outflow", exp: "Correct; this traps blood in the corpora."}, 
+                                {text: "Relaxation of ischio-cavernosus muscles", isCorrect: true, exp: "Incorrect. During rigid erection, the ischiocavernosus muscles contract to further increase pressure; relaxation would not cause rigidity."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "With which of the following diseases is priapism most commonly associated?", 
+                            opts: [
+                                {text: "Sickle cell anemia", isCorrect: true, exp: "Correct. The most common cause of ischemic priapism."}, 
+                                {text: "Leukemia", exp: "Can cause priapism but less common than sickle cell disease."}, 
+                                {text: "Organic depression", exp: "Not directly associated."}, 
+                                {text: "Parkinson disease", exp: "Not associated with priapism."}, 
+                                {text: "Peyronie disease", exp: "Causes penile curvature and sometimes erectile pain but not priapism."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "Wrong about physiology of erection:", 
+                            opts: [
+                                {text: "Penis is supplied by sympathetic and parasympathetic", exp: "Correct."}, 
+                                {text: "Sympathetic is for ejaculation and parasympathetic for erection", exp: "Correct."}, 
+                                {text: "NO by nitric oxide synthase from L-Arginine decrease Ca+ leading to muscle relaxation + increase blood flow; PDE5", exp: "Partially correct description."}, 
+                                {text: "cGMP produced from PDE5 inhibitor lead to end of erection", isCorrect: true, exp: "Wrong; PDE5 inhibitors prevent breakdown of cGMP, sustaining erection; the statement is false."}, 
+                                {text: "Prostaglandin E1 relaxes cavernosal smooth muscle", isAi: true, exp: "Correct, it is a vasodilator used for intracavernous injection."}
+                            ], 
+                            eval: "Answer is correct. The statement is erroneous." 
+                        },
+                        { 
+                            q: "The most common cause of erectile dysfunction is:", 
+                            opts: [
+                                {text: "Psychological", isCorrect: true, exp: "Correct. Psychogenic factors are the most common cause, especially in younger men."}, 
+                                {text: "DM", exp: "A major organic cause but not the most common overall."}, 
+                                {text: "Vascular", exp: "Common organic aetiology but not as frequent as psychogenic in general population."}, 
+                                {text: "Neurological", exp: "Less frequent."}, 
+                                {text: "Medication side effects", isAi: true, exp: "Common but not the leading cause."}
+                            ], 
+                            eval: "Answer is correct. Psychogenic ED is considered the most frequent overall cause." 
+                        },
+                        { 
+                            q: "Organic cause of erectile dysfunction true except:", 
+                            opts: [
+                                {text: "Sudden onset", isCorrect: true, exp: "Characteristic of psychogenic, not organic; thus the exception."}, 
+                                {text: "DM", exp: "Organic."}, 
+                                {text: "Peripheral vascular disease", exp: "Organic."}, 
+                                {text: "Inability to sustain erection", exp: "Typical of venous leak or vascular disease, organic."}, 
+                                {text: "Low testosterone", isAi: true, exp: "Organic, hormonal cause."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "One is false about priapism:", 
+                            opts: [
+                                {text: "Glans not affected", exp: "True; in low-flow priapism glans and spongiosum are soft."}, 
+                                {text: "Corpus cavernosum not affected", isCorrect: true, exp: "False; the corpora cavernosa are rigid and engorged."}, 
+                                {text: "Corpus spongiosum not affected", exp: "True."}, 
+                                {text: "Acute emergency", exp: "True; ischemic priapism requires urgent intervention."}, 
+                                {text: "Is usually painless", isAi: true, exp: "False; ischemic priapism is painful. The correct false statement here is option B."}
+                            ], 
+                            eval: "Answer is correct." 
+                        }
+                    ]},
+{ t: "Miscellaneous Symptoms & Conditions", qs: [
+                        { 
+                            q: "In patient with primary nocturnal enuresis, the MOA of Minirin (Desmopressin):", 
+                            opts: [
+                                {text: "Relaxation of bladder at night", exp: "Not the mechanism."}, 
+                                {text: "Increases bladder capacity", exp: "Not its primary action."}, 
+                                {text: "Decreases urine output", isCorrect: true, exp: "Correct. Desmopressin is an ADH analogue that concentrates urine and reduces nocturnal urine production."}, 
+                                {text: "Increases aquaporin expression", isAi: true, exp: "Partially correct down to the cellular mechanism loop, but the foundational clinical consequence is reduced urinary volume output."}, 
+                                {text: "Reduces detrusor overactivity", isAi: true, exp: "Not the mechanism of desmopressin."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "A 16-year-old male, LUTS, the most important test to do:", 
+                            opts: [
+                                {text: "Urine Analysis", isCorrect: true, exp: "Correct; first-line to rule out infection, haematuria, etc., in a young male with lower urinary tract symptoms."}, 
+                                {text: "Uroflowmetry", exp: "Helpful for obstruction but not more important than urinalysis."}, 
+                                {text: "Post-void residual measurement", exp: "Part of workup but second step."}, 
+                                {text: "Renal ultrasound", exp: "Not usually first-line for simple LUTS in a teenager unless other signs."}, 
+                                {text: "Cystoscopy", isAi: true, exp: "Invasive, not the first test."}
+                            ], 
+                            eval: "Answer is correct. Urinalysis is the most important initial test." 
+                        },
+                        { 
+                            q: "One is not caused by vesicoureteral reflux:", 
+                            opts: [
+                                {text: "Cortical scarring", exp: "Classic consequence of reflux nephropathy."}, 
+                                {text: "Dilated ureter", exp: "Seen with high-grade reflux."}, 
+                                {text: "Dilated pelvicalyceal system", exp: "Common in VUR."}, 
+                                {text: "Urothelial neoplasm", isCorrect: true, exp: "Not caused by VUR."}, 
+                                {text: "Renal stone formation", isAi: true, exp: "VUR can predispose to urinary stasis and infection, possibly contributing to stones, but it’s not a direct cause."}
+                            ], 
+                            eval: "Answer is correct. VUR does not cause urothelial tumours." 
+                        },
+                        { 
+                            q: "One of these is not a complication of cryptorchidism:", 
+                            opts: [
+                                {text: "Impotence", isCorrect: true, exp: "Correct answer; cryptorchidism does not cause erectile dysfunction."}, 
+                                {text: "Testicular tumor", exp: "Risk increased."}, 
+                                {text: "Testicular torsion", exp: "More common in undescended testes."}, 
+                                {text: "Inguinal hernia", exp: "Often associated."}, 
+                                {text: "Infertility", exp: "Impaired spermatogenesis if bilateral and uncorrected."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "What are the typical symptoms associated with bladder diverticulum?", 
+                            opts: [
+                                {text: "Hematuria and flank pain", exp: "Not typical."}, 
+                                {text: "Dysuria and urinary frequency", exp: "Can occur but not the classic presentation; often due to residual urine and infection."}, 
+                                {text: "Urinary retention and suprapubic discomfort (irritative symptoms)", isCorrect: true, exp: "Correct. Diverticulum leads to poor emptying, retention, and discomfort."}, 
+                                {text: "Incontinence and urethral discharge", exp: "Not typical."}, 
+                                {text: "Recurrent UTIs", isAi: true, exp: "Common, but the characteristic symptoms include retention and discomfort; recurrent UTIs are a complication."}
+                            ], 
+                            eval: "Answer is correct. Bladder diverticulum often presents with incomplete emptying and suprapubic discomfort." 
+                        },
+                        { 
+                            q: "In the context of urinary symptoms, what is meant by the term “hesitancy”?", 
+                            opts: [
+                                {text: "Involuntary leakage of urine", exp: "Describes incontinence."}, 
+                                {text: "Pain or discomfort during urination", exp: "Dysuria."}, 
+                                {text: "Difficulty initiating urination", isCorrect: true, exp: "Correct; hesitancy is delay in starting the stream."}, 
+                                {text: "Frequent urination at night", exp: "Nocturia."}, 
+                                {text: "Painful urination", isAi: true, exp: "Synonym for dysuria, not hesitancy."}
+                            ], 
+                            eval: "Answer is correct." 
+                        },
+                        { 
+                            q: "Flaccid penis pain is mostly due to:", 
+                            opts: [
+                                {text: "Urethral and bladder inflammation", isCorrect: true, exp: "Can cause penile pain, especially at the tip."}, 
+                                {text: "Lower ureteric stone", isCorrect: true, exp: "Referred pain to the tip of the penis is classic for a distal ureteric calculus."}, 
+                                {text: "Priapism", exp: "Painful but penis is rigid, not flaccid."}, 
+                                {text: "Peyronie disease", exp: "Pain typically occurs with erection, not flaccid."}, 
+                                {text: "Testicular torsion", isAi: true, exp: "Pain is scrotal, may radiate but not isolated flaccid penile pain."}
+                            ], 
+                            eval: "The source material reflects diagnostic ambiguity. Referred pain down the penile branch from lower ureteral stone impaction or localized structural urethritis are both primary considerations." 
+                        },
+                        { 
+                            q: "Which of the following is not part of the normal aging process in males?", 
+                            opts: [
+                                {text: "Prolonged latency period", exp: "Normal aging change; more time to achieve erection."}, 
+                                {text: "Decreased refractory period", exp: "Normal aging extends this timeline interval, making decrease abnormal."}, 
+                                {text: "Decreased tactile sensation", exp: "Normal aging development trait."}, 
+                                {text: "Complete erectile dysfunction", isCorrect: true, exp: "Not part of normal aging; some degree of ED is common but complete loss is pathological."}, 
+                                {text: "Decreased libido", isAi: true, exp: "Libido may gradually decline with age but remains within normal parameters."}
+                            ], 
+                            eval: "The choice of complete erectile dysfunction is correct. While performance parameters change, absolute functional failure signals pathology rather than healthy aging." 
+                        },
+                        { 
+                            q: "False about physiology of sperms:", 
+                            opts: [
+                                {text: "Sympathetic innervation for ejection, parasympathetic for ejaculation", isCorrect: true, exp: "False; both emission/ejection and ejaculation are coordinated along pathways driven by sympathetic tone networks."}, 
+                                {text: "NO (nitrous oxide) increases cGMP and cause relaxation of muscles", exp: "Correct mechanism tracking concept (though chemically notes nitric oxide)."}, 
+                                {text: "Erection is primarily under parasympathetic control", isAi: true, exp: "Correct framework."}, 
+                                {text: "Ejaculation is primarily under sympathetic control", isAi: true, exp: "Correct framework."}, 
+                                {text: "Detumescence is mediated by sympathetic vasoconstriction", isAi: true, exp: "Correct framework."}
+                            ], 
+                            eval: "Answer is correct. The false statement is option A." 
+                        }
+                    ]}
                 ]
             },
             {
