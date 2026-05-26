@@ -5285,7 +5285,664 @@
                             ], 
                             eval: "The answer is correct." 
                         }
-                    ]},  
+                    ]},  { t: "Chronic Otitis Media", qs: [
+                        { 
+                            q: "A 20 year old female presented with bad odor ear discharge, she has recurrent ear discharge and hearing loss since childhood, what is the next step:", 
+                            opts: [
+                                {text: "CT temporal bone", isCorrect: true, exp: "Correct. Long-standing chronic suppurative otitis media with suspected cholesteatoma or atticoantral disease warrants imaging to assess bony erosion, ossicular chain integrity, and intracranial extension before surgical planning. CT is the best initial imaging modality."}, 
+                                {text: "Take culture of discharge and start antibiotics", exp: "Helpful but not the best next step; culture may be contaminated by external canal flora, and antibiotics do not address the underlying cholesteatoma or bony disease."}, 
+                                {text: "Empiric antibiotics for 7-10 days", exp: "This temporarily reduces infection but does not resolve the primary pathology (cholesteatoma, bony erosion); definitive management is surgical, and imaging is needed first."}, 
+                                {text: "Magnetic resonance imaging of brain and temporal bone", isAi: true, exp: "MRI is useful for distinguishing cholesteatoma from granulation tissue and evaluating intracranial complications, but CT is the initial study of choice for bony details."}, 
+                                {text: "Pure tone audiometry", isAi: true, exp: "Audiometry documents the degree of hearing loss but does not help establish the cause of persistent fetid discharge; imaging is required to evaluate the disease extent."}
+                            ], 
+                            eval: "The answer seems correct. In a patient with long-standing offensive ear discharge and childhood hearing loss, cholesteatoma must be excluded; high-resolution CT temporal bone is the next step to map the disease." 
+                        },
+                        { 
+                            q: "Most children with palatal cleft have:", 
+                            opts: [
+                                {text: "Secretory otitis media", isCorrect: true, exp: "Correct. Eustachian tube dysfunction is nearly universal in cleft palate, leading to persistent middle ear effusion (otitis media with effusion)."}, 
+                                {text: "Branchial cyst", exp: "A congenital neck remnant unrelated to cleft palate."}, 
+                                {text: "Thyroglossal cyst", exp: "Midline neck cyst, not associated with cleft palate."}, 
+                                {text: "Sensorineural defect", exp: "Cleft palate is associated with conductive hearing loss from middle ear effusion, not primarily sensorineural loss."}, 
+                                {text: "Cardiac anomaly", exp: "Some syndromes may involve both, but the most consistent finding in isolated cleft palate is middle ear disease."}
+                            ], 
+                            eval: "The answer is correct. Otitis media with effusion is extremely common in cleft palate due to tensor veli palatini dysfunction." 
+                        },
+                        { 
+                            q: "Which is not a feature of discharge of chronic suppurative otitis media atticoantral type?", 
+                            opts: [
+                                {text: "Persistent", exp: "Feature; atticoantral CSOM usually causes chronic, persistent discharge."}, 
+                                {text: "Purulent", exp: "Feature; the discharge is often purulent."}, 
+                                {text: "Foul smelling", exp: "Feature; fetid odour is characteristic of cholesteatomatous bone erosion."}, 
+                                {text: "Profuse", isCorrect: true, exp: "Not a feature; atticoantral discharge is typically scanty, not copious."}, 
+                                {text: "Scanty", exp: "Feature; the discharge is characteristically scanty and foul-smelling."}
+                            ], 
+                            eval: "The answer is correct. Profuse discharge is typical of tubotympanic CSOM; atticoantral disease gives scanty, offensive discharge." 
+                        },
+                        { 
+                            q: "What is the most common persistent symptom of chronic otitis media?", 
+                            opts: [
+                                {text: "Tinnitus", exp: "May occur but is not the most consistent persistent symptom."}, 
+                                {text: "Vertigo", exp: "Rarely persistent; may occur during acute exacerbations or complications."}, 
+                                {text: "Conductive hearing loss", isCorrect: true, exp: "Correct. Middle ear pathology (perforation, ossicular erosion, effusion) causes persistent conductive deficit."}, 
+                                {text: "Sensorineural hearing loss", exp: "May develop late in chronic disease (labyrinthitis) but is not the most common chronic symptom."}, 
+                                {text: "Otorrhea (ear discharge)", exp: "Often intermittent; hearing loss remains even when the ear is dry."}
+                            ], 
+                            eval: "The answer is correct. Persistent conductive hearing loss is the hallmark chronic symptom." 
+                        },
+                        { 
+                            q: "In chronic otitis media, atticoantral pattern is associated with all of the following except:", 
+                            opts: [
+                                {text: "The perforation is central", isCorrect: true, exp: "Not associated; atticoantral disease presents with attic or marginal perforation, not a central perforation (which is tubotympanic)."}, 
+                                {text: "The discharge is scanty & foul-smelling", exp: "Typical of atticoantral CSOM."}, 
+                                {text: "The polyp is red & fleshy", exp: "Aural polyp may be present in atticoantral disease."}, 
+                                {text: "Granulation is a common finding", exp: "Granulation tissue at the attic or posterosuperior quadrant is common."}, 
+                                {text: "Cholesteatoma is present", isAi: true, exp: "True; cholesteatoma is frequently found in attico-antral disease."}
+                            ], 
+                            eval: "The answer is correct. Central perforation is the hallmark of safe/tubotympanic disease." 
+                        },
+                        { 
+                            q: "Cholesteatoma, all EXCEPT:", 
+                            opts: [
+                                {text: "After central perforation of tympanic membrane", isCorrect: true, exp: "Cholesteatoma does not typically follow a central perforation; central perforations are associated with tubotympanic CSOM."}, 
+                                {text: "After attic perforation of tympanic membrane", exp: "Attic retraction pockets can progress to cholesteatoma."}, 
+                                {text: "After marginal perforation of tympanic membrane", exp: "Marginal perforations allow squamous epithelium migration into the middle ear, forming cholesteatoma."}, 
+                                {text: "May cause vertigo", exp: "Erosion of the horizontal semicircular canal (fistula) can cause vertigo."}, 
+                                {text: "May cause intracranial complications", exp: "Cholesteatoma can lead to meningitis, brain abscess, sigmoid sinus thrombophlebitis."}
+                            ], 
+                            eval: "The answer is correct. Cholesteatoma arises from attic or marginal perforations/retractions, not central perforations." 
+                        },
+                        { 
+                            q: "What is the cause of persistent mucopurulent discharge after resolution of otitis media:", 
+                            opts: [
+                                {text: "Cholesteatoma", isCorrect: true, exp: "Correct. Persistent mucopurulent discharge despite antibiotic treatment raises suspicion for underlying cholesteatoma."}, 
+                                {text: "Secretory otitis media", exp: "Usually gives a glue-like, non-purulent effusion without active mucopurulent discharge through a perforation."}, 
+                                {text: "Coalescent mastoiditis", exp: "An acute complication of acute otitis media with persistent fever and pain, not typically prolonged mucopurulent discharge after resolution."}, 
+                                {text: "Foreign body in ear canal", isAi: true, exp: "Can cause unilateral discharge but would be associated with a history of insertion and visible on otoscopy."}, 
+                                {text: "Chronic granulomatous disease", isAi: true, exp: "A rare systemic condition predisposing to recurrent infections; not a routine cause of persistent ear discharge."}
+                            ], 
+                            eval: "The answer is correct. Cholesteatoma must be excluded in any ear with chronic suppuration unresponsive to medical management." 
+                        },
+                        { 
+                            q: "What is the most common cause of hearing loss in children aged 3–5 years?", 
+                            opts: [
+                                {text: "Acute otitis media", exp: "Causes temporary conductive loss during episodes but is not the most common persistent cause."}, 
+                                {text: "Otitis media with effusion", isCorrect: true, exp: "Correct. Persistent middle ear fluid (OME) is very common in this age group and leads to conductive hearing loss."}, 
+                                {text: "Congenital sensorineural hearing loss", exp: "Usually detected earlier; less prevalent than OME."}, 
+                                {text: "Impacted cerumen", exp: "Uncommon in young children."}, 
+                                {text: "Eustachian tube dysfunction", isAi: true, exp: "Underlies OME, but the hearing loss is directly due to the effusion; OME is the more specific answer."}
+                            ], 
+                            eval: "The answer is correct. Otitis media with effusion is the leading cause of acquired hearing loss in preschool children." 
+                        },
+                        { 
+                            q: "Serous otitis media, the most common cause is:", 
+                            opts: [
+                                {text: "Incomplete treatment", exp: "Not a primary cause; otitis media with effusion is often independent of acute infection treatment."}, 
+                                {text: "Allergy", exp: "May contribute to eustachian tube dysfunction but is not the most common cause."}, 
+                                {text: "Adenoids", isCorrect: true, exp: "Correct. Adenoid hypertrophy obstructs the eustachian tube orifice and acts as a bacterial reservoir, being the most frequent cause in children."}, 
+                                {text: "Barotrauma", isAi: true, exp: "Can cause serous effusion but is far less common than adenoid obstruction."}, 
+                                {text: "Cleft palate", isAi: true, exp: "Strongly associated, but in the general paediatric population without cleft, adenoids remain the most common cause."}
+                            ], 
+                            eval: "The answer is correct. Adenoid enlargement is the single most common aetiological factor for OME." 
+                        },
+                        { 
+                            q: "Definite diagnosis of cholesteatoma is done by:", 
+                            opts: [
+                                {text: "Otoscopy", isCorrect: true, exp: "Correct. Direct visualisation of a retraction pocket with keratin debris or a pearly mass through a perforation provides the definitive clinical diagnosis."}, 
+                                {text: "Pure tone audiometry", exp: "Shows conductive hearing loss but is non-specific."}, 
+                                {text: "Tympanometry", exp: "May suggest ossicular discontinuity or perforation, but cannot definitively diagnose cholesteatoma."}, 
+                                {text: "MRI", exp: "Useful for suspected intracranial extension but not the first-line definitive diagnostic tool."}, 
+                                {text: "CT scan", exp: "Shows soft tissue mass and bony erosion; highly suggestive, but otoscopic examination is the gold standard for clinical diagnosis."}
+                            ], 
+                            eval: "The answer is correct. Diagnosis is primarily clinical by otoscopy/microscopy." 
+                        },
+                        { 
+                            q: "Cholesteatoma is:", 
+                            opts: [
+                                {text: "Growing pocket", isCorrect: true, exp: "This is a descriptive term for the progressive retraction and accumulation of keratinizing squamous epithelium; the source accepts this as the answer."}, 
+                                {text: "Benign tumour of the middle ear", exp: "Incorrect; cholesteatoma is not a neoplasm."}, 
+                                {text: "Collection of keratin debris only", exp: "The matrix is living squamous epithelium; the debris is a product, not the definition."}, 
+                                {text: "Retraction pocket filled with squamous epithelium", isAi: true, exp: "This describes the anatomy of an attic cholesteatoma, but the source uses “growing pocket” as the key phrase."}, 
+                                {text: "Cystic lesion behind an intact tympanic membrane", isAi: true, exp: "A congenital cholesteatoma may appear behind an intact drum, but the classic acquired cholesteatoma is a growing pocket."}
+                            ], 
+                            eval: "The answer as given is acceptable, though simplified. “Growing pocket” refers to the progressive nature of a retraction pocket cholesteatoma." 
+                        },
+                        { 
+                            q: "The characteristic of pus in cholesteatoma:", 
+                            opts: [
+                                {text: "Scanty and foul", isCorrect: true, exp: "Correct. The discharge in atticoantral disease/cholesteatoma is scanty and characteristically foul‑smelling due to bone necrosis and anaerobic infection."}, 
+                                {text: "Profuse and purulent", exp: "Typical of tubotympanic CSOM, not cholesteatoma."}, 
+                                {text: "Blood‑stained and profuse", exp: "May occur in trauma or neoplasm, not characteristic."}, 
+                                {text: "Mucoid and odourless", exp: "Suggests tubotympanic mucosal disease."}, 
+                                {text: "Yellow and creamy", exp: "Non‑specific; not the classic description."}
+                            ], 
+                            eval: "The answer is correct. Scanty, foul‑smelling otorrhoea is a hallmark of cholesteatoma." 
+                        },
+                        { 
+                            q: "All are true about attico-antral disease EXCEPT (otitis media):", 
+                            opts: [
+                                {text: "Scanty amount of discharge", exp: "True; discharge is scanty."}, 
+                                {text: "Foul-smelling discharge", exp: "True; fetor is typical."}, 
+                                {text: "Central perforation", isCorrect: true, exp: "False; attico-antral disease involves attic or marginal perforations, not central."}, 
+                                {text: "Treatment is mainly surgical", exp: "True; cholesteatoma requires surgical removal."}, 
+                                {text: "Cholesteatoma may be present", isAi: true, exp: "True; cholesteatoma is frequently found in attico-antral disease."}
+                            ], 
+                            eval: "Correct. Central perforation is a feature of tubotympanic, not attico-antral, CSOM." 
+                        },
+                        { 
+                            q: "All are common complications of secretory otitis media EXCEPT:", 
+                            opts: [
+                                {text: "Cholesteatoma", exp: "A recognised complication of chronic OME, especially with retraction pockets."}, 
+                                {text: "Cholesterol granuloma", exp: "A foreign body reaction to haemorrhage in OME, seen in longstanding effusions."}, 
+                                {text: "Sensorineural deafness", isCorrect: true, exp: "Not a common complication; OME causes conductive loss."}, 
+                                {text: "Adhesive otitis media", exp: "Atelectasis and adhesions can result from chronic OME."}, 
+                                {text: "Acute suppupative otitis media", exp: "OME predisposes to recurrent acute infections."}
+                            ], 
+                            eval: "The answer is correct. Sensorineural hearing loss is not a typical consequence of OME." 
+                        },
+                        { 
+                            q: "All are possible causes of intracranial complications in chronic suppurative otitis media EXCEPT:", 
+                            opts: [
+                                {text: "Skull fracture", exp: "A separate cause of intracranial infection, not directly a complication of CSOM itself but could be a pathway; however the question asks for causes of complications, and all except one are routes."}, 
+                                {text: "Complication after radical mastoidectomy", exp: "Surgery can introduce infection intracranially."}, 
+                                {text: "Complication through vascular channels", exp: "Spread via thrombophlebitis or emissary veins is a recognised route."}, 
+                                {text: "Local osteomyelitis", isCorrect: true, exp: "The answer given states this is the exception. Osteomyelitis of the temporal bone can cause intracranial spread, so it may be considered a cause; however the source indicates it is not a possible cause, perhaps because it is the underlying pathology rather than a distinct cause."}, 
+                                {text: "Congenital defect", exp: "Pre‑existing bony dehiscences allow direct spread."}
+                            ], 
+                            eval: "The source answer is “Local osteomyelitis”. This is debatable because local osteomyelitis is a well‑known mechanism of intracranial extension. Possibly the question intended “local osteomyelitis” as the infectious process itself rather than a cause. If a better answer exists, “Skull fracture” might be considered less directly related to CSOM, but the answer is kept as per source." 
+                        },
+                        { 
+                            q: "The management of recent traumatic tympanic membrane perforation is:", 
+                            opts: [
+                                {text: "Systemic steroids", exp: "No role in traumatic perforation."}, 
+                                {text: "Antibiotic ear drops", exp: "Not routinely indicated unless there is infection; may be harmful if the perforation is dry."}, 
+                                {text: "Immediate repair of the perforation", exp: "Most acute traumatic perforations heal spontaneously; surgery is reserved for non‑healing perforations."}, 
+                                {text: "Watchful observation", isCorrect: true, exp: "Correct. The majority of traumatic perforations heal within weeks; dry ear precautions and observation are the standard."}, 
+                                {text: "None of the above", exp: "Incorrect, as observation is appropriate."}
+                            ], 
+                            eval: "The answer is correct. Expectant management with water precautions is the first line." 
+                        },
+                        { 
+                            q: "Treatment of dry traumatic rupture of tympanic membrane is:", 
+                            opts: [
+                                {text: "Myringoplasty", exp: "Only for persistent perforations after failed spontaneous healing."}, 
+                                {text: "Ear pack soaked with antibiotic", exp: "Not indicated and may introduce infection."}, 
+                                {text: "Systemic antibiotics", exp: "Not required in a clean dry perforation."}, 
+                                {text: "Antibiotic ear drops", exp: "Usually avoided in dry traumatic perforation."}, 
+                                {text: "Protection of ear against water", isCorrect: true, exp: "Correct. Keeping the ear dry prevents infection while spontaneous healing occurs."}
+                            ], 
+                            eval: "The answer is correct. Dry ear precautions are the mainstay." 
+                        }
+                    ]},
+                    { t: "Tinnitus", qs: [
+                        { 
+                            q: "Which of the following is a cause of objective tinnitus?", 
+                            opts: [
+                                {text: "Meniere’s disease", exp: "Causes subjective tinnitus; not audible to the examiner."}, 
+                                {text: "Acoustic neuroma", exp: "Tinnitus is subjective, due to neural compression."}, 
+                                {text: "Noise-induced hearing loss", exp: "Subjective tinnitus from cochlear damage."}, 
+                                {text: "Palatal myoclonus", isCorrect: true, exp: "Correct. Objective tinnitus can be produced by rhythmic contraction of palatal muscles, audible to the examiner."}, 
+                                {text: "Ototoxicity", exp: "Subjective tinnitus from hair cell damage."}
+                            ], 
+                            eval: "The answer is correct. Palatal myoclonus is a classic cause of objective tinnitus (the examiner can hear the clicking sound)." 
+                        },
+                        { 
+                            q: "Which of the following is true about Meniere’s disease?", 
+                            opts: [
+                                {text: "It is caused by a viral infection", exp: "Aetiology is unknown, thought to relate to endolymphatic hydrops, not a proven viral cause."}, 
+                                {text: "It is a type of conductive hearing loss", exp: "Meniere’s causes sensorineural hearing loss, initially low‑frequency, fluctuating."}, 
+                                {text: "It is characterized by sudden onset of severe pain in the ear", exp: "Pain is not a feature of Meniere’s disease."}, 
+                                {text: "It is associated with tinnitus & aural fullness", isCorrect: true, exp: "Correct. Episodic vertigo with fluctuating hearing loss, tinnitus, and aural fullness defines the classic triad/tetrad."}, 
+                                {text: "It is treated with antibiotics & antihistamines", exp: "Treatment includes dietary salt restriction, betahistine, diuretics; antibiotics are not used."}
+                            ], 
+                            eval: "The answer is correct. Tinnitus and aural fullness are cardinal symptoms." 
+                        },
+                        { 
+                            q: "Tinnitus is seen in all EXCEPT:", 
+                            opts: [
+                                {text: "Loud noise", isCorrect: true, exp: "Given as the correct answer (exception). However, loud noise is a well‑recognised cause of tinnitus (e.g., after noise trauma). This may be debatable."}, 
+                                {text: "Meniere’s disease", exp: "Causes tinnitus."}, 
+                                {text: "High sensorineural hearing loss", exp: "Presbycusis and high‑frequency loss are strongly associated with tinnitus."}, 
+                                {text: "Otitis media", exp: "Conductive hearing loss can also produce tinnitus."}, 
+                                {text: "Acoustic neuroma", isAi: true, exp: "Typically causes unilateral tinnitus."}
+                            ], 
+                            eval: "The answer “Loud noise” is questionable, as loud noise exposure is a common trigger for tinnitus. Most clinicians would consider Meniere’s, high SNHL, otitis media, and acoustic neuroma all causes of tinnitus, and loud noise as a cause as well. The answer is kept as per source, but it may not be accurate." 
+                        },
+                        { 
+                            q: "First treatment of tinnitus:", 
+                            opts: [
+                                {text: "Masking", exp: "Provides immediate relief but not definitive first‑line therapy."}, 
+                                {text: "Hearing aids", exp: "Helpful if hearing loss is present, but not the universal first step."}, 
+                                {text: "Sedatives", exp: "May be used short‑term but not the primary treatment."}, 
+                                {text: "Retraining", isCorrect: true, exp: "Tinnitus retraining therapy (TRT) is often recommended as a long‑term, first‑line behavioural intervention, combining counselling and sound therapy."}, 
+                                {text: "Cognitive behavioural therapy", isAi: true, exp: "CBT is effective and often combined with retraining, but the source identifies retraining as the first treatment."}
+                            ], 
+                            eval: "The answer may be acceptable. While CBT is now often first‑line in many guidelines, tinnitus retraining therapy (Jastreboff model) was historically promoted as the primary treatment. So the answer is consistent with some older teachings." 
+                        }
+                    ]},
+                    { t: "Vertigo", qs: [
+                        { 
+                            q: "Which part of the inner ear is responsible for sensing angular movement?", 
+                            opts: [
+                                {text: "Cochlea", exp: "Responsible for hearing, not balance."}, 
+                                {text: "Semicircular canals", isCorrect: true, exp: "Correct. The three semicircular canals detect angular acceleration."}, 
+                                {text: "Utricle & saccule", exp: "Detect linear acceleration and head tilt (otolith organs)."}, 
+                                {text: "Vestibulocochlear nerve", exp: "Transmits signals, not the sensor itself."}, 
+                                {text: "The endolymphatic sac", isAi: true, exp: "Involved in endolymph homeostasis, not angular motion sensing."}
+                            ], 
+                            eval: "The answer is correct. The semicircular canals are the angular motion receptors." 
+                        },
+                        { 
+                            q: "What is the most common cause of vertigo?", 
+                            opts: [
+                                {text: "Benign Paroxysmal Positional Vertigo (BPPV)", isCorrect: true, exp: "Correct. BPPV is by far the most common vestibular disorder causing vertigo."}, 
+                                {text: "Meniere’s disease", exp: "Much less common."}, 
+                                {text: "Vestibular neuritis", exp: "Also common but not as frequent as BPPV."}, 
+                                {text: "Migraine", exp: "Migrainous vertigo is common but still less than BPPV."}, 
+                                {text: "Acoustic neuroma", exp: "Rare."}
+                            ], 
+                            eval: "The answer is correct. BPPV is the most prevalent cause of vertigo." 
+                        },
+                        { 
+                            q: "Scenarios describing a sudden onset of vertigo without hearing loss for 3 days duration, that resolved on its own:", 
+                            opts: [
+                                {text: "Labyrinthitis", exp: "Presents with vertigo and hearing loss; not without hearing loss."}, 
+                                {text: "Vestibular neuritis", isCorrect: true, exp: "Correct. Acute unilateral vestibular loss with severe vertigo, no hearing loss, lasting days, with gradual spontaneous recovery."}, 
+                                {text: "Meniere", exp: "Vertigo lasts hours, typically associated with hearing loss, tinnitus, fullness; not days without hearing symptoms."}, 
+                                {text: "BPPV", exp: "Brief seconds‑long positional vertigo, not continuous for 3 days."}, 
+                                {text: "Migrainous vertigo", isAi: true, exp: "Duration can vary but usually associated with migrainous features, not typically a single 3‑day spell that resolves completely without headache."}
+                            ], 
+                            eval: "The answer is correct. Vestibular neuritis causes acute prolonged vertigo without auditory symptoms, improving over days." 
+                        },
+                        { 
+                            q: "In which age group is vertigo and unsteadiness most common?", 
+                            opts: [
+                                {text: "Children under 5 years’ old", exp: "Balance disorders are uncommon; brief benign paroxysmal vertigo of childhood exists but not the peak."}, 
+                                {text: "Children & teenagers aged 5 to 19 years’ old", exp: "Less common; BPPV rare, migraine may occur."}, 
+                                {text: "Adults aged 20 to 40 years’ old", exp: "BPPV and vestibular neuritis occur, but prevalence of dizziness and unsteadiness rises with age."}, 
+                                {text: "Old aged above 60 years’ old", isCorrect: true, exp: "Correct. Multifactorial dizziness from multisensory decline, BPPV, and central causes peaks in the elderly."}, 
+                                {text: "It occurs equally across all age groups", exp: "False."}
+                            ], 
+                            eval: "The answer is correct. The prevalence of vertigo and imbalance increases significantly after age 60." 
+                        },
+                        { 
+                            q: "Intermediate duration vertigo is seen in:", 
+                            opts: [
+                                {text: "Benign paroxysmal positional vertigo", exp: "Vertigo lasts seconds to minutes, not intermediate."}, 
+                                {text: "Meniere’s disease", isCorrect: true, exp: "Atticks typically last 20 minutes to 12–24 hours, classed as intermediate duration."}, 
+                                {text: "Vestibular neuritis", exp: "Prolonged vertigo, days to weeks."}, 
+                                {text: "Labyrinthitis", exp: "Days with hearing loss."}, 
+                                {text: "Migrainous vertigo", exp: "Duration variable, minutes to days, but classic intermediate duration is Meniere’s."}
+                            ], 
+                            eval: "The answer is correct. Meniere’s attacks fit the intermediate timeframe." 
+                        },
+                        { 
+                            q: "One will cause unilateral vertigo without deafness:", 
+                            opts: [
+                                {text: "Vestibular neuritis", isCorrect: true, exp: "Correct. Acute unilateral vestibular loss causes vertigo without hearing loss."}, 
+                                {text: "Cerebellopontine angle tumor", exp: "Usually gradual unsteadiness and hearing loss, not acute vertigo without deafness."}, 
+                                {text: "Benign paroxysmal vertigo", exp: "Likely refers to BPPV; vertigo is positional, not sustained unilateral loss, and no deafness, but the given answer is vestibular neuritis."}, 
+                                {text: "Meniere’s disease", exp: "Includes hearing loss, tinnitus."}, 
+                                {text: "Labyrinthitis", isAi: true, exp: "Vertigo with hearing loss."}
+                            ], 
+                            eval: "The answer is correct. Vestibular neuritis uniquely presents with isolated acute vertigo." 
+                        },
+                        { 
+                            q: "One is not a feature of central nystagmus:", 
+                            opts: [
+                                {text: "Spontaneous", exp: "May be spontaneous."}, 
+                                {text: "All directions", exp: "Central nystagmus can be direction‑changing (gaze‑evoked) or vertical."}, 
+                                {text: "Decreases with time", isCorrect: true, exp: "This is a feature of peripheral nystagmus (fatigues); central nystagmus does not decrease with time or fixation."}, 
+                                {text: "Not affected by visual fixation", exp: "Central nystagmus is not suppressed by fixation."}, 
+                                {text: "Usually unilateral", exp: "Central nystagmus can be unilateral but often bilateral or direction‑changing; however the incorrect statement given is “decreases with time”."}
+                            ], 
+                            eval: "The answer “Decreases with time” is correct; central nystagmus is sustained and does not fatigue or decrease over the course of the examination." 
+                        },
+                        { 
+                            q: "Regarding peripheral nystagmus, all are correct EXCEPT:", 
+                            opts: [
+                                {text: "It is often horizontal with a torsional component", exp: "Correct for BPPV (canal‑specific)."}, 
+                                {text: "It fatigues with repeated Hallpike’s maneuver", exp: "Correct; peripheral nystagmus fatigues."}, 
+                                {text: "It is suppressed by visual fixation", exp: "Correct; peripheral nystagmus is typically suppressed by fixation."}, 
+                                {text: "It may be accompanied by vertigo", exp: "Correct; peripheral vestibular nystagmus is associated with vertigo."}, 
+                                {text: "Will not fatigue on Hallpike’s maneuver", isCorrect: true, exp: "Incorrect; it does fatigue. This is the false statement."}
+                            ], 
+                            eval: "The answer is correct. Peripheral nystagmus is characteristically fatigable." 
+                        },
+                        { 
+                            q: "Not a characteristic of peripheral nystagmus:", 
+                            opts: [
+                                {text: "Horizontal-torsional nystagmus", exp: "Characteristic of BPPV."}, 
+                                {text: "Suppressed by visual fixation", exp: "True for peripheral nystagmus."}, 
+                                {text: "Fatigues with repetition", exp: "True; peripheral nystagmus fatigues."}, 
+                                {text: "Associated with vertigo", exp: "True."}, 
+                                {text: "Change direction with different postures", isCorrect: true, exp: "Not characteristic; peripheral nystagmus is unidirectional and does not change direction with head position (central nystagmus may change direction)."}
+                            ], 
+                            eval: "The answer is correct. A direction‑changing nystagmus with different head positions suggests a central lesion." 
+                        }
+                    ]},{ t: "Hearing Assessment in Children", qs: [
+                        { 
+                            q: "The assessment of hearing in bilateral congenital aural atresia is best accomplished using:", 
+                            opts: [
+                                {text: "ABR", isCorrect: true, exp: "Correct. Auditory brainstem response testing using bone-conduction stimuli can assess cochlear function and auditory pathway integrity despite absent ear canals."}, 
+                                {text: "Pure tone audiogram", exp: "Cannot be performed reliably; the atresia prevents air-conduction testing, and a standard audiogram requires an open ear canal."}, 
+                                {text: "Pure tone audiogram with masking", exp: "Same problem as above; masking does not overcome the conductive barrier of atresia."}, 
+                                {text: "Otoacoustic emission", exp: "Otoacoustic emissions are measured from the ear canal and are absent when there is a conductive block such as atresia, even if cochlear function is normal."}, 
+                                {text: "Speech audiogram", exp: "Requires air-conduction delivery of speech stimuli; not feasible with complete ear canal atresia."}
+                            ], 
+                            eval: "The answer is correct. Bone-conduction ABR is the method of choice for objective hearing assessment in bilateral congenital aural atresia." 
+                        },
+                        { 
+                            q: "How is neonate hearing assessment typically performed?", 
+                            opts: [
+                                {text: "Pure-tone audiometry", exp: "Requires active patient cooperation; not feasible in neonates."}, 
+                                {text: "Speech audiometry", exp: "Requires language comprehension and behavioral responses; impossible in newborns."}, 
+                                {text: "ABR", isCorrect: true, exp: "Correct. Automated or diagnostic ABR is the standard electrophysiological screening method for newborn hearing."}, 
+                                {text: "Tympanometry", exp: "Evaluates middle ear function but does not assess hearing thresholds; it is an adjunct, not the primary hearing assessment."}, 
+                                {text: "Tinnitus matching", exp: "Not applicable to neonates and not used for hearing screening."}
+                            ], 
+                            eval: "The answer is correct. Neonatal hearing screening is predominantly performed by otoacoustic emissions and/or automated ABR." 
+                        },
+                        { 
+                            q: "ABR is done to all the following except:", 
+                            opts: [
+                                {text: "Congenital infections", exp: "TORCH infections are high-risk factors for hearing loss; ABR screening is indicated."}, 
+                                {text: "Family history of hearing loss at young age", exp: "A known risk factor requiring ABR screening."}, 
+                                {text: "Hyperbilirubinemia", exp: "High levels requiring exchange transfusion carry a risk of auditory neuropathy; ABR is indicated."}, 
+                                {text: "Maternal severe depression", isCorrect: true, exp: "Correct exception. It is not a direct risk factor for infant hearing loss and does not warrant targeted ABR screening by itself."}, 
+                                {text: "Low birth weight", exp: "Low birth weight (<1500g) is an established risk factor necessitating hearing screening."}
+                            ], 
+                            eval: "The answer is correct. ABR is targeted based on neonatal hearing loss risk factors, and maternal depression alone is not among them." 
+                        },
+                        { 
+                            q: "In Auditory brainstem reflex, you detect:", 
+                            opts: [
+                                {text: "Auditory neuropathy", isCorrect: true, exp: "Correct. ABR helps identify auditory neuropathy spectrum disorder by showing an absent or grossly abnormal ABR with present otoacoustic emissions."}, 
+                                {text: "Central processing disorder", exp: "ABR reflects brainstem pathways; it does not assess higher cortical auditory processing."}, 
+                                {text: "Non organic hearing loss", exp: "Cannot be detected by ABR; behavioral tests and stapedial reflex testing are more helpful."}, 
+                                {text: "Cochlear microphonics", isAi: true, exp: "Recorded by electrocochleography, not by ABR."}, 
+                                {text: "Semicircular canal function", isAi: true, exp: "Assessed by vestibular testing such as caloric or vHIT, not by ABR."}
+                            ], 
+                            eval: "The answer is correct. ABR is particularly useful in diagnosing auditory neuropathy." 
+                        },
+                        { 
+                            q: "Which of the following carries the highest risk of developing hearing loss in the future for a baby managed in the ICU?", 
+                            opts: [
+                                {text: "Intubation for 3 days with pathological hyperbilirubinemia", exp: "Significant risk, but does not include ototoxic medication exposure."}, 
+                                {text: "Entered the NICU for five days + treated with Aminoglycoside + hyperbilirubinemia", isCorrect: true, exp: "Correct. This combines multiple potent risk factors: NICU stay, ototoxic antibiotic, and hyperbilirubinemia, conferring the highest additive risk."}, 
+                                {text: "Prematurity without other risk factors", isAi: true, exp: "A risk factor but lower than the combination of multiple major risks."}, 
+                                {text: "Mechanical ventilation for 1 day only", isAi: true, exp: "Minimal risk without accompanying ototoxic drugs or severe hyperbilirubinemia."}, 
+                                {text: "Use of loop diuretics alone", isAi: true, exp: "Potentially ototoxic, but monotherapy carries less risk than the combination in B."}
+                            ], 
+                            eval: "The answer is correct. The additive effect of multiple risk factors yields the highest probability of hearing loss." 
+                        },
+                        { 
+                            q: "Which of the following is not a child with a high risk for hearing loss?", 
+                            opts: [
+                                {text: "History of meningitis", exp: "Bacterial meningitis is a well-recognised cause of acquired sensorineural hearing loss."}, 
+                                {text: "Family history of hearing loss", exp: "Positive family history in a first-degree relative is a strong risk factor."}, 
+                                {text: "Congenital rubella infection", exp: "Classic TORCH agent responsible for congenital hearing loss."}, 
+                                {text: "The use of ototoxic drugs", exp: "Aminoglycosides and other ototoxins can cause cochlear damage."}, 
+                                {text: "Children born by cesarean delivery", isCorrect: true, exp: "Correct. Delivery mode in the absence of other risk factors does not confer high risk for hearing loss."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Child of 5 years, delay in speech and inattention, diagnosis?", 
+                            opts: [
+                                {text: "OME", isCorrect: true, exp: "Correct. Otitis media with effusion causes fluctuating conductive hearing loss, which commonly presents with speech delay and inattentiveness in young children."}, 
+                                {text: "Sensorineural hearing loss", exp: "Can cause speech delay but inattention as the primary behavioural complaint often points to the hearing fluctuation of OME."}, 
+                                {text: "Autism", exp: "Presents with social communication deficits and restricted behaviours, not just speech delay and inattention."}, 
+                                {text: "Attention deficit hyperactivity disorder (ADHD)", isAi: true, exp: "Inattention is a hallmark, but primary speech delay without other pervasive features is not typical."}, 
+                                {text: "Intellectual disability", isAi: true, exp: "Would show global developmental delay, not isolated speech delay and inattention."}
+                            ], 
+                            eval: "The answer is reasonable. OME is a very common reversible cause of speech delay and apparent inattention in preschool children." 
+                        }
+                    ]},
+                    { t: "Hearing Loss", qs: [
+                        { 
+                            q: "The most common cause of acquired sensorineural hearing loss in children is:", 
+                            opts: [
+                                {text: "Mumps", exp: "Known cause of unilateral sensorineural hearing loss, but less common than meningitis."}, 
+                                {text: "Measles", exp: "Can cause post-infectious sensorineural loss, but incidence is low with vaccination."}, 
+                                {text: "Trauma", exp: "Much rarer as a cause of SNHL in children compared to meningitis."}, 
+                                {text: "Meningitis", isCorrect: true, exp: "Correct. Bacterial meningitis is the leading cause of acquired sensorineural hearing loss in children."}, 
+                                {text: "Otitis media with effusion", isAi: true, exp: "Causes conductive, not sensorineural, hearing loss."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common cause of acquired sensorineural hearing loss:", 
+                            opts: [
+                                {text: "Mumps", exp: "Causes SNHL but is not the most common acquired cause overall."}, 
+                                {text: "Measles", exp: "Less prevalent."}, 
+                                {text: "Trauma", exp: "Less frequent."}, 
+                                {text: "Meningitis", isCorrect: true, exp: "Correct. Meningitis remains the most common cause of postnatally acquired sensorineural hearing loss."}, 
+                                {text: "Influenza", exp: "Very rarely associated with SNHL; not a major cause."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is a cause of sensorineural hearing loss?", 
+                            opts: [
+                                {text: "Longitudinal fracture of the temporal bone", exp: "Typically causes conductive hearing loss by disrupting the ossicular chain; sensorineural loss is seen in transverse fractures."}, 
+                                {text: "Tympanosclerosis", exp: "Causes conductive loss by fixation of the tympanic membrane or ossicles."}, 
+                                {text: "Cholesteatoma", exp: "Erosion of ossicles leads to conductive loss; sensorineural loss occurs only if there is inner ear erosion (rare)."}, 
+                                {text: "Otosclerosis", exp: "Usually presents with conductive loss from stapes fixation; cochlear otosclerosis can cause SNHL, but classic clinical picture is conductive."}, 
+                                {text: "Presbycusis", isCorrect: true, exp: "Correct. Age-related sensorineural hearing loss."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is NOT a common cause of sensorineural hearing loss?", 
+                            opts: [
+                                {text: "Aging", exp: "Presbycusis is a major cause of SNHL."}, 
+                                {text: "Noise exposure", exp: "Noise-induced hearing loss is sensorineural."}, 
+                                {text: "Ototoxic medications", exp: "Cause cochlear damage and SNHL."}, 
+                                {text: "Viral infections", exp: "Can cause labyrinthitis and SNHL."}, 
+                                {text: "Otosclerosis", isCorrect: true, exp: "Correct. It typically causes conductive hearing loss; cochlear otosclerosis with SNHL is much less common."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is NOT a common cause of hearing loss?", 
+                            opts: [
+                                {text: "Aging", exp: "Presbycusis is very common."}, 
+                                {text: "Noise exposure", exp: "Common cause of SNHL."}, 
+                                {text: "Otitis media", exp: "Common cause of conductive hearing loss."}, 
+                                {text: "Otitis externa", isCorrect: true, exp: "Correct. Otitis externa rarely causes significant hearing loss unless the canal is completely occluded by oedema and debris, and it is not a persistent cause."}, 
+                                {text: "Meniere’s disease", exp: "Causes fluctuating SNHL with vertigo."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following conditions does NOT require screening for hearing loss?", 
+                            opts: [
+                                {text: "Aging", exp: "Routine hearing screening is recommended in the elderly."}, 
+                                {text: "Occupational noise exposure", exp: "Workers with hazardous noise exposure require periodic audiometric surveillance."}, 
+                                {text: "Family history of hearing loss", exp: "Requires screening for early detection of hereditary hearing loss."}, 
+                                {text: "History of otitis media", exp: "Chronic otitis media with effusion warrants hearing monitoring."}, 
+                                {text: "History of otitis externa", isCorrect: true, exp: "Correct. Simple otitis externa without other risk factors does not require long-term hearing screening."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "What are the 2 most important risk factors for hearing loss?", 
+                            opts: [
+                                {text: "Family history & aging", exp: "Both are risk factors, but aging and noise exposure together represent the most prevalent causes of acquired hearing loss in adults."}, 
+                                {text: "Aging & noise-induced", isCorrect: true, exp: "Correct. Age-related and noise-induced hearing loss are the two most common forms of acquired hearing loss globally."}, 
+                                {text: "Otitis media & trauma", isAi: true, exp: "Less impactful on a population scale compared to aging and noise."}, 
+                                {text: "Ototoxic drugs & meningitis", isAi: true, exp: "Important risk factors but much less common overall."}, 
+                                {text: "Smoking & hypertension", isAi: true, exp: "Vascular risk factors have some association, but are not the top two."}
+                            ], 
+                            eval: "The answer is correct. Aging and noise exposure are universally accepted as the two leading causes of hearing loss." 
+                        },
+                        { 
+                            q: "Sensorineural hearing loss, one is correct:", 
+                            opts: [
+                                {text: "Talks in a loud voice", isCorrect: true, exp: "Correct. SNHL patients often speak loudly because they do not hear their own voice well."}, 
+                                {text: "Hears better in noisy places", exp: "Paracusis Willisii is typical of conductive hearing loss, not SNHL."}, 
+                                {text: "Good discrimination score", exp: "SNHL often has poor speech discrimination (distortion)."}, 
+                                {text: "Tolerates high intensity", exp: "Recruitment makes loud sounds uncomfortably loud in cochlear SNHL; tolerance is low."}, 
+                                {text: "Rinne test is negative", isAi: true, exp: "False; Rinne is positive in sensorineural hearing loss."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Not a cause of conductive hearing loss:", 
+                            opts: [
+                                {text: "Otitis media", exp: "Fluid in the middle ear causes conductive loss."}, 
+                                {text: "Perforation", exp: "Tympanic membrane perforation leads to conductive loss."}, 
+                                {text: "Loud noise deafness", isCorrect: true, exp: "Correct. Noise-induced hearing loss is sensorineural."}, 
+                                {text: "Tympanosclerosis", isAi: true, exp: "Stiffening of the tympanic membrane or ossicular chain causes conductive loss."}, 
+                                {text: "Cerumen impaction", isAi: true, exp: "Obstruction of the external ear canal produces a conductive loss."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Recruitment is associated with:", 
+                            opts: [
+                                {text: "Cochlear hearing loss", isCorrect: true, exp: "Correct. Recruitment (abnormal growth of loudness) is a characteristic sign of cochlear pathology."}, 
+                                {text: "Malingering", exp: "No recruitment; the patient feigns the loss."}, 
+                                {text: "Psychogenic cause", exp: "Non-organic hearing loss does not show true recruitment."}, 
+                                {text: "Auditory neuropathy", exp: "May have absent acoustic reflexes but recruitment is not typical."}, 
+                                {text: "Conductive hearing loss", isAi: true, exp: "Recruitment is not a feature of conductive loss."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 65 year old patient with bilateral hearing loss, more in the right side with perforated tympanic membrane on the right, what is the best to do?", 
+                            opts: [
+                                {text: "Myringoplasty", exp: "Would close the perforation but alone may not fully address the bilateral hearing loss if there is an additional sensorineural component."}, 
+                                {text: "Hearing aid", exp: "Will amplify sound for both ears but an aid in the perforated ear risks otorrhoea and infection."}, 
+                                {text: "Hearing aid + myringoplasty", isCorrect: true, exp: "Correct. Repair the perforation to create a safe, dry ear for hearing aid fitting, and use a hearing aid for the bilateral deficit."}, 
+                                {text: "Observation", exp: "Not appropriate for symptomatic hearing loss."}, 
+                                {text: "Cochlear implant", isAi: true, exp: "Reserved for severe-to-profound sensorineural loss, not indicated here."}
+                            ], 
+                            eval: "The answer is correct. Combined surgical repair and hearing rehabilitation is optimal." 
+                        },
+                        { 
+                            q: "One of these statements regarding tympanometry is False:", 
+                            opts: [
+                                {text: "Tympanometry is a hearing test.", isCorrect: true, exp: "False. Tympanometry measures middle ear compliance and pressure, not hearing thresholds."}, 
+                                {text: "can’t be used if the patient has wax in his ears.", exp: "True; occlusion or wax can prevent a seal and invalidate results."}, 
+                                {text: "Flat line (B) means there’s fluid behind the tympanic membrane", exp: "True; a type B tympanogram is typical of middle ear effusion."}, 
+                                {text: "Can’t be used when ear wax", exp: "Same as second option; true."}, 
+                                {text: "Type C curve indicates negative middle ear pressure", isAi: true, exp: "True; a curve shifted to the negative pressure side indicates Eustachian tube dysfunction."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following statements is true about tympanometry?", 
+                            opts: [
+                                {text: "Type A curve indicates fluid in the middle ear", exp: "False; type B indicates fluid."}, 
+                                {text: "Type C curve represents abnormal compliance or stiffness of the middle ear system", exp: "False; it represents significant negative pressure, with normal compliance."}, 
+                                {text: "Type A curve lies in the midline", isCorrect: true, exp: "Correct. Type A has normal peak compliance at or near atmospheric pressure."}, 
+                                {text: "Type B curve represents normal middle ear pressure & compliance", exp: "False; type B is flat, indicating effusion or perforation."}, 
+                                {text: "Type A curve lies to the left of the midline", exp: "False; that describes type C."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "In tympanometry, which of the following is true?", 
+                            opts: [
+                                {text: "An A curve is in the middle", isCorrect: true, exp: "Correct. Type A peaks at 0 daPa, indicating normal middle ear pressure."}, 
+                                {text: "Curve in positive region", exp: "A curve in the positive region alone is not a standard classification."}, 
+                                {text: "B curve in negative", exp: "False; a B curve is flat, with no identifiable peak."}, 
+                                {text: "As curve is high", exp: "False; As has low compliance (shallow peak)."}, 
+                                {text: "Ad curve is low", exp: "False; Ad has high compliance (high peak), as seen in ossicular discontinuity."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One will differentiate B curve from other causes:", 
+                            opts: [
+                                {text: "Absent stapedial reflex", exp: "Seen in both middle ear effusion and perforation; not the primary differentiating factor."}, 
+                                {text: "Increased external canal volume", isCorrect: true, exp: "Correct. A B curve with a large equivalent ear canal volume suggests a perforation or patent ventilation tube, as opposed to fluid (which has a small volume)."}, 
+                                {text: "Increased compliance", exp: "Does not differentiate; B curve lacks compliance peak."}, 
+                                {text: "High static compliance", isAi: true, exp: "Not a feature of B curve; static compliance is very low."}, 
+                                {text: "Shift to positive pressure", isAi: true, exp: "Not relevant; B curve is flat."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The characteristic finding on audiogram in a patient with presbycusis:", 
+                            opts: [
+                                {text: "Bilateral low-frequency sensorineural hearing loss", exp: "Typical of Meniere’s disease, not presbycusis."}, 
+                                {text: "Bilateral high-frequency sensorineural hearing loss with a sloping pattern", isCorrect: true, exp: "Correct. Presbycusis classically shows a bilateral, symmetric, sloping high-frequency SNHL."}, 
+                                {text: "Bilateral conductive hearing loss", exp: "Not presbycusis."}, 
+                                {text: "Unilateral sensorineural hearing loss with a flat audiogram", exp: "Asymmetry and flat audiogram are not typical."}, 
+                                {text: "Mixed hearing loss with a predominance of sensorineural component", exp: "Not characteristic; presbycusis is purely sensorineural."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is correct about audiogram?", 
+                            opts: [
+                                {text: "Otosclerosis is associated with abnormal bone conduction", exp: "Classic otosclerosis shows normal bone conduction; the Carhart notch may be present but bone conduction is not generally abnormal."}, 
+                                {text: "Sensorineural hearing loss is associated with abnormal air conduction", exp: "Both air and bone conduction are equally reduced in SNHL; this statement is incomplete."}, 
+                                {text: "Conductive hearing loss is associated with abnormal bone conduction", exp: "Bone conduction is normal in pure conductive loss; the air-bone gap exists because air conduction is worse."}, 
+                                {text: "Mixed hearing loss is associated with both abnormalities", isCorrect: true, exp: "Correct. Air conduction is abnormal and bone conduction is also elevated, with an air-bone gap."}, 
+                                {text: "Sensorineural hearing loss shows normal air conduction and abnormal bone conduction", isAi: true, exp: "False; both air and bone conduction are elevated in SNHL."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Patient with Rt. conductive hearing loss and normal Lt. ear, what would you expect him to have when doing Weber and Rinne tests:", 
+                            opts: [
+                                {text: "Rt. -ve Rinne with Weber lateralization to the Rt", isCorrect: true, exp: "Correct. Right conductive loss gives a negative Rinne on the right (bone > air) and Weber lateralizes to the poorer-hearing right ear."}, 
+                                {text: "Rt. +ve Rinne with Weber lateralization to the Lt", exp: "Not consistent with right conductive loss."}, 
+                                {text: "Rt. -ve Rinne with Weber lateralization to the Lt", exp: "Weber lateralizes to the worse ear in conductive loss, so this would be left-sided pathology."}, 
+                                {text: "Lt. -ve Rinne with Weber lateralization to the Rt", exp: "Describes left conductive loss."}, 
+                                {text: "Bilateral -ve Rinne with Weber central", exp: "Would suggest bilateral conductive loss, not unilateral."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "In right middle ear pathology Weber’s test will be:", 
+                            opts: [
+                                {text: "Lateralized to left side", exp: "Occurs if left ear has a conductive loss."}, 
+                                {text: "Lateralized to right side", isCorrect: true, exp: "Correct. In right conductive loss, Weber lateralizes to the affected (poorer) ear."}, 
+                                {text: "Normal", exp: "Not with significant conductive pathology."}, 
+                                {text: "Centralized", exp: "Weber is midline only with symmetrical hearing."}, 
+                                {text: "Positive", exp: "Not a result of the Weber test; Rinne is described as positive or negative."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "If tuning fork test revealed right Rinne negative, left Rinne positive, & Weber test lateralizes to the right, the patient most likely has:", 
+                            opts: [
+                                {text: "Left sensorineural hearing loss", exp: "Would show left Rinne positive (unless severe) and Weber lateralizing to the right (better ear), but left Rinne positive and right negative does not fit."}, 
+                                {text: "Right conductive hearing loss", isCorrect: true, exp: "Correct. Right Rinne negative (bone > air), left Rinne positive, and Weber lateralizes to the right (poorer ear) is the classic picture."}, 
+                                {text: "Normal hearing", exp: "Would have bilateral positive Rinne and central Weber."}, 
+                                {text: "Left conductive hearing loss", exp: "Would have left Rinne negative and Weber lateralizing to the left."}, 
+                                {text: "Right sensorineural hearing loss", exp: "Would have right positive Rinne (mild/moderate) and Weber lateralizing to the left (better ear)."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Hearing tests: patient with Rinne negative on left and positive on right ear. On Weber test, there is localization to the right ear. What is the most likely diagnosis?", 
+                            opts: [
+                                {text: "Right conductive deafness", exp: "Would show right Rinne negative and Weber lateralizing to right, not left."}, 
+                                {text: "Severe left sensorineural deafness", isCorrect: true, exp: "Correct. The left Rinne is falsely negative due to severe SNHL; right Rinne is positive. In SNHL, Weber lateralizes to the better-hearing ear (right)."}, 
+                                {text: "Bilateral conductive deafness", exp: "Both Rinne negative and Weber central."}, 
+                                {text: "Mixed right hearing loss - False Negative Rinne", exp: "Not consistent; a mixed loss on the right would not produce a negative Rinne on the left."}, 
+                                {text: "Left conductive hearing loss", isAi: true, exp: "Would show left Rinne negative, but Weber would lateralize to the left (worse ear), not the right."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Patient with Rt. ear conductive hearing loss has:", 
+                            opts: [
+                                {text: "Rt. Rinne +ve", exp: "False; right Rinne is negative in conductive loss."}, 
+                                {text: "Lt. Rinne −ve", exp: "Left ear is normal, so left Rinne is positive."}, 
+                                {text: "Lateralization to Lt", exp: "Weber lateralizes to the right in right conductive loss."}, 
+                                {text: "Lateralization to Lt + Rt. Rinne −ve", exp: "Weber goes to the right, not left."}, 
+                                {text: "Lateralization to Rt + Rt. Rinne −ve", isCorrect: true, exp: "Correct. Right negative Rinne and Weber lateralizing to the right is the classic pattern."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]}, 
                 ]
             },
             {
