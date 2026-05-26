@@ -4041,7 +4041,634 @@
                             ], 
                             eval: "The answer is correct." 
                         }
-                    ]} , { t: "Spinal Cord Injury", qs: [
+                    ]},{ t: "Head Injury", qs: [
+                        { 
+                            q: "Head trauma in RTAs is:", 
+                            opts: [
+                                {text: "20%", exp: "Incorrect; underestimates the proportion of road traffic accidents that result in head trauma."}, 
+                                {text: "40%", exp: "Incorrect; lower than the commonly cited figure."}, 
+                                {text: "60%", isCorrect: true, exp: "Correct. Head injury is a leading component of RTA-related trauma, frequently quoted as around 60%."}, 
+                                {text: "80%", exp: "Incorrect; overestimation."}, 
+                                {text: "90%", exp: "Incorrect; too high."}
+                            ], 
+                            eval: "The answer is correct. Head trauma constitutes a significant majority of injuries in road traffic accidents." 
+                        },
+                        { 
+                            q: "The best modality for evaluation of head injury:", 
+                            opts: [
+                                {text: "CT scan", isCorrect: true, exp: "Correct. Rapid, widely available, excellent for acute hemorrhage and fracture."}, 
+                                {text: "MRI", exp: "Not first line in acute trauma; longer acquisition, less sensitive to acute blood products early on."}, 
+                                {text: "MRA", exp: "Evaluates vessels, not the primary imaging for parenchymal injury."}, 
+                                {text: "Cerebral angiography", exp: "Invasive, used for vascular injury when CTA is equivocal."}, 
+                                {text: "Plain film radiographs", exp: "Obsolete for brain injury; may show fractures but no intracranial detail."}
+                            ], 
+                            eval: "The answer is correct. Non-contrast CT is the gold standard initial imaging for acute head trauma." 
+                        },
+                        { 
+                            q: "Cephalohematoma is a:", 
+                            opts: [
+                                {text: "Subcutaneous hematoma", exp: "Superficial, not limited by suture lines."}, 
+                                {text: "Subaponeurotic hematoma", exp: "Subgaleal hematoma, crosses suture lines, can be massive."}, 
+                                {text: "Subperiosteal hematoma", isCorrect: true, exp: "Correct. Cephalohematoma is a collection of blood beneath the periosteum, confined to a single cranial bone."}, 
+                                {text: "Subdural hematoma", exp: "Intracranial, between dura and arachnoid."}, 
+                                {text: "Subtentorial hematoma", exp: "Posterior fossa intracranial bleeding."}
+                            ], 
+                            eval: "The answer is correct. Cephalohematoma is subperiosteal, limited by suture lines." 
+                        },
+                        { 
+                            q: "In cephalohematoma in infants, infants might have shock due to:", 
+                            opts: [
+                                {text: "Low blood volume", isCorrect: true, exp: "Correct. A large cephalohematoma can sequester enough blood to cause hypovolemic shock."}, 
+                                {text: "Hyperbilirubinemia", isAi: true, exp: "May cause jaundice, not shock."}, 
+                                {text: "Infection", isAi: true, exp: "Possible complication but not a direct cause of shock."}, 
+                                {text: "Pain", isAi: true, exp: "Severe pain is not typical and would rarely lead to shock."}, 
+                                {text: "Respiratory distress", isAi: true, exp: "Not directly due to cephalohematoma."}
+                            ], 
+                            eval: "The answer is correct. Significant blood loss into the subperiosteal space can produce hypovolemic shock." 
+                        },
+                        { 
+                            q: "MRI is better than CT by all except:", 
+                            opts: [
+                                {text: "Detecting hairline fracture at temporal bone", isCorrect: true, exp: "Correct exception. CT is superior for bone detail and fractures."}, 
+                                {text: "Detecting diffuse axonal injury", isAi: true, exp: "MRI is far better for DAI."}, 
+                                {text: "Detecting brainstem contusion", isAi: true, exp: "MRI is more sensitive for posterior fossa and brainstem lesions."}, 
+                                {text: "Detecting early ischemic changes", isAi: true, exp: "MRI (DWI) detects ischemia earlier than CT."}, 
+                                {text: "Detecting small cortical contusions", isAi: true, exp: "MRI is more sensitive for small parenchymal injuries."}
+                            ], 
+                            eval: "The answer is correct. CT remains the modality of choice for skull fractures." 
+                        },
+                        { 
+                            q: "All are signs of basal skull fracture involving the anterior fossa except:", 
+                            opts: [
+                                {text: "Battle’s sign", isCorrect: true, exp: "Correct answer; mastoid ecchymosis indicates posterior fossa fracture."}, 
+                                {text: "CSF rhinorrhea", exp: "Anterior fossa sign."}, 
+                                {text: "Epistaxis", exp: "May occur with anterior skull base fractures."}, 
+                                {text: "Blindness", exp: "Can result from optic nerve injury in anterior fossa fractures."}, 
+                                {text: "Raccoon’s eyes", exp: "Periorbital ecchymosis, anterior fossa sign."}
+                            ], 
+                            eval: "The answer is correct. Battle’s sign is a classic sign of temporal bone/posterior fossa fracture." 
+                        },
+                        { 
+                            q: "Regarding fractures of the skull, all of the following are true except:", 
+                            opts: [
+                                {text: "Basilar skull fractures are more likely to injure cranial nerves than vault fractures", exp: "True; the foramina are at the base."}, 
+                                {text: "Linear fractures do not require treatment unless associated with complications", exp: "True."}, 
+                                {text: "Pond fractures of babies do not require elevation", exp: "True; they often remodel spontaneously."}, 
+                                {text: "Compound depressed skull fractures require emergency treatment", exp: "True; open fractures need debridement and elevation."}, 
+                                {text: "A growing skull fracture is a complication of linear fractures in adults", isCorrect: true, exp: "Incorrect, and thus the exception. Growing skull fractures occur in young children with dural tear, not adults."}
+                            ], 
+                            eval: "The answer is correct. Growing skull fractures are a pediatric phenomenon." 
+                        },
+                        { 
+                            q: "Regarding fractures of the skull, all of the following are true except:", 
+                            opts: [
+                                {text: "Linear fractures do not require treatment unless associated with complications", exp: "True."}, 
+                                {text: "Compound depressed skull fractures require emergency treatment", exp: "True."}, 
+                                {text: "Basilar skull fractures are more likely to injure cranial nerves than vault fractures", exp: "True."}, 
+                                {text: "All basilar skull fractures will develop CSF leak", isCorrect: true, exp: "False; many do not, thus the exception."}, 
+                                {text: "Pond fractures of babies usually do not require elevation", exp: "True."}
+                            ], 
+                            eval: "The answer is correct. Only a minority of basilar fractures result in CSF fistula." 
+                        },
+                        { 
+                            q: "Depressed fracture — do not elevate if:", 
+                            opts: [
+                                {text: "Less than the thickness of adjacent bone", isCorrect: true, exp: "Correct. Elevation is not necessary if the fragment is depressed less than the skull thickness and there is no dural tear, neurological deficit, or cosmetic deformity."}, 
+                                {text: "Cosmetic", exp: "Incorrect; cosmetic deformity is an indication for elevation."}, 
+                                {text: "Overlying wound infection", isAi: true, exp: "An infected wound complicates but does not preclude elevation; contaminated open fractures need debridement."}, 
+                                {text: "Dural penetration", isAi: true, exp: "Dural tear is an indication for surgery."}, 
+                                {text: "Neurological deficit", isAi: true, exp: "Neurological deficit related to the fracture mandates elevation."}
+                            ], 
+                            eval: "The answer is correct. The depth less than the table of the skull is a classical criterion for nonoperative management." 
+                        },
+                        { 
+                            q: "What is an absolute indication for surgery in skull fracture?", 
+                            opts: [
+                                {text: "Linear fracture", exp: "Not an indication unless complicated."}, 
+                                {text: "Basilar fracture", exp: "Usually managed conservatively."}, 
+                                {text: "Pond fracture in an infant", isAi: true, exp: "Usually managed conservatively unless depressed, causing neurological deficit, or with dural tear."}, 
+                                {text: "Compound depressed fracture", isCorrect: true, exp: "Correct. Open depressed fracture requires surgical debridement and elevation."}, 
+                                {text: "Closed depressed fracture less than skull thickness", isAi: true, exp: "Often managed non-operatively."}
+                            ], 
+                            eval: "The answer is correct. Compound depressed skull fractures are a surgical emergency." 
+                        },
+                        { 
+                            q: "Fracture that causes otorrhea:", 
+                            opts: [
+                                {text: "Frontal bone fracture", isAi: true, exp: "Usually causes rhinorrhea, not otorrhea."}, 
+                                {text: "Parietal bone fracture", isAi: true, exp: "Vault fracture, unlikely to cause CSF otorrhea."}, 
+                                {text: "Temporal bone fracture (petrous part)", isCorrect: true, exp: "Correct. Fracture through the petrous temporal bone tears the dura and allows CSF drainage into the middle ear and out the ear canal if the tympanic membrane is ruptured."}, 
+                                {text: "Occipital bone fracture", isAi: true, exp: "Posterior fossa fracture may cause CSF leak into the nasopharynx, not otorrhea."}, 
+                                {text: "Sphenoid bone fracture", isAi: true, exp: "May cause rhinorrhea."}
+                            ], 
+                            eval: "The answer is correct. Petrous temporal bone fractures are the source of otorrhea." 
+                        },
+                        { 
+                            q: "Brain contusions:", 
+                            opts: [
+                                {text: "Less likely to happen in children", exp: "Incorrect; contusions do occur, but children have fewer due to smoother skull base; however the mechanism is better described by acceleration-deceleration."}, 
+                                {text: "Frontal lobe most commonly", exp: "True that frontal and temporal lobes are common sites, but the question asks for a true statement about contusions; the given answer is the mechanism, which is unequivocally correct."}, 
+                                {text: "Acceleration-deceleration", isCorrect: true, exp: "Correct. Brain contusions result from movement of the brain within the skull hitting irregular bony surfaces, typical of acceleration-deceleration."}, 
+                                {text: "Always require surgical evacuation", isAi: true, exp: "Many are managed conservatively."}, 
+                                {text: "Occur only in the occipital lobe", isAi: true, exp: "False, frontal and temporal more common."}
+                            ], 
+                            eval: "The answer is correct. Acceleration-deceleration is the essential biomechanics of cerebral contusions." 
+                        },
+                        { 
+                            q: "Causes of secondary brain injury except:", 
+                            opts: [
+                                {text: "Counter coup injury", isCorrect: true, exp: "Correct exception. Counter coup is a primary injury mechanism occurring at the moment of impact."}, 
+                                {text: "Hematoma", exp: "Secondary injury; mass effect and biochemical damage."}, 
+                                {text: "Brain shifting", exp: "Herniation and vascular compromise are secondary."}, 
+                                {text: "Hypoxia", exp: "Systemic secondary insult."}, 
+                                {text: "Ischemia", exp: "Secondary insult from impaired perfusion."}
+                            ], 
+                            eval: "The answer is correct. Counter coup is a primary mechanical injury." 
+                        },
+                        { 
+                            q: "The most prognostic sign in acute head injury is:", 
+                            opts: [
+                                {text: "Pupil reactivity", isAi: true, exp: "Important but GCS is the single strongest predictor."}, 
+                                {text: "Age", isAi: true, exp: "Influences outcome but not the most prognostic acute sign."}, 
+                                {text: "Glasgow Coma Scale", isCorrect: true, exp: "Correct. The post-resuscitation GCS is the most powerful prognostic indicator in head injury."}, 
+                                {text: "CT Marshall classification", isAi: true, exp: "Provides prognostic information but GCS is superior."}, 
+                                {text: "Mechanism of injury", isAi: true, exp: "Helps but not as strong as clinical grade."}
+                            ], 
+                            eval: "The answer is correct. GCS remains the cornerstone of severity assessment and prognosis." 
+                        },
+                        { 
+                            q: "Patient comes to the ER after RTA, he has normal CT initially, later shows white tract hemorrhages, brain stem punctate hemorrhage, his GCS was 5, most likely diagnosis?", 
+                            opts: [
+                                {text: "Diffuse axonal injury", isCorrect: true, exp: "Correct. CT may be normal early; characteristic findings are petechial hemorrhages in white matter and brainstem, with profound coma."}, 
+                                {text: "Epidural hematoma", exp: "Would likely show a hyperdense biconvex mass on initial CT."}, 
+                                {text: "Subdural hematoma", exp: "Would show a crescentic hyperdensity."}, 
+                                {text: "Brain contusion", exp: "Might show parenchymal hemorrhage, but the widespread pattern and brainstem involvement is DAI."}
+                            ], 
+                            eval: "The answer is correct. The clinical picture and delayed CT findings are classic for grade 3 DAI." 
+                        },
+                        { 
+                            q: "Transition from prolonged coma to a stable or a transient vegetative state is seen after:", 
+                            opts: [
+                                {text: "Brain concussion", exp: "Brief loss of consciousness, not prolonged coma to vegetative state."}, 
+                                {text: "Diffuse axonal injury of the brain", isCorrect: true, exp: "Correct. Severe DAI often leads to coma and may evolve into a vegetative state."}, 
+                                {text: "Brain tumour", exp: "Not an acute traumatic cause."}, 
+                                {text: "Subgaleal hematoma", exp: "Extracranial, does not cause coma."}, 
+                                {text: "Epidural hematoma", exp: "If treated, recovery possible; if untreated, death from herniation, not typically prolonged coma to vegetative state."}
+                            ], 
+                            eval: "The answer is correct. Diffuse axonal injury is the classic pathology for post-traumatic persistent vegetative state." 
+                        },
+                        { 
+                            q: "A patient has moderate head injury; the Glasgow Coma Scale is:", 
+                            opts: [
+                                {text: "Below 6", exp: "Severe."}, 
+                                {text: "Below 8", exp: "Severe (≤8)."}, 
+                                {text: "9–13", isCorrect: true, exp: "Correct. Moderate head injury is GCS 9–12 (sometimes 9–13)."}, 
+                                {text: "13–15", exp: "Mild."}, 
+                                {text: "14–15", exp: "Mild."}
+                            ], 
+                            eval: "The answer is correct. Moderate TBI is commonly defined as GCS 9–12 or 9–13." 
+                        },
+                        { 
+                            q: "According to Glasgow Coma Scale, a severe craniocerebral traumatic injury would score:", 
+                            opts: [
+                                {text: "1–2 Points", exp: "Not possible; minimum GCS is 3."}, 
+                                {text: "3–7 Points", isCorrect: true, exp: "Correct; severe TBI is GCS 3–8, and this option covers 3–7."}, 
+                                {text: "8–10 Points", exp: "Moderate range."}, 
+                                {text: "11–13 Points", exp: "Moderate."}, 
+                                {text: "14–15 Points", exp: "Mild."}
+                            ], 
+                            eval: "The answer is correct, though severe is usually 3–8, 3–7 still falls within severe." 
+                        },
+                        { 
+                            q: "A patient with head injury has a GCS of 14/15, which of the following shouldn’t be part of his management?", 
+                            opts: [
+                                {text: "Endotracheal intubation and hyperventilation", isCorrect: true, exp: "Correct. Not indicated in a GCS 14 patient without airway compromise; hyperventilation is harmful if used prophylactically."}, 
+                                {text: "Admission for ICU for observation", exp: "Might be done if CT abnormal, but could be considered in a moderate injury; not necessarily inappropriate but the question focuses on what shouldn’t be done. The selected answer is clearly wrong."}, 
+                                {text: "Urgent CT scan of the brain", exp: "Indicated in many mild head injuries with risk factors."}, 
+                                {text: "Mild analgesia to relieve the pain", exp: "Acceptable after assessment."}
+                            ], 
+                            eval: "The answer is correct. Intubation and hyperventilation are not indicated in mild TBI with GCS 14." 
+                        },
+                        { 
+                            q: "Patient presented with a moderate craniocerebral injury, GCS was 10, which of these isn’t part of the management plan?", 
+                            opts: [
+                                {text: "Administering corticosteroids", isCorrect: true, exp: "Correct. Steroids are not indicated and may be harmful in head injury."}, 
+                                {text: "Admit the patient to the ICU", exp: "Moderate TBI often requires ICU monitoring."}
+                            ], 
+                            eval: "The answer is correct. Corticosteroids have no role in traumatic brain injury." 
+                        },
+                        { 
+                            q: "Management options in the treatment of intracranial hypertension secondary to trauma include all of the following except:", 
+                            opts: [
+                                {text: "High dose cortical steroids", isCorrect: true, exp: "Correct exception; steroids are not effective and may increase mortality."}, 
+                                {text: "Mild sedation", exp: "Used to reduce ICP."}, 
+                                {text: "External ventricular drainage", exp: "Drains CSF to lower ICP."}, 
+                                {text: "Use of osmotic diuretics", exp: "Mannitol/hypertonic saline are first-line."}, 
+                                {text: "Decompressive craniectomy", exp: "Last-tier therapy."}
+                            ], 
+                            eval: "The answer is correct. Steroids are contraindicated for intracranial hypertension after trauma." 
+                        },
+                        { 
+                            q: "In severe cranio-cerebral injuries, the recommended measure to reduce increased pressure, in their order of safety are:", 
+                            opts: [
+                                {text: "Barbiturate coma, intermittent mannitol, hyperventilation, and hypothermia", exp: "Order not standard; mannitol usually precedes barbiturates."}, 
+                                {text: "Hyperventilation, barbiturate coma, hypothermia, and intermittent mannitol", exp: "Incorrect sequence."}, 
+                                {text: "Hypothermia, hyperventilation, barbiturate coma and intermittent mannitol", exp: "Not the standard tier."}, 
+                                {text: "Mannitol, hyperventilation, barbiturates, hypothermia, decompressive craniotomy", exp: "This reflects a more evidence-based escalating approach (mannitol first, then hyperventilation, barbiturates, hypothermia, craniectomy)."}, 
+                                {text: "Hyperventilation, mannitol, barbiturate, hypothermia, craniotomy", isCorrect: true, exp: "The given answer; places hyperventilation before osmotic therapy, which is not the usual first step."}
+                            ], 
+                            eval: "The answer is likely incorrect. Current guidelines recommend osmotherapy (mannitol/hypertonic saline) as the first-line medical therapy for elevated ICP, followed by mild hyperventilation, then barbiturates, hypothermia, and decompressive craniectomy. The sequence placing hyperventilation before mannitol is outdated. A better answer would be 'Mannitol, hyperventilation, barbiturates, hypothermia, decompressive craniotomy'." 
+                        },
+                        { 
+                            q: "A 19-year-old man was brought to the ER after being involved in a road traffic accident. Examinations showed that his Glasgow coma score was 15/15, with no abnormal neurological signs. His blood pressure, pulse rate and respiration were normal. Examination of all systems was negative. The patient drew the attention of the examining doctor to the fact that when he bent his head, some clear fluid came down his left nostril. Testing the fluid for beta 2 transferrin proved that it was CSF. The diagnosis of basal skull fracture and CSF was made. The next step would be:", 
+                            opts: [
+                                {text: "Prescribe broad spectrum antibiotics for 2 weeks and ask the patient to come to OPD afterwards", exp: "Outpatient management is insufficient; bed rest and observation needed."}, 
+                                {text: "Admit the patient and take the patient to the operating theatre and close the site of the leak. Give post-operative antibiotics", exp: "Surgery is not first line for acute traumatic CSF rhinorrhea; most resolve spontaneously."}, 
+                                {text: "Discharge the patient and ask him to take appointment with the ENT department", exp: "Inappropriate; needs admission."}, 
+                                {text: "Ask for ENT consultation so that the nasal cavity be examined to try to detect the site of the leak", exp: "ENT consultation may be helpful but not the definitive next step; admission and conservative measures come first."}, 
+                                {text: "Admit the patient, give broad spectrum antibiotics, and wait for the leak to stop spontaneously", isCorrect: true, exp: "Correct. Conservative management with bed rest, head elevation, avoidance of straining, and antibiotics (controversial but commonly prescribed) is standard."}
+                            ], 
+                            eval: "The answer is correct. Traumatic CSF rhinorrhea without mass effect is managed conservatively." 
+                        },
+                        { 
+                            q: "During an emergency surgery for a traumatic brain injury, the brain was found to be edematous and tense, so the surgeon decided not to replace back the cranial bone flap in an attempt to decrease the intracranial pressure, this procedure is called:", 
+                            opts: [
+                                {text: "Cranioplasty", exp: "Reconstruction of skull defect, performed later."}, 
+                                {text: "Skull base repair", exp: "Repair of skull base defects."}, 
+                                {text: "Decompressive craniectomy", isCorrect: true, exp: "Correct. Removal of a bone flap without immediate replacement to allow brain swelling."}, 
+                                {text: "Elevation of depressed fracture", exp: "Elevating depressed bone."}, 
+                                {text: "Craniotomy", exp: "Bone flap is replaced at end of procedure."}
+                            ], 
+                            eval: "The answer is correct. Decompressive craniectomy is the removal of a large skull flap to treat refractory intracranial hypertension." 
+                        },
+                        { 
+                            q: "Causes of secondary brain injury except:", 
+                            opts: [
+                                {text: "Counter coup injury", isCorrect: true, exp: "Correct exception; primary mechanical injury."}, 
+                                {text: "Hematoma", exp: "Secondary mass lesion."}, 
+                                {text: "Brain shifting", exp: "Secondary herniation."}, 
+                                {text: "Hypoxia", exp: "Secondary systemic insult."}, 
+                                {text: "Ischemia", exp: "Secondary insult."}
+                            ], 
+                            eval: "The answer is correct. Counter coup is a primary injury." 
+                        },
+                        { 
+                            q: "All are early complication in head injury except:", 
+                            opts: [
+                                {text: "Epilepsy", exp: "Early post-traumatic seizures (within 7 days) are an early complication."}, 
+                                {text: "Brain edema", isCorrect: true, exp: "Given answer as the exception; however, cerebral edema is considered an early secondary injury, but some may classify it as a pathophysiological process rather than a complication. Debatable."}, 
+                                {text: "CSF leak", exp: "Can occur early."}, 
+                                {text: "Intracranial hematoma", exp: "Early."}, 
+                                {text: "Hyponatremia", exp: "Subacute metabolic consequences like SIADH/cerebral salt wasting can occur early."}
+                            ], 
+                            eval: "The answer is debatable. Brain edema is a common early consequence of trauma; some texts consider it a complication. The differentiation may be that edema is an inherent part of the injury, not a “complication” per se, but it is generally listed as an early complication. A better answer might be that all are early complications, making the question potentially flawed." 
+                        },
+                        { 
+                            q: "Head trauma with rhinorrhea, otorrhea, which is wrong?", 
+                            opts: [
+                                {text: "Treatment of choice is LP shunt", isCorrect: true, exp: "Correctly identified as wrong. LP shunt is for hydrocephalus, not CSF fistula."}, 
+                                {text: "Do lumbar drain", exp: "Lumbar drainage can be used for persistent leaks."}, 
+                                {text: "Most of them resolve spontaneously", exp: "True, majority stop within 7–10 days."}, 
+                                {text: "Diagnosed as CSF leak by B2 transferrin", exp: "Beta-2 transferrin is a specific marker."}, 
+                                {text: "Usually occurs due to skull base fracture", exp: "True."}
+                            ], 
+                            eval: "The answer is correct. Lumboperitoneal shunt is not the treatment for traumatic CSF leak." 
+                        },
+                        { 
+                            q: "Acute intracranial hematomas are those which form during the first:", 
+                            opts: [
+                                {text: "7 Days", exp: "Subacute period."}, 
+                                {text: "14 Days", exp: "Chronic."}, 
+                                {text: "10 Days", exp: "Subacute."}, 
+                                {text: "3 Days", isCorrect: true, exp: "Correct. Acute hematomas are defined as <3 days."}, 
+                                {text: "21 Days", exp: "Chronic."}
+                            ], 
+                            eval: "The answer is correct. The acute phase is generally within the first 72 hours." 
+                        },
+                        { 
+                            q: "Acute traumatic intracranial hematomas frequently manifest with:", 
+                            opts: [
+                                {text: "Hypersalivation", exp: "Not typical."}, 
+                                {text: "Hyperhydrosis", exp: "Not a hallmark."}, 
+                                {text: "Seizures", isCorrect: true, exp: "Correct. Seizures are a frequent presenting feature of acute traumatic hematomas."}, 
+                                {text: "Acute adrenal failure", exp: "Not directly linked."}, 
+                                {text: "Toxic shock", exp: "Not a direct manifestation."}
+                            ], 
+                            eval: "The answer is correct. Seizures are a common early sign of an expanding intracranial mass." 
+                        },
+                        { 
+                            q: "Bradycardia, hypertension, hemiparesis and anisocoria, classic presentations of:", 
+                            opts: [
+                                {text: "Carotid cavernous fistula", exp: "Pulsatile exophthalmos, bruit."}, 
+                                {text: "Arnold-Chiari malformation", exp: "Headache, cranial nerve, spinal symptoms."}, 
+                                {text: "Spinal cord tumor", exp: "Myelopathy."}, 
+                                {text: "Compression vascular neuropathy", exp: "Not this picture."}, 
+                                {text: "Traumatic intracranial hematoma", isCorrect: true, exp: "Correct. Cushing’s reflex (bradycardia, hypertension) plus ipsilateral pupillary dilation and contralateral hemiparesis indicate uncal herniation from a hematoma."}
+                            ], 
+                            eval: "The answer is correct. This is the classic herniation syndrome from a traumatic mass." 
+                        },
+                        { 
+                            q: "Most common source for the formation of epidural hematomas:", 
+                            opts: [
+                                {text: "Cerebral arteries and veins", exp: "Not epidural."}, 
+                                {text: "Choroid plexus of the 4th ventricle", exp: "Intraventricular source."}, 
+                                {text: "Galen’s vein", exp: "Deep cerebral vein."}, 
+                                {text: "Diploic vessels of the cranial bones", exp: "Can contribute but not the most common."}, 
+                                {text: "Middle meningeal arteries", isCorrect: true, exp: "Correct. The vast majority of EDHs are arterial from the middle meningeal artery."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The commonest site for extradural hematoma is:", 
+                            opts: [
+                                {text: "Subfrontal region", exp: "Less common."}, 
+                                {text: "Parietal region", exp: "Can occur but not commonest."}, 
+                                {text: "Parafalcine region", exp: "Atypical for EDH."}, 
+                                {text: "Temporal region", isCorrect: true, exp: "Correct. The middle meningeal artery is most vulnerable in the temporal squamosa."}, 
+                                {text: "Posterior fossa", exp: "Can occur, less common."}
+                            ], 
+                            eval: "The answer is correct. The temporal fossa is the most frequent location." 
+                        },
+                        { 
+                            q: "Wrong about epidural hematoma:", 
+                            opts: [
+                                {text: "Most common source of bleeding is the middle meningeal artery", exp: "True."}, 
+                                {text: "Most commonly in the frontal region", isCorrect: true, exp: "Incorrect; temporal region, so this is the wrong statement."}, 
+                                {text: "Can occur due to a fracture line", exp: "True."}, 
+                                {text: "Lucid interval corresponds to the period of accumulation of blood", exp: "True."}, 
+                                {text: "Occurs mainly in population below the age of 40", exp: "True, dura less adherent."}
+                            ], 
+                            eval: "The answer is correct. EDHs are most commonly temporal." 
+                        },
+                        { 
+                            q: "Epidural hematoma, what is the least affected age group?", 
+                            opts: [
+                                {text: "15–30", exp: "Common in young adults."}, 
+                                {text: ">60", isCorrect: true, exp: "Correct. The dura becomes firmly adherent to the skull, limiting epidural collection; thus elderly have the lowest incidence."}, 
+                                {text: "Mid age men", exp: "Still common."}, 
+                                {text: "Mid age women", exp: "Less than men but still not the least."}
+                            ], 
+                            eval: "The answer is correct. EDH is rare in the elderly due to dural adherence." 
+                        },
+                        { 
+                            q: "Extradural hematoma is due to bleeding from all the following sources except:", 
+                            opts: [
+                                {text: "Straight sinus", isCorrect: true, exp: "Correct exception; deep midline sinus not a common source."}, 
+                                {text: "Transverse sinus", exp: "Can be torn in posterior fossa fractures."}, 
+                                {text: "Diploic veins", exp: "Can cause EDH."}, 
+                                {text: "Middle meningeal artery", exp: "Most common source."}, 
+                                {text: "Superior sagittal sinus", exp: "Can be source in vertex fractures."}
+                            ], 
+                            eval: "The answer is correct. Straight sinus is an uncommon source." 
+                        },
+                        { 
+                            q: "The typical appearance of an acute extradural hematoma on non-contrasted CT scan of the head is:", 
+                            opts: [
+                                {text: "Hypodense lens shape", exp: "Not acute; hypodense suggests chronic."}, 
+                                {text: "Hypodense crescentric shape", exp: "Chronic subdural."}, 
+                                {text: "Hyperdense crescentric shape", exp: "Acute subdural."}, 
+                                {text: "Hyperdense lens shape", isCorrect: true, exp: "Correct. Acute EDH is biconvex (lens-shaped) and hyperdense."}, 
+                                {text: "Isodense lens shape", exp: "Subacute possible, but acute is hyperdense."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Epidural hematomas are usually limited by:", 
+                            opts: [
+                                {text: "Cerebral cortex", exp: "Subdural/subarachnoid."}, 
+                                {text: "Choroid plexuses", exp: "Intraventricular."}, 
+                                {text: "Falciform processes", exp: "Not epidural limiting structure."}, 
+                                {text: "Tentorium cerebelli", exp: "May limit some posterior fossa bleeding, but not the usual limitation."}, 
+                                {text: "Skull sutures", isCorrect: true, exp: "Correct. The dura is tightly attached at sutures, so EDH does not cross suture lines."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "In which type of post traumatic intracranial hemorrhage a “lucid interval” is most likely to be seen?", 
+                            opts: [
+                                {text: "Cerebral contusion", exp: "Usually no lucid interval."}, 
+                                {text: "Brain concussion", exp: "Brief loss of consciousness then recovery, not classic lucid interval with later deterioration."}, 
+                                {text: "Epidural hematoma", isCorrect: true, exp: "Correct. Classic lucid interval between initial concussion and later herniation."}, 
+                                {text: "Subdural hematoma", exp: "Typically progressive decline without lucid interval."}, 
+                                {text: "Subarachnoid hemorrhage", exp: "No classic lucid interval."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Extradural hematoma, True:", 
+                            opts: [
+                                {text: "The most affected artery is the middle meningeal", exp: "True."}, 
+                                {text: "Have lucid interval", exp: "True."}, 
+                                {text: "The treatment is evacuation", exp: "True."}, 
+                                {text: "All of the above are true", isCorrect: true, exp: "Correct."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following facts are correct about extradural hematoma (EDH) except:", 
+                            opts: [
+                                {text: "Skull fracture associated with EDH are three times as common in adults when compared to children", exp: "True."}, 
+                                {text: "The mortality rate is around 75%", isCorrect: true, exp: "False; mortality is approximately 10–20%, so this is the exception."}, 
+                                {text: "The best time of operation is before the ensuing of the second loss of consciousness which denotes herniation", exp: "True."}, 
+                                {text: "Most EDHs are arterial in nature", exp: "True."}, 
+                                {text: "When compared to acute subdural hematoma, the outcome of EDH is much better", exp: "True."}
+                            ], 
+                            eval: "The answer is correct. EDH mortality is not 75%." 
+                        },
+                        { 
+                            q: "Concerning epidural hematoma, all the following statements are true except:", 
+                            opts: [
+                                {text: "Characteristic biconvex shape", exp: "True."}, 
+                                {text: "Represent 3% of all head injuries", exp: "Approximate true figure."}, 
+                                {text: "Rare to be seen before 2 years and those older than 60 years", exp: "True."}, 
+                                {text: "Have the characteristic lucid interval in 2/3 of cases", exp: "Approximately true."}, 
+                                {text: "Most common in the parietal lobe", isCorrect: true, exp: "False; temporal, so this is the exception."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Source for formation of subdural hematoma:", 
+                            opts: [
+                                {text: "Anterior choroidal artery", exp: "Not typical source."}, 
+                                {text: "Pial/bridging veins", isCorrect: true, exp: "Correct. Tearing of bridging veins between cortex and dural sinuses causes SDH."}, 
+                                {text: "Choroid plexus of the lateral ventricles", exp: "Intraventricular hemorrhage."}, 
+                                {text: "Choroid plexus of the 4th ventricle", exp: "Intraventricular."}, 
+                                {text: "Arteries of the circle of Willis", exp: "Subarachnoid hemorrhage."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Character of subdural hematoma:", 
+                            opts: [
+                                {text: "Does not cross suture lines", isAi: true, exp: "That is epidural."}, 
+                                {text: "Crosses suture lines and crosses midline", isAi: true, exp: "SDH can cross suture lines but is limited by falx, so does not cross midline."}, 
+                                {text: "Crosses suture lines but does not cross midline", isCorrect: true, exp: "Correct. SDH spreads across the hemisphere but is stopped by the falx cerebri."}, 
+                                {text: "Is always bilateral", isAi: true, exp: "Can be unilateral."}, 
+                                {text: "Is lens-shaped", isAi: true, exp: "Epidural is biconvex."}
+                            ], 
+                            eval: "The answer is correct. " 
+                        },
+                        { 
+                            q: "Which of the following is true?", 
+                            opts: [
+                                {text: "Subdural is associated with more severe injury", isCorrect: true, exp: "Correct. Acute SDH usually results from high-energy trauma with underlying brain injury."}, 
+                                {text: "Epidural presents with lucid interval in more than 60% of patients", exp: "Lucid interval occurs but not in >60%; classically about 20–50%."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All are false about acute subdural hematoma except:", 
+                            opts: [
+                                {text: "The blood clot is found between the skull and meninges", exp: "False; that’s epidural. SDH is between dura and arachnoid."}, 
+                                {text: "Most of the manifestations are due to the presence of the blood clot", exp: "False; underlying brain injury often dominates."}, 
+                                {text: "It is more dangerous than extradural hematoma", isCorrect: true, exp: "True; higher mortality and morbidity, so this is the exception."}, 
+                                {text: "Treatment is by removal of the hematoma and excision of the affected brain area using burr hole", exp: "False; acute SDH usually requires craniotomy, not just burr hole."}
+                            ], 
+                            eval: "The answer is correct. Acute SDH has a worse prognosis." 
+                        },
+                        { 
+                            q: "Regarding acute subdural hematoma, which is wrong?", 
+                            opts: [
+                                {text: "The blood clot develops between the brain and outer layer of the meninges", exp: "Describes SDH location (outer layer = dura), correct."}, 
+                                {text: "The blood clot makes the major contribution to the clinical picture", isCorrect: true, exp: "Incorrect; the associated brain injury is the major determinant."}, 
+                                {text: "In general, has a worse prognosis than extradural hematoma", exp: "True."}, 
+                                {text: "The surgical treatment includes mainly evacuation of the hematoma and excision of the lacerated brain via a craniotomy", exp: "Correct for acute SDH."}, 
+                                {text: "The source of bleeding is the bridging veins", exp: "True."}
+                            ], 
+                            eval: "The answer is correct. The clinical picture is dominated by the underlying parenchymal injury." 
+                        },
+                        { 
+                            q: "In spite of the best treatment, the highest mortality is associated with:", 
+                            opts: [
+                                {text: "Extradural hematoma", exp: "Lower mortality if treated."}, 
+                                {text: "Acute subdural hematoma", isCorrect: true, exp: "Correct. Mortality 50–90% due to associated brain injury."}, 
+                                {text: "Chronic subdural hematoma", exp: "Excellent prognosis with drainage."}, 
+                                {text: "Subacute subdural hematoma", exp: "Better than acute."}, 
+                                {text: "Traumatic SAH", exp: "Not as high mortality as acute SDH with mass effect."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Acute subdural hematomas have more mortality and morbidity than acute extradural hematomas because:", 
+                            opts: [
+                                {text: "They are usually bigger than extradural hematomas", exp: "Volume may be large but not the primary reason."}, 
+                                {text: "Because they always originate from the large superior sagittal sinus", exp: "False."}, 
+                                {text: "Because they are always bilateral", exp: "Not always."}, 
+                                {text: "Because they are usually associated with severe brain injury", isCorrect: true, exp: "Correct. The parenchymal damage drives the poor outcome."}, 
+                                {text: "Because they are nearer to the cortex than extradural hematomas", exp: "Not the key prognostic factor."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is NOT a characteristic of subacute subdural hematoma?", 
+                            opts: [
+                                {text: "Compression of the lateral ventricle on the side of the hematoma", exp: "Mass effect seen."}, 
+                                {text: "Effaced sulci", exp: "Due to mass."}, 
+                                {text: "White matter buckling", exp: "Yes, subdural hematoma buckles the white matter."}, 
+                                {text: "Thick cortical mantle", exp: "Cortical veins and cortex may appear thickened."}, 
+                                {text: "Insular ribbon sign", isCorrect: true, exp: "Correct; this is a sign of acute MCA infarction (loss of gray-white differentiation at the insula), not SDH."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Long clinical scenario about a patient who came with head trauma and GCS 6, on CT he was found to have subdural hematoma, which of the following is an inappropriate step in the management?", 
+                            opts: [
+                                {text: "Administer cyclocapron (tranexamic acid) to prevent clot lysis", isCorrect: true, exp: "Inappropriate; not indicated for traumatic SDH, may cause harm."}, 
+                                {text: "Plan for urgent evacuation of the hematoma", exp: "Appropriate for acute SDH with coma."}, 
+                                {text: "Intubate and secure airway", isAi: true, exp: "GCS 6 necessitates airway protection."}, 
+                                {text: "Administer mannitol bolus", isAi: true, exp: "Appropriate to temporize elevated ICP."}, 
+                                {text: "Insert an intracranial pressure monitor", isAi: true, exp: "Standard for severe TBI."}
+                            ], 
+                            eval: "The answer is correct. Tranexamic acid has no role in the management of acute traumatic SDH." 
+                        },
+                        { 
+                            q: "Patient post RTA mild head injury with dementia the following few weeks:", 
+                            opts: [
+                                {text: "Chronic subdural hematoma", isCorrect: true, exp: "Correct. Progressive dementia, weeks after mild trauma, is classic for chronic SDH."}, 
+                                {text: "Intracerebral hematoma", exp: "Acute presentation."}, 
+                                {text: "Normal pressure hydrocephalus", isAi: true, exp: "Triad of gait, urinary incontinence, dementia but not typically preceded by trauma."}, 
+                                {text: "Post-concussion syndrome", isAi: true, exp: "Headache, dizziness, cognitive fog, but not progressive dementia."}, 
+                                {text: "Depression", isAi: true, exp: "Can mimic dementia but not directly post-traumatic with organic basis."}
+                            ], 
+                            eval: "The answer is correct. Chronic subdural hematoma often presents with gradual cognitive decline." 
+                        },
+                        { 
+                            q: "The proper method for surgical removal of a chronic subdural hematoma in an adult patient is:", 
+                            opts: [
+                                {text: "Burr hole and subdural drain insertion for evacuation", isCorrect: true, exp: "Correct. Standard treatment is burr hole craniostomy with drain."}, 
+                                {text: "Craniotomy and evacuation", exp: "Used for acute SDH or recurrent/membranous chronic SDH, not first line."}, 
+                                {text: "Endovascular removal", exp: "Not applicable."}, 
+                                {text: "Stereotactic removal", exp: "Not standard."}, 
+                                {text: "Puncture and needle aspiration", exp: "Not adequate for definitive management."}
+                            ], 
+                            eval: "The answer is correct. Burr hole evacuation is the gold standard for chronic SDH." 
+                        },
+                        { 
+                            q: "Which of the following is correct regarding chronic subdural hematoma?", 
+                            opts: [
+                                {text: "Can appear either hyperintense, isointense, or hypointense on MRI", exp: "True; signal varies with age."}, 
+                                {text: "Associated with brain atrophy", exp: "True; atrophy stretches bridging veins."}, 
+                                {text: "Mostly can be drained by burr holes", exp: "True."}, 
+                                {text: "All of the above", isCorrect: true, exp: "Correct."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Patient with craniotomy cerebral injury, which of the following is true about complications?", 
+                            opts: [
+                                {text: "Hydrocephalus if occurs is usually communicating type", isCorrect: true, exp: "Correct. Post-traumatic hydrocephalus is often communicating due to subarachnoid blood."}, 
+                                {text: "If patient doesn’t develop seizures in the first week he is unlikely to develop seizures later", exp: "False; late seizures can occur."}, 
+                                {text: "CSF otorrhea more common than rhinorrhea", exp: "False; rhinorrhea is more common."}, 
+                                {text: "Infection typically manifests within first 24 hours", isAi: true, exp: "Wound infections appear after several days, not within 24 hours."}, 
+                                {text: "Diabetes insipidus is common", isAi: true, exp: "Not a common complication of craniotomy for trauma."}
+                            ], 
+                            eval: "The answer is correct. Post-traumatic hydrocephalus is most frequently communicating." 
+                        },
+                        { 
+                            q: "Most common symptom of intracranial hemorrhage:", 
+                            opts: [
+                                {text: "Headache", isAi: true, exp: "Common but not the most common initial symptom in traumatic intracranial hemorrhage."}, 
+                                {text: "Vomiting", isAi: true, exp: "Nonspecific."}, 
+                                {text: "Seizure", isCorrect: true, exp: "Correct. Seizures are frequently the presenting symptom of acute traumatic intracranial hemorrhage."}, 
+                                {text: "Focal weakness", isAi: true, exp: "Can occur but seizure is more common."}, 
+                                {text: "Loss of consciousness", isAi: true, exp: "More related to impact severity."}
+                            ], 
+                            eval: "The answer is correct. Seizures are a frequent early manifestation." 
+                        },
+                        { 
+                            q: "Epilepsy occurs post trauma can occur due to all of the following, except:", 
+                            opts: [
+                                {text: "Depressed fracture", exp: "Cortical irritation."}, 
+                                {text: "Intracranial hematoma", exp: "Mass effect and blood products."}, 
+                                {text: "Dural tear", exp: "With cortical injury."}, 
+                                {text: "Brain contusion", exp: "Epiletogenic focus."}, 
+                                {text: "Diffuse axonal injury", isCorrect: true, exp: "Correct exception. DAI causes shearing of white matter, not a focal epileptogenic lesion."}
+                            ], 
+                            eval: "The answer is correct. DAI is not a direct cause of post-traumatic epilepsy." 
+                        },
+                        { 
+                            q: "The following are causes of epilepsy except:", 
+                            opts: [
+                                {text: "Cerebral hematoma", exp: "Supratentorial lesions cause seizures."}, 
+                                {text: "Cerebellar hematoma", isCorrect: true, exp: "Correct; cerebellar lesions rarely cause epilepsy."}, 
+                                {text: "Cortical contusion", exp: "Common cause."}, 
+                                {text: "Suprasellar tumor", exp: "May cause seizures."}, 
+                                {text: "Hydrocephalus", exp: "Can cause seizures especially if acute."}
+                            ], 
+                            eval: "The answer is correct. Infratentorial pathology is not typically epileptogenic." 
+                        },
+                        { 
+                            q: "Which of the following antiepileptics is the most teratogenic?", 
+                            opts: [
+                                {text: "Phenytoin", isAi: true, exp: "Teratogenic (fetal hydantoin syndrome) but less than valproate."}, 
+                                {text: "Carbamazepine", isAi: true, exp: "Associated with neural tube defects but lower risk."}, 
+                                {text: "Valproate", isCorrect: true, exp: "Correct. Valproate has the highest risk of major congenital malformations, especially neural tube defects."}, 
+                                {text: "Levetiracetam", isAi: true, exp: "Considered relatively safe in pregnancy."}, 
+                                {text: "Lamotrigine", isAi: true, exp: "Lower teratogenic potential."}
+                            ], 
+                            eval: "The answer is correct. Valproate is the most teratogenic antiepileptic drug." 
+                        }
+                    ]}  , { t: "Spinal Cord Injury", qs: [
                         { 
                             q: "A patient comes to the ER 30 minutes after an RTA. He has signs of C7 radiculopathy. Which of the following is appropriate in his management?", 
                             opts: [
