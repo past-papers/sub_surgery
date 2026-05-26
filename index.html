@@ -4952,11 +4952,340 @@
             },
             {
                 main: "Ent", color: "teal", subtopics: [
-                    { t: "External Ear Conditions", qs: [] }, { t: "Acute Otitis Media", qs: [] }, { t: "Chronic Otitis Media", qs: [] },
-                    { t: "Tinnitus", qs: [] }, { t: "Vertigo", qs: [] }, { t: "Hearing Assessment in Children", qs: [] },
-                    { t: "Hearing loss", qs: [] }, { t: "Epistaxis & Nasal Trauma", qs: [] }, { t: "Rhinosinusitis", qs: [] },
-                    { t: "Adeno-Tonsillar Disease", qs: [] }, { t: "Stridor & Tracheostomy", qs: [] }, { t: "Neck Masses", qs: [] },
-                    { t: "Head and Neck & Oncology", qs: [] }
+                   { t: "External Ear Conditions", qs: [
+                        { 
+                            q: "Which of the following nerves is not associated with referred otalgia?", 
+                            opts: [
+                                {text: "Trigeminal nerve", exp: "Associated. Supplies sensation to anterior part of external ear and can refer pain from teeth, TMJ."}, 
+                                {text: "Glossopharyngeal nerve", exp: "Associated. Tympanic branch (Jacobson's nerve) supplies middle ear, refers pain from pharynx."}, 
+                                {text: "Vagus nerve", exp: "Associated. Auricular branch (Arnold's nerve) supplies external canal and refers pain from larynx."}, 
+                                {text: "Hypoglossal nerve", isCorrect: true, exp: "Not associated. This is a pure motor nerve to the tongue and has no sensory role in ear pain."}, 
+                                {text: "All of the above are associated with referred otalgia", exp: "Incorrect because the hypoglossal nerve is not involved."}
+                            ], 
+                            eval: "The answer is correct. The hypoglossal nerve is purely motor and does not carry sensory fibers for referred otalgia." 
+                        },
+                        { 
+                            q: "The following nerve is the source of referred pain to the ear:", 
+                            opts: [
+                                {text: "Glossopharyngeal nerve", isCorrect: true, exp: "Correct. It supplies the middle ear and pharynx, so pharyngeal lesions refer pain to the ear."}, 
+                                {text: "Cochlear nerve", exp: "Incorrect. It is the hearing nerve and carries no pain sensation."}, 
+                                {text: "Abducent nerve", exp: "Incorrect. It is a motor nerve to the lateral rectus muscle."}, 
+                                {text: "Oculomotor nerve", exp: "Incorrect. It is a motor nerve to extraocular muscles and pupil."}, 
+                                {text: "All of the above", exp: "Incorrect, as only the glossopharyngeal nerve is involved in referred ear pain."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The cough response caused while cleaning the ear canal is mediated by stimulation of:", 
+                            opts: [
+                                {text: "The 10th cranial nerve", isCorrect: true, exp: "Correct. Stimulation of the auricular branch of the vagus nerve (Arnold's nerve) triggers a cough reflex."}, 
+                                {text: "The 8th cranial nerve", exp: "Incorrect; this nerve subserves hearing and balance, not cough."}, 
+                                {text: "The 5th cranial nerve", exp: "Provides some sensory supply to the ear but the cough reflex is vagally mediated."}, 
+                                {text: "Branches of the 7th cranial nerve", exp: "Incorrect; facial nerve supplies some sensory fibers to part of the ear but not the cough reflex."}, 
+                                {text: "Innervation of external ear canal by C1 and C2", exp: "Sparse innervation but the cough is specifically vagal."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient in head trauma, bilateral ear bleeding, first step is:", 
+                            opts: [
+                                {text: "Take a full hx", exp: "Not the first step; airway is the priority in trauma."}, 
+                                {text: "Oral intubation", isCorrect: true, exp: "Correct. Airway management is the first priority according to ATLS protocols."}, 
+                                {text: "Secure an IV line", exp: "Important but comes after airway."}, 
+                                {text: "Pack the ear canals with sterile gauze", isAi: true, exp: "Incorrect and dangerous; packing can increase intracranial pressure and introduce infection."}, 
+                                {text: "Perform immediate CT head without contrast", isAi: true, exp: "Imaging is necessary but only after stabilization of airway, breathing, and circulation."}
+                            ], 
+                            eval: "The answer is correct. In head trauma with signs of basal skull fracture, airway management is the initial step." 
+                        },
+                        { 
+                            q: "The treatment of a large hematoma of the auricle is:", 
+                            opts: [
+                                {text: "Aspiration only", exp: "Insufficient; re-accumulation is common without pressure dressing."}, 
+                                {text: "Systemic antibiotics", exp: "Do not address the collection; needed as adjunct for infection prevention."}, 
+                                {text: "Evacuation plus pressure bandaging and antibiotics", isCorrect: true, exp: "Correct. Evacuation, pressure dressing to prevent re-accumulation, and antibiotics to prevent perichondritis."}, 
+                                {text: "A local antibiotic ointment", exp: "Not adequate for a large hematoma."}, 
+                                {text: "To leave it alone", exp: "Wrong; leads to cauliflower ear deformity."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A child fell on her ear, next day the pinna is swollen and red, what is the management:", 
+                            opts: [
+                                {text: "Incision and drainage with oral antibiotics", exp: "Incision is not first choice; aspiration with pressure dressing is preferred for auricular hematoma."}, 
+                                {text: "Incision and drainage with topical antibiotics", exp: "Topical antibiotics are insufficient and incision can cause deformity."}, 
+                                {text: "Aspiration and drainage with pressure dressing", isCorrect: true, exp: "Correct. Aspiration evacuates blood, pressure dressing prevents re-collection."}, 
+                                {text: "Pressure dressing and topical antibiotics", exp: "Without evacuation, the hematoma organizes causing deformity."}, 
+                                {text: "Oral antibiotics alone without drainage", isAi: true, exp: "Will not resolve the hematoma; mechanical evacuation is necessary."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following about otitis externa is true EXCEPT:", 
+                            opts: [
+                                {text: "In a young adult", isCorrect: true, exp: "Incorrect as a universal statement. Otitis externa can occur at any age; it is not limited to young adults. This is the exception."}, 
+                                {text: "Diabetic patient", exp: "True; diabetes predisposes to otitis externa and necrotizing forms."}, 
+                                {text: "Pseudomonas infection", exp: "True, a common causative organism."}, 
+                                {text: "It is often associated with moisture exposure", isAi: true, exp: "True; moisture from swimming or humidity is a major risk factor."}, 
+                                {text: "Topical antibiotics are first-line treatment", isAi: true, exp: "True; uncomplicated cases are treated with topical agents."}
+                            ], 
+                            eval: "The answer is correct. Otitis externa is not exclusive to young adults; it affects all age groups." 
+                        },
+                        { 
+                            q: "All of the following are common associated symptoms of furuncle of the vibrissae except:", 
+                            opts: [
+                                {text: "Fever", exp: "Can occur due to infection."}, 
+                                {text: "Headache", isCorrect: true, exp: "Correct, it is not a typical symptom. The infection is localized in the nasal vestibule."}, 
+                                {text: "Pus-filled discharge", exp: "Common; furuncle can discharge pus."}, 
+                                {text: "Painful swelling", exp: "The hallmark of a furuncle."}, 
+                                {text: "Nasal obstruction", exp: "Edema and swelling can obstruct the nasal airway."}
+                            ], 
+                            eval: "The answer is correct. Headache is not a characteristic feature of a nasal furuncle." 
+                        },
+                        { 
+                            q: "What is the most common cause of acute diffuse otitis externa?", 
+                            opts: [
+                                {text: "Pseudomonas aeruginosa", isCorrect: true, exp: "Correct. It is the most common pathogen in acute diffuse otitis externa."}, 
+                                {text: "Staphylococcus aureus", exp: "A cause but less common than Pseudomonas."}, 
+                                {text: "Candida albicans", exp: "Fungal, not a common cause of acute bacterial diffuse external otitis."}, 
+                                {text: "Aspergillus fumigatus", exp: "Fungal, more in otomycosis."}, 
+                                {text: "Streptococcus pyogenes", exp: "Rarely causes otitis externa."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is not a typical feature of malignant otitis externa?", 
+                            opts: [
+                                {text: "Presence of granulation tissue", exp: "Typical; seen at the bony-cartilaginous junction."}, 
+                                {text: "Mitotic figures are high", isCorrect: true, exp: "Not typical. This refers to histological malignancy, not necrotizing infection. This is the exception."}, 
+                                {text: "Patients are usually old", exp: "True; commonly in elderly diabetics."}, 
+                                {text: "Caused by Pseudomonas aeruginosa", exp: "True; the primary pathogen."}, 
+                                {text: "Patient are usually immune compromised", exp: "True; diabetic or immunocompromised."}
+                            ], 
+                            eval: "The answer is correct. Malignant otitis externa is an infection, not a neoplasm with high mitotic figures." 
+                        },
+                        { 
+                            q: "The most common fungus in otomycosis externa is:", 
+                            opts: [
+                                {text: "Candida albicans", exp: "A cause, but not the most common."}, 
+                                {text: "Aspergillus fumigatus", exp: "Can cause otomycosis, but A. niger is more frequent."}, 
+                                {text: "Penicillium", exp: "Uncommon."}, 
+                                {text: "Aspergillus niger", isCorrect: true, exp: "Correct. It is the most common fungal cause, presenting as black spores."}, 
+                                {text: "None of the above", exp: "Incorrect."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is the treatment of fungal otitis externa:", 
+                            opts: [
+                                {text: "Oral antifungals for 1 week", exp: "Not first line; topical is preferred, and 1 week is insufficient."}, 
+                                {text: "Oral antifungals for 3 weeks", exp: "Systemic therapy reserved for resistant cases."}, 
+                                {text: "Local antifungals for 1 week", exp: "Too short for eradication."}, 
+                                {text: "Local antifungals for 2 weeks", exp: "May be insufficient; standard is often 3 weeks."}, 
+                                {text: "Local antifungals for 3 weeks", isCorrect: true, exp: "Correct. Topical antifungal ear drops for at least 3 weeks to ensure clearance."}
+                            ], 
+                            eval: "The answer is correct. Otomycosis requires prolonged topical treatment, often 3 weeks." 
+                        },
+                        { 
+                            q: "A patient came complaining of itching. On otoscopy, black dots are seen in the ear canal, what’s the best management option?", 
+                            opts: [
+                                {text: "Oral antifungal", exp: "Not first line; topical treatment is more direct and effective."}, 
+                                {text: "Topical antibiotic", exp: "Incorrect; the condition is fungal (Aspergillus niger)."}, 
+                                {text: "Aural toilet & topical antifungal", isCorrect: true, exp: "Correct. Cleaning the canal and applying topical antifungals is the standard."}, 
+                                {text: "Oral antibiotic", exp: "No bacterial infection is indicated."}, 
+                                {text: "Oral antihistamines", exp: "May help itching but does not treat the underlying fungal infection."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "During aural toilet, the direction of the saline wash is:", 
+                            opts: [
+                                {text: "Anterior inferior", exp: "Incorrect; does not follow the canal's natural curvature."}, 
+                                {text: "Posterior inferior", exp: "Incorrect."}, 
+                                {text: "Posterior superior", isCorrect: true, exp: "Correct. The stream is directed posterosuperiorly along the canal wall to avoid pushing debris onto the eardrum."}, 
+                                {text: "Anterior superior", exp: "Incorrect direction."}, 
+                                {text: "Directly onto the tympanic membrane", isAi: true, exp: "Incorrect and can damage the tympanic membrane."}
+                            ], 
+                            eval: "The answer is correct. The correct technique is to aim the stream posteriorly and superiorly." 
+                        },
+                        { 
+                            q: "Otitis externa due to aspergillus nigra is treated with:", 
+                            opts: [
+                                {text: "2% sodium bicarbonate", isCorrect: true, exp: "Correct. Alkalizes the ear canal, creating an unfavorable environment for Aspergillus niger."}, 
+                                {text: "Systemic antifungal", exp: "Not first line; topical is preferred."}, 
+                                {text: "Local antifungal steroids", exp: "Antifungal combined with steroid may be used, but sodium bicarbonate is a specific remedy for A. niger."}, 
+                                {text: "Topical antibiotic drops", isAi: true, exp: "Not indicated for fungal infection."}, 
+                                {text: "Oral corticosteroids", isAi: true, exp: "No role in fungal otitis externa."}
+                            ], 
+                            eval: "The answer is correct. Sodium bicarbonate 2% drops are effective against Aspergillus niger." 
+                        },
+                        { 
+                            q: "One is true about mycosis of the external ear:", 
+                            opts: [
+                                {text: "Causes severe pain", exp: "Uncommon; more itching and discomfort."}, 
+                                {text: "High fever", exp: "Fungal otitis externa is usually afebrile."}, 
+                                {text: "Excessive ear discharge", exp: "May have some discharge but not excessive purulence."}, 
+                                {text: "Ear blockage", isCorrect: true, exp: "True. Fungal debris and hyphae can cause a sensation of blockage."}, 
+                                {text: "Typically requires systemic antifungal therapy", isAi: true, exp: "False; topical therapy is the mainstay."}
+                            ], 
+                            eval: "The answer is correct. Ear blockage due to fungal debris is characteristic." 
+                        },
+                        { 
+                            q: "What is true about necrotizing otitis externa?", 
+                            opts: [
+                                {text: "Staph is the main cause", exp: "Incorrect; Pseudomonas aeruginosa is the main cause."}, 
+                                {text: "More common in diabetic elderly", isCorrect: true, exp: "Correct. It predominantly affects elderly diabetic or immunocompromised patients."}, 
+                                {text: "More in children", exp: "False; rare in children."}, 
+                                {text: "It is typically bilateral", isAi: true, exp: "False; it is usually unilateral."}, 
+                                {text: "It resolves without antibiotics", isAi: true, exp: "False; requires aggressive intravenous antibiotics."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                    { t: "Acute Otitis Media", qs: [
+                        { 
+                            q: "Which of the following is false regarding acute otitis media?", 
+                            opts: [
+                                {text: "Most commonly caused by viral infection", exp: "True; viruses are the most common initiators."}, 
+                                {text: "Rhinovirus is the main causative pathogen", exp: "True; rhinovirus and RSV are frequent viral causes."}, 
+                                {text: "H.infleunza is a common cause", exp: "True; it is among the top three bacteria."}, 
+                                {text: "2% complicated by bacterial infection", isCorrect: true, exp: "False. Bacterial co-infection or complication is far more common than 2%. This is the false statement."}, 
+                                {text: "Streptococcus pneumoniae is a common bacterial pathogen", isAi: true, exp: "True; it is the most common bacterial cause."}
+                            ], 
+                            eval: "The answer appears correct. The statement that only 2% are complicated by bacterial infection underestimates the rate." 
+                        },
+                        { 
+                            q: "Common organisms in acute suppurative otitis media include all the following EXCEPT:", 
+                            opts: [
+                                {text: "H. influenzae", exp: "Common cause of AOM."}, 
+                                {text: "Pseudomonas aeruginosa", isCorrect: true, exp: "Correct exception. It is not a typical organism in acute suppurative otitis media; more common in chronic suppurative otitis media or otitis externa."}, 
+                                {text: "Staphylococcus aureus", exp: "Can be a cause, though less frequent than pneumococcus and H. flu."}, 
+                                {text: "Streptococcus pneumoniae", exp: "Most common bacterial cause."}, 
+                                {text: "Moraxella catarrhalis", exp: "Third most common bacterium in AOM."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which is not a factor in causing otitis media:", 
+                            opts: [
+                                {text: "All allergy", exp: "Can cause eustachian tube edema and predispose to OM."}, 
+                                {text: "Eustachian tube dysfunction", exp: "Primary factor in pathogenesis."}, 
+                                {text: "Bacterial infection", exp: "Direct cause of suppurative otitis media."}, 
+                                {text: "Dental infection", isCorrect: true, exp: "Not a recognized cause of otitis media. This is the correct exception."}, 
+                                {text: "Immotile cilia", exp: "Primary ciliary dyskinesia leads to poor clearance and recurrent OM."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Bullous myringitis is caused by:", 
+                            opts: [
+                                {text: "Bacterial infection", exp: "Can occur secondary but primary bullous myringitis is typically viral."}, 
+                                {text: "Viral infection", isCorrect: true, exp: "Correct. Usually associated with viral upper respiratory infections; Mycoplasma pneumoniae can also cause it."}, 
+                                {text: "Fungal infection", exp: "Not a recognized cause."}, 
+                                {text: "Trauma to the eardrum", exp: "Does not cause the typical bullae."}, 
+                                {text: "Allergic reaction", exp: "Not typical."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Regarding acute otitis media, which of the following is correct?", 
+                            opts: [
+                                {text: ">80% of AOM cases are bacterial", exp: "Incorrect; the majority are viral, though bacterial superinfection is common."}, 
+                                {text: "%50-45 of bacterial AOM are due to S. pneumoniae", isCorrect: true, exp: "Correct. Streptococcus pneumoniae accounts for about 30–50% of bacterial AOM."}, 
+                                {text: "H. influenzae is the most common bacterial cause", isAi: true, exp: "Incorrect; S. pneumoniae is more common."}, 
+                                {text: "Moraxella catarrhalis is the most common cause in neonates", isAi: true, exp: "Incorrect; not the most common, and not specifically neonatal."}, 
+                                {text: "Viral AOM always requires antibiotics", isAi: true, exp: "Incorrect; viral AOM resolves without antibiotics."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common microorganism causing acute otitis media is:", 
+                            opts: [
+                                {text: "Streptococcus pneumoniae", isCorrect: true, exp: "Correct. It is the most common bacterial pathogen in AOM."}, 
+                                {text: "H. influenzae", exp: "Second most common."}, 
+                                {text: "Moraxella catarrhalis", isAi: true, exp: "Third most common; less frequent."}, 
+                                {text: "Staphylococcus aureus", isAi: true, exp: "Can cause AOM but not the most common."}, 
+                                {text: "Pseudomonas aeruginosa", isAi: true, exp: "Not typical in acute suppurative OM."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common cause of OM in children is:", 
+                            opts: [
+                                {text: "Eustachian tube dysfunction", isCorrect: true, exp: "Correct. Anatomical and functional eustachian tube immaturity is the primary cause of OM in children."}, 
+                                {text: "Bacterial infection alone", isAi: true, exp: "It is a contributing factor but not the primary underlying cause."}, 
+                                {text: "Allergy", isAi: true, exp: "A predisposing factor but not the most common cause."}, 
+                                {text: "Viral upper respiratory infection", isAi: true, exp: "Triggers acute episodes but the underlying cause is tubal dysfunction."}, 
+                                {text: "Immunodeficiency", isAi: true, exp: "Rare cause."}
+                            ], 
+                            eval: "The answer is correct. Eustachian tube dysfunction is the fundamental factor." 
+                        },
+                        { 
+                            q: "Otitis media is caused via one route:", 
+                            opts: [
+                                {text: "Eustachian tube", isCorrect: true, exp: "Correct. The vast majority of middle ear infections ascend from the nasopharynx via the eustachian tube."}, 
+                                {text: "Hematogenous", exp: "Rare route, not the primary one."}, 
+                                {text: "Nasal", exp: "Essentially the same as eustachian tube; infection spreads via the tube from the nasopharynx."}, 
+                                {text: "Direct inoculation through perforation", isAi: true, exp: "Possible but uncommon compared to the eustachian tube route."}, 
+                                {text: "Lymphatic spread", isAi: true, exp: "Not a recognized major route."}
+                            ], 
+                            eval: "The answer is correct. The eustachian tube is the principal pathway." 
+                        },
+                        { 
+                            q: "Which of the following is not indicated in the second phase of acute otitis media?", 
+                            opts: [
+                                {text: "Use of cold compressors on the legs", exp: "Some protocols use warming/cooling measures, but this is not standard; however, the clear incorrect answer is B."}, 
+                                {text: "Topical antibiotics", isCorrect: true, exp: "Not indicated. Topical antibiotic eardrops do not reach the middle ear through an intact tympanic membrane and are not recommended. This is the correct answer."}, 
+                                {text: "Local hyperthermia", exp: "May be used for pain relief."}, 
+                                {text: "Systemic antibiotics", exp: "Indicated in bacterial AOM, especially in the second phase."}, 
+                                {text: "Myringotomy", exp: "Indicated in severe bulging, pain, or complications."}
+                            ], 
+                            eval: "The answer is correct. Topical antibiotics have no role in AOM with an intact drum." 
+                        },
+                        { 
+                            q: "A patient with a history of otitis media who subsequently developed severe headache, high-grade fever, with no meningeal irritation signs. What is the most likely diagnosis?", 
+                            opts: [
+                                {text: "Subdural empyema", exp: "Usually associated with meningeal signs and focal deficits."}, 
+                                {text: "Meningitis", exp: "Presents with neck stiffness and meningeal signs, absent here."}, 
+                                {text: "Epidural abscess", isCorrect: true, exp: "Correct. Epidural abscess classically presents with severe headache, fever, and a lack of meningeal signs."}, 
+                                {text: "Mastoiditis", exp: "Would present with postauricular signs and ear findings, not isolated headache."}, 
+                                {text: "Brain abscess", isAi: true, exp: "Often has focal neurological deficits and may have meningismus, not just headache."}
+                            ], 
+                            eval: "The answer is correct. Epidural abscess is notorious for severe headache without meningeal signs." 
+                        },
+                        { 
+                            q: "Intracranial complication due to otitis media occurs via one route:", 
+                            opts: [
+                                {text: "Direct extension", isCorrect: true, exp: "Correct. Infection erodes bone and spreads directly to the intracranial cavity."}, 
+                                {text: "Temporal bone osteomyelitis", exp: "Can occur but the typical route is direct extension through bone."}, 
+                                {text: "Hematogenous", exp: "Rare pathway for otitis complications."}, 
+                                {text: "Lymphatic spread", isAi: true, exp: "Not a major route."}, 
+                                {text: "Perineural spread", isAi: true, exp: "Not typical for otitis media complications."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "What is the most common intracranial complication of otitis media?", 
+                            opts: [
+                                {text: "Meningitis", isCorrect: true, exp: "Correct. It is the most frequent intracranial complication."}, 
+                                {text: "Cerebral abscess", exp: "Less common."}, 
+                                {text: "Facial nerve palsy", exp: "Intratemporal complication, not intracranial."}, 
+                                {text: "Labyrinthitis", exp: "Intratemporal complication."}, 
+                                {text: "Mastoiditis", exp: "Extracranial complication."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The earliest symptom in a patient with an intracranial complication due to a discharging ear is usually:", 
+                            opts: [
+                                {text: "Headache", isCorrect: true, exp: "Correct. Persistent, often severe headache is the earliest warning sign of intracranial spread."}, 
+                                {text: "Deafness", exp: "Pre-existing due to ear disease, not an early indicator of intracranial complication."}, 
+                                {text: "Ataxia", exp: "Late sign of cerebellar involvement."}, 
+                                {text: "Vertigo", exp: "Suggests labyrinthine involvement, not early intracranial."}, 
+                                {text: "Tinnitus", exp: "Non-specific, not a sign of complication."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},  
                 ]
             },
             {
