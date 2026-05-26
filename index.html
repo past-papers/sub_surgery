@@ -76,9 +76,850 @@
                 main: "Ophthalmology",
                 color: "blue",
                 subtopics: [
-                    { t: "Optics & refraction", qs: []},
-                    { t: "Strabismus", qs: []},
-                    { t: "Diabetic Retinopathy", qs: [] },
+                  { t: "Optics & refraction", qs: [
+                        { 
+                            q: "Myopia can be associated with:", 
+                            opts: [
+                                {text: "Closed angle glaucoma", exp: "Incorrect, myopia is not typically associated; closed angle glaucoma is more common in hypermetropia due to shallow anterior chamber."}, 
+                                {text: "Open angle glaucoma", isCorrect: true, exp: "Correct. Myopia is a well-established risk factor for primary open-angle glaucoma."}, 
+                                {text: "Congenital glaucoma", isAi: true, exp: "No specific association with myopia; it results from developmental angle anomalies."}, 
+                                {text: "Steroid-induced glaucoma", isAi: true, exp: "Not linked to myopia; it arises from corticosteroid use regardless of refractive error."}, 
+                                {text: "Uveitic glaucoma", isAi: true, exp: "Not particularly associated with myopia; it results from intraocular inflammation."}
+                            ], 
+                            eval: "The answer is correct. Myopia is associated with open angle glaucoma, while closed angle glaucoma is linked to hypermetropia." 
+                        },
+                        { 
+                            q: "Which of the following does NOT cause hypermetropia?", 
+                            opts: [
+                                {text: "Microphthalmos", isAi: true, exp: "Causes hyperopia due to short axial length."}, 
+                                {text: "Flat cornea", isAi: true, exp: "Decreased corneal curvature reduces refractive power, causing hyperopia."}, 
+                                {text: "Keratoconus", isCorrect: true, exp: "Correct. It causes progressive corneal steepening leading to myopia and irregular astigmatism, not hyperopia."}, 
+                                {text: "Aphakia", isAi: true, exp: "Absence of the crystalline lens results in high hyperopia."}, 
+                                {text: "Short axial length", isAi: true, exp: "A classic anatomical cause of hyperopia."}
+                            ], 
+                            eval: "The answer is correct. Keratoconus produces myopia, while all other listed options can cause hyperopia." 
+                        },
+                        { 
+                            q: "Major contributor to refractive power is:", 
+                            opts: [
+                                {text: "Axial length of eye ball", exp: "Determines the final refractive state but is not the major contributor to total dioptric power."}, 
+                                {text: "Curvature of cornea", exp: "Affects power but the overall refractive power of the cornea, including the air-tear interface, is what contributes about two-thirds."}, 
+                                {text: "Refractive power of cornea", isCorrect: true, exp: "Correct. The cornea provides approximately 2/3 of the eye's total refractive power."}, 
+                                {text: "Lens", exp: "Contributes about 1/3 of the total refractive power."}, 
+                                {text: "Refractive index of vitreous", isAi: true, exp: "Has a negligible contribution to the eye's refractive power."}
+                            ], 
+                            eval: "The answer is correct. The cornea is the major refractive element, mainly due to the large difference in refractive index at the air-tear interface." 
+                        },
+                        { 
+                            q: "Cylindrical lenses are prescribed for:", 
+                            opts: [
+                                {text: "Astigmatism", isCorrect: true, exp: "Correct. Cylindrical lenses correct the uneven curvature of the cornea or lens by providing different powers in different meridians."}, 
+                                {text: "Presbyopia", exp: "Incorrect, treated with convex spherical lenses or multifocal designs."}, 
+                                {text: "Hypermetropia", exp: "Incorrect, corrected with convex spherical lenses."}, 
+                                {text: "Myopia", exp: "Incorrect, corrected with concave spherical lenses."}, 
+                                {text: "Squint", exp: "Incorrect, not treated with cylindrical lenses unless there is associated astigmatism; squint management may include glasses, patching, or surgery."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Not associated with hypermetropia:", 
+                            opts: [
+                                {text: "Presbyopia", exp: "Often associated; hypermetropes may experience earlier presbyopic symptoms due to accommodative demand."}, 
+                                {text: "Keratoconus", isCorrect: true, exp: "Correct, not associated. It causes myopia and irregular astigmatism."}, 
+                                {text: "Microphthalmos", isAi: true, exp: "Associated; a small eye with short axial length results in hyperopia."}, 
+                                {text: "Flat cornea", isAi: true, exp: "Associated; decreased corneal power leads to hyperopia."}, 
+                                {text: "Aphakia", isAi: true, exp: "Associated; removal of the lens causes high hyperopia."}
+                            ], 
+                            eval: "The answer is correct. Keratoconus is linked to myopia, while the others are linked to hypermetropia." 
+                        },
+                        { 
+                            q: "Regarding myopia, all of the following are true except:", 
+                            opts: [
+                                {text: "Biconcave lenses are used for correction", isAi: true, exp: "True, myopia is corrected with concave (minus) lenses."}, 
+                                {text: "Biconvex lenses are used for correction", isCorrect: true, exp: "False; biconvex lenses correct hypermetropia. This is the exception."}, 
+                                {text: "Minus power lenses are prescribed for myopia", isAi: true, exp: "True."}, 
+                                {text: "Distant objects appear blurry while near vision is clear", isAi: true, exp: "True, this is the cardinal symptom of myopia."}, 
+                                {text: "Axial elongation is a common structural correlate", isAi: true, exp: "True, myopia is often associated with increased axial length."}
+                            ], 
+                            eval: "The answer is correct. Biconvex lenses are for hypermetropia, not myopia." 
+                        },
+                        { 
+                            q: "All of these surgeries cause astigmatism except:", 
+                            opts: [
+                                {text: "Retinal detachment surgery", isCorrect: true, exp: "Correct, it typically does not induce significant corneal astigmatism; scleral buckling mainly alters axial length."}, 
+                                {text: "Pterygium surgery", exp: "Can induce or alter astigmatism by changing corneal shape."}, 
+                                {text: "Cataract surgery", exp: "The corneal incision can cause surgically induced astigmatism."}, 
+                                {text: "LASIK surgery", isAi: true, exp: "Can cause irregular astigmatism as a complication."}, 
+                                {text: "Keratoplasty", isAi: true, exp: "Often results in high regular or irregular astigmatism postoperatively."}
+                            ], 
+                            eval: "The answer is generally accepted, though scleral buckles can sometimes induce a degree of astigmatism. However, compared to the others, retinal detachment surgery is considered less likely to cause significant corneal astigmatism." 
+                        },
+                        { 
+                            q: "A patient reports that distant objects appear blurry while close objects are clear. What is the most likely refractive condition?", 
+                            opts: [
+                                {text: "Hypermetropia", isAi: true, exp: "Near vision is typically more blurred, while distance may be clear in youth with accommodation."}, 
+                                {text: "Myopia", isCorrect: true, exp: "Correct. Distance vision is blurred, near vision is clear."}, 
+                                {text: "Presbyopia", isAi: true, exp: "Near vision is blurred due to loss of accommodation, distance vision is typically clear."}, 
+                                {text: "Astigmatism", isAi: true, exp: "Distortion at all distances, not selective blur for distance only."}, 
+                                {text: "Emmetropia", isAi: true, exp: "No refractive error, clear vision at distance and near."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following are indications for corneal transplant except:", 
+                            opts: [
+                                {text: "High myopia", isCorrect: true, exp: "Correct, not a standard indication for corneal transplantation; it is managed with refractive surgery, intraocular lenses, or glasses."}, 
+                                {text: "Pseudophakic bullous keratopathy", exp: "Indication due to endothelial decompensation after cataract surgery."}, 
+                                {text: "Aphakic bullous keratopathy", exp: "Indication, similar endothelial failure in aphakia."}, 
+                                {text: "Severe keratoconus", exp: "Indication when contact lenses fail or central scarring occurs."}, 
+                                {text: "Corneal scarring", exp: "Indication when visual axis is involved and vision is impaired."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common complication after LASIK surgery is:", 
+                            opts: [
+                                {text: "Endophthalmitis", exp: "Rare postoperative complication, not the most common."}, 
+                                {text: "Infection", exp: "Uncommon due to sterile technique and antibiotics."}, 
+                                {text: "Blepharitis", exp: "Not a direct typical complication; can be preexisting."}, 
+                                {text: "Dryness", isCorrect: true, exp: "Correct. Dry eye is the most frequent post-LASIK complaint due to corneal nerve disruption."}, 
+                                {text: "Glaucoma", exp: "Rare, usually related to steroid use, not the most common."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following cannot be used to correct vision in a patient with unilateral aphakia?", 
+                            opts: [
+                                {text: "Contact lenses", isAi: true, exp: "Can be used and reduce aniseikonia."}, 
+                                {text: "Intraocular lens implantation", isAi: true, exp: "The preferred method for aphakia correction."}, 
+                                {text: "Spectacles (glasses)", isCorrect: true, exp: "Correct. They cause significant aniseikonia and are poorly tolerated in unilateral aphakia."}, 
+                                {text: "Refractive corneal surgery", isAi: true, exp: "Possible but not first-line; it can correct aphakia."}, 
+                                {text: "Iris-fixated lens", isAi: true, exp: "A surgical option for aphakia correction."}
+                            ], 
+                            eval: "The answer is correct. Spectacles are unsuitable for unilateral aphakia because of the large image size difference between the two eyes." 
+                        },
+                        { 
+                            q: "Which of the following is not a risk factor for myopia?", 
+                            opts: [
+                                {text: "Old age", isCorrect: true, exp: "Correct, not a risk factor; myopia typically develops in childhood and may progress, but old age itself is not a risk factor."}, 
+                                {text: "Long vertical axis", exp: "Increased axial length is a major risk factor for myopia."}, 
+                                {text: "Post cataract surgery", exp: "Can induce a myopic shift due to lens power changes."}, 
+                                {text: "Keratoconus", exp: "Causes progressive myopia and astigmatism."}, 
+                                {text: "Genetic predisposition", isAi: true, exp: "Strongly associated with myopia development."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Contraindication for LASIK surgery?", 
+                            opts: [
+                                {text: "26 year old Pregnant lady", isCorrect: true, exp: "Correct. Pregnancy is a contraindication due to hormonal refractive shifts and healing concerns."}, 
+                                {text: "Mild dryness", exp: "Relative contraindication; can often be managed but increases risk."}, 
+                                {text: "22 year old medical student", exp: "Not a contraindication if refraction stable."}, 
+                                {text: "40 year old businessman", exp: "Age alone is not a contraindication; presbyopia may be a consideration but does not exclude."}, 
+                                {text: "Stable refraction for 2 years", isAi: true, exp: "Not a contraindication; stability is a requirement for LASIK."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                    { t: "Strabismus", qs: [
+                        { 
+                            q: "Esotropia in a young child is caused by all of the following except for:", 
+                            opts: [
+                                {text: "PCA aneurysm", isCorrect: true, exp: "Correct. Posterior communicating artery aneurysm compresses the third cranial nerve, causing exotropia, not esotropia. This is the exception."}, 
+                                {text: "Hypermetropia", exp: "Accommodative effort can lead to esotropia."}, 
+                                {text: "Optic atrophy", exp: "Poor vision can cause sensory esotropia."}, 
+                                {text: "Corneal Opacity", exp: "Deprivation of visual input can result in sensory esotropia."}, 
+                                {text: "Sixth nerve palsy", isAi: true, exp: "Paralysis of the lateral rectus muscle leads to unopposed medial rectus, causing esotropia."}
+                            ], 
+                            eval: "The answer is correct. PCA aneurysm causes third nerve palsy and exotropia." 
+                        },
+                        { 
+                            q: "Which of these are yoke muscles?", 
+                            opts: [
+                                {text: "Right medial rectus and left lateral rectus", isCorrect: true, exp: "Correct. These are contralateral synergists for rightward horizontal conjugate gaze."}, 
+                                {text: "Right medial rectus and left medial rectus", exp: "Not yoke; they move the eyes nasally during convergence, not conjugate versions."}, 
+                                {text: "Right superior rectus and left superior oblique", exp: "Not a yoke pair; they have opposite vertical actions."}, 
+                                {text: "Right inferior oblique and left superior oblique", isAi: true, exp: "Not yoke; their actions do not synergize for a cardinal position."}, 
+                                {text: "Right superior oblique and left inferior rectus", isAi: true, exp: "Not a standard yoke pair; the yoke for downgaze right is right inferior rectus and left superior oblique."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 2-month-old baby was presented to your clinic, mom was complaining that his eyes are deviated inwardly. One of the following is correct:", 
+                            opts: [
+                                {text: "Presence of epicanthal folds rules out serious condition", exp: "Incorrect. Pseudoesotropia from epicanthal folds can coexist with true strabismus or intraocular pathology."}, 
+                                {text: "Obtaining family history isn’t important", exp: "Incorrect. Family history of retinoblastoma or strabismus is crucial."}, 
+                                {text: "Presence of paralytic squint at 2-months isn’t possible", exp: "Incorrect. Congenital nerve palsies can present at this age."}, 
+                                {text: "Fundoscopy is a must", isCorrect: true, exp: "Correct. Red reflex and fundus examination are essential to exclude retinoblastoma and other posterior segment abnormalities."}, 
+                                {text: "Reassure mom", exp: "Incorrect without a full ophthalmic evaluation."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "If you want to look up and to the right side, what combination of muscles to use?", 
+                            opts: [
+                                {text: "Right superior rectus & left superior oblique", exp: "Incorrect; they have opposing vertical actions (elevator and depressor)."}, 
+                                {text: "Right inferior rectus & right superior oblique", exp: "Both depress, not for upgaze."}, 
+                                {text: "Right superior rectus & left inferior oblique", isCorrect: true, exp: "Correct. This is the yoke pair for dextroelevation (up and right); right SR elevates and adducts, left IO elevates and abducts."}, 
+                                {text: "Right inferior rectus & right inferior oblique", exp: "One depresses, one elevates, not synergistic for a gaze."}, 
+                                {text: "Right superior rectus & right inferior oblique", exp: "Both act on the right eye only, not a contralateral yoke pair."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "In infantile esotropia what is wrong?", 
+                            opts: [
+                                {text: "Similar to injury of both 6th cranial nerve", exp: "This description is often used; infantile esotropia can mimic bilateral abduction deficits but is not a true nerve palsy. Could be considered incorrect if interpreted literally."}, 
+                                {text: "Might be associated with hypermetropia", exp: "This is generally wrong. Infantile esotropia typically occurs without significant hypermetropia; accommodative esotropia is associated with hypermetropia. Likely the intended incorrect statement."}, 
+                                {text: "Amblyopia is common", exp: "Correct. Cross fixation leads to a high rate of amblyopia."}, 
+                                {text: "Happen in 1st year of life", exp: "True. By definition, onset is within the first 6 months of life."}, 
+                                {text: "Treatment is only surgical", exp: "Not entirely accurate. While surgery is the mainstay, initial treatment may include correction of any refractive error, amblyopia therapy, and sometimes prism. This statement could also be considered wrong."}
+                            ], 
+                            eval: "The answer is ambiguous. Both B and E can be argued as incorrect. However, in most standard texts, infantile esotropia is not associated with hypermetropia, making B the more clear-cut false statement. E is also not strictly true because patching or glasses may be attempted, but many view surgery as the definitive primary treatment. If a single best answer is required, B is likely the intended incorrect statement." 
+                        },
+                        { 
+                            q: "About infantile esotropia, what is true?", 
+                            opts: [
+                                {text: "Present by child's 2nd birthday", exp: "Incorrect; it presents within the first 6 months, not by the 2nd birthday."}, 
+                                {text: "Amblyopia is rare", exp: "Incorrect; amblyopia is common, occurring in 17–50% of cases."}, 
+                                {text: "Ocular fixation", isCorrect: true, exp: "Correct. Infants with infantile esotropia often display cross fixation, using each eye to fixate in the contralateral field, alternating fixation."}, 
+                                {text: "Associated with refractive index like hypermetropia", exp: "Incorrect; it is typically not associated with significant hypermetropia."}, 
+                                {text: "It resolves spontaneously", isAi: true, exp: "False. Infantile esotropia requires active management, usually surgery."}
+                            ], 
+                            eval: "The answer is correct. \"Ocular fixation\" refers to the cross-fixation pattern characteristic of the condition." 
+                        },
+                        { 
+                            q: "All are causes of esotropia except (means both eyes adducted):", 
+                            opts: [
+                                {text: "3rd nerve palsy", isCorrect: true, exp: "Correct. It causes exotropia and ptosis due to unopposed lateral rectus, not esotropia. This is the exception."}, 
+                                {text: "Hypermetropia", exp: "Can lead to accommodative esotropia."}, 
+                                {text: "Nystagmus", exp: "Esotropia can occur with nystagmus blockage syndrome."}, 
+                                {text: "Infantile", exp: "Infantile esotropia is a primary form."}, 
+                                {text: "Tumors", exp: "Intraocular or orbital tumors can cause sensory esotropia."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Most common cause of strabismus in child <1 year:", 
+                            opts: [
+                                {text: "Accommodative esotropia", exp: "Usually presents later, around 2–3 years of age."}, 
+                                {text: "Infantile esotropia syndrome", isCorrect: true, exp: "Correct. It is the most frequent strabismus presenting before the first birthday."}, 
+                                {text: "Hypertropia", exp: "Much less common in this age group."}, 
+                                {text: "Exotropia", isAi: true, exp: "Less common than esotropia in infancy."}, 
+                                {text: "Congenital fourth nerve palsy", isAi: true, exp: "A less common cause of vertical strabismus."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 20 year old female patient with esotropia and amblyopia, all can be done except:", 
+                            opts: [
+                                {text: "Measure angle of deviation", exp: "Can and should be done."}, 
+                                {text: "Use glasses to correct any refractive error", exp: "Appropriate."}, 
+                                {text: "Cover / uncover test", exp: "Essential for diagnosis and measurement."}, 
+                                {text: "Total cover of good eye to stimulate vision in the other eye", isCorrect: true, exp: "This is the exception. Prolonged total occlusion of the sound eye in an adult can induce occlusion amblyopia and should be avoided or carefully managed."}, 
+                                {text: "Surgery for cosmetic improvement", exp: "Can be offered after appropriate workup."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All are possible causes of esotropia in a 4-year old child except:", 
+                            opts: [
+                                {text: "Falling down", exp: "May not be a typical cause, but trauma is listed as a possibility. The exception is clearly aneurysm."}, 
+                                {text: "Cerebellar astrocytoma", exp: "Can cause raised ICP and sixth nerve palsy, leading to esotropia."}, 
+                                {text: "Hypermetropia", exp: "Accommodative esotropia is common in this age group."}, 
+                                {text: "Idiopathic intracranial hypertension", exp: "Can cause sixth nerve palsy and esotropia."}, 
+                                {text: "Posterior communicating artery aneurysm", isCorrect: true, exp: "Correct exception. It causes third nerve palsy with exotropia, not esotropia."}
+                            ], 
+                            eval: "The answer is correct. A posterior communicating aneurysm leads to exotropia, making it the definite non-cause among the options." 
+                        },
+                        { 
+                            q: "A 2-month old child came with bilateral medial deviation of the eyes, what is true?", 
+                            opts: [
+                                {text: "Fundoscopy is a must", isCorrect: true, exp: "Correct. Retinoblastoma and other posterior segment pathology must be excluded urgently."}, 
+                                {text: "Epicanthal folds rule out serious causes", exp: "Incorrect. Pseudoesotropia can coexist with true disease."}, 
+                                {text: "This presentation in adults is never due to serious cause", exp: "Incorrect. Acute esotropia in adults can indicate neurological emergencies."}, 
+                                {text: "Immediate surgery is indicated", isAi: true, exp: "False. A full diagnostic work-up is mandatory before any surgical decision."}, 
+                                {text: "Reassurance without examination is appropriate", isAi: true, exp: "False and dangerous."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is the least cause of exotropia?", 
+                            opts: [
+                                {text: "3rd CN palsy", exp: "Directly causes exotropia due to unopposed lateral rectus."}, 
+                                {text: "Posterior communicating aneurysm", exp: "Compresses the third nerve causing exotropia."}, 
+                                {text: "Craniosynostosis", exp: "Shallow orbits and mechanical factors often result in exotropia."}, 
+                                {text: "Myopia", isCorrect: true, exp: "Correct. While high myopia can be associated with exotropia, it is considered the least direct/common cause among these."}, 
+                                {text: "Fatigue", exp: "Intermittent exotropia frequently manifests or worsens with fatigue."}
+                            ], 
+                            eval: "The answer is plausible. Myopia is more often linked to esophoria or can be associated with exotropia in some cases, but compared to paretic or structural causes like third nerve palsy and craniosynostosis, it is the least robust direct cause." 
+                        }
+                    ]}  ,  { t: "Cornea & sclera", qs: [
+                        { 
+                            q: "Cornea anatomy, one is false:", 
+                            opts: [
+                                {text: "Descemet cannot regenerate", isCorrect: true, exp: "False. Descemet’s membrane can be regenerated by the endothelial cells after injury."}, 
+                                {text: "Bowman membrane is not a true basement membrane", exp: "True. It is an acellular, condensed layer of collagen fibrils, not a true basement membrane."}, 
+                                {text: "Endothelial layer cannot regenerate", exp: "True. Human corneal endothelial cells have little to no regenerative capacity in vivo; loss is compensated by cell enlargement and migration."}, 
+                                {text: "Epithelial layer defect stains green on fluorescein", exp: "True. Fluorescein pools in epithelial defects and stains them bright green under cobalt blue light."}, 
+                                {text: "Epithelium is non-keratinized stratified squamous epithelium", isAi: true, exp: "True. The corneal epithelium is a non-keratinized stratified squamous epithelium, so this is a correct statement, not the false one."}
+                            ], 
+                            eval: "The answer seems correct. Descemet’s membrane can regenerate, making that the false statement. All other options are true anatomic or staining facts." 
+                        },
+                        { 
+                            q: "Diameter of the cornea is:", 
+                            opts: [
+                                {text: "13.5", exp: "Too large; the average horizontal corneal diameter in adults is 11–12 mm."}, 
+                                {text: "11.5", isCorrect: true, exp: "Correct. Falls within the normal adult horizontal corneal diameter range (about 11–12 mm)."}, 
+                                {text: "16", exp: "Far above normal; could be seen in congenital glaucoma (buphthalmos)."}, 
+                                {text: "18", exp: "Extremely large, pathological."}, 
+                                {text: "10", exp: "Below normal; could represent microcornea."}
+                            ], 
+                            eval: "The answer is correct. 11.5 mm is a standard normal value for adult corneal diameter." 
+                        },
+                        { 
+                            q: "Which's incorrect about cornea?", 
+                            opts: [
+                                {text: "Stroma constitutes 50% of corneal layers", isCorrect: true, exp: "Incorrect. The stroma makes up about 90% of total corneal thickness."}, 
+                                {text: "Bowman's layer is acellular", exp: "Correct. It is an acellular, condensed collagenous layer."}, 
+                                {text: "Endothelium is single layer of hexagonal cells", exp: "Correct. The normal endothelium is a monolayer of mostly hexagonal cells."}, 
+                                {text: "Epithelium is stratified squamous epithelium", exp: "Correct. It is a stratified squamous non-keratinized epithelium."}, 
+                                {text: "Descemet's membrane is produced by endothelial cells", isAi: true, exp: "Correct. Descemet’s membrane is the basement membrane secreted by the endothelium."}
+                            ], 
+                            eval: "The answer is correct. The stroma accounts for roughly 90% of corneal thickness, not 50%." 
+                        },
+                        { 
+                            q: "Anatomy of Cornea, all of the following are correct except:", 
+                            opts: [
+                                {text: "Stromal layer forms 90%", exp: "Correct. Corneal stroma comprises about 90% of the total thickness."}, 
+                                {text: "Endothelial layer does not regenerate", exp: "Correct. Endothelium has extremely limited regenerative ability in humans."}, 
+                                {text: "Contains 5 layers", exp: "Correct. Classic description: epithelium, Bowman’s layer, stroma, Descemet’s membrane, endothelium."}, 
+                                {text: "In keratoconus it may ruptured", isCorrect: true, exp: "Incorrect. In keratoconus, Descemet’s membrane may rupture (acute hydrops), but the cornea itself does not typically rupture. The phrasing “it may ruptured” is inaccurate."}, 
+                                {text: "Bowman's layer is acellular", isAi: true, exp: "Correct. Bowman’s layer has no cells."}
+                            ], 
+                            eval: "The answer seems correct. The statement “In keratoconus it may ruptured” is poorly phrased and false for the cornea as a whole; Descemet’s membrane rupture is what occurs in acute hydrops." 
+                        },
+                        { 
+                            q: "Regarding corneal structure which's incorrect:", 
+                            opts: [
+                                {text: "Epithelial layer cannot be regenerated", isCorrect: true, exp: "Incorrect. Corneal epithelium regenerates rapidly from limbal stem cells."}, 
+                                {text: "Bowman membrane has no cell", exp: "Correct. Bowman’s layer is acellular."}, 
+                                {text: "Give 2/3 of refraction", exp: "Correct. The cornea provides about two-thirds of the eye’s total refractive power."}, 
+                                {text: "Stroma accounts for about 90% of corneal thickness", isAi: true, exp: "Correct. The stroma makes up the bulk of the cornea."}, 
+                                {text: "Endothelium is a monolayer of hexagonal cells", isAi: true, exp: "Correct. The normal endothelial mosaic is a single layer of mostly hexagonal cells."}
+                            ], 
+                            eval: "The answer is correct. Corneal epithelium can and does regenerate; endothelium cannot." 
+                        },
+                        { 
+                            q: "The most common cause of visual loss in stromal corneal dystrophy is:", 
+                            opts: [
+                                {text: "Macular edema", exp: "Not typical; stromal dystrophies primarily cause deposits and opacification, not cystoid macular edema."}, 
+                                {text: "Corneal opacity", isCorrect: true, exp: "Correct. Deposition of abnormal material (amyloid, hyaline, glycosaminoglycans) leads to stromal opacities that obstruct the visual axis."}, 
+                                {text: "Corneal edema", exp: "Can occur, especially in macular dystrophy, but visual loss is mainly from opacities, not edema alone."}, 
+                                {text: "Corneal thinning", exp: "Not a primary feature; most stromal dystrophies cause deposits, not significant thinning."}, 
+                                {text: "Refractive error", exp: "Can be present but is not the main cause of vision loss; opacities directly block light."}
+                            ], 
+                            eval: "The answer is correct. In stromal corneal dystrophies, progressive deposition of opacities in the stroma is the principal reason for visual decline." 
+                        },
+                        { 
+                            q: "Corneal grafting, one is false:", 
+                            opts: [
+                                {text: "Rejection is type 2 hypersensitivity reaction", isCorrect: true, exp: "False. Corneal graft rejection is predominantly a type IV (cell-mediated) hypersensitivity reaction."}, 
+                                {text: "Most common indication worldwide is pseudophakic bullous keratopathy", exp: "True. Globally, pseudophakic bullous keratopathy remains the leading indication for penetrating keratoplasty."}, 
+                                {text: "Occurs in all layer of the cornea stroma, endothelium and epithelium", exp: "True. Rejection can involve any layer (epithelial, stromal, endothelial), though endothelial rejection is most sight‑threatening."}, 
+                                {text: "Corneal graft rejection is primarily a type IV hypersensitivity reaction", isAi: true, exp: "True. The main immune mechanism is T‑cell mediated (type IV)."}, 
+                                {text: "Topical corticosteroids are the mainstay for prevention and treatment", isAi: true, exp: "True. Corticosteroids suppress the immune response and are the cornerstone of rejection prophylaxis and management."}
+                            ], 
+                            eval: "The answer is correct. Rejection is type IV, not type II, hypersensitivity." 
+                        },
+                        { 
+                            q: "False about acanthamoeba keratitis:", 
+                            opts: [
+                                {text: "Contact lens wear is a risk factor", exp: "True. Contact lens use, especially with poor hygiene, is the major risk factor."}, 
+                                {text: "White circular ulcer is a characteristic", isCorrect: true, exp: "False. Classic finding is a ring-shaped stromal infiltrate or abscess, not a white circular ulcer; ulceration is not the hallmark."}, 
+                                {text: "Topical antibiotics are used to treat superimposed infections", exp: "True. Bacterial co‑infection may complicate the keratitis and require antibiotics."}, 
+                                {text: "Treated by antiacanthamoeba drugs", exp: "True. Biguanides (chlorhexidine) and diamidines (propamidine) are used."}, 
+                                {text: "Radial keratoneuritis is a classic sign", isAi: true, exp: "True. Radial keratoneuritis (perineural infiltrates) is a highly characteristic early sign."}
+                            ], 
+                            eval: "The answer is correct. A ring infiltrate (abscess), not a white circular ulcer, is the typical description." 
+                        },
+                        { 
+                            q: "Regarding herpetic disease of the eye, one statement is false:", 
+                            opts: [
+                                {text: "Herpes simplex keratitis can present with the Hutchinson sign", isCorrect: true, exp: "False. Hutchinson’s sign (vesicles on the tip/nose) indicates involvement of the nasociliary branch of V1 and is characteristic of herpes zoster ophthalmicus, not herpes simplex."}, 
+                                {text: "Interstitial keratitis denotes involvement of the corneal stroma", exp: "True. Interstitial keratitis is stromal inflammation, often immune-mediated (e.g., in syphilis)."}, 
+                                {text: "Treatment of herpes zoster ophthalmicus is with parenteral antivirals", exp: "True. Systemic antivirals (e.g., intravenous acyclovir) are standard, especially in severe or immunocompromised cases; oral valacyclovir is also used."}, 
+                                {text: "Treatment of herpes simplex keratitis is topical antivirals", exp: "True. Epithelial HSV keratitis is treated with topical antivirals (acyclovir ointment, trifluridine). Stromal disease requires steroids with antiviral cover."}, 
+                                {text: "Herpes zoster ophthalmicus can precede herpetic meningioencephalitis", exp: "True. HZO can be complicated by encephalitis, especially in immunocompromised hosts."}
+                            ], 
+                            eval: "The answer is correct. Hutchinson’s sign is associated with VZV, not HSV." 
+                        },
+                        { 
+                            q: "Wrong about Acanthamoeba keratitis:", 
+                            opts: [
+                                {text: "Contact lens wear is a major risk factor", exp: "Correct. Contact lens wear, especially with contaminated water exposure, is the main risk factor."}, 
+                                {text: "Ring-shaped stromal infiltrate is characteristic", exp: "Correct. The ring infiltrate is a hallmark."}, 
+                                {text: "Pyrimethamine is used in its treatment", isCorrect: true, exp: "Incorrect. Pyrimethamine is an antiprotozoal used for Toxoplasma, not Acanthamoeba. Treatment is with biguanides and diamidines."}, 
+                                {text: "Confocal microscopy aids diagnosis", isAi: true, exp: "Correct. In vivo confocal microscopy can directly visualize cysts and trophozoites."}, 
+                                {text: "Treatment includes chlorhexidine and propamidine", isAi: true, exp: "Correct. These are first‑line antiacanthamoebal agents."}
+                            ], 
+                            eval: "The answer is correct. Pyrimethamine is not part of Acanthamoeba treatment; chlorhexidine and propamidine are standard." 
+                        },
+                        { 
+                            q: "In keratoconus the most common cause of vision loss is:", 
+                            opts: [
+                                {text: "Corneal edema", exp: "Acute edema occurs in hydrops, but it is not the most common cause of chronic visual loss."}, 
+                                {text: "Corneal scar", exp: "Scarring can occur after hydrops, but most vision loss is due to progressive ectasia with irregular astigmatism before scarring."}, 
+                                {text: "Myopic astigmatism", isCorrect: true, exp: "Correct. Progressive corneal steepening and irregularity induce increasing myopia and astigmatism, reducing vision even with spectacles."}, 
+                                {text: "Deposits of hyaline material in anterior stroma", exp: "Not a typical feature of keratoconus; this describes conditions like spheroidal degeneration."}, 
+                                {text: "Hypropic shift", exp: "“Hydrops” causes sudden corneal edema; this is an acute event, not the most common cause of overall visual loss in keratoconus."}
+                            ], 
+                            eval: "The answer is correct. The primary driver of visual loss in keratoconus is progressive irregular myopic astigmatism." 
+                        },
+                        { 
+                            q: "Which of the following is a wrong statement?", 
+                            opts: [
+                                {text: "Most common indication for penetrating keratoplasty worldwide is pseudophakic bullous keratopathy", exp: "True. Worldwide, endothelial decompensation after cataract surgery is the leading indication."}, 
+                                {text: "Keratoconus is a common indication in younger patients", exp: "True. In younger age groups, keratoconus is a major reason for grafting."}, 
+                                {text: "Most common indication for keratoplasty is corneal ectasia", isCorrect: true, exp: "False. Corneal ectasia (keratoconus, ectasia after refractive surgery) is important, but the most common overall indication globally is pseudophakic bullous keratopathy."}, 
+                                {text: "Lamellar keratoplasty is preferred for anterior stromal disease", isAi: true, exp: "True. Anterior lamellar keratoplasty selectively replaces diseased anterior stroma while preserving healthy endothelium."}, 
+                                {text: "Graft rejection can occur in any layer of the cornea", isAi: true, exp: "True. Epithelial, stromal, and endothelial rejection are all possible."}
+                            ], 
+                            eval: "The answer seems correct based on the source. The statement “most common indication is corneal ectasia” is wrong when worldwide figures are considered, as pseudophakic bullous keratopathy remains number one." 
+                        },
+                        { 
+                            q: "Munson's sign is found in:", 
+                            opts: [
+                                {text: "Keratoconus", isCorrect: true, exp: "Correct. Munson’s sign is a V‑shaped indentation of the lower eyelid on downgaze due to the conical corneal protrusion."}, 
+                                {text: "Retinal detachment", exp: "Not associated; no lid contour change occurs."}, 
+                                {text: "Glaucoma", exp: "No typical lid indentation; buphthalmos may cause a large eye but not Munson’s sign."}, 
+                                {text: "Horner syndrome", exp: "Causes ptosis and miosis, not V‑shaped lower lid."}, 
+                                {text: "Corneal ulcer", isAi: true, exp: "A corneal ulcer may cause lid edema but not a V‑shaped indentation on downgaze."}
+                            ], 
+                            eval: "The answer is correct. Munson’s sign is a classic sign of advanced keratoconus." 
+                        },
+                        { 
+                            q: "Does not lead to absent red reflex:", 
+                            opts: [
+                                {text: "Keratoconus", isCorrect: true, exp: "Does not cause absent red reflex. The cornea remains relatively clear, and the media are not opaque enough to block the reflex."}, 
+                                {text: "Vitreous hemorrhage", exp: "Dense hemorrhage can obstruct the red reflex."}, 
+                                {text: "Endophthalmitis", exp: "Intraocular inflammation with exudates can dim or abolish the reflex."}, 
+                                {text: "Dense cataract", exp: "A dense lens opacity blocks the red reflex completely."}, 
+                                {text: "Retinoblastoma", isAi: true, exp: "Large retinoblastomas, especially with vitreous seeding, produce leukocoria and absent red reflex."}
+                            ], 
+                            eval: "The answer is correct. Keratoconus does not opacify the ocular media sufficiently to eliminate the red reflex." 
+                        },
+                        { 
+                            q: "Wrong statement:", 
+                            opts: [
+                                {text: "Riboflavin is used as a photosensitizer in corneal cross‑linking", exp: "Correct. Riboflavin (vitamin B2) absorbs UVA and generates reactive oxygen species to form cross-links."}, 
+                                {text: "UVA light is applied during cross‑linking", exp: "Correct. UVA (370 nm) is used to activate riboflavin."}, 
+                                {text: "Thiamine is used in corneal cross‑linking", isCorrect: true, exp: "Incorrect. Thiamine is vitamin B1; riboflavin (B2) is the agent used."}, 
+                                {text: "Cross‑linking strengthens corneal collagen", isAi: true, exp: "Correct. New covalent bonds between collagen fibrils increase biomechanical rigidity."}, 
+                                {text: "Cross‑linking halts progression of keratoconus", isAi: true, exp: "Correct. The primary goal is to arrest ectatic progression."}
+                            ], 
+                            eval: "The answer is correct. Riboflavin, not thiamine, is the photosensitizer in CXL." 
+                        },
+                        { 
+                            q: "What is the most common cause of localized eye redness:", 
+                            opts: [
+                                {text: "Episcleritis", isCorrect: true, exp: "Correct. Episcleritis typically presents with sectoral, localized redness (often interpalpebral), while conjunctivitis is more diffuse."}, 
+                                {text: "Conjunctivitis", exp: "Usually causes diffuse injection; not as discretely localized as episcleritis."}, 
+                                {text: "Subconjunctival hemorrhage", isAi: true, exp: "A localized flat red patch, but it is hemorrhage, not inflammatory redness; episcleritis is more common as a cause of localized red eye."}, 
+                                {text: "Acute iritis", isAi: true, exp: "Produces perilimbal (ciliary) injection, usually circumferential rather than a single sectoral patch."}, 
+                                {text: "Corneal abrasion", isAi: true, exp: "Causes pain, lacrimation, and often diffuse conjunctival injection; not purely a localized sectoral redness."}
+                            ], 
+                            eval: "The answer is correct. Episcleritis is classically described as a localized, sectoral injection with minimal discomfort." 
+                        },
+                        { 
+                            q: "One is true about keratoconus:", 
+                            opts: [
+                                {text: "Is corneal degeneration", isCorrect: true, exp: "The given answer states this is true. Some older classifications may refer to keratoconus as a degeneration, though most modern texts classify it as an ectatic dystrophy or non‑inflammatory ectasia."}, 
+                                {text: "Its onset is at 25", exp: "Onset is typically at puberty or early teens; 25 is not a fixed age."}, 
+                                {text: "Thinning is superior", exp: "The thinning in keratoconus is usually central or paracentral, often inferotemporal; it is not typically superior."}, 
+                                {text: "May cause corneal scar", exp: "True; hydrops can heal with scarring, so this is also a correct statement. However, the selected answer is A."}, 
+                                {text: "Does not affect vision", exp: "False; keratoconus significantly impairs vision due to irregular astigmatism."}
+                            ], 
+                            eval: "The assigned answer “Is corneal degeneration” is debated. While some older sources may have termed keratoconus a degeneration, current classification considers it a non-inflammatory ectatic condition or dystrophy. A better true statement from the list would be “May cause corneal scar,” as corneal scarring can occur after acute hydrops. Nevertheless, the answer is kept as in the source." 
+                        },
+                        { 
+                            q: "Mostly seen with contact lens:", 
+                            opts: [
+                                {text: "Staph. aureus", exp: "Can be associated with contact lens related bacterial keratitis but not the classic contact lens pathogen for parasitic keratitis."}, 
+                                {text: "Streptococcus", exp: "Possible, but less prominently linked to contact lenses as a defining risk factor."}, 
+                                {text: "Acanthamoeba", isCorrect: true, exp: "Correct. Strongly associated with contact lens wear, especially with exposure to contaminated water."}, 
+                                {text: "Pseudomonas aeruginosa", isAi: true, exp: "Also strongly associated with contact lens wear and rapid corneal melting; however, the question specifically expects Acanthamoeba as the answer in this context."}, 
+                                {text: "Fusarium", isAi: true, exp: "Fungal keratitis, linked to contact lens use and trauma; but Acanthamoeba is the classic protozoan contact lens pathogen."}
+                            ], 
+                            eval: "The answer is correct. Acanthamoeba keratitis is classically linked to contact lens wear, though Pseudomonas is also common; the source answer reflects the intended association." 
+                        }
+                    ]},{ t: "Lens and Cataract", qs: [
+                        { 
+                            q: "The earliest visual rehabilitation occurs in:", 
+                            opts: [
+                                {text: "Phacoemulsification", isCorrect: true, exp: "Correct. Small incision, foldable IOL, rapid wound healing, minimal astigmatism, and early visual recovery."}, 
+                                {text: "ECCE with lens", exp: "Provides good vision but larger incision means slower wound healing and more astigmatism compared to phacoemulsification."}, 
+                                {text: "ICCE with lens", exp: "Old technique with a large limbal incision, prolonged rehabilitation."}, 
+                                {text: "ECCE without lens", exp: "Aphakic correction with glasses gives poor image quality and delays full rehabilitation."}, 
+                                {text: "All of the above", isAi: true, exp: "Not true because the rates of visual recovery differ significantly among the techniques."}
+                            ], 
+                            eval: "The answer is correct. Phacoemulsification offers the earliest visual rehabilitation." 
+                        },
+                        { 
+                            q: "3-months post cataract surgery man came complaining of decreased vision, on examination posterior capsular opacity, management:", 
+                            opts: [
+                                {text: "Excimer laser", exp: "Used for refractive corneal procedures, not for posterior capsule opacification."}, 
+                                {text: "Keratoplasty", exp: "Corneal transplant, irrelevant here."}, 
+                                {text: "YAG Laser", isCorrect: true, exp: "Correct. Nd:YAG laser posterior capsulotomy is the standard outpatient treatment."}, 
+                                {text: "Pars plana vitrectomy", isAi: true, exp: "Not indicated for uncomplicated posterior capsular opacity."}, 
+                                {text: "Intravitreal steroid injection", isAi: true, exp: "No role in treating posterior capsular opacification."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which is true about mature cataract?", 
+                            opts: [
+                                {text: "Causes absent red reflex", isCorrect: true, exp: "Correct. Complete opacification blocks the red reflex."}, 
+                                {text: "Best is to put lens in anterior chamber", exp: "Incorrect. In-the-bag posterior chamber IOL is preferred whenever capsular support is adequate."}, 
+                                {text: "Always requires intracapsular extraction", isAi: true, exp: "Incorrect; phacoemulsification or ECCE can still be performed."}, 
+                                {text: "Is associated with phacodonesis", isAi: true, exp: "False; phacodonesis indicates zonular weakness, not a feature of mature cataract per se."}, 
+                                {text: "Typically causes myopia", isAi: true, exp: "Incorrect; nuclear cataracts cause myopic shift, not all mature cataracts."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "69-year old male, blurring of vision through last 6 months, can see near objects (can read near words ...) most likely:", 
+                            opts: [
+                                {text: "Bilateral nuclear cataract", isCorrect: true, exp: "Correct. Nuclear sclerosis increases lens refractive index producing a myopic shift (second sight), improving near vision while distance is blurred."}, 
+                                {text: "Bilateral Age Related Macular edema (AMD)", exp: "Would cause central distortion and scotoma; near vision typically worsens."}, 
+                                {text: "Bilateral cortical cataract", exp: "Causes glare but does not typically cause a myopic shift that improves near vision."}, 
+                                {text: "Bilateral posterior subcapsular cataract", isAi: true, exp: "Usually reduces near and distance vision, especially in bright light."}, 
+                                {text: "Presbyopia", isAi: true, exp: "Causes difficulty with near vision, not improved near vision."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Most common complication of cataract surgery:", 
+                            opts: [
+                                {text: "Retinal detachment", exp: "Known late complication, not the most common."}, 
+                                {text: "Vitreous loss", exp: "Intraoperative complication, less frequent."}, 
+                                {text: "Opacification of the posterior capsule", isCorrect: true, exp: "Correct. Posterior capsular opacification (PCO) is the most common late complication, occurring in up to 20–40% of cases over time."}, 
+                                {text: "Endophthalmitis", isAi: true, exp: "Rare but serious."}, 
+                                {text: "Cystoid macular edema", isAi: true, exp: "Fairly common but less frequent than PCO."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient came to you after cataract surgery with painful red eye, the first thing to think of is:", 
+                            opts: [
+                                {text: "Bacterial Endophthalmitis", isCorrect: true, exp: "Correct. Acute postoperative pain, redness, and decreased vision must be assumed endophthalmitis until proven otherwise."}, 
+                                {text: "Blepharitis", exp: "Lid margin inflammation, not an acute painful red eye after surgery."}, 
+                                {text: "Secondary glaucoma", exp: "Can cause pain and redness but endophthalmitis must be excluded first."}, 
+                                {text: "Conjunctivitis", exp: "Usually mild discomfort, not severe pain, and less urgent."}, 
+                                {text: "Corneal abrasion", isAi: true, exp: "Can cause pain but is less vision-threatening; endophthalmitis must be ruled out."}
+                            ], 
+                            eval: "The answer is correct. Endophthalmitis is the most feared early postoperative complication." 
+                        },
+                        { 
+                            q: "Advantage of Phacoemulsification to ECCE:", 
+                            opts: [
+                                {text: "Decrease astigmatism", isCorrect: true, exp: "Correct. Small, self-sealing incisions in phacoemulsification induce significantly less astigmatism than the larger ECCE wound."}, 
+                                {text: "Decrease infection", exp: "Not a well-documented advantage; infection rates are low with both techniques under proper asepsis."}, 
+                                {text: "Shorter operating time", isAi: true, exp: "Not necessarily; phaco can be quicker but depends on surgeon and case."}, 
+                                {text: "Lower cost", isAi: true, exp: "Phacoemulsification equipment is more expensive."}, 
+                                {text: "Less postoperative inflammation", isAi: true, exp: "Possibly due to smaller incision, but the primary advantage documented is reduced astigmatism."}
+                            ], 
+                            eval: "The answer is correct. The main advantage is decreased surgically induced astigmatism." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about cataract?", 
+                            opts: [
+                                {text: "Cataract surgery is indicated when the cataract reduces quality of life", isAi: true, exp: "True statement."}, 
+                                {text: "Age-related cataract is the most common type", isAi: true, exp: "True."}, 
+                                {text: "Phacoemulsification is the most common surgical technique", isAi: true, exp: "True."}, 
+                                {text: "Congenital cataracts should be removed early to prevent amblyopia", isAi: true, exp: "True."}, 
+                                {text: "Adults with early cataract should be treated by placing lens as soon as possible", isCorrect: true, exp: "This is wrong. Surgery is indicated when the cataract affects daily activities and vision-related quality of life, not merely because it is present."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Earliest visual rehabilitation occurs with:", 
+                            opts: [
+                                {text: "Intracapsular cataract extraction plus glasses", exp: "Large wound, aphakic glasses, slow visual recovery."}, 
+                                {text: "Small incision cataract extraction", exp: "Phacoemulsification is a small incision technique, but this answer option is ambiguous; not as early as phaco with foldable IOL."}, 
+                                {text: "Intracapsular cataract extraction plus intraocular lens implantation", exp: "Large incision, longer healing."}, 
+                                {text: "Phacoemulsification plus intraocular lens implantation", isCorrect: true, exp: "Correct. Small, self-sealing incision with foldable IOL allows the fastest visual rehabilitation."}, 
+                                {text: "Extracapsular cataract extraction plus intraocular lens implantation", exp: "Larger incision, more astigmatism, slower recovery."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All are complications of cataract surgery except:", 
+                            opts: [
+                                {text: "Leukocoria", isCorrect: true, exp: "Correct exception. It is a presenting sign of intraocular pathology (e.g., retinoblastoma) and not a complication of cataract surgery."}, 
+                                {text: "Retinal detachment", exp: "Known late complication."}, 
+                                {text: "Iris prolapse", exp: "Can occur with wound dehiscence."}, 
+                                {text: "Posterior capsular opacification", exp: "The most common late complication."}, 
+                                {text: "Endophthalmitis", isAi: true, exp: "A rare but severe complication."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following congenital cataract mandates the most urgent surgical intervention?", 
+                            opts: [
+                                {text: "Unilateral nuclear cataract", isCorrect: true, exp: "Correct. A dense, unilateral, central cataract causes severe deprivation amblyopia and requires the earliest surgery, ideally in the first weeks of life."}, 
+                                {text: "Bilateral posterior lenticonus cataract", exp: "May be visually significant but is often bilateral and may not require the same urgency as a unilateral dense cataract."}, 
+                                {text: "Unilateral anterior polar cataract", exp: "Often small and may not affect the visual axis significantly."}, 
+                                {text: "Unilateral lamellar cataract", exp: "Can be large but may still permit some visual development; urgency depends on density."}, 
+                                {text: "Bilateral nuclear cataract", exp: "Bilateral cases need surgery but the extreme urgency is slightly less than unilateral because the risk of irreversible unilateral amblyopia from a dense lens is highest with unilateral opacity."}
+                            ], 
+                            eval: "The answer is largely accepted. A dense unilateral cataract presents the highest risk of irreversible amblyopia and mandates the most urgent intervention." 
+                        },
+                        { 
+                            q: "Which of the following statements about early complications of cataract surgery is incorrect?", 
+                            opts: [
+                                {text: "Posterior opacification", isCorrect: true, exp: "Incorrect. Posterior capsular opacification is a late complication, occurring months to years postoperatively."}, 
+                                {text: "Intraocular lens dislocation", exp: "Can occur early due to zonular or capsular rupture."}, 
+                                {text: "Endophthalmitis", exp: "Classic early, acute complication (first few days to weeks)."}, 
+                                {text: "Retinal detachment", exp: "Can be an early or late complication; more common in high myopes or with vitreous loss."}, 
+                                {text: "Corneal edema", isAi: true, exp: "Often seen early due to endothelial trauma during surgery."}
+                            ], 
+                            eval: "The answer is correct. Posterior capsule opacification is a late, not early, complication." 
+                        },
+                        { 
+                            q: "A patient complains of glare and decreased contrast sensitivity. What is the most likely type of cataract?", 
+                            opts: [
+                                {text: "Nuclear cataract", exp: "Causes blurring and myopic shift, with less prominent glare symptoms."}, 
+                                {text: "Cortical cataract", exp: "Causes glare from light scattering but posterior subcapsular is more notorious for glare and contrast loss."}, 
+                                {text: "Posterior subcapsular cataract", isCorrect: true, exp: "Correct. Located at the nodal point of the eye, it significantly degrades vision in bright light, causing disabling glare and reduced contrast sensitivity."}, 
+                                {text: "Mature cataract", isAi: true, exp: "Causes severe overall vision loss but the specific complaint of glare and reduced contrast is classic for subcapsular."}, 
+                                {text: "Hypermature cataract", isAi: true, exp: "May cause lens-induced complications, not specifically glare and contrast loss."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Loss of lens in the pupil is called:", 
+                            opts: [
+                                {text: "Aphakia", isCorrect: true, exp: "Correct. Absence of the crystalline lens from the pupillary area."}, 
+                                {text: "Anisometropia", exp: "Difference in refractive power between the two eyes."}, 
+                                {text: "Aniseikonia", exp: "Difference in image size perceived by each eye."}, 
+                                {text: "Pseudophakia", isAi: true, exp: "Presence of an artificial intraocular lens; not loss of the natural lens without replacement."}, 
+                                {text: "Lens subluxation", isAi: true, exp: "Partial displacement of the lens, not complete absence from the pupil."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                    { t: "Diabetic Retinopathy", qs: [
+                        { 
+                            q: "Which of the following is correct about diabetic retinopathy?", 
+                            opts: [
+                                {text: "Cotton wool spots", isCorrect: true, exp: "Correct. They are nerve fiber layer infarcts seen in diabetic retinopathy."}, 
+                                {text: "Hard exudates are pathognomonic", isAi: true, exp: "Incorrect; they are lipid deposits not unique to diabetes."}, 
+                                {text: "Neovascularization is seen in non-proliferative DR", isAi: true, exp: "Incorrect; it defines proliferative DR."}, 
+                                {text: "Microaneurysms are a late sign", isAi: true, exp: "Incorrect; they are the earliest visible sign."}, 
+                                {text: "Vitreous hemorrhage is the first sign", isAi: true, exp: "Incorrect; early DR is asymptomatic and vitreous hemorrhage occurs late."}
+                            ], 
+                            eval: "The answer is correct. Cotton wool spots are a well-known feature of diabetic retinopathy." 
+                        },
+                        { 
+                            q: "The most common cause of loss vision in DM:", 
+                            opts: [
+                                {text: "Macular edema", isCorrect: true, exp: "Correct. Diabetic macular edema is the leading cause of visual impairment in diabetic patients."}, 
+                                {text: "Retinal detachment", exp: "Can cause vision loss but is less common than macular edema."}, 
+                                {text: "Vitrous hemorrhage", exp: "Causes acute vision loss but macular edema is the most frequent cause of decreased vision overall."}, 
+                                {text: "Proliferative retinopathy", isAi: true, exp: "Can cause complications but not the most common direct cause of vision loss."}, 
+                                {text: "Neovascular glaucoma", isAi: true, exp: "A late and less frequent cause."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common cause of impaired vision worldwide, in working age group is:", 
+                            opts: [
+                                {text: "Keratoconus", exp: "A rare ectatic disorder, not a leading cause globally."}, 
+                                {text: "Corneal dystrophy", exp: "Uncommon."}, 
+                                {text: "Diabetic retinopathy", isCorrect: true, exp: "Correct. It is the leading cause of blindness in the working-age population in many parts of the world."}, 
+                                {text: "Cataract", exp: "The leading cause of blindness overall, but in the working-age group diabetic retinopathy predominates."}, 
+                                {text: "Hypertensive retinopathy", exp: "Much less common as a primary cause of visual impairment."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "55-year old diabetic patient presented with decreased right eye visual acuity, on examination non-proliferative DR in both eyes with macular edema in the right eye, your management is:", 
+                            opts: [
+                                {text: "Anti-VEGF in the right eye", isCorrect: true, exp: "Correct. Center-involving diabetic macular edema is primarily treated with intravitreal anti-VEGF agents."}, 
+                                {text: "Localized/grid laser to right eye then pan-retinal laser", exp: "May be used but anti-VEGF is first-line; pan-retinal laser is for proliferative DR."}, 
+                                {text: "Localized/grid laser to right eye only", exp: "Previously a standard but now anti-VEGF is superior for visual outcomes."}, 
+                                {text: "Pan-retinal laser to both eyes", exp: "Not indicated in NPDR without high-risk features."}, 
+                                {text: "Observation", isAi: true, exp: "Not appropriate with vision loss from macular edema."}
+                            ], 
+                            eval: "The answer is correct. Anti-VEGF is the current first-line treatment for diabetic macular edema with visual loss." 
+                        },
+                        { 
+                            q: "On fundoscopic examination which one indicates proliferative DR:", 
+                            opts: [
+                                {text: "Vitreous hemorrhage", isCorrect: true, exp: "Correct. In the setting of diabetes, it strongly indicates the presence of retinal or disc neovascularization that has bled."}, 
+                                {text: "Microaneurysms", exp: "Sign of non-proliferative DR."}, 
+                                {text: "Venous beading", exp: "Sign of severe NPDR, not proliferative."}, 
+                                {text: "Intraretinal microvascular abnormalities (IRMA)", isAi: true, exp: "Feature of severe NPDR."}, 
+                                {text: "Macular edema", isAi: true, exp: "Can occur in both NPDR and PDR."}
+                            ], 
+                            eval: "The answer is correct. Vitreous hemorrhage is a clinical marker of proliferative disease." 
+                        },
+                        { 
+                            q: "First sign of diabetic retinopathy:", 
+                            opts: [
+                                {text: "Microaneurysm", isCorrect: true, exp: "Correct. The earliest ophthalmoscopically visible lesion of diabetic retinopathy."}, 
+                                {text: "Macular edema", exp: "Occurs later, often with established retinopathy."}, 
+                                {text: "Dilated veins", exp: "Not the earliest sign."}, 
+                                {text: "Cotton wool spots", isAi: true, exp: "Represent more advanced ischemic changes."}, 
+                                {text: "Venous beading", isAi: true, exp: "Indicates severe NPDR."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following doesn't affect development of diabetic retinopathy:", 
+                            opts: [
+                                {text: "HTN", exp: "Uncontrolled hypertension is a known risk factor for progression."}, 
+                                {text: "Ocular HTN", isCorrect: true, exp: "Correct. Elevated intraocular pressure does not increase the risk of diabetic retinopathy; some studies even suggest a protective effect."}, 
+                                {text: "Pregnancy", exp: "Can accelerate DR progression."}, 
+                                {text: "Hyperlipidemia", isAi: true, exp: "Associated with increased hard exudates and progression."}, 
+                                {text: "Duration of diabetes", isAi: true, exp: "The strongest risk factor for developing DR."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most important sign (hallmark) in Proliferative Diabetic retinopathy:", 
+                            opts: [
+                                {text: "Neovascularization", isCorrect: true, exp: "Correct. The defining feature of proliferative diabetic retinopathy."}, 
+                                {text: "Hemorrhage", exp: "Consequence of neovascularization, not the hallmark."}, 
+                                {text: "Microaneurysm", exp: "Early sign of NPDR."}, 
+                                {text: "Soft exudate", exp: "Cotton wool spots, part of NPDR."}, 
+                                {text: "Venous loops", isAi: true, exp: "Can occur in severe NPDR or PDR but not the hallmark."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is a wrong association about diabetic retinopathy?", 
+                            opts: [
+                                {text: "Microaneurysms – earliest sign of DR", isAi: true, exp: "Correct association."}, 
+                                {text: "Neovascularization – hallmark of proliferative DR", isAi: true, exp: "Correct."}, 
+                                {text: "Macular edema – common cause of vision loss in DR", isAi: true, exp: "Correct."}, 
+                                {text: "Venous beading – indicator of severe NPDR", isAi: true, exp: "Correct."}, 
+                                {text: "Cotton wool spots and dot blot hemorrhages – severe nonproliferative diabetic retinopathy", isCorrect: true, exp: "Incorrect. Cotton wool spots and dot-blot hemorrhages are features of moderate NPDR. Severe NPDR is defined by the 4‑2‑1 rule."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All are true regarding diabetic retinopathy except:", 
+                            opts: [
+                                {text: "There are features of ischemia and leakage", exp: "True; DR has both ischemic and exudative components."}, 
+                                {text: "Flame-shape hemorrhages are due to rupture of microaneurysms", isCorrect: true, exp: "False. Flame-shaped hemorrhages arise from superficial retinal capillaries, not microaneurysms (which cause dot-blot hemorrhages in deeper layers)."}, 
+                                {text: "Narrowing of blood vessels lumen may be found", exp: "True, in advanced ischemic retinopathy."}, 
+                                {text: "There is loss of pericytes", exp: "True, an early histopathological change."}, 
+                                {text: "Thickening of the basal membrane is seen", exp: "True, basement membrane thickening is characteristic."}
+                            ], 
+                            eval: "The answer is correct. Flame-shaped hemorrhages are due to capillaries rupture in the superficial layers." 
+                        },
+                        { 
+                            q: "One of the following is a sign of proliferative DR:", 
+                            opts: [
+                                {text: "Cotton-wool spots", exp: "Feature of NPDR."}, 
+                                {text: "Venous changes", exp: "Can be seen in severe NPDR."}, 
+                                {text: "Pre-retinal hemorrhage", isCorrect: true, exp: "Correct. A subhyaloid or pre-retinal hemorrhage indicates bleeding from neovascular fronds in proliferative DR."}, 
+                                {text: "Intra-retinal microvascular abnormalities", exp: "Severe NPDR."}, 
+                                {text: "Macular edema", isAi: true, exp: "Occurs in both NPDR and PDR."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One is not manifestation of diabetic retinopathy:", 
+                            opts: [
+                                {text: "Cataract", isCorrect: true, exp: "Correct. Though diabetes increases cataract risk, cataract is not a direct manifestation of diabetic retinopathy."}, 
+                                {text: "PDR", exp: "Proliferative diabetic retinopathy is a direct manifestation."}, 
+                                {text: "Retinopathy", exp: "General term for the spectrum of DR."}, 
+                                {text: "Maculopathy", exp: "Diabetic maculopathy is part of DR."}, 
+                                {text: "PDR and it's complications", exp: "Obviously a manifestation."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One of these isn’t the cause of vision loss in DR:", 
+                            opts: [
+                                {text: "Subretinal hemorrhage", isCorrect: true, exp: "Correct. It is not a typical feature of diabetic retinopathy; more common in age-related macular degeneration."}, 
+                                {text: "Macular edema", exp: "Major cause of visual loss."}, 
+                                {text: "Macular ischemia", exp: "Leads to irreversible vision loss."}, 
+                                {text: "Subhyaloid hemorrhage", exp: "Bleeding into the pre-retinal space from proliferative disease reduces vision."}, 
+                                {text: "Vitreous hemorrhage", isAi: true, exp: "Common cause of sudden visual loss in proliferative DR."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One of these is a sign of proliferative DR:", 
+                            opts: [
+                                {text: "Neovascularization", isCorrect: true, exp: "Correct. The defining sign of proliferative DR."}, 
+                                {text: "Flame shaped hemorrhage", exp: "Superficial retinal hemorrhage, seen in NPDR."}, 
+                                {text: "Cotton wool spots", exp: "Nerve fiber layer infarcts, NPDR."}, 
+                                {text: "Dot & Blot hemorrhage", exp: "Deep retinal hemorrhages, NPDR."}, 
+                                {text: "Macular edema", isAi: true, exp: "Present in both NPDR and PDR but not a direct sign of proliferation."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient with proliferative diabetic retinopathy and macular edema, what is the most appropriate management plan:", 
+                            opts: [
+                                {text: "Panretinal laser photocoagulation and anti-VEGF intravitreal injection", isCorrect: true, exp: "Correct. Combined treatment addresses both the neovascular process (PRP) and macular edema (anti-VEGF)."}, 
+                                {text: "Anti-VEGF intravitreal injection alone", exp: "May help both, but high-risk PDR often requires PRP for lasting regression."}, 
+                                {text: "Panretinal laser photocoagulation alone", exp: "Does not optimally treat macular edema and can worsen it."}, 
+                                {text: "Focused laser photocoagulation", exp: "Only for focal macular edema, not sufficient for proliferative disease."}, 
+                                {text: "Vitrectomy", isAi: true, exp: "Reserved for non-clearing vitreous hemorrhage or tractional detachment."}
+                            ], 
+                            eval: "The answer is correct. The current approach often includes anti-VEGF plus PRP for combined pathology." 
+                        },
+                        { 
+                            q: "Which condition does NOT cause macular edema?", 
+                            opts: [
+                                {text: "Acute closed-angle glaucoma", isCorrect: true, exp: "Correct. It causes optic nerve damage and corneal edema, not cystoid macular edema."}, 
+                                {text: "Diabetic retinopathy", exp: "A major cause of macular edema."}, 
+                                {text: "Macular degeneration", exp: "Wet AMD causes subretinal fluid, but some forms may involve intraretinal fluid; still a common cause of macular edema."}, 
+                                {text: "Retinal vein occlusion", exp: "Frequently causes marked macular edema."}, 
+                                {text: "Uveitis", isAi: true, exp: "Posterior uveitis commonly leads to cystoid macular edema."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Not feature of severe NPDR:", 
+                            opts: [
+                                {text: "Venous changes", exp: "Venous beading is a defining feature of severe NPDR."}, 
+                                {text: "Iris neovascularization", isCorrect: true, exp: "Correct. It is a sign of proliferative retinopathy, not NPDR."}, 
+                                {text: "IRMAs", exp: "Intraretinal microvascular abnormalities are a feature of severe NPDR."}, 
+                                {text: "Flame shaped hemorrhages", exp: "Can be present, but the severe NPDR definition uses the 4‑2‑1 rule."}, 
+                                {text: "Multiple cotton wool spots", isAi: true, exp: "Often seen in severe NPDR."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All are risk factors for diabetic retinopathy except:", 
+                            opts: [
+                                {text: "Myopia", isCorrect: true, exp: "Correct. High myopia is not a risk factor; some studies suggest it may be protective."}, 
+                                {text: "Pregnancy", exp: "Can accelerate DR progression."}, 
+                                {text: "Nephropathy", exp: "Strongly correlated with DR severity."}, 
+                                {text: "HTN", exp: "Worsens DR."}, 
+                                {text: "Uncontrolled high blood sugar", exp: "Primary risk factor."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is not related to microvascular leakage in diabetic retinopathy?", 
+                            opts: [
+                                {text: "Hard exudates", exp: "Lipid residues from chronic leakage."}, 
+                                {text: "Circinate exudates", exp: "Form of hard exudates in a ring pattern from leakage."}, 
+                                {text: "Cystic macular edema", exp: "Fluid accumulation from breakdown of the blood-retinal barrier."}, 
+                                {text: "Focal macular edema", exp: "Result of focal leakage from microaneurysms."}, 
+                                {text: "Cotton wool spots", isCorrect: true, exp: "Correct. They are nerve fiber layer infarcts due to microvascular occlusion (ischemia), not leakage."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
                     { t: "Glaucoma", qs: [] },
                     { t: "Uveitis", qs: [] },
                     { t: "Eye injuries", qs: [] },
