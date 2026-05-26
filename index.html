@@ -7820,8 +7820,7 @@
                                 {text: "Prostate CA", exp: "PSA is not specific for cancer; it is elevated in many conditions."}, 
                                 {text: "Prostatitis", exp: "PSA can be high in prostatitis, but it is not specific for it."}, 
                                 {text: "BPH", exp: "PSA levels correlate with prostate volume, but not specific for BPH."}, 
-                                {text: "None of the above", isCorrect: true, exp: "Correct. PSA is organ-specific (prostate tissue) but not disease-specific."}, 
-                                {text: "All of the above", isAi: true, exp: "Incorrect; PSA cannot reliably distinguish between these entities on its own."}
+                                {text: "None of the above", isCorrect: true, exp: "Correct. PSA is organ-specific (prostate tissue) but not disease-specific."}
                             ], 
                             eval: "The answer is correct." 
                         },
@@ -7848,17 +7847,6 @@
                             eval: "The answer is correct." 
                         },
                         { 
-                            q: "One is not an indication for prostatectomy:", 
-                            opts: [
-                                {text: "Overflow incontinence", exp: "Indication; it reflects chronic retention needing surgery."}, 
-                                {text: "Residual urine > 1000 ml", exp: "Massive residual volume is an indication for surgery."}, 
-                                {text: "Uremia", exp: "Renal failure from BPH is a strong surgical indication."}, 
-                                {text: "Hydronephrosis", exp: "Upper tract dilatation due to obstruction mandates prostatectomy."}, 
-                                {text: "Flow meter < 9 cc/min", isCorrect: true, exp: "Low flow alone, if asymptomatic and without complications, may not be an absolute indication compared to structural or functional decompensation."}
-                            ], 
-                            eval: "The answer is not explicitly given in the text, but low flow rate without other criteria is the least absolute indication among the choices." 
-                        },
-                        { 
                             q: "BPH will have all of the following except:", 
                             opts: [
                                 {text: "Poor stream", exp: "Typical voiding symptom."}, 
@@ -7883,7 +7871,7 @@
                         { 
                             q: "Which of the following is not used in routine screening for BPH?", 
                             opts: [
-                                {text: "Ultrasound and postvoidal residual volume", exp: "Used to assess bladder emptying and prostate volume."}, 
+                                {ext: "Ultrasound and postvoidal residual volume", exp: "Used to assess bladder emptying and prostate volume."}, 
                                 {text: "Urine analysis", exp: "Part of basic evaluation to rule out infection."}, 
                                 {text: "Urine culture", exp: "Often sent if UTI is suspected, may be part of initial panel."}, 
                                 {text: "Digital rectal examination", isAi: true, exp: "DRE is a routine part of BPH assessment; thus it is used, so this is not the correct answer for 'not used'."}, 
@@ -7891,17 +7879,7 @@
                             ], 
                             eval: "The answer is correct. Multi-planar MRI is not a baseline or routine screening modality for BPH." 
                         },
-                        { 
-                            q: "A patient presented with LUTS, previously diagnosed with BPH, prostate volume is 60cc, PVR= 70ml, normal creatinine levels, how do you manage this patient?", 
-                            opts: [
-                                {text: "Alpha blocker", isCorrect: true, exp: "Rapid symptom relief. Appropriate first choice, especially if symptoms are bothersome."}, 
-                                {text: "5-alpha reductase inhibitor", isCorrect: true, exp: "For prostates >40-50cc, a 5-ARI can be used alone or added to an alpha-blocker, but it works slowly."}, 
-                                {text: "TURBT", exp: "Not indicated for BPH; TURP is the surgical option, not TURBT."}, 
-                                {text: "Combination therapy (alpha blocker + 5-ARI)", isAi: true, exp: "Often recommended for larger prostates with bothersome symptoms, but the original text points to an ambiguous choice between A and B."}, 
-                                {text: "Watchful waiting", isAi: true, exp: "Acceptable for mild symptoms, but the question implies active management."}
-                            ], 
-                            eval: "The original answer is ambiguous (A vs B). Guidelines support single-agent alpha blockers for immediate relief or 5-ARIs for long-term reduction of volume." 
-                        },
+                        
                         { 
                             q: "Which one of the following is a definition of PSA density?", 
                             opts: [
@@ -8183,7 +8161,7 @@
                             eval: "The answer is correct. Exogenous testosterone suppresses the pituitary release of LH and FSH, leading to impaired spermatogenesis." 
                         },
                         { 
-                            q: "Which of the following is considered an independent risk factor for male infertility?", 
+                            q: "Which of the following is considered an not risk factor for male infertility?", 
                             opts: [
                                 {text: "Varicocele", exp: "Known risk factor; can impair spermatogenesis."}, 
                                 {text: "Cryptorchidism", exp: "Maldescended testes cause impaired fertility."}, 
@@ -8191,7 +8169,7 @@
                                 {text: "Advanced paternal age", exp: "Associated with DNA fragmentation and lower fertility."}, 
                                 {text: "Race", isCorrect: true, exp: "Correct answer for the exception. Race alone is not an independent risk factor for male infertility."}
                             ], 
-                            eval: "The answer 'Race' is correct." 
+                            eval: "The answer is correct." 
                         },
                         { 
                             q: "Infertility is clinically defined as:", 
@@ -8979,17 +8957,8 @@
                             ], 
                             eval: "The answer is correct. Rigid ureteroscopy is not suitable for the upper ureter/UPJ due to anatomic limitations." 
                         },
-                        { 
-                            q: "All of these are correct when it comes to treating a 1 cm distal ureteric stone except:", 
-                            opts: [
-                                {text: "PCNL", isCorrect: true, exp: "Correct. PCNL is not appropriate for a distal ureteric stone because it is designed to access the kidney cavity directly."}, 
-                                {text: "ESWL", exp: "Effective for 1 cm distal stones."}, 
-                                {text: "Rigid ureteroscope with pneumatic Lithotripsy", exp: "Highly effective for distal stones."}, 
-                                {text: "Cystolitholapaxy", exp: "Used for bladder stones, not ureteric stones; technically not a correct treatment for a ureteric stone configuration."}, 
-                                {text: "Laparoscopic ureterolithotomy", exp: "Can be used for large impacted stones."}
-                            ], 
-                            eval: "PCNL is definitely not indicated for treating a distal ureteric stone. While cystolitholapaxy is also technically restricted to bladder calculus management, PCNL remains the primary standard anatomical mismatch exception." 
-                        },
+                         
+                          
                         { 
                             q: "Diagnostic study for stones:", 
                             opts: [
@@ -9135,7 +9104,7 @@
                             eval: "The answer is reasonable, though some guidelines list active infection and active substance abuse as more classic absolute contraindications. Neuropsychiatric illness is accepted as absolute when it severely impacts compliance." 
                         }
                     ]},
-{ t: "Miscellaneous (Embryology, Anatomy, Physiology)", qs: [
+{ t: "UTI, PEDs, Anatomy, others", qs: [
                         { 
                             q: "Which radiotracer is ideally suited for imaging renal scarring?", 
                             opts: [
@@ -9378,17 +9347,8 @@
                             ], 
                             eval: "The answer is correct. Hypokalemia is the most dangerous electrolyte disturbance in the diuretic phase of ATN." 
                         },
-                        { 
-                            q: "Most common cause of Chronic testicular pain (orchalgia) is", 
-                            opts: [
-                                {text: "Distal ureter stone", exp: "Incorrect alone; referred pain to testis can occur."}, 
-                                {text: "Hydrocele", exp: "Incorrect alone; can cause dull ache but not the sole leading cause."}, 
-                                {text: "Both distal ureter stone and hydrocele", isCorrect: true, exp: "Correct (per given answer). The source states both are implicated as common causes."}, 
-                                {text: "Varicocele", isAi: true, exp: "A cause but not the most common per this source."}, 
-                                {text: "Chronic epididymitis", isAi: true, exp: "Common but source indicates both stone and hydrocele."}
-                            ], 
-                            eval: "The answer “both cause it” is ambiguous. Classically, chronic orchialgia is often idiopathic or post-vasectomy; however, the source answer is retained as given." 
-                        },
+                        
+                        
                         { 
                             q: "Most common source of RENIN is?", 
                             opts: [
@@ -9400,17 +9360,7 @@
                             ], 
                             eval: "The answer is correct." 
                         },
-                        { 
-                            q: "Female with HTN of 2 years duration. treated with diuretics, BP 150/90 .. Na 135 ...K 2.7 .. Cr 0.8 ..she has:", 
-                            opts: [
-                                {text: "essential HTN", isCorrect: true, exp: "Possible; diuretic-induced hypokalemia can explain the picture entirely."}, 
-                                {text: "hyper aldosteronemia", isCorrect: true, exp: "Possible; hypertension with hypokalemia and normal sodium raises suspicion for primary hyperaldosteronism."}, 
-                                {text: "syndromes ...", exp: "Incomplete alternative path; could hypothetically refer to inherited options like Liddle's syndrome."}, 
-                                {text: "Renal artery stenosis", isAi: true, exp: "Would explain hypertension but typically features renal impairment rather than isolated low K on a diuretic profile."}, 
-                                {text: "Cushing’s syndrome", isAi: true, exp: "Can cause HTN and hypokalemia, but active diuretic background complicates direct tracking."}
-                            ], 
-                            eval: "The answer is ambiguous in the source text. Diuretics safely provoke hypokalemia during essential hypertension management, yet primary hyperaldosteronism independently maps to this profile. Renin and aldosterone tests are required to confirm." 
-                        },
+
                         { 
                             q: "Narrowest part of ureter:", 
                             opts: [
@@ -9533,17 +9483,8 @@
                             ], 
                             eval: "Answer is correct. A palpable bladder is the expected physical finding in overflow incontinence." 
                         },
-                        { 
-                            q: "Which of the following statements describes the role of voiding and retention in bladder health?", 
-                            opts: [
-                                {text: "Retaining urine promotes bladder distention and strengthens bladder muscles", exp: "Incorrect; chronic retention overstretches the detrusor and may cause decompensation."}, 
-                                {text: "Voiding exacerbates bladder dysfunction and urinary incontinence", exp: "Incorrect; appropriate voiding is beneficial, not harmful."}, 
-                                {text: "Retaining urine reduces the risk of urinary tract infections", exp: "Incorrect; stasis of urine promotes bacterial growth and increases UTI risk."}, 
-                                {text: "Voiding helps maintain bladder health and prevents urinary stasis", isCorrect: true, exp: "Correct. Regular voiding flushes out bacteria and prevents stasis."}, 
-                                {text: "Holding urine for long periods has no effect on bladder function", isAi: true, exp: "Incorrect; habitual retention can lead to detrusor underactivity and increased UTIs."}
-                            ], 
-                            eval: "The answer is correct despite the file’s note of confusion. Voiding prevents stasis, which is essential for bladder health." 
-                        },
+                      
+                          
                         { 
                             q: "Classical symptom of neurogenic bladder:", 
                             opts: [
@@ -9644,17 +9585,6 @@
                                 {text: "Chemotherapy alone", isAi: true, exp: "Not curative; surgery is primary."}
                             ], 
                             eval: "The answer seems correct. Radical nephroureterectomy with bladder cuff is the standard for upper tract urothelial carcinoma." 
-                        },
-                        { 
-                            q: "A patient was found to have a 3 cm soft tissue parenchymal mass, asymptomatic, what is the correct answer:", 
-                            opts: [
-                                {text: "Follow up with CT annually", isCorrect: true, exp: "Could be considered for small, incidental renal masses with low probability of malignancy or in poor surgical candidates."}, 
-                                {text: "Partial nephrectomy (nephron preserving)", isCorrect: true, exp: "Correct standard for small renal masses suspicious for RCC; nephron-sparing surgery is preferred."}, 
-                                {text: "Radical nephrectomy", isAi: true, exp: "Would remove the entire kidney, not first choice for a 3 cm mass."}, 
-                                {text: "Biopsy", isAi: true, exp: "Not routinely required before definitive treatment of a solid enhancing renal mass in a surgical candidate."}, 
-                                {text: "Radiofrequency ablation", isAi: true, exp: "An option for small tumours in non-surgical candidates, but not the first-line in an asymptomatic fit patient."}
-                            ], 
-                            eval: "The answer is debated between Active Surveillance or Partial Nephrectomy. A 3 cm solid renal mass in a healthy patient is typically managed with partial nephrectomy, though active surveillance remains an option in select cohorts." 
                         },
                         { 
                             q: "RCC is associated with:", 
