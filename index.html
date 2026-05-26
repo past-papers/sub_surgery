@@ -8025,11 +8025,1049 @@
                             ], 
                             eval: "The answer is correct." 
                         }
-                    ]} , { t: "Hematuria", qs: [] }, { t: "Trauma", qs: [] },
-                    { t: "Infertility", qs: [] }, { t: "Scrotal Pathologies", qs: [] }, { t: "Bladder Cancer", qs: [] },
-                    { t: "Testicular Tumors", qs: [] }, { t: "Stones", qs: [] }, { t: "Kidney Transplant", qs: [] },
-                    { t: "Peds Urology", qs: [] }, { t: "Incontinence and Urodynamics", qs: [] }, { t: "UTI", qs: [] },
-                    { t: "Renal Tumors", qs: [] }, { t: "Intro (First 3 Lecs) + Misc.", qs: [] }
+                    ]}  { t: "Renal & Bladder Trauma", qs: [
+                        { 
+                            q: "Occlusion or injury to a segmental renal artery will cause:", 
+                            opts: [
+                                {text: "Renal atrophy.", exp: "Incorrect; chronic ischemia may cause atrophy, but acute segmental occlusion leads to infarction rather than gradual atrophy."}, 
+                                {text: "No pathologic conditions", exp: "Incorrect; occlusion of an end-artery causes tissue necrosis."}, 
+                                {text: "An effect that depends on the availability of collaterals", exp: "Incorrect; the renal segmental arteries are functional end-arteries with little to no collateral supply."}, 
+                                {text: "Opening of collateral circulation", exp: "Incorrect; there is no significant collateral network to open acutely."}, 
+                                {text: "Segmental renal infarction.", isCorrect: true, exp: "Correct. Segmental arteries are end-arteries; occlusion causes infarction of the supplied segment."}
+                            ], 
+                            eval: "The answer is correct. The kidney has a segmental end-arterial blood supply, so occlusion leads to infarction." 
+                        },
+                        { 
+                            q: "The best treatment for intraperitoneal bladder injury is:", 
+                            opts: [
+                                {text: "Wait and see.", exp: "Incorrect; intraperitoneal rupture requires surgical closure to prevent peritonitis and urinary ascites."}, 
+                                {text: "Laparotomy and repair.", isCorrect: true, exp: "Correct. Intraperitoneal bladder rupture must be surgically repaired."}, 
+                                {text: "Suprapubic drain.", exp: "Incorrect; drainage alone does not close the defect and risks ongoing urinary leakage."}, 
+                                {text: "Urethral catheterization.", exp: "Incorrect; catheter drainage alone is insufficient for intraperitoneal injury."}, 
+                                {text: "Bilateral nephrostomies.", isAi: true, exp: "Not indicated; urinary diversion at the kidney level does not address the bladder defect."}
+                            ], 
+                            eval: "The answer is correct. Intraperitoneal bladder rupture mandates operative repair." 
+                        },
+                        { 
+                            q: "Male kicked on left loin blunt renal trauma, CT shows contusion 2cm without extravasation of urine, your next step is:", 
+                            opts: [
+                                {text: "Admit and observe vitals", isCorrect: true, exp: "Correct. Grade 1-2 renal injury with no urinary extravasation is managed non-operatively with bed rest, observation, and serial vital signs."}, 
+                                {text: "Urgent laparotomy", exp: "Incorrect; not indicated for a minor renal contusion without active bleeding or extravasation."}, 
+                                {text: "Discharge", exp: "Dangerous; even minor renal trauma warrants observation for delayed bleeding."}, 
+                                {text: "Abx", exp: "Not the primary step; antibiotics are not routinely needed for an isolated blunt renal contusion."}, 
+                                {text: "Cystoscopy to rule out bladder injury", isAi: true, exp: "Not indicated; CT has already shown the injury is renal, and there is no hematuria profile suggesting bladder rupture."}
+                            ], 
+                            eval: "The answer is correct. A 2 cm contusion without extravasation is a grade I-II renal injury, managed conservatively with observation." 
+                        },
+                        { 
+                            q: "Extraperitoneal bladder injury, what to do?", 
+                            opts: [
+                                {text: "Surgery to repair", exp: "Incorrect; most extraperitoneal ruptures heal with catheter drainage alone."}, 
+                                {text: "Urgent laparotomy", exp: "Not first-line; reserved for cases with bone fragments in the bladder or failure of conservative management."}, 
+                                {text: "Cath", isCorrect: true, exp: "Correct. Urethral catheter drainage for 10-14 days is the standard management."}, 
+                                {text: "Observation with bed rest", isAi: true, exp: "Inadequate without urinary drainage; a catheter is required."}, 
+                                {text: "Percutaneous suprapubic cystostomy", isAi: true, exp: "Can be used if urethral catheter is contraindicated, but simple urethral catheter is preferred."}
+                            ], 
+                            eval: "The answer is correct. Extraperitoneal bladder rupture is treated with catheter drainage." 
+                        },
+                        { 
+                            q: "A patient presented to the ER department due to history of blunt trauma to his right flank. The patient has mild hematuria, fever is 36.8, BP 125/78, Pulse 90. Upon examination, ecchymosis in the flank was noted. Upon further evaluation the patient was found to have grade 2 renal trauma. Which of the following is indicated for this patient?", 
+                            opts: [
+                                {text: "Admission and surgical exploration of the injured kidney", exp: "Not indicated; grade 2 injury is managed conservatively."}, 
+                                {text: "Admission and plan for renal reconstruction", exp: "Unnecessary; there is no collecting system disruption or devitalized tissue."}, 
+                                {text: "Admission and plan for nephrectomy", exp: "Too aggressive; nephrectomy is reserved for grade V injuries or hemodynamic instability."}, 
+                                {text: "Admission and apply conservative management", isCorrect: true, exp: "Correct. Grade 2 renal trauma (non-expanding hematoma, shallow laceration) is managed non-operatively."}, 
+                                {text: "Admission and percutaneous drainage of perirenal hematoma", isAi: true, exp: "Not required; small hematomas resolve spontaneously."}
+                            ], 
+                            eval: "The answer is correct. Hemodynamically stable grade 2 renal injury is managed conservatively." 
+                        },
+                        { 
+                            q: "Which radiotracer is ideally suited for imaging renal scarring?", 
+                            opts: [
+                                {text: "99mTc-MAG3", exp: "Used for dynamic renal function and drainage, not cortical scarring."}, 
+                                {text: "99mTc-DTPA", exp: "Glomerular filtration agent; used for function and obstruction, not ideal for scarring."}, 
+                                {text: "99mTc-sulfur colloid (Liver, spleen)", exp: "Localizes in liver/spleen; not a renal cortical agent."}, 
+                                {text: "67Ga-citrate", exp: "Infection/inflammation imaging; not for renal cortical scarring."}, 
+                                {text: "99mTc-DMSA", isCorrect: true, exp: "Correct. It binds to renal tubules and delineates cortical scars."}
+                            ], 
+                            eval: "The answer is correct. DMSA scan is the gold standard for detecting renal parenchymal scarring." 
+                        },
+                        { 
+                            q: "Treatment of choice of one small stricture in bulbar urethra:", 
+                            opts: [
+                                {text: "Optical urethrotomy", isCorrect: true, exp: "Correct; direct vision internal urethrotomy is an accepted first-line minimally invasive treatment for short bulbar strictures."}, 
+                                {text: "Meatal dilatation", exp: "Not appropriate; meatal dilatation is for meatal stenosis, not bulbar stricture."}, 
+                                {text: "Urethroplasty", exp: "May offer better long-term success but is a more extensive surgery; for a single small stricture, urethrotomy is often tried first."}, 
+                                {text: "Urethral stent placement", isAi: true, exp: "Not standard initial therapy for bulbar strictures; stents have high failure and complication rates."}, 
+                                {text: "Observation only", isAi: true, exp: "Inappropriate; a symptomatic stricture will not resolve without intervention."}
+                            ], 
+                            eval: "The answer is acceptable as a common initial management, though current guidelines increasingly favor urethroplasty for better long-term cure. Nonetheless, optical urethrotomy remains a valid first-choice option." 
+                        },
+                        { 
+                            q: "Superficial kidney laceration:", 
+                            opts: [
+                                {text: "Grade I", exp: "Renal contusion or subcapsular hematoma without laceration."}, 
+                                {text: "Grade II", isCorrect: true, exp: "Correct. Superficial cortical laceration less than 1 cm depth without collecting system involvement."}, 
+                                {text: "Grade III", exp: "Laceration greater than 1 cm depth without collecting system extravasation."}, 
+                                {text: "Grade IV", exp: "Laceration extending into the collecting system or segmental vascular injury."}, 
+                                {text: "Grade V", isAi: true, exp: "Shattered kidney or avulsion of renal pedicle."}
+                            ], 
+                            eval: "The answer is correct. A superficial laceration is classified as grade II." 
+                        },
+                        { 
+                            q: "Shattered kidney, according to WHO this is classified as a renal injury:", 
+                            opts: [
+                                {text: "Grade I", exp: "Minor injury, no laceration."}, 
+                                {text: "Grade II", exp: "Superficial laceration."}, 
+                                {text: "Grade III", exp: "Deep laceration without collecting system injury."}, 
+                                {text: "Grade IV", exp: "Laceration into collecting system or segmental vascular injury."}, 
+                                {text: "Grade V", isCorrect: true, exp: "Correct. Shattered kidney or main renal artery/vein avulsion is grade V."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient presented with intraperitoneal bladder injury, management is:", 
+                            opts: [
+                                {text: "Correct the injury (surgery)", isCorrect: true, exp: "Correct. Intraperitoneal rupture must be repaired surgically."}, 
+                                {text: "Observation", exp: "Inadequate; leads to chemical peritonitis."}, 
+                                {text: "Indwelling catheterization", exp: "Insufficient alone for intraperitoneal rupture."}, 
+                                {text: "Urethral catheter drainage and antibiotics", isAi: true, exp: "Not adequate; surgical closure is mandatory."}, 
+                                {text: "Observation with serial ultrasound", isAi: true, exp: "Dangerous; urinary ascites will develop without repair."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                    { t: "Male Infertility & Testes", qs: [
+                        { 
+                            q: "The commonest treatable cause of male infertility is:", 
+                            opts: [
+                                {text: "Varicocele.", isCorrect: true, exp: "Correct. It is the most common correctable cause of male infertility."}, 
+                                {text: "Obstructed verumontanum.", exp: "Rare cause of ejaculatory duct obstruction, not the commonest."}, 
+                                {text: "Testicular atrophy.", exp: "Often irreversible primary testicular failure."}, 
+                                {text: "Testicular tuberculosis.", exp: "Uncommon cause and often causes irreversible damage."}, 
+                                {text: "Vasectomy.", isAi: true, exp: "Although treatable by reversal, it is a cause of obstructive infertility but not the most common."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "30 years old man with azoospermia, normal LH and FSH. He is most likely suffering from:", 
+                            opts: [
+                                {text: "Testicular failure.", exp: "Elevated FSH/LH would be expected."}, 
+                                {text: "Testicular absence.", exp: "Very rare; if bilateral, FSH/LH would be high."}, 
+                                {text: "Obstructive infertility.", isCorrect: true, exp: "Correct. Normal gonadotropins with azoospermia suggest obstruction."}, 
+                                {text: "Post mumps testicular atrophy.", exp: "Would typically show elevated FSH."}, 
+                                {text: "Testicular neoplasia.", exp: "Hormone levels vary; not the typical pattern."}
+                            ], 
+                            eval: "The answer is correct. Obstructive azoospermia presents with normal hormone profiles." 
+                        },
+                        { 
+                            q: "One of these conditions is a reversible cause of male infertility:", 
+                            opts: [
+                                {text: "Varicocele", isCorrect: true, exp: "Correct. Varicocelectomy can improve semen parameters and fertility."}, 
+                                {text: "Congenital loss of vas deferens", exp: "Irreversible congenital anomaly; sperm retrieval with ART is needed."}, 
+                                {text: "Klinefelter syndrome (47,XXY)", isAi: true, exp: "Genetic cause of primary testicular failure, not reversible."}, 
+                                {text: "Bilateral undescended testes after puberty", isAi: true, exp: "Causes irreversible germ cell damage."}, 
+                                {text: "Post-chemotherapy azoospermia", isAi: true, exp: "Often irreversible testicular failure."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 30-year-old male has been experiencing infertility issues. After consulting with a physician, it is discovered that he has been using exogenous testosterone for muscle enhancement for the past two years. What's the pathophysiology behind his infertility?", 
+                            opts: [
+                                {text: "Suppression of pituitary FSH and LH release", isCorrect: true, exp: "Correct. Exogenous testosterone provides negative feedback on the hypothalamus and pituitary, suppressing gonadotropins and thereby intratesticular testosterone and spermatogenesis."}, 
+                                {text: "Inhibition of GnRH release", exp: "This also occurs, but the primary pituitary suppression is the direct mechanism; the answer given is pituitary suppression, which is accurate."}, 
+                                {text: "Increased sperm production beyond the normal range", exp: "Incorrect; spermatogenesis is suppressed."}, 
+                                {text: "Increased conversion of testosterone to estrogen", exp: "May contribute but not the main mechanism of infertility."}, 
+                                {text: "Exogenous testosterone causes formation of antisperm antibodies", exp: "Not caused by exogenous testosterone."}
+                            ], 
+                            eval: "The answer is correct. Exogenous testosterone suppresses the pituitary release of LH and FSH, leading to impaired spermatogenesis." 
+                        },
+                        { 
+                            q: "Which of the following is considered an independent risk factor for male infertility?", 
+                            opts: [
+                                {text: "Varicocele", exp: "Known risk factor; can impair spermatogenesis."}, 
+                                {text: "Cryptorchidism", exp: "Maldescended testes cause impaired fertility."}, 
+                                {text: "Tobacco smoking", exp: "Associated with reduced semen quality."}, 
+                                {text: "Advanced paternal age", exp: "Associated with DNA fragmentation and lower fertility."}, 
+                                {text: "Race", isCorrect: true, exp: "Correct answer for the exception. Race alone is not an independent risk factor for male infertility."}
+                            ], 
+                            eval: "The answer 'Race' is correct." 
+                        },
+                        { 
+                            q: "Infertility is clinically defined as:", 
+                            opts: [
+                                {text: "Inability to achieve erection", exp: "Defines erectile dysfunction, not infertility."}, 
+                                {text: "Failure to conceive after 6 months of unprotected intercourse", exp: "Standard definition is 1 year (or 6 months for women older than 35); general definition is 1 year."}, 
+                                {text: "Failure to conceive after 1 year of unprotected sexual intercourse.", isCorrect: true, exp: "Correct definition of clinical infertility."}, 
+                                {text: "Absence of sperm in semen", exp: "Azoospermia, a cause of infertility, not its broad definition."}, 
+                                {text: "Recurrent miscarriages", exp: "Defines recurrent pregnancy loss, not infertility."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The majority of the volume of semen is contributed by the:", 
+                            opts: [
+                                {text: "Prostate", exp: "Contributes about 20–30% of volume, acidic fluid."}, 
+                                {text: "Seminal vesicles", isCorrect: true, exp: "Correct; produce approximately 60–70% of seminal fluid (alkaline, fructose-rich)."}, 
+                                {text: "Bulbourethral glands", exp: "Contribute a small amount of mucus."}, 
+                                {text: "Epididymis", exp: "Storage and maturation of sperm, not major fluid volume."}, 
+                                {text: "Testes", exp: "Produce sperm and a minor amount of fluid."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 2 month old child was presented to your clinic with unilateral inguinal testis, nothing was abnormal other than this, what to do?", 
+                            opts: [
+                                {text: "Orchidectomy", exp: "Not indicated; the testis is salvageable."}, 
+                                {text: "Conservative management with orchidopexy at 2 years old", exp: "Delayed surgery increases risk of irreversible damage."}, 
+                                {text: "Orchidopexy before the age of 18 months", isCorrect: true, exp: "Correct. Current guidelines recommend surgery between 6–12 months, optimally before 18 months."}, 
+                                {text: "Neoadjuvant hormonal therapy with orchidopexy before 12 months", exp: "Hormonal therapy is not routinely recommended."}, 
+                                {text: "Observation", exp: "Risk of infertility and malignant transformation if left uncorrected."}
+                            ], 
+                            eval: "The answer is correct. Orchidopexy should be performed before 18 months, ideally around 6–12 months." 
+                        },
+                        { 
+                            q: "A man presents with azoospermia (count of 5 million/ml). In addition to measuring testosterone, which of the following is the routine initial investigation:", 
+                            opts: [
+                                {text: "Prolactin only", exp: "Insufficient; FSH and LH are essential."}, 
+                                {text: "FSH only", exp: "Does not evaluate LH or prolactin."}, 
+                                {text: "FSH, LH & prolactin", isCorrect: true, exp: "Correct. Together with testosterone, this is the basic hormonal workup for azoospermia/oligospermia."}, 
+                                {text: "FSH and thyroid", exp: "Thyroid function is not a routine initial test unless clinically indicated."}, 
+                                {text: "Testosterone and inhibin B", isAi: true, exp: "Inhibin B is not a first-line routine test, though it reflects Sertoli cell function."}
+                            ], 
+                            eval: "The answer is acceptable as a core hormone panel. Note, however, that the initial panel ideally includes testosterone, FSH, LH, and prolactin." 
+                        },
+                        { 
+                            q: "Male with azoospermia, high FSH, LH and low testosterone, the next step:", 
+                            opts: [
+                                {text: "Extraction from testis", exp: "May be needed later for sperm retrieval, but not the immediate next step without imaging and genetics."}, 
+                                {text: "Testicular U/S", isCorrect: true, exp: "Correct as an initial step to evaluate testicular size, consistency, and rule out obstruction or tumor."}, 
+                                {text: "MRI head", exp: "Indicated if prolactin markedly elevated, not for this profile."}, 
+                                {text: "Genetic testing (karyotype and Y microdeletion)", isAi: true, exp: "Important in workup but usually after confirming testicular failure via ultrasound and before sperm retrieval."}, 
+                                {text: "Empiric testosterone therapy", isAi: true, exp: "Not indicated in a man seeking fertility; testosterone will suppress spermatogenesis."}
+                            ], 
+                            eval: "The answer is reasonable; testicular ultrasound is a standard next step to assess testicular volume and rule out obstructive component or neoplasm before genetic studies." 
+                        },
+                        { 
+                            q: "Most common cause of primary infertility:", 
+                            opts: [
+                                {text: "Mumps orchitis", exp: "Uncommon cause."}, 
+                                {text: "Bacterial orchitis", exp: "Rare as a primary infertility cause."}, 
+                                {text: "Undescended testicle", exp: "Important cause but not the most common."}, 
+                                {text: "Idiopathic hypogonadism", isCorrect: true, exp: "Correct. A significant proportion of primary testicular failure is idiopathic."}, 
+                                {text: "Klinefelter syndrome", isAi: true, exp: "Most common genetic cause of primary hypogonadism, but overall idiopathic is more common."}
+                            ], 
+                            eval: "The answer is acceptable. Idiopathic non-obstructive azoospermia/primary testicular failure is a common final diagnosis." 
+                        },
+                        { 
+                            q: "Regarding mumps orchitis, all are true except:", 
+                            opts: [
+                                {text: "Rare before puberty", exp: "True; orchitis usually occurs post-pubertally."}, 
+                                {text: "Usually unilateral", exp: "True; bilateral in about 15–30%."}, 
+                                {text: "Never lead to atrophy of testis", isCorrect: true, exp: "False; atrophy occurs in up to 50% of affected testes. This is the exception."}, 
+                                {text: "Can be bilateral", exp: "True."}, 
+                                {text: "Typically results in permanent infertility in bilateral involvement", isAi: true, exp: "True; bilateral atrophy can lead to infertility."}
+                            ], 
+                            eval: "The answer is correct. Mumps orchitis can lead to significant testicular atrophy." 
+                        },
+                        { 
+                            q: "Most accurate way to rule out testicular torsion:", 
+                            opts: [
+                                {text: "Surgical exploration", isCorrect: true, exp: "Correct. Direct visualization is the gold standard and most definitive."}, 
+                                {text: "Doppler U/S", exp: "Highly sensitive but can have false negatives; exploration is definitive."}, 
+                                {text: "Radionuclide scrotal scan", isAi: true, exp: "Rarely used now; Doppler is preferred."}, 
+                                {text: "Clinical evaluation with Prehn's sign", isAi: true, exp: "Not reliable; clinical signs cannot reliably rule out torsion."}, 
+                                {text: "Testicular scintigraphy", isAi: true, exp: "Historical, replaced by Doppler; exploration is more accurate."}
+                            ], 
+                            eval: "The answer is correct. Immediate surgical exploration is the gold standard to definitively rule out torsion." 
+                        },
+                        { 
+                            q: "The best age to do orchidopexy for undescended testis is:", 
+                            opts: [
+                                {text: "3-4 years.", exp: "Too late; damage to germ cells may occur after 6-12 months."}, 
+                                {text: "Immediately after birth.", exp: "Not necessary; spontaneous descent may occur in the first few months."}, 
+                                {text: "6-7 years.", exp: "Too late."}, 
+                                {text: "No need to do surgery.", exp: "Incorrect; surgery is required."}, 
+                                {text: "6-12 months", isCorrect: true, exp: "Correct; current guidelines recommend orchidopexy between 6 and 12 months of age."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Factors important to the testis to descend intrauterine are all the following except:", 
+                            opts: [
+                                {text: "Omphalocele.", isCorrect: true, exp: "Correct (not a factor). Omphalocele is an abdominal wall defect and is not a normal physiological factor for testicular descent."}, 
+                                {text: "Normal growth of the baby.", exp: "True; intrauterine growth restriction can impair descent."}, 
+                                {text: "Preserved of normal abdominal pressure of the baby.", exp: "True; increased abdominal pressure aids descent."}, 
+                                {text: "Gubernaculum.", exp: "True; guides the testis into the scrotum."}, 
+                                {text: "The presence of testosterone.", exp: "True; androgens are essential for descent."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Wrong about varicocele:", 
+                            opts: [
+                                {text: "More on left side.", exp: "True."}, 
+                                {text: "Can cause pain in the affected side.", exp: "True, dull ache."}, 
+                                {text: "Abnormal dilatation of pampiniform plexus veins.", exp: "True."}, 
+                                {text: "Can cause subfertility.", exp: "True."}, 
+                                {text: "Grade 3 always must be treated by surgery", isCorrect: true, exp: "False. Surgery is indicated for infertility, pain, or testicular atrophy, not solely based on the clinical grade."}
+                            ], 
+                            eval: "The answer is correct. Treatment depends on clinical indicators like semen parameters or pain, not grading alone." 
+                        },
+                        { 
+                            q: "Testicular torsion all true except:", 
+                            opts: [
+                                {text: "History of abdominal pain", exp: "True; referred pain to lower abdomen can occur."}, 
+                                {text: "Doppler US is needed to diagnosis", isCorrect: true, exp: "False. Diagnosis is clinical, and exploration should not be delayed for Doppler if high suspicion."}, 
+                                {text: "Sudden severe testicular pain", isAi: true, exp: "True; classic presentation."}, 
+                                {text: "Absent cremasteric reflex", isAi: true, exp: "True; often absent on affected side."}, 
+                                {text: "Nausea and vomiting", isAi: true, exp: "Common associated symptom."}
+                            ], 
+                            eval: "The answer is correct. Clinical suspicion mandates immediate exploration; Doppler is not strictly required for diagnosis." 
+                        },
+                        { 
+                            q: "Choose the correct answer regarding the drainage of testicular veins:", 
+                            opts: [
+                                {text: "Left gonadal vein into left renal vein then IVC, while the right gonadal vein goes directly to IVC.", isCorrect: true, exp: "Correct anatomy."}, 
+                                {text: "Both to IVC.", exp: "Incorrect; left drains via renal vein."}, 
+                                {text: "Right gonadal vein into left renal vein then IVC, while the left gonadal vein goes directly to IVC.", exp: "Incorrect anatomy."}, 
+                                {text: "Common iliac vein.", exp: "Incorrect anatomy."}, 
+                                {text: "Both drain into internal iliac veins", isAi: true, exp: "Incorrect anatomy."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One of these combinations is incorrect:", 
+                            opts: [
+                                {text: "Cryptorchidism - orchidopexy", exp: "Correct combination."}, 
+                                {text: "Varicocele - ligation", exp: "Correct combination."}, 
+                                {text: "Spermatocele - spermatocelectomy", exp: "Correct combination."}, 
+                                {text: "Hydrocele - Orchidectomy", isCorrect: true, exp: "Incorrect. Hydrocele is treated by hydrocelectomy, not removal of the testis."}, 
+                                {text: "Testicular torsion - orchiectomy", isAi: true, exp: "Correct for a non-viable testis, so the combination is not mismatched in that context."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The testicles drain into:", 
+                            opts: [
+                                {text: "Paraaortic lymph nodes", isCorrect: true, exp: "Correct. The testicular lymphatics follow the gonadal vessels to para-aortic nodes."}, 
+                                {text: "Popliteal lymph nodes", exp: "Incorrect; these drain the lower leg."}, 
+                                {text: "Periumbilical lymph nodes", exp: "Incorrect; these drain the anterior abdominal wall."}, 
+                                {text: "Internal iliac lymph nodes", exp: "Incorrect; these drain pelvic viscera like prostate and bladder."}, 
+                                {text: "External iliac lymph node", exp: "Incorrect; these drain lower limb and pelvic structures."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "During a surgical procedure to ligate a varicocele, which nerve is at risk of injury due to its proximity to the surgical site?", 
+                            opts: [
+                                {text: "Femoral nerve", exp: "Not in the surgical field of inguinal varicocelectomy."}, 
+                                {text: "Ilioinguinal nerve", isCorrect: true, exp: "Correct. It runs in the inguinal canal and is at risk during varicocelectomy or hernia repair."}, 
+                                {text: "External iliac nerve", exp: "No such named nerve."}, 
+                                {text: "Iliohypogastric nerve", exp: "Also nearby, but ilioinguinal is most commonly injured."}, 
+                                {text: "Pudendal nerve", exp: "Deep in pelvis, not at risk."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following conditions and treatments are mismatched?", 
+                            opts: [
+                                {text: "Hydrocele - hydrocelectomy", exp: "Correct combination."}, 
+                                {text: "Varicocele - testicular vein ligation", exp: "Correct combination."}, 
+                                {text: "Testicular torsion - manual detorsion", isCorrect: true, exp: "Mismatched; manual detorsion alone is not definitive treatment; emergency surgical exploration and orchidopexy are required."}, 
+                                {text: "Undescended testis - orchidopexy", exp: "Correct combination."}, 
+                                {text: "Epididymo-orchitis - antibiotic therapy", isAi: true, exp: "Correct treatment."}
+                            ], 
+                            eval: "The answer is correct. Manual detorsion may be attempted as a temporizing measure but surgical fixation is definitive." 
+                        },
+                        { 
+                            q: "A patient presented to ER with testicular torsion, your management is:", 
+                            opts: [
+                                {text: "Doppler U/S", exp: "May delay treatment; exploration should not wait for imaging if torsion is strongly suspected."}, 
+                                {text: "Surgical exploration", isCorrect: true, exp: "Correct. Immediate scrotal exploration is the standard of care."}, 
+                                {text: "Pelvis CT to visualize testis", exp: "Not indicated."}, 
+                                {text: "Conservative management", exp: "Inappropriate; leads to testicular loss."}, 
+                                {text: "Manual detorsion and discharge", isAi: true, exp: "Manual detorsion is temporary; surgical fixation is still required."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "When testicular torsion is suspected, which of the following should be done:", 
+                            opts: [
+                                {text: "Wait 24 hour and then explore the symptomatic side only", exp: "Unacceptable; delay risks necrosis."}, 
+                                {text: "Wait 24 hour and then explore the symptomatic and asymptomatic side", exp: "Delay is dangerous."}, 
+                                {text: "Immediate exploration of the symptomatic side only", exp: "Contralateral testis is often fixed at the same time due to bilateral anatomical predisposition."}, 
+                                {text: "Immediate exploration of the symptomatic side and asymptomatic side", isCorrect: true, exp: "Correct. Standard practice is bilateral exploration and orchidopexy."}, 
+                                {text: "No surgical exploration should be done until torsion is confirmed by doppler US", exp: "Doppler can be false-negative; delay risks the testis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The testicular artery arises from the:", 
+                            opts: [
+                                {text: "Aorta above superior mesenteric artery", exp: "Incorrect; origin is below renal arteries."}, 
+                                {text: "Aorta under renal artery", isCorrect: true, exp: "Correct. Testicular arteries arise from the abdominal aorta just inferior to the renal arteries."}, 
+                                {text: "Internal iliac artery", isAi: true, exp: "Supplies pelvic viscera, not the testis."}, 
+                                {text: "External iliac artery", isAi: true, exp: "Incorrect; becomes the femoral artery."}, 
+                                {text: "Renal artery", isAi: true, exp: "Not the standard anatomical origin."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Epididymitis all true except:", 
+                            opts: [
+                                {text: "There is usually no pain", isCorrect: true, exp: "False; epididymitis is typically painful. This is the exception."}, 
+                                {text: "Hyperemia of scrotum", exp: "True; scrotal erythema is common."}, 
+                                {text: "Often associated with dysuria", isAi: true, exp: "True, especially if associated with urinary tract infection."}, 
+                                {text: "Caused by retrograde infection", isAi: true, exp: "True; organisms ascend from the urethra."}, 
+                                {text: "Elevation of testis may relieve pain (Prehn sign)", isAi: true, exp: "True; classically helps differentiate from torsion, though not entirely reliable."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Wrong about Spermatocele:", 
+                            opts: [
+                                {text: "Retention cyst that contain sperm", exp: "True."}, 
+                                {text: "Usually occur in children", isCorrect: true, exp: "False; spermatoceles typically occur in adults, often middle-aged and older."}, 
+                                {text: "Located in the head of epididymis", isAi: true, exp: "True; typically in the epididymal head."}, 
+                                {text: "Transilluminates", isAi: true, exp: "True; they transilluminate."}, 
+                                {text: "Smooth cystic swelling", isAi: true, exp: "True; on clinical examination."}
+                            ], 
+                            eval: "The answer is correct. Spermatoceles are rare in pediatric populations." 
+                        },
+                        { 
+                            q: "30yr old male pt present with hard unilateral testicular mass most likely?", 
+                            opts: [
+                                {text: "Seminoma", isCorrect: true, exp: "Correct. A solid, hard testicular mass in a young man is testicular cancer until proven otherwise; seminoma is the most common germ cell tumor."}, 
+                                {text: "Hydrocele", exp: "Cystic, transilluminable, not hard."}, 
+                                {text: "Varicocele", exp: "Feels like a \"bag of worms,\" not a discrete hard mass."}, 
+                                {text: "Testicular abscess", isAi: true, exp: "Usually painful and associated with systemic or localized signs of infection."}, 
+                                {text: "Epididymal cyst", isAi: true, exp: "Cystic, located in the epididymis, not a hard testicular mass."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One is not found in testicular torsion?", 
+                            opts: [
+                                {text: "Elevate testis", exp: "The testis may be elevated, but scrotal elevation does not relieve pain (negative Prehn sign)."}, 
+                                {text: "Vomiting", exp: "Common autonomic response due to severe pain."}, 
+                                {text: "High fever", isCorrect: true, exp: "Correct exception; torsion is not typically associated with high fever unless necrosis is prolonged and complicated."}, 
+                                {text: "Onset is very sudden.", exp: "True; acute onset of severe pain."}, 
+                                {text: "Age from 10 yr- puberty", exp: "True; peak incidence occurs in this age range."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A hematocele is anatomically located in the:", 
+                            opts: [
+                                {text: "Tunica albuginea", exp: "Encloses testicular tissue; hematoma here is intratesticular."}, 
+                                {text: "Tunica vaginalis", isCorrect: true, exp: "Correct. Hematocele is a collection of blood between the layers of the tunica vaginalis."}, 
+                                {text: "Spermatic cord", exp: "Hematoma of the cord is not termed a hematocele."}, 
+                                {text: "Epididymis", exp: "Not the site of a hematocele."}, 
+                                {text: "Testicular parenchyma", exp: "Intratesticular hematoma, not a hematocele."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Child with ruptured testis, what is the best management option?", 
+                            opts: [
+                                {text: "Testicular repair (orchidorrhaphy)", exp: "Current management aims to salvage the testis by debridement and closure of tunica albuginea if viable."}, 
+                                {text: "Orchidectomy", isCorrect: true, exp: "Correct based on source answer key, though reserved clinically for a completely non-viable, destroyed testis."}, 
+                                {text: "Scrotal exploration and drainage", exp: "Insufficient without repair or removal of non-viable tissue."}, 
+                                {text: "Antibiotics and bed rest", exp: "Not adequate for blunt rupture."}, 
+                                {text: "Immediate ultrasound", exp: "Delays definitive surgical management if history is highly suspicious."}
+                            ], 
+                            eval: "The provided answer is orchidectomy. Note that modern guidelines prioritize surgical repair and testicular salvage if any viable tissue remains." 
+                        },
+                        { 
+                            q: "Foreskin trapped in a zipper, what is the best tool for extraction?", 
+                            opts: [
+                                {text: "Dorsal slit", exp: "Not initially indicated for simple zipper entrapment."}, 
+                                {text: "Circumcision", exp: "Unnecessary surgical trauma; the zipper can be removed without tissue excision."}, 
+                                {text: "Bone cutter", isCorrect: true, exp: "Correct. The metal median bar of the zipper slide can be cut cleanly with a bone cutter to release the entrapped skin."}, 
+                                {text: "Manual reduction", exp: "Forceful attempts cause more edema and pain."}, 
+                                {text: "Application of lubricant", exp: "Usually ineffective once skin is firmly compressed within the zipper mechanism."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The main blood supply of the testis is the:", 
+                            opts: [
+                                {text: "Internal spermatic artery.", isCorrect: true, exp: "Correct. Also known as the testicular artery, it arises from the abdominal aorta."}, 
+                                {text: "Artery of the vas deferens", exp: "Supplies the vas deferens and makes a minor collateral contribution to the testis."}, 
+                                {text: "Cremasteric artery", exp: "Branches from the inferior epigastric artery, supplying the testicular coverings."}, 
+                                {text: "External pudendal artery", exp: "Supplies scrotal skin structures."}, 
+                                {text: "Internal pudendal artery", exp: "Supplies perineum and erectile structures, not the testis main supply."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which structure is NOT a content of the spermatic cord?", 
+                            opts: [
+                                {text: "Vas deferens", exp: "Contained within the spermatic cord."}, 
+                                {text: "Testicular artery", exp: "Contained within the spermatic cord."}, 
+                                {text: "Pampiniform plexus", exp: "Contained within the spermatic cord."}, 
+                                {text: "Ilioinguinal nerve", exp: "Runs along the outside of the cord in the inguinal canal, but often mixed in options."}, 
+                                {text: "Testis", isCorrect: true, exp: "Correct answer. The testis is suspended by the spermatic cord, it is not a structural content inside the cord itself."}
+                            ], 
+                            eval: "The answer structurally differentiates the cord from the organ it suspends." 
+                        },
+                        { 
+                            q: "The vas deferens and epididymis are embryologically derived from:", 
+                            opts: [
+                                {text: "Müllerian duct", exp: "Forms fallopian tubes, uterus, upper vagina; regresses in males."}, 
+                                {text: "Wolffian duct", isCorrect: true, exp: "Correct. Gives rise to epididymis, vas deferens, and seminal vesicles under testosterone stimulation."}, 
+                                {text: "Urogenital sinus", exp: "Forms the bladder, urethra, and prostate."}, 
+                                {text: "Genital ridge", exp: "Gonadal precursor structure."}, 
+                                {text: "Gubernaculum", exp: "Fibrous cord guiding testicular descent."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The cremasteric muscle is supplied by the:", 
+                            opts: [
+                                {text: "Genital branch of genitofemoral.", isCorrect: true, exp: "Correct. It supplies the cremaster muscle and regulates the motor loop of the cremasteric reflex."}, 
+                                {text: "Ilioinguinal nerve", exp: "Sensory to scrotal skin and medial thigh, not motor to cremaster."}, 
+                                {text: "Iliohypogastric nerve", exp: "Motor to abdominal wall muscles, sensory to gluteal/hypogastric skin."}, 
+                                {text: "Femoral nerve", exp: "Supplies anterior thigh muscles and sensation."}, 
+                                {text: "Obturator nerve", exp: "Supplies the medial thigh adductor muscles."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following conditions does NOT typically affect male fertility?", 
+                            opts: [
+                                {text: "Testicular torsion", exp: "Can cause testicular necrosis and loss of fertility if untreated."}, 
+                                {text: "Undescended testis", exp: "Leads to heat-induced germ cell damage and impaired spermatogenesis."}, 
+                                {text: "Trauma", exp: "May rupture the blood-testis barrier leading to antisperm antibodies or tissue loss."}, 
+                                {text: "Epididymal cyst", isCorrect: true, exp: "Correct. Simple epididymal cysts are benign and do not impair fertility parameters."}, 
+                                {text: "Varicocele", isAi: true, exp: "Can impair fertility via localized hyperthermia and venous stasis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All are presentations of testicular cancer except:", 
+                            opts: [
+                                {text: "Acute pain", exp: "Can occur due to intratumoral hemorrhage or acute focal infarction."}, 
+                                {text: "Scrotal swelling", exp: "The most common presentation of a testicular neoplasm."}, 
+                                {text: "Erectile dysfunction", isCorrect: true, exp: "Correct exception. Testicular cancer does not typically manifest as erectile dysfunction."}, 
+                                {text: "Scrotal heaviness", exp: "Nonspecific presentation common in solid tumors."}, 
+                                {text: "Symptoms related to metastasis", exp: "Back pain, cough, or palpable lymphadenopathy can occur."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following conditions and treatments are mismatched?", 
+                            opts: [
+                                {text: "Hydrocele - hydrocelectomy", exp: "Correct treatment combination."}, 
+                                {text: "Varicocele - ligation", exp: "Correct treatment combination."}, 
+                                {text: "Spermatocele - spermatocelectomy", exp: "Correct treatment combination."}, 
+                                {text: "Epididymo-orchitis - incision and drainage", isCorrect: true, exp: "Mismatched. Treatment is primarily medical with antibiotics; incision/drainage is strictly reserved for abscess formation."}, 
+                                {text: "Testicular torsion - immediate surgical exploration", exp: "Correct treatment combination."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]}  , { t: "Bladder Cancer", qs: [
+                        { 
+                            q: "The mc histologic bladder ca cell type is:", 
+                            opts: [
+                                {text: "small cell", exp: "A rare, aggressive variant; not the most common."}, 
+                                {text: "urothelial", isCorrect: true, exp: "Correct. Urothelial (transitional cell) carcinoma accounts for over 90% of bladder cancers."}, 
+                                {text: "adenosarcoma", exp: "An extremely rare mesenchymal tumor of the bladder."}, 
+                                {text: "leiomyosarcoma", exp: "A rare smooth muscle malignancy, not the predominant histology."}, 
+                                {text: "squamous", exp: "More common in regions with chronic schistosomiasis, but worldwide urothelial is the most frequent."}
+                            ], 
+                            eval: "The answer is correct. Urothelial carcinoma is by far the most common histological type of bladder cancer." 
+                        },
+                        { 
+                            q: "Which of the following is not a high-risk factor in urothelial cancer in microscopic hematuria:", 
+                            opts: [
+                                {text: "Age younger than 40 years", isCorrect: true, exp: "Correct (not a high-risk factor). Age over 40 is considered a risk factor; younger age lowers suspicion."}, 
+                                {text: "Previous urologic surgery", exp: "Is a recognized risk factor due to chronic irritation/inflammation."}, 
+                                {text: "UTI", exp: "While infection itself is not a carcinogenic factor, recurrent UTI may cause hematuria and can be associated with chronic inflammation, but it is not a classic high-risk factor for urothelial cancer. However, in the context of risk stratification for microscopic hematuria, older guidelines list recurrent UTI as a risk factor; newer AUA guidelines consider it a potential confounder. Regardless, age <40 is clearly the non-risk factor."}, 
+                                {text: "Smoking", exp: "The most important modifiable risk factor for urothelial carcinoma."}, 
+                                {text: "History of pelvic radiation", exp: "Increases the risk of secondary bladder cancer."}
+                            ], 
+                            eval: "The answer is correct according to standard risk stratification. Age younger than 40 years is not a high-risk feature; the rest are generally considered risk factors." 
+                        },
+                        { 
+                            q: "What important information is gained from pelvic bimanual examination that cannot be obtained from radiologic evaluation?", 
+                            opts: [
+                                {text: "Invasion of bladder cancer into perivesical fat", exp: "Imaging (MRI/CT) can assess perivesical fat invasion."}, 
+                                {text: "Presence of bladder calculi", exp: "Detected on imaging or cystoscopy."}, 
+                                {text: "Presence of bladder mass", exp: "Imaging and cystoscopy identify masses."}, 
+                                {text: "Mobility/fixation of pelvic organs", isCorrect: true, exp: "Correct. Bimanual exam under anesthesia evaluates fixation of the bladder to surrounding structures, which imaging cannot reliably assess."}, 
+                                {text: "Presence of associated pathologic lesion in female adnexal structure", exp: "Pelvic ultrasound/CT can identify adnexal pathology."}
+                            ], 
+                            eval: "The answer is correct. Bimanual examination provides information about tumor fixation and organ mobility that radiology cannot fully replace." 
+                        },
+                        { 
+                            q: "Most common presentation in CIS (carcinoma in situ):", 
+                            opts: [
+                                {text: "painless gross hematuria", exp: "Classic for papillary tumors, not the most common CIS presentation."}, 
+                                {text: "irritative symptoms", isCorrect: true, exp: "Correct. CIS typically presents with frequency, urgency, and dysuria."}, 
+                                {text: "flank pain", isAi: true, exp: "Not a typical presenting symptom of primary bladder CIS."}, 
+                                {text: "urinary retention", isAi: true, exp: "Rarely a presenting feature of CIS."}, 
+                                {text: "asymptomatic microscopic hematuria", isAi: true, exp: "Can occur but irritative symptoms are the hallmark."}
+                            ], 
+                            eval: "The answer is correct. Carcinoma in situ frequently causes irritative voiding symptoms, unlike painless hematuria seen in papillary lesions." 
+                        },
+                        { 
+                            q: "Patient presented with muscle-invasive transitional cell carcinoma of bladder, the Most appropriate management is:", 
+                            opts: [
+                                {text: "TURBT", exp: "Diagnostic and may be therapeutic for superficial disease, not definitive for muscle invasion."}, 
+                                {text: "Radical cystectomy", isCorrect: true, exp: "Correct. Standard curative treatment for localized muscle-invasive bladder cancer."}, 
+                                {text: "Chemotherapy", exp: "Neoadjuvant chemotherapy is given, but radical cystectomy remains the primary modality."}, 
+                                {text: "Partial cystectomy", isAi: true, exp: "An option only in highly selected cases with solitary, small tumors; not the standard for most muscle-invasive disease."}, 
+                                {text: "Intravesical BCG", isAi: true, exp: "Used for carcinoma in situ and high-risk non-muscle-invasive disease, not for muscle invasion."}
+                            ], 
+                            eval: "The answer is correct. Radical cystectomy with pelvic lymphadenectomy is the standard for muscle-invasive bladder cancer." 
+                        },
+                        { 
+                            q: "Papillary transitional cell Bladder CA, didn't invade muscle, what is the management:", 
+                            opts: [
+                                {text: "simple cystectomy", exp: "Overly aggressive for non-muscle-invasive disease."}, 
+                                {text: "radical cystectomy", exp: "Not indicated as first-line for Ta/T1 tumors without high-risk features."}, 
+                                {text: "systemic chemotherapy", exp: "Not standard for non-muscle-invasive bladder cancer."}, 
+                                {text: "follow up after 4-6 weeks cystoscopy", isCorrect: true, exp: "Correct. After initial TURBT, surveillance cystoscopy is performed, and re-resection if necessary."}, 
+                                {text: "no follow up", exp: "Inappropriate; all bladder cancers require surveillance."}
+                            ], 
+                            eval: "The answer is correct. Non-muscle-invasive papillary tumors are managed with TURBT and close cystoscopic follow-up." 
+                        },
+                        { 
+                            q: "In areas where Schistosomiasis is endemic, the most common type of bladder cancer is:", 
+                            opts: [
+                                {text: "Urothelial (transitional cell) carcinoma", exp: "Most common worldwide, but not in schistosomiasis-endemic regions."}, 
+                                {text: "Squamous cell carcinoma", isCorrect: true, exp: "Typically the most common type in chronic Schistosoma haematobium infection due to squamous metaplasia."}, 
+                                {text: "Adenocarcinoma", exp: "Rare; can arise from urachal remnants or chronic irritation."}, 
+                                {text: "Small cell carcinoma", exp: "Rare, aggressive neuroendocrine tumor, not related to schistosomiasis."}, 
+                                {text: "Sarcoma", exp: "Very rare bladder malignancy."}
+                            ], 
+                            eval: "According to standard clinical knowledge, squamous cell carcinoma is the most prevalent bladder cancer variant in Schistosoma-endemic geographic locations." 
+                        },
+                        { 
+                            q: "treatment for carcinoma in situ of bladder ca?", 
+                            opts: [
+                                {text: "Radical cystectomy", exp: "Reserved for BCG-refractory CIS or when conservative measures fail."}, 
+                                {text: "Partial Cystectomy", exp: "Not appropriate; CIS is diffuse."}, 
+                                {text: "Intravesical chemotherapy", isCorrect: true, exp: "Correct. Intravesical agents (BCG immunotherapy or chemotherapy like mitomycin) are first-line."}, 
+                                {text: "IV chemotherapy", exp: "Not indicated for primary CIS without invasion."}, 
+                                {text: "Transurethral resection of bladder tumor (TURBT) alone", isAi: true, exp: "Insufficient; CIS requires intravesical therapy."}
+                            ], 
+                            eval: "The answer is acceptable. First-line treatment for CIS is intravesical BCG, but the source lists intravesical chemotherapy, which is also a valid option." 
+                        },
+                        { 
+                            q: "Treatment of bladder adenocarcinoma:", 
+                            opts: [
+                                {text: "Transurethral resection alone", isAi: true, exp: "Not curative; high recurrence rate."}, 
+                                {text: "Radical cystectomy", isCorrect: true, exp: "Correct. Standard surgical treatment for non-metastatic bladder adenocarcinoma."}, 
+                                {text: "Chemoradiation", isAi: true, exp: "May be used in select cases but not the primary treatment."}, 
+                                {text: "Intravesical BCG", isAi: true, exp: "Ineffective; used for urothelial carcinoma."}, 
+                                {text: "Partial cystectomy", isAi: true, exp: "Possible for urachal adenocarcinoma at the dome, but radical cystectomy is more common."}
+                            ], 
+                            eval: "The answer is correct. Cystectomy (usually radical) is the mainstay for adenocarcinoma of the bladder." 
+                        },
+                        { 
+                            q: "T2N0M0 bladder CA:", 
+                            opts: [
+                                {text: "Transurethral resection (TURBT) alone", isAi: true, exp: "Inadequate for muscle invasion."}, 
+                                {text: "Radical cystectomy with pelvic lymph node dissection", isCorrect: true, exp: "Correct. Gold standard for T2 muscle-invasive bladder cancer."}, 
+                                {text: "Chemotherapy alone", isAi: true, exp: "Not curative alone; used as neoadjuvant/adjuvant."}, 
+                                {text: "Partial cystectomy", isAi: true, exp: "Rarely suitable; only for solitary, small, non-trigonal lesions."}, 
+                                {text: "Radiotherapy", isAi: true, exp: "Bladder-preserving option but not the primary standard."}
+                            ], 
+                            eval: "The answer is correct. T2N0M0 is localized muscle-invasive disease treated with radical cystectomy." 
+                        },
+                        { 
+                            q: "The most common risk factor in transitional cell carcinoma of bladder:", 
+                            opts: [
+                                {text: "Smoking", isCorrect: true, exp: "Correct. The single most important risk factor, accounting for a large proportion of cases."}, 
+                                {text: "Occupational exposure to aromatic amines", isAi: true, exp: "Historically important but less common than smoking."}, 
+                                {text: "Chronic cystitis", isAi: true, exp: "Predisposes to squamous cell carcinoma."}, 
+                                {text: "Pelvic radiation", isAi: true, exp: "A risk factor, but less common."}, 
+                                {text: "Schistosomiasis", isAi: true, exp: "Associated with squamous cell carcinoma."}
+                            ], 
+                            eval: "The answer is correct. Smoking is the most common risk factor for urothelial cancer." 
+                        },
+                        { 
+                            q: "Most common bladder cancer histology?", 
+                            opts: [
+                                {text: "Transitional cell carcinoma (urothelial carcinoma)", isCorrect: true, exp: "Correct. Over 90% of bladder cancers."}, 
+                                {text: "Squamous cell carcinoma", isAi: true, exp: "Second most common, especially in endemic regions."}, 
+                                {text: "Adenocarcinoma", isAi: true, exp: "Rare, less than 2%."}, 
+                                {text: "Small cell carcinoma", isAi: true, exp: "Rare, neuroendocrine."}, 
+                                {text: "Sarcoma", isAi: true, exp: "Very rare mesenchymal tumor."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+{ t: "Testicular Tumors", qs: [
+                        { 
+                            q: "The most common testicular tumor in infants and children is:", 
+                            opts: [
+                                {text: "Choriocarcinoma", exp: "Rare in children, highly malignant."}, 
+                                {text: "Teratocarcinoma", exp: "Contains teratoma and embryonal carcinoma; less common in young children."}, 
+                                {text: "Yolk sac tumor", isCorrect: true, exp: "Correct. Endodermal sinus tumor (yolk sac) is the most common prepubertal testicular tumor."}, 
+                                {text: "Embryonal cell carcinoma", exp: "More common in adults as a component of mixed tumors."}, 
+                                {text: "Seminoma", exp: "Extremely rare before puberty."}
+                            ], 
+                            eval: "The answer is correct. Yolk sac tumor predominates in infants and children." 
+                        },
+                        { 
+                            q: "Which of the following germ cell tumors is most likely to spread hematogenously?", 
+                            opts: [
+                                {text: "Choriocarcinoma", isCorrect: true, exp: "Correct. Highly angioinvasive; early hematogenous dissemination to lungs, liver, brain."}, 
+                                {text: "Seminoma", exp: "Spreads primarily via lymphatics."}, 
+                                {text: "Immature teratoma", exp: "Can spread but not predominantly hematogenous."}, 
+                                {text: "Embryonal carcinoma", exp: "Frequently metastasizes, but early lymphatic spread is typical."}, 
+                                {text: "Teratoma with malignant transformation", exp: "Spread pattern depends on the transformed histology, not purely hematogenous."}
+                            ], 
+                            eval: "The answer is correct. Choriocarcinoma has the highest propensity for hematogenous spread." 
+                        },
+                        { 
+                            q: "Old man with testicular mass would have what kind of Tumor?", 
+                            opts: [
+                                {text: "Seminoma", exp: "Most common in men 30–40 years, not the elderly."}, 
+                                {text: "Lymphoma", isCorrect: true, exp: "Correct. Primary testicular lymphoma is the most common testicular tumor in men over 60."}, 
+                                {text: "Yolk sac tumor", isAi: true, exp: "Occurs almost exclusively in children."}, 
+                                {text: "Teratoma", isAi: true, exp: "Seen in younger adults, not typical in elderly."}, 
+                                {text: "Leydig cell tumor", isAi: true, exp: "Can occur at any age but not the most common in old men; lymphoma is more frequent."}
+                            ], 
+                            eval: "The answer is correct. In an older man, testicular lymphoma is the leading consideration." 
+                        },
+                        { 
+                            q: "Surgical maneuver: modified retroperitoneal lymph node dissection preserves fertility because it spares:", 
+                            opts: [
+                                {text: "seminal vesicles", exp: "Not the structure spared for fertility; they are not directly involved in emission."}, 
+                                {text: "artery", exp: "Sparing the inferior mesenteric artery or others doesn't preserve ejaculation."}, 
+                                {text: "nerve", exp: "Vague; the specific fibers are sympathetic."}, 
+                                {text: "postganglionic SYMPATHETIC fibers", isCorrect: true, exp: "Correct. Nerve-sparing RPLND preserves sympathetic chains and hypogastric plexus to maintain emission and antegrade ejaculation."}, 
+                                {text: "parasympathetic", exp: "Parasympathetics are responsible for erection, not ejaculation."}
+                            ], 
+                            eval: "The answer is correct. Sparing the postganglionic sympathetic fibers preserves ejaculatory function." 
+                        },
+                        { 
+                            q: "One is false concerning teratoma:", 
+                            opts: [
+                                {text: "A-fetoprotein & β-hCG may be normal", exp: "True; teratoma often has normal tumor markers."}, 
+                                {text: "Radiosensitive", isCorrect: true, exp: "Correct (false statement). Teratoma is radioresistant."}, 
+                                {text: "Manipulation of scrotal skin may disseminate tumor to inguinal L.N", exp: "True; scrotal violation alters lymphatic drainage."}, 
+                                {text: "Open surgery may required for staging", exp: "True; RPLND may be needed for accurate staging."}, 
+                                {text: "It may contain elements of all three germ layers", isAi: true, exp: "True; teratoma by definition contains tissues from ectoderm, mesoderm, endoderm."}
+                            ], 
+                            eval: "The answer is correct. Teratoma is not radiosensitive." 
+                        },
+                        { 
+                            q: "One not used in testicular tumor:", 
+                            opts: [
+                                {text: "Chest x-ray", exp: "Used for initial staging, looking for pulmonary metastases."}, 
+                                {text: "Needle biopsy", isCorrect: true, exp: "Correct (not used). Scrotal needle biopsy risks tumor seeding and alters lymphatic drainage; radical inguinal orchiectomy is both diagnostic and therapeutic."}, 
+                                {text: "Pelvic CT", exp: "Part of staging to assess retroperitoneal nodes."}, 
+                                {text: "Testis US", exp: "Primary imaging modality to characterize testicular mass."}, 
+                                {text: "Cystoscopy", isAi: true, exp: "Not indicated in testicular tumor workup."}
+                            ], 
+                            eval: "The answer is correct. Needle biopsy is contraindicated; inguinal orchiectomy is the standard approach." 
+                        },
+                        { 
+                            q: "One of these Germ Cell Tumors has usually metastasized by time of presentation:", 
+                            opts: [
+                                {text: "Choriocarcinoma", isCorrect: true, exp: "Correct. Very aggressive, often presents with widespread metastases."}, 
+                                {text: "Embryonal Tumor", exp: "Frequently presents with metastases but less universally than choriocarcinoma."}, 
+                                {text: "Immature Teratoma", exp: "Usually localized, especially in children."}, 
+                                {text: "Seminoma", isAi: true, exp: "Most present as stage I disease confined to testis."}, 
+                                {text: "Yolk sac tumor", isAi: true, exp: "Common localized in children, though may metastasize in adults."}
+                            ], 
+                            eval: "The answer is correct. Choriocarcinoma often has distant metastases at diagnosis." 
+                        },
+                        { 
+                            q: "Choriocarcinoma metastasizes through?", 
+                            opts: [
+                                {text: "Peritoneal seeding", exp: "Not the primary route."}, 
+                                {text: "Hematogenous spread", isCorrect: true, exp: "Correct. Choriocarcinoma is angioinvasive with early blood-borne metastases."}, 
+                                {text: "Lymphatic spread", exp: "More typical of seminoma and embryonal carcinoma."}, 
+                                {text: "Direct invasion into adjacent organs", exp: "Occurs but not the predominant metastatic mechanism."}, 
+                                {text: "Retrograde venous spread", isAi: true, exp: "Not characteristic; hematogenous dissemination is anterograde via venous system."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Most common type of testicular cancer?", 
+                            opts: [
+                                {text: "Pure seminoma", isAi: true, exp: "A common single histology, but mixed tumors overall are more frequent."}, 
+                                {text: "Mixed germ cell tumor", isCorrect: true, exp: "Correct. Mixed tumors (more than one histology) are the most common testicular cancers."}, 
+                                {text: "Embryonal carcinoma", isAi: true, exp: "Often a component of mixed tumors, not most common alone."}, 
+                                {text: "Teratoma", isAi: true, exp: "More common in children; in adults it is often part of a mixed tumor."}, 
+                                {text: "Choriocarcinoma", isAi: true, exp: "Rare in pure form."}
+                            ], 
+                            eval: "The answer is correct. Mixed germ cell tumors are the most prevalent." 
+                        },
+                        { 
+                            q: "Most common testicular tumor in adults is?", 
+                            opts: [
+                                {text: "Seminoma", isCorrect: true, exp: "Correct. Seminoma is the most common pure germ cell tumor in adults."}, 
+                                {text: "Embryonal carcinoma", isAi: true, exp: "Less common as a pure tumor."}, 
+                                {text: "Mixed germ cell tumor", isAi: true, exp: "Most common overall, but when considering a single histology, seminoma predominates."}, 
+                                {text: "Teratoma", isAi: true, exp: "Not the most common in adult pure form."}, 
+                                {text: "Yolk sac tumor", isAi: true, exp: "Rare in adults."}
+                            ], 
+                            eval: "The answer is correct, assuming the question refers to the most common pure histological type." 
+                        },
+                        { 
+                            q: "Most aggressive germ tumor.", 
+                            opts: [
+                                {text: "Choriocarcinoma", isCorrect: true, exp: "Correct. Highly aggressive with early hematogenous spread."}, 
+                                {text: "Embryonal carcinoma", isAi: true, exp: "Aggressive but not as much as choriocarcinoma."}, 
+                                {text: "Seminoma", isAi: true, exp: "Least aggressive germ cell tumor."}, 
+                                {text: "Teratoma", isAi: true, exp: "Can undergo malignant transformation but usually less aggressive."}, 
+                                {text: "Yolk sac tumor", isAi: true, exp: "Aggressive in adults, but choriocarcinoma is considered the most aggressive."}
+                            ], 
+                            eval: "The answer is correct. Choriocarcinoma is the most aggressive germ cell tumor." 
+                        }
+                    ]},
+{ t: "Urolithiasis (Stones)", qs: [
+                        { 
+                            q: "A ureteric stone complicated by pyelonephritis is best treated by:", 
+                            opts: [
+                                {text: "Open surgical removal of the stone", exp: "Not first-line in the setting of infection; minimally invasive drainage is preferred."}, 
+                                {text: "Ureteroscopy and Pneumatic lithotripsy", exp: "Definitive stone removal is deferred until infection is controlled."}, 
+                                {text: "Analgesia", exp: "Insufficient alone; active infection requires decompression and antibiotics."}, 
+                                {text: "ESWL (extracorporeal shockwave lithotripsy)", exp: "Contraindicated during active infection due to risk of sepsis."}, 
+                                {text: "Antibiotic and kidney decompression", isCorrect: true, exp: "Correct. Urgent decompression (stent or nephrostomy) with intravenous antibiotics is the standard for obstructive pyelonephritis."}
+                            ], 
+                            eval: "The answer is correct. Relief of obstruction and antibiotics are the priorities." 
+                        },
+                        { 
+                            q: "woman with one kidney and a 9 cm size of stone in mid of ureter what should you do:", 
+                            opts: [
+                                {text: "Insertion of J stent as soon as possible with ureteroscope or laser", isCorrect: true, exp: "Correct. Immediate decompression and ureteroscopic lithotripsy for a large obstructing stone in a solitary kidney."}, 
+                                {text: "ESWL", exp: "Not ideal for a 9 cm stone; large stones require more definitive fragmentation."}, 
+                                {text: "Antibiotic", exp: "Adjunctive; does not address obstruction."}, 
+                                {text: "Percutaneous nephrolithotomy (PCNL)", isAi: true, exp: "Used for large renal stones, not mid-ureteral stones."}, 
+                                {text: "Open ureterolithotomy", isAi: true, exp: "May be considered if endoscopic approaches fail, but not the first step."}
+                            ], 
+                            eval: "The answer appears correct, though a stone of 9 cm in the ureter is exceptionally large (possibly a typo). Urgent decompression and endoscopic removal is reasonable." 
+                        },
+                        { 
+                            q: "Which one of the following predisposes most commonly to renal stones:", 
+                            opts: [
+                                {text: "Race", exp: "White race has higher prevalence, but family history is stronger."}, 
+                                {text: "Genetics", isCorrect: true, exp: "Correct. Family history and genetic predisposition (e.g., cystinuria, hypercalciuria) are major factors."}, 
+                                {text: "Hormonal", exp: "Some hormonal influences (e.g., hyperparathyroidism) but not the most common overall."}, 
+                                {text: "None of the above", exp: "Incorrect."}, 
+                                {text: "Race and Hormonal", exp: "Not the most common."}
+                            ], 
+                            eval: "The answer is correct. Genetics/family history is the strongest predisposing factor." 
+                        },
+                        { 
+                            q: "Most common renal & uretral stones are:", 
+                            opts: [
+                                {text: "Uric acid stones", exp: "Account for about 10%."}, 
+                                {text: "Calcium oxalate stones", isCorrect: true, exp: "Correct. The most common stone composition (~70-80%)."}, 
+                                {text: "Struvite stones", exp: "Infection stones, less common."}, 
+                                {text: "Cysteine stones (M/c in children)", exp: "Rare genetic cause."}, 
+                                {text: "Indinavir stones", exp: "Drug-induced, uncommon."}
+                            ], 
+                            eval: "The answer is correct. Calcium oxalate stones are the most prevalent." 
+                        },
+                        { 
+                            q: "A patient presented to ER with obstructive pyelonephritis, a CT without contrast was done and revealed : 7mm ureteral stone & hydronephrosis, what to do ?", 
+                            opts: [
+                                {text: "nephrostomy tube", isCorrect: true, exp: "Correct. Percutaneous nephrostomy rapidly decompresses the infected system."}, 
+                                {text: "urgent ureteroscopy", exp: "Stone manipulation during active infection risks urosepsis; drainage first."}, 
+                                {text: "Double-J insertion", exp: "Also acceptable for decompression, but nephrostomy is often preferred when the patient is septic."}, 
+                                {text: "Medical expulsion therapy", exp: "Not appropriate with active infection."}, 
+                                {text: "Intravenous antibiotics alone", isAi: true, exp: "Inadequate without relieving obstruction."}
+                            ], 
+                            eval: "The answer is correct. Emergency decompression via nephrostomy (or retrograde stent) plus antibiotics is standard. Some guidelines consider both nephrostomy and stent equally appropriate." 
+                        },
+                        { 
+                            q: "The management of renal stone (2.7cm) is:", 
+                            opts: [
+                                {text: "PCNL", isCorrect: true, exp: "Correct. Stones solutions greater than 2 cm are best managed with percutaneous nephrolithotomy."}, 
+                                {text: "Double-J & ESWL", exp: "Possible for stones less than 2 cm; larger stones may require multiple sessions."}, 
+                                {text: "ESWL alone", exp: "Not recommended for stones greater than 2 cm due to low clearance rates."}, 
+                                {text: "Observation", exp: "Not indicated for a large symptomatic stone."}, 
+                                {text: "Flexible ureteroscopy with laser lithotripsy", isAi: true, exp: "Can be used but PCNL has higher stone-free rates for stones greater than 2 cm."}
+                            ], 
+                            eval: "The answer is correct. PCNL is first-line for renal stones greater than 2 cm." 
+                        },
+                        { 
+                            q: "Which type of stones is not visible onKUB:", 
+                            opts: [
+                                {text: "uric acid", isCorrect: true, exp: "Correct. Radiolucent; not visible on plain KUB."}, 
+                                {text: "cystine", exp: "Faintly opaque, may be seen."}, 
+                                {text: "calcium phosphate", exp: "Radiopaque."}, 
+                                {text: "struvite", isAi: true, exp: "Radiopaque, often staghorn calculi."}, 
+                                {text: "calcium oxalate", isAi: true, exp: "Radiopaque."}
+                            ], 
+                            eval: "The answer is correct. Uric acid stones are radiolucent." 
+                        },
+                        { 
+                            q: "What is the most specific thing that will be found in uric acid stones:", 
+                            opts: [
+                                {text: "acidic urine pH", isCorrect: true, exp: "Correct. Uric acid stones form and persist in acid urine (pH less than 5.5); persistently acidic urine is a hallmark."}, 
+                                {text: "alkaline urine pH", exp: "Favors calcium phosphate or struvite."}, 
+                                {text: "high blood uric acid", exp: "Can contribute but not specific; many with hyperuricemia don’t form stones."}, 
+                                {text: "low blood uric acid", exp: "Not associated."}, 
+                                {text: "Hyperuricosuria", isAi: true, exp: "A risk factor but not the most specific finding; urine pH is more specifically linked."}
+                            ], 
+                            eval: "The answer is correct. Acidic urine pH is the key metabolic abnormality." 
+                        },
+                        { 
+                            q: "Ureteral obstruction: except?", 
+                            opts: [
+                                {text: "it may cause hematuria", exp: "True; stones often cause hematuria."}, 
+                                {text: "may result in increased BUN and renal damage", exp: "True; prolonged obstruction impairs renal function."}, 
+                                {text: "it is commonly due to a ureteric calculus", exp: "True; calculi are the most common cause."}, 
+                                {text: "usually relieved by open surgical procedure", isCorrect: true, exp: "Correct (false statement). Most obstructions are managed endoscopically or with minimally invasive methods; open surgery is rare."}, 
+                                {text: "it is commonly associated with infection behind level of obstruction", exp: "True; stasis predisposes to infection."}
+                            ], 
+                            eval: "The answer is correct. Open surgery is not the usual treatment." 
+                        },
+                        { 
+                            q: "Most sensitive Dx test of renal stones:", 
+                            opts: [
+                                {text: "unenhanced spiral CT", isCorrect: true, exp: "Correct. Non-contrast CT is the gold standard with the highest sensitivity and specificity."}, 
+                                {text: "enhanced spiral CT", exp: "Contrast not needed and may obscure stones."}, 
+                                {text: "KUB", exp: "Less sensitive, can miss radiolucent stones."}, 
+                                {text: "Ultrasound", isAi: true, exp: "Good for hydronephrosis but less sensitive for small stones."}, 
+                                {text: "Intravenous pyelogram (IVP)", isAi: true, exp: "Historically used, but replaced by CT."}
+                            ], 
+                            eval: "The answer is correct. Non-enhanced helical CT is the most sensitive test." 
+                        },
+                        { 
+                            q: "Right flank colicky pain that radiate to external genitalia has:", 
+                            opts: [
+                                {text: "Ureteric colic", isCorrect: true, exp: "Correct. Classic presentation: flank pain radiating to groin/genitalia."}, 
+                                {text: "Appendicitis", exp: "Pain usually migrates to right lower quadrant."}, 
+                                {text: "Diverticulitis", exp: "Typically left lower quadrant pain."}, 
+                                {text: "Gallbladder stone", exp: "Right upper quadrant or epigastric pain radiating to scapula."}, 
+                                {text: "Acute pyelonephritis", isAi: true, exp: "Flank pain with fever, dysuria, but radiation to genitalia is less typical."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The mechanism by which citrate prevent stone formation is:", 
+                            opts: [
+                                {text: "Decrease Ca excretion", exp: "Not the primary mechanism; citrate binds calcium."}, 
+                                {text: "Decrease oxalate excretion", exp: "Not a direct effect."}, 
+                                {text: "Complexes to P04", exp: "Incorrect."}, 
+                                {text: "Complexes to Ca", isCorrect: true, exp: "Correct. Citrate forms soluble complexes with calcium, reducing free calcium available to precipitate with oxalate or phosphate."}, 
+                                {text: "Complexes to oxalate", exp: "Citrate does not directly complex with oxalate."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All are modalities for stones treatment except:", 
+                            opts: [
+                                {text: "US waves", exp: "Used in ESWL (shock waves are acoustic)."}, 
+                                {text: "X-radiation", isCorrect: true, exp: "Correct (not a treatment). X-rays are used for imaging, not for stone fragmentation."}, 
+                                {text: "Laser", exp: "Used in ureteroscopic lithotripsy."}, 
+                                {text: "Microwaves", exp: "Investigational but not a standard primary modality; however, X-radiation is clearly not a therapy."}, 
+                                {text: "Electrohydrologic", exp: "Electrohydraulic lithotripsy uses electric sparks to generate shock waves."}
+                            ], 
+                            eval: "The answer is correct. X-radiation is not a therapeutic modality for stones." 
+                        },
+                        { 
+                            q: "A 45-year-old female presents to the emergency department with severe flank pain and hematuria. Imaging reveals a 2 cm kidney stone lodged at the upper ureteropelvic junction. Which of the following treatment modalities would NOT be appropriate for this patient's condition?", 
+                            opts: [
+                                {text: "Double J-stent placement", exp: "Can relieve obstruction, appropriate as temporizing measure."}, 
+                                {text: "Percutaneous nephrolithotomy (PCNL)", exp: "Appropriate for large renal/UPJ stones."}, 
+                                {text: "Extracorporeal shock wave lithotripsy (ESWL)", exp: "Possible, but for a 2 cm stone at UPJ, clearance may be suboptimal; still an option."}, 
+                                {text: "Rigid ureteroscopy and stone extraction", isCorrect: true, exp: "Incorrect. Rigid ureteroscope cannot reach the upper ureter/UPJ; flexible ureteroscopy is required."}, 
+                                {text: "Flexible ureteroscopy and stone extraction", exp: "Appropriate; flexible scope can access UPJ."}
+                            ], 
+                            eval: "The answer is correct. Rigid ureteroscopy is not suitable for the upper ureter/UPJ due to anatomic limitations." 
+                        },
+                        { 
+                            q: "All of these are correct when it comes to treating a 1 cm distal ureteric stone except:", 
+                            opts: [
+                                {text: "PCNL", isCorrect: true, exp: "Correct. PCNL is not appropriate for a distal ureteric stone because it is designed to access the kidney cavity directly."}, 
+                                {text: "ESWL", exp: "Effective for 1 cm distal stones."}, 
+                                {text: "Rigid ureteroscope with pneumatic Lithotripsy", exp: "Highly effective for distal stones."}, 
+                                {text: "Cystolitholapaxy", exp: "Used for bladder stones, not ureteric stones; technically not a correct treatment for a ureteric stone configuration."}, 
+                                {text: "Laparoscopic ureterolithotomy", exp: "Can be used for large impacted stones."}
+                            ], 
+                            eval: "PCNL is definitely not indicated for treating a distal ureteric stone. While cystolitholapaxy is also technically restricted to bladder calculus management, PCNL remains the primary standard anatomical mismatch exception." 
+                        },
+                        { 
+                            q: "Diagnostic study for stones:", 
+                            opts: [
+                                {text: "Non-enhanced helical CT scan", isCorrect: true, exp: "Correct. Gold standard, highest sensitivity and specificity."}, 
+                                {text: "Ultrasound", isAi: true, exp: "First-line in pregnancy, pediatrics, but less sensitive."}, 
+                                {text: "KUB", isAi: true, exp: "Limited, can miss radiolucent and small stones."}, 
+                                {text: "Intravenous pyelogram (IVP)", isAi: true, exp: "Rarely used now, replaced by CT."}, 
+                                {text: "MRI", isAi: true, exp: "Poor visualization of stones."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Most common stone composition?", 
+                            opts: [
+                                {text: "Calcium oxalate", isCorrect: true, exp: "Correct. Accounts for approximately 70-80% of stones."}, 
+                                {text: "Uric acid", isAi: true, exp: "~10%."}, 
+                                {text: "Struvite", isAi: true, exp: "Infection-related, less common."}, 
+                                {text: "Cystine", isAi: true, exp: "Rare genetic disorder."}, 
+                                {text: "Calcium phosphate", isAi: true, exp: "Less common than oxalate."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Treatment of a stone in the renal pelvicalyceal system measuring 3 cm is :", 
+                            opts: [
+                                {text: "PCNL (percutaneous nephrolithotomy)", isCorrect: true, exp: "Correct. Stones greater than 2 cm are best treated with PCNL."}, 
+                                {text: "ESWL", isAi: true, exp: "Low stone-free rates for stones greater than 2 cm."}, 
+                                {text: "Flexible ureteroscopy with laser", isAi: true, exp: "Possible but often requires multiple stages; PCNL is preferred."}, 
+                                {text: "Open pyelolithotomy", isAi: true, exp: "Rarely needed, may be used for very complex stones."}, 
+                                {text: "Observation", isAi: true, exp: "Not appropriate for a large stone."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Not indication of extracorporeal lithotripsy –", 
+                            opts: [
+                                {text: "Stone size less than 10 mm", isAi: true, exp: "Good indication for ESWL."}, 
+                                {text: "Renal stone larger than 2 cm", isCorrect: true, exp: "Correct. ESWL not recommended for stones greater than 2 cm due to poor clearance."}, 
+                                {text: "Mid-ureteral stone 7 mm", isAi: true, exp: "ESWL can be used."}, 
+                                {text: "Lower pole stone 1 cm", isAi: true, exp: "ESWL possible, though clearance may be lower."}, 
+                                {text: "Non-obstructing calyceal stone 5 mm", isAi: true, exp: "Can be treated with ESWL."}
+                            ], 
+                            eval: "The answer is correct. Stones larger than 2 cm are not ideal for ESWL." 
+                        },
+                        { 
+                            q: "Abnormality mostly seen in uric acid stones:", 
+                            opts: [
+                                {text: "Aciduria (persistently acidic urine pH)", isCorrect: true, exp: "Correct. Uric acid precipitation occurs in acid urine."}, 
+                                {text: "Alkaline urine pH", isAi: true, exp: "Not associated."}, 
+                                {text: "Hypercalciuria", isAi: true, exp: "Linked to calcium stones."}, 
+                                {text: "Hyperoxaluria", isAi: true, exp: "Linked to calcium oxalate stones."}, 
+                                {text: "Cystinuria", isAi: true, exp: "Causes cystine stones."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "6mm stone complicated by pyelonephritis, next step?", 
+                            opts: [
+                                {text: "Antibiotic and double J insertion", isCorrect: true, exp: "Correct. Immediate decompression of an infected obstructed system with a stent or nephrostomy, plus IV antibiotics."}, 
+                                {text: "ESWL", exp: "Contraindicated during infection."}, 
+                                {text: "Open surgery", exp: "Not first-line; endoscopic drainage is preferred."}, 
+                                {text: "Ureteroscopy with pneumatic lithotripsy", exp: "Stone manipulation should be deferred until infection is controlled."}, 
+                                {text: "Ureteroscopy with laser lithotripsy", exp: "Same as above; drainage is the priority."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common Renal stones?", 
+                            opts: [
+                                {text: "Uric acid stones", exp: "Less common."}, 
+                                {text: "Calcium oxalate", isCorrect: true, exp: "Correct. Most common stone type."}, 
+                                {text: "Cystine", exp: "Rare."}, 
+                                {text: "Calcium phosphate", exp: "Less common than oxalate."}, 
+                                {text: "Struvite", isAi: true, exp: "Infection stones, not the most common."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
                 ]
             },
             {
