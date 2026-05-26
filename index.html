@@ -5942,7 +5942,615 @@
                             ], 
                             eval: "The answer is correct." 
                         }
-                    ]}, 
+                    ]},  { t: "Epistaxis & Nasal Trauma", qs: [
+                        { 
+                            q: "Kiesselbach’s plexus receives branches from all except:", 
+                            opts: [
+                                {text: "Superior labial artery", exp: "Contributes. A branch of the facial artery that reaches the anteroinferior septum via the septal branch."}, 
+                                {text: "Anterior ethmoidal artery", exp: "Contributes. Supplies the anterosuperior part of the septum."}, 
+                                {text: "Greater palatine artery", exp: "Contributes. Ascends through the incisive canal to the anterior inferior septum."}, 
+                                {text: "Sphenopalatine artery", exp: "Contributes. Terminal branch of the maxillary artery; supplies the posterior septum."}, 
+                                {text: "Posterior ethmoidal artery", isCorrect: true, exp: "Correct answer (does NOT contribute). Supplies the superior turbinate and sphenoethmoidal recess, not Little’s area."}
+                            ], 
+                            eval: "The answer is correct. Kiesselbach’s plexus is classically formed by the anterior ethmoidal, superior labial, sphenopalatine, and greater palatine arteries; the posterior ethmoidal does not contribute." 
+                        },
+                        { 
+                            q: "Woodruff’s plexus receives branches from the following vessel:", 
+                            opts: [
+                                {text: "Sphenopalatine artery", isCorrect: true, exp: "Correct. Woodruff’s plexus, located on the posterior inferior turbinate and posterior septum, is supplied by branches of the sphenopalatine artery."}, 
+                                {text: "Greater palatine artery", exp: "Does not directly supply Woodruff’s area; it supplies the anterior septum via the incisive canal."}, 
+                                {text: "Superior ethmoidal artery", exp: "Supplies the olfactory cleft and superior septum, not the posterior inferior region."}, 
+                                {text: "Superior labial artery", exp: "Goes to anterior septum."}, 
+                                {text: "Anterior ethmoidal artery", exp: "Supplies anterior superior septum."}
+                            ], 
+                            eval: "The answer is correct. Woodruff’s plexus is supplied by the posterior lateral nasal branches from the sphenopalatine artery." 
+                        },
+                        { 
+                            q: "The most common area of epistaxis is:", 
+                            opts: [
+                                {text: "Kiesselbach’s plexus (Little’s area)", isCorrect: true, exp: "Correct. This anterior septal anastomotic network is the source of about 90% of nosebleeds."}, 
+                                {text: "Inferior turbinate", exp: "Epistaxis from here is less common; mainly posterior epistaxis from Woodruff’s plexus."}, 
+                                {text: "Middle turbinate", exp: "Rarely a primary bleeding site."}, 
+                                {text: "Woodruff’s plexus", exp: "Causes posterior epistaxis, which is less common than anterior."}, 
+                                {text: "Paranasal sinuses", exp: "Not a typical site of spontaneous epistaxis; bleeding may enter the nose from a sinus but is uncommon."}
+                            ], 
+                            eval: "The answer is correct. Little’s area is by far the most frequent origin." 
+                        },
+                        { 
+                            q: "Percentage of bleeding from Kiesselbach’s plexus in epistaxis:", 
+                            opts: [
+                                {text: "50%", exp: "Too low; most anterior epistaxis arises from Little’s area."}, 
+                                {text: "60%", exp: "Underestimate."}, 
+                                {text: "70%", exp: "Underestimate."}, 
+                                {text: "80%", exp: "Closer, but still below the typical figure."}, 
+                                {text: "90%", isCorrect: true, exp: "Correct. Approximately 90% of epistaxis originates from Kiesselbach’s plexus."}
+                            ], 
+                            eval: "The answer is correct. Standard texts cite 90–95% of anterior epistaxis from Little’s area." 
+                        },
+                        { 
+                            q: "Active anterior right epistaxis in a 60-year-old patient in ED, what is the next step:", 
+                            opts: [
+                                {text: "Anterior packing", exp: "Used if cautery fails or the bleeding point cannot be visualised; not the very first step if a bleeder is visible."}, 
+                                {text: "Anterior and posterior packing", exp: "Only for severe posterior bleeding or failure of anterior measures."}, 
+                                {text: "Observation", exp: "Not appropriate for active bleeding."}, 
+                                {text: "Do a CBC", exp: "May be done later but does not control active haemorrhage."}, 
+                                {text: "Electrocautery of the bleeder", isCorrect: true, exp: "Correct. If a bleeding point is visible, direct electrocautery or chemical cautery is the immediate management."}
+                            ], 
+                            eval: "The answer is correct. Direct control of a visible anterior bleeding point (cautery) is the first active step after initial compression and topical vasoconstriction." 
+                        },
+                        { 
+                            q: "One is true about epistaxis in children:", 
+                            opts: [
+                                {text: "Usually caused by foreign bodies", exp: "Not usually; foreign body is a specific but less common cause."}, 
+                                {text: "Caused by inflammation and trauma", isCorrect: true, exp: "Correct. The most frequent causes are dry air/inflammation (URTI) and digital trauma (nose picking)."}, 
+                                {text: "Caused by tumor and bone destruction", exp: "Very rare in children; juvenile nasopharyngeal angiofibroma occurs in adolescent males but is not the common cause."}, 
+                                {text: "Allergic condition", exp: "Allergic rhinitis may predispose but is not the primary direct cause."}, 
+                                {text: "Most episodes originate from Woodruff’s plexus", isAi: true, exp: "Incorrect. Most childhood epistaxis is anterior from Little’s area; Woodruff’s plexus is a posterior source, less common in children."}
+                            ], 
+                            eval: "The answer is correct. In children, inflammation (e.g., upper respiratory infections) and minor trauma (nose picking) are the most common aetiologies." 
+                        },
+                        { 
+                            q: "One of these statements about posterior nasal packing is correct:", 
+                            opts: [
+                                {text: "Can’t be used with anterior packing", exp: "Incorrect; posterior packing is usually combined with anterior packing."}, 
+                                {text: "Used only for severe cases", exp: "Posterior packing is for severe posterior epistaxis, but the phrase “only for severe cases” is not the best correct statement; monitoring is the key issue."}, 
+                                {text: "Need to monitor for apnea, hypoxia or arrhythmias", isCorrect: true, exp: "Correct. The nasopulmonary reflex can cause bradycardia, apnea, hypoxia, and arrhythmias; continuous monitoring (pulse oximetry, cardiac monitor) is mandatory."}, 
+                                {text: "Need to monitor for hypocarbia", exp: "Incorrect; the concern is hypoxia and hypercarbia, not hypocarbia."}, 
+                                {text: "It can be left in place for up to 7 days without complications", isAi: true, exp: "Incorrect. Posterior packs are typically removed within 48–72 hours to avoid infection, necrosis, and other complications."}
+                            ], 
+                            eval: "The answer is correct. Cardiorespiratory monitoring is essential after posterior packing." 
+                        },
+                        { 
+                            q: "True about posterior packing of the nasal cavity:", 
+                            opts: [
+                                {text: "Posterior packing requires admission & monitoring", isCorrect: true, exp: "Correct. Patients require hospital admission for airway observation and continuous monitoring."}, 
+                                {text: "It should be the first line treatment", exp: "Incorrect; first line is identifying and cauterising the bleeding vessel if possible, or anterior packing."}, 
+                                {text: "Should not be done with anterior packing", exp: "Incorrect; it is typically combined with anterior packing."}, 
+                                {text: "It can be managed entirely on an outpatient basis", isAi: true, exp: "Incorrect. Posterior packing is a high-risk procedure requiring inpatient care."}, 
+                                {text: "Antibiotic prophylaxis is contraindicated", isAi: true, exp: "Incorrect. Prophylactic antibiotics against staphylococcal and streptococcal infection are usually given while the pack is in place."}
+                            ], 
+                            eval: "The answer is correct. Admission and monitoring are standard after posterior nasal packing." 
+                        },
+                        { 
+                            q: "Trauma in a child, the next day, what complication is suspected:", 
+                            opts: [
+                                {text: "Septal hematoma", isCorrect: true, exp: "Correct. A septal haematoma typically develops within 24–48 hours after nasal trauma and presents with nasal obstruction and swelling."}, 
+                                {text: "Epistaxis", exp: "Bleeding usually occurs immediately, not specifically “the next day”."}, 
+                                {text: "CSF rhinorrhea", exp: "More likely with severe craniofacial trauma; not the classic next-day finding."}, 
+                                {text: "Nasal bone fracture displacement", exp: "Apparent immediately or after oedema subsides, but not a “next-day” complication per se."}, 
+                                {text: "Orbital blowout fracture", isAi: true, exp: "Would present with eye signs and is not the typical next-day isolated nasal finding."}
+                            ], 
+                            eval: "The answer is correct. Septal haematoma commonly presents the day after trauma and must be drained promptly to prevent cartilage necrosis." 
+                        },
+                        { 
+                            q: "All of the following are true about nasal trauma EXCEPT:", 
+                            opts: [
+                                {text: "Reduction should be performed within 6 hours of injury", isCorrect: true, exp: "False. Ideal immediate reduction is within 1–2 hours before oedema develops; 6 hours is not necessarily ideal and may coincide with developing swelling."}, 
+                                {text: "If the patient presents after 1 week, reduction should be delayed for 3–6 weeks", isCorrect: true, exp: "False. According to the slide, after 1 week you can still perform reduction; you cannot wait longer than 14 days."}, 
+                                {text: "Septal hematoma requires immediate drainage", exp: "True. Drainage is urgent to prevent saddle nose deformity."}, 
+                                {text: "Edema may mask deformity and delay reduction", exp: "True. Significant oedema obscures the contour, so reduction may be deferred 3–5 days until swelling resolves but still within 14 days."}, 
+                                {text: "Reduction is generally not performed after 14 days", isAi: true, exp: "True. After 2 weeks, fracture healing begins; closed reduction becomes difficult and may need to be postponed for a formal rhinoplasty."}
+                            ], 
+                            eval: "The answer (A & B both false) appears correct according to the source’s stated timing. The slide specifies ideal reduction at 1–2 hours and that waiting 3–6 weeks after 1 week is incorrect (you can reduce up to 14 days)." 
+                        },
+                        { 
+                            q: "A case of nasal trauma that developed redness and swelling in the nose, most probably the cause is:", 
+                            opts: [
+                                {text: "Rhinitis medicamentosa", exp: "Caused by overuse of decongestants, not trauma."}, 
+                                {text: "Allergic rhinitis", exp: "Not directly caused by trauma."}, 
+                                {text: "Septal hematoma / turbinate hypertrophy", isCorrect: true, exp: "Correct. Post‑traumatic redness and swelling suggests a septal haematoma, which can expand and cause nasal obstruction."}, 
+                                {text: "Vasomotor rhinitis", exp: "Not trauma‑related."}, 
+                                {text: "Acute bacterial sinusitis", isAi: true, exp: "Unlikely to develop so acutely after trauma without other signs; haematoma is the immediate concern."}
+                            ], 
+                            eval: "The answer is correct. A septal haematoma is the most probable post‑traumatic cause of acute nasal redness and swelling." 
+                        },
+                        { 
+                            q: "In the management of a case of nasal fracture after trauma, one of the following is false:", 
+                            opts: [
+                                {text: "Correct it after three weeks", isCorrect: true, exp: "False. Closed reduction should ideally be done within 14 days; after 3 weeks, healing makes reduction difficult."}, 
+                                {text: "Reduction can be performed under local or general anaesthesia", exp: "True. Depending on the case, either can be used."}, 
+                                {text: "Closed reduction is usually attempted first", exp: "True. Closed reduction is the initial approach for displaced nasal fractures."}, 
+                                {text: "Septal haematoma should be drained", exp: "True. Urgent drainage prevents complications."}, 
+                                {text: "An X‑ray is not always necessary", isAi: true, exp: "True. Nasal fractures are often diagnosed clinically; X‑ray is not mandatory if deformity is evident."}
+                            ], 
+                            eval: "The answer is correct. Reducing a nasal fracture after three weeks is generally not recommended due to callus formation." 
+                        }
+                    ]},
+                    { t: "Acute & Chronic Rhinosinusitis", qs: [
+                        { 
+                            q: "The most common cause of perennial allergy (plus in Jordan):", 
+                            opts: [
+                                {text: "Fruit allergy", exp: "Oral allergy syndrome can occur, but dust mite is the dominant perennial allergen."}, 
+                                {text: "Egg", exp: "Food allergy, not primarily a perennial respiratory allergen."}, 
+                                {text: "Dust mite", isCorrect: true, exp: "Correct. House dust mite is the most common perennial allergen worldwide and in Jordan."}, 
+                                {text: "Drug", exp: "Drug allergy is not a perennial inhalant allergy."}, 
+                                {text: "Olive pollens", exp: "Olive is a seasonal aeroallergen (spring), not perennial."}
+                            ], 
+                            eval: "The answer is correct. Dust mite is the leading cause of perennial allergic rhinitis." 
+                        },
+                        { 
+                            q: "How is vasomotor rhinitis diagnosed?", 
+                            opts: [
+                                {text: "By skin prick testing", exp: "Helps identify allergic triggers; in vasomotor rhinitis it is negative."}, 
+                                {text: "By a complete blood count (CBC)", exp: "Not diagnostic."}, 
+                                {text: "By imaging studies such as CT scan", exp: "May be normal; does not confirm vasomotor rhinitis."}, 
+                                {text: "By a physical examination", exp: "May show turbinate swelling but not diagnostic alone."}, 
+                                {text: "By exclusion of other causes of rhinitis", isCorrect: true, exp: "Correct. Vasomotor rhinitis is a diagnosis of exclusion after ruling out allergy, infection, structural, and systemic causes."}
+                            ], 
+                            eval: "The answer is correct. It is a non‑allergic, non‑infective rhinitis diagnosed when other aetiologies are excluded." 
+                        },
+                        { 
+                            q: "A 40-year-old man with unilateral nasal obstruction and rhinorrhea, what is the next step?", 
+                            opts: [
+                                {text: "Biopsy", exp: "May be needed if a mass is found, but imaging first."}, 
+                                {text: "CT of the sinuses", isCorrect: true, exp: "Correct. Unilateral symptoms warrant imaging to evaluate for structural lesions, fungal ball, or tumour."}, 
+                                {text: "Plan for surgery", exp: "Premature without imaging and diagnosis."}, 
+                                {text: "Skin prick test", exp: "More relevant for bilateral allergic symptoms."}, 
+                                {text: "Angiography", exp: "Not indicated for nasal obstruction and rhinorrhea."}
+                            ], 
+                            eval: "The answer is correct. CT is the next appropriate step to assess unilateral sinonasal disease." 
+                        },
+                        { 
+                            q: "Which of the following is true regarding vasomotor rhinitis?", 
+                            opts: [
+                                {text: "Due to malignancy", exp: "Incorrect."}, 
+                                {text: "Allergic", exp: "Incorrect; it is non‑allergic."}, 
+                                {text: "Due to allergic & malignancy", exp: "Incorrect."}, 
+                                {text: "Has two types: eosinophilic & non-eosinophilic", isCorrect: true, exp: "Correct. Vasomotor rhinitis can be subdivided into NARES (non‑allergic rhinitis with eosinophilia) and non‑eosinophilic forms."}, 
+                                {text: "Infection", exp: "Not an infection."}
+                            ], 
+                            eval: "The answer is correct. This classification is recognised." 
+                        },
+                        { 
+                            q: "What is the most effective treatment for allergic rhinitis?", 
+                            opts: [
+                                {text: "Antibiotics", exp: "Ineffective in allergy."}, 
+                                {text: "Antihistamines", exp: "Control symptoms but do not alter the underlying hypersensitivity."}, 
+                                {text: "Topical decongestants", exp: "Provide temporary relief; cannot be used long‑term."}, 
+                                {text: "Oral corticosteroids", exp: "Effective for severe cases but not the most appropriate long‑term strategy."}, 
+                                {text: "Avoidance of the allergen", isCorrect: true, exp: "Correct. Allergen avoidance is the most effective long‑term management."}
+                            ], 
+                            eval: "The answer is correct. When feasible, avoidance is the definitive approach." 
+                        },
+                        { 
+                            q: "Regarding atrophic rhinitis, which of the following is not true?", 
+                            opts: [
+                                {text: "The mainstay in surgical treatment is narrowing or closure of the nasal cavities", isCorrect: true, exp: "Not true. Medical treatment (nasal irrigation, crust removal, lubricants) is the mainstay; surgery (narrowing/closure) is reserved for refractory cases."}, 
+                                {text: "The medical treatment consists of peeling of the crusts & lubricants", exp: "True. This is the core of conservative care."}, 
+                                {text: "The patient usually complains of bad odor from the nose (ozena)", exp: "True. Foul‑smelling discharge is characteristic."}, 
+                                {text: "The organism most often associated is Klebsiella ozaenae", exp: "True. Frequently isolated from crusts."}, 
+                                {text: "More common in females", exp: "True. Atrophic rhinitis has a female preponderance."}
+                            ], 
+                            eval: "The answer is correct. Medical management is the primary treatment; surgery is not the mainstay." 
+                        },
+                        { 
+                            q: "In atrophic rhinitis the following are present except:", 
+                            opts: [
+                                {text: "There is enlargement of the nasal cavity", exp: "Present; paradoxical patency due to mucosal atrophy."}, 
+                                {text: "There is crusting and infection", exp: "Present; thick crusts and secondary infection are typical."}, 
+                                {text: "There are polyps in the nose", isCorrect: true, exp: "Not present; polyps are not a feature of atrophic rhinitis."}, 
+                                {text: "There is loss of sense of smell", exp: "Present; anosmia or hyposmia from atrophy of olfactory epithelium."}, 
+                                {text: "There is bad smell in the nose", exp: "Present; ozaena (foul odour) is common."}
+                            ], 
+                            eval: "The answer is correct. Nasal polyps are not part of atrophic rhinitis." 
+                        },
+                        { 
+                            q: "Most common cause of acute rhinitis:", 
+                            opts: [
+                                {text: "Allergic rhinitis", exp: "A cause of rhinitis symptoms, but acute rhinitis usually refers to infective/viral."}, 
+                                {text: "Non-allergic rhinitis", exp: "A broad category, but not the single most common acute cause."}, 
+                                {text: "Common cold", isCorrect: true, exp: "Correct. Viral upper respiratory infection is by far the most common cause of acute rhinitis."}, 
+                                {text: "Influenza", exp: "Causes rhinitis but is less common than the myriad of common cold viruses."}, 
+                                {text: "Bacterial sinusitis", isAi: true, exp: "Usually a complication, not the primary cause of acute rhinitis."}
+                            ], 
+                            eval: "The answer is correct. The common cold (viral) is the predominant aetiology." 
+                        },
+                        { 
+                            q: "What is the cause of rhinitis medicamentosa?", 
+                            opts: [
+                                {text: "Bacterial infection", exp: "Not a cause."}, 
+                                {text: "Allergic reaction", exp: "Not a cause."}, 
+                                {text: "Chronic sinusitis", exp: "Not a cause."}, 
+                                {text: "Overuse of nasal decongestants", isCorrect: true, exp: "Correct. Prolonged use of topical vasoconstrictors leads to rebound congestion and rhinitis medicamentosa."}, 
+                                {text: "Environmental irritants", exp: "Cause irritant rhinitis, not medicamentosa."}
+                            ], 
+                            eval: "The answer is correct. Rhinitis medicamentosa is a rebound phenomenon from topical decongestant overuse." 
+                        },
+                        { 
+                            q: "The most common cause of rhinosinusitis is:", 
+                            opts: [
+                                {text: "Allergic rhinitis", exp: "Predisposes but is not an infection."}, 
+                                {text: "Non-allergic rhinitis", exp: "Not the primary infectious cause."}, 
+                                {text: "Viral rhinitis", isCorrect: true, exp: "Correct. Most acute rhinosinusitis episodes are viral in origin."}, 
+                                {text: "Chronic bacterial rhinitis", exp: "Not the most common; acute viral is far more frequent."}, 
+                                {text: "Fungal infection", isAi: true, exp: "Rare, typically in immunocompromised hosts."}
+                            ], 
+                            eval: "The answer is correct. Viral infection is the leading cause of acute rhinosinusitis." 
+                        },
+                        { 
+                            q: "Which of the following is true about a patient with external nasal infection?", 
+                            opts: [
+                                {text: "Cavernous sinus thrombosis is not a possible complication", exp: "False. Infections in the “danger triangle” can spread to the cavernous sinus."}, 
+                                {text: "Furunculosis is not painful", exp: "False. Nasal furuncles are exquisitely painful."}, 
+                                {text: "Furunculosis is most commonly streptococcal", exp: "False. Typically caused by Staphylococcus aureus."}, 
+                                {text: "The infection is treated by an antibiotic", isCorrect: true, exp: "Correct. Furunculosis and cellulitis require systemic antistaphylococcal antibiotics."}, 
+                                {text: "Topical treatment is the preferred method of treatment for all cases of external nasal infection", exp: "False. Deep infections require systemic therapy."}
+                            ], 
+                            eval: "The answer is correct. Systemic antibiotics are needed for significant external nasal infections." 
+                        },
+                        { 
+                            q: "The most common microorganism causing rhinosinusitis is:", 
+                            opts: [
+                                {text: "Rhinovirus", isCorrect: true, exp: "Correct. The most frequent viral pathogen in acute rhinosinusitis."}, 
+                                {text: "Streptococcus", exp: "Common in acute bacterial rhinosinusitis but not the most common overall."}, 
+                                {text: "Moraxella", exp: "A bacterial cause, not the most common overall."}, 
+                                {text: "Staphylococcus", exp: "Sometimes involved, but not the leading cause of uncomplicated acute rhinosinusitis."}, 
+                                {text: "Haemophilus influenzae", isAi: true, exp: "Important in acute bacterial rhinosinusitis but overall less common than rhinovirus."}
+                            ], 
+                            eval: "The answer is correct. Viruses, particularly rhinovirus, cause the majority of rhinosinusitis cases." 
+                        },
+                        { 
+                            q: "Which of the following is true about rhinosinusitis?", 
+                            opts: [
+                                {text: "Extension to subdural space happens through peri-neural spaces of olfactory nerve", exp: "False; intracranial spread is typically via diploic veins or direct erosion, not specifically perineural olfactory spread as a primary route."}, 
+                                {text: "Frontal bone is the most common bone involved in osteomyelitis", isCorrect: true, exp: "Correct. Frontal sinusitis can lead to Pott’s puffy tumour (osteomyelitis of the frontal bone)."}, 
+                                {text: "Intracranial complications are rare in acute sinusitis", exp: "False; they are uncommon but can occur, so blanket statement is misleading. But the specific true statement is B."}, 
+                                {text: "Cavernous sinus thrombosis is a common complication", exp: "False; it is rare."}, 
+                                {text: "Orbital cellulitis does not require imaging", isAi: true, exp: "False; CT is important to assess orbital complications."}
+                            ], 
+                            eval: "The answer is correct. Frontal bone osteomyelitis is the classic bony complication of frontal sinusitis." 
+                        },
+                        { 
+                            q: "The most common cause of acute bacterial rhinosinusitis is:", 
+                            opts: [
+                                {text: "Pseudomonas aeruginosa", exp: "Uncommon in non‑nosocomial acute bacterial rhinosinusitis."}, 
+                                {text: "Streptococcus viridans & Staphylococcus aureus", exp: "Not the most common; S. pneumoniae and H. influenzae predominate."}, 
+                                {text: "Proteus & Klebsiella", exp: "Rare."}, 
+                                {text: "Streptococcus pneumoniae & Haemophilus influenzae", isCorrect: true, exp: "Correct. These two are the most common pathogens in acute bacterial rhinosinusitis."}, 
+                                {text: "Staphylococcus aureus & anaerobes", exp: "More common in chronic sinusitis."}
+                            ], 
+                            eval: "The answer is correct. S. pneumoniae and H. influenzae are the leading bacterial causes." 
+                        },
+                        { 
+                            q: "Wrong about chronic rhinosinusitis:", 
+                            opts: [
+                                {text: "Allergic rhinitis is a predisposing factor", exp: "True."}, 
+                                {text: "90% heal spontaneously", isCorrect: true, exp: "Wrong; chronic rhinosinusitis often requires medical and sometimes surgical management."}, 
+                                {text: "It may be associated with nasal polyps", exp: "True; CRSwNP is a subtype."}, 
+                                {text: "Symptoms include nasal obstruction and discharge", exp: "True."}, 
+                                {text: "CT scan helps in diagnosis", isAi: true, exp: "True; CT is the imaging modality of choice."}
+                            ], 
+                            eval: "The answer is correct. Chronic rhinosinusitis does not have a 90% spontaneous resolution rate." 
+                        },
+                        { 
+                            q: "What is the first-line antibiotic of choice for the treatment of acute bacterial rhinosinusitis?", 
+                            opts: [
+                                {text: "Trimethoprim-sulfamethoxazole", exp: "Second‑line due to resistance."}, 
+                                {text: "Doxycycline", exp: "Alternative, not first‑line."}, 
+                                {text: "Levofloxacin", exp: "Reserved for complicated cases or penicillin allergy."}, 
+                                {text: "Ceftriaxone", exp: "Parenteral, not first‑line for uncomplicated outpatient sinusitis."}, 
+                                {text: "Amoxicillin with clavulanic acid", isCorrect: true, exp: "Correct. First‑line oral antibiotic covering beta‑lactamase producers."}
+                            ], 
+                            eval: "The answer is correct. Amoxicillin‑clavulanate is the recommended empirical therapy." 
+                        },
+                        { 
+                            q: "Which of the following statements is NOT true regarding chronic infective rhinosinusitis?", 
+                            opts: [
+                                {text: "It is usually caused by bacterial or fungal infections", exp: "True; chronic infective rhinosinusitis can be bacterial or fungal."}, 
+                                {text: "It may present with nasal congestion or discharge", exp: "True."}, 
+                                {text: "It may cause a decreased sense of smell or taste", exp: "True."}, 
+                                {text: "It can present with sneezing or facial pain", isCorrect: true, exp: "Not true. Sneezing is more characteristic of allergic rhinitis, not chronic infective rhinosinusitis."}, 
+                                {text: "It is typically treated with antibiotics and/or surgery", exp: "True."}
+                            ], 
+                            eval: "The answer is correct. Sneezing is not a cardinal symptom of chronic infective rhinosinusitis." 
+                        },
+                        { 
+                            q: "One of the following is not from the diagnostic criteria for chronic rhinosinusitis:", 
+                            opts: [
+                                {text: "Facial pain", exp: "Part of the minor criteria."}, 
+                                {text: "Sneezing", isCorrect: true, exp: "Not a diagnostic criterion; it is associated with allergic rhinitis."}, 
+                                {text: "Anosmia", exp: "Loss of smell is a criterion."}, 
+                                {text: "Nasal discharge", exp: "Anterior or posterior discharge is a major criterion."}, 
+                                {text: "Decrease the sense of smell", exp: "Hyposmia is included."}
+                            ], 
+                            eval: "The answer is correct. Sneezing is not among the symptom criteria for chronic rhinosinusitis." 
+                        },
+                        { 
+                            q: "Presentation of nasal tumor:", 
+                            opts: [
+                                {text: "Nasal obstruction", isCorrect: true, exp: "Correct. The most common presenting symptom of nasal tumours is progressive unilateral nasal obstruction."}, 
+                                {text: "Bleeding", exp: "Epistaxis can occur but is less common than obstruction."}, 
+                                {text: "Anosmia", exp: "May occur with olfactory region tumours but not the most common overall presentation."}, 
+                                {text: "Facial swelling", isAi: true, exp: "Late sign, not the most frequent initial complaint."}, 
+                                {text: "Epiphora", isAi: true, exp: "Can occur if the tumour involves the nasolacrimal duct, but not the primary presentation."}
+                            ], 
+                            eval: "The answer is correct. Progressive unilateral obstruction is the hallmark." 
+                        },
+                        { 
+                            q: "Nasal polyps most commonly originate from:", 
+                            opts: [
+                                {text: "Anterior ethmoid sinus", isCorrect: true, exp: "Correct. Most inflammatory nasal polyps arise from the middle meatus and anterior ethmoid region."}, 
+                                {text: "Posterior ethmoid sinus", exp: "Less common origin."}, 
+                                {text: "Maxillary sinus", exp: "Antrochoanal polyps originate here, but common inflammatory polyps are ethmoidal."}, 
+                                {text: "Sphenoidal sinus", exp: "Rare."}, 
+                                {text: "Frontal sinus", isAi: true, exp: "Rare origin."}
+                            ], 
+                            eval: "The answer is correct. The anterior ethmoid is the most frequent site." 
+                        },
+                        { 
+                            q: "Correct about nasal polyps:", 
+                            opts: [
+                                {text: "You should exclude cystic fibrosis", exp: "Important in children with polyps, but not a universal correct statement for all nasal polyps."}, 
+                                {text: "Most are ethmoidal in origin", isCorrect: true, exp: "Correct. The majority originate from the ethmoid sinuses."}, 
+                                {text: "Steroid treatment is very effective", exp: "Topical steroids are effective, but the question singles out one “correct” statement; B is more specific."}, 
+                                {text: "30% of the population", exp: "Grossly overestimated; prevalence is about 1–4%."}, 
+                                {text: "70% recurrence", exp: "Recurrence is common but 70% is not a universally accepted fixed percentage."}
+                            ], 
+                            eval: "The answer is correct. Most nasal polyps are ethmoidal in origin." 
+                        },
+                        { 
+                            q: "Which of the following is wrong regarding nasal polyp theory?", 
+                            opts: [
+                                {text: "Allergic inflammation is a contributing factor", exp: "True; allergy may contribute but is not always present."}, 
+                                {text: "Chronic infection is the underlying cause", isCorrect: true, exp: "Wrong. The current theory emphasises chronic eosinophilic inflammation, not simply infection."}, 
+                                {text: "It involves a disturbance of the balance between inflammatory mediators", exp: "True."}, 
+                                {text: "Genetic predisposition may play a role", exp: "True."}, 
+                                {text: "Aspirin sensitivity is associated with nasal polyps", isAi: true, exp: "True (Samter’s triad)."}
+                            ], 
+                            eval: "The answer is correct. Chronic infection is not considered the primary underlying aetiology; inflammation is key." 
+                        },
+                        { 
+                            q: "Antrochoanal polyps most commonly arise from which of the following structures?", 
+                            opts: [
+                                {text: "Nasal septum", exp: "Not the origin."}, 
+                                {text: "Frontal sinus", exp: "Not typical."}, 
+                                {text: "Sphenoid sinus", exp: "Rare."}, 
+                                {text: "Maxillary sinus", isCorrect: true, exp: "Correct. Antrochoanal polyps originate from the maxillary sinus and extend through the ostium into the choana."}, 
+                                {text: "Eustachian tube", exp: "Not related."}
+                            ], 
+                            eval: "The answer is correct. The maxillary sinus is the classic site of origin." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about antrochoanal polyps?", 
+                            opts: [
+                                {text: "They arise from the mucosa of the maxillary sinus", exp: "True."}, 
+                                {text: "They are usually unilateral", exp: "True."}, 
+                                {text: "They can turn into a malignant lesion & bleed easily", isCorrect: true, exp: "Wrong. Antrochoanal polyps are benign and do not undergo malignant transformation; they are not typically friable and bleeding."}, 
+                                {text: "They can’t be treated medically", exp: "True; surgical removal is the primary treatment, though some respond to steroids."}, 
+                                {text: "They may extend into the nasopharynx", isAi: true, exp: "True, reaching the choana."}
+                            ], 
+                            eval: "The answer is correct. Malignant change is not a feature." 
+                        },
+                        { 
+                            q: "An asthmatic child who has polyps has sensitivity to:", 
+                            opts: [
+                                {text: "Penicillin", exp: "Not specifically linked."}, 
+                                {text: "Antihistamine", exp: "Not a sensitivity."}, 
+                                {text: "Tetracycline", exp: "No association."}, 
+                                {text: "Aspirin", isCorrect: true, exp: "Correct. Samter’s triad: asthma, nasal polyps, aspirin sensitivity."}, 
+                                {text: "Sulfa drugs", isAi: true, exp: "No established triad."}
+                            ], 
+                            eval: "The answer is correct. Aspirin‑exacerbated respiratory disease is the association." 
+                        },
+                        { 
+                            q: "Which of the following sinuses are present at birth:", 
+                            opts: [
+                                {text: "Ethmoid and frontal", exp: "Frontal sinus is undeveloped at birth."}, 
+                                {text: "Ethmoid and maxillary", isCorrect: true, exp: "Correct. Ethmoid and maxillary sinuses are present and aerated at birth."}, 
+                                {text: "Maxillary and sphenoid", exp: "Sphenoid sinus develops later."}, 
+                                {text: "Sphenoid and frontal", exp: "Neither is well developed at birth."}, 
+                                {text: "Maxillary and frontal", isAi: true, exp: "Frontal sinus absent."}
+                            ], 
+                            eval: "The answer is correct. Only ethmoid and maxillary sinuses are present at birth." 
+                        },
+                        { 
+                            q: "Which radiographic view is best for evaluating the maxillary sinus?", 
+                            opts: [
+                                {text: "Water’s view", isCorrect: true, exp: "Correct. The occipitomental (Water’s) view best visualises the maxillary sinuses without petrous ridge overlap."}, 
+                                {text: "Caldwell view", exp: "Better for frontal sinuses."}, 
+                                {text: "Lateral view", exp: "Limited evaluation of maxillary sinuses."}, 
+                                {text: "Submentovertex view", exp: "Evaluates base of skull and sphenoid sinus."}, 
+                                {text: "CT scan", isAi: true, exp: "More detailed but not the standard plain film “best view” when asked traditionally."}
+                            ], 
+                            eval: "The answer is correct. Water’s view is the conventional plain radiograph for maxillary sinus." 
+                        },
+                        { 
+                            q: "The sinus draining in the superior meatus is:", 
+                            opts: [
+                                {text: "Posterior ethmoidal sinus", isCorrect: true, exp: "Correct. Drains into the superior meatus."}, 
+                                {text: "Frontal sinus", exp: "Drains into the middle meatus (frontonasal recess)."}, 
+                                {text: "Maxillary sinus", exp: "Middle meatus (via hiatus semilunaris)."}, 
+                                {text: "Anterior ethmoidal sinus", exp: "Middle meatus."}, 
+                                {text: "Nasolacrimal duct", isAi: true, exp: "Drains into the inferior meatus."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following opens in the inferior meatus?", 
+                            opts: [
+                                {text: "Nasolacrimal duct", isCorrect: true, exp: "Correct. Opens into the inferior meatus."}, 
+                                {text: "Posterior ethmoidal sinus", exp: "Superior meatus."}, 
+                                {text: "Maxillary sinus", exp: "Middle meatus."}, 
+                                {text: "Frontal sinus", isAi: true, exp: "Middle meatus."}, 
+                                {text: "Sphenoid sinus", isAi: true, exp: "Sphenoethmoidal recess."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common sinus infected in children:", 
+                            opts: [
+                                {text: "Ethmoid", isCorrect: true, exp: "Correct. Ethmoid sinuses are present at birth and are most frequently infected in children."}, 
+                                {text: "Maxillary", exp: "Also common, but ethmoid predominates in early childhood."}, 
+                                {text: "Frontal", exp: "Rare; not developed until later."}, 
+                                {text: "Sphenoid", exp: "Rarely infected in young children."}, 
+                                {text: "All equally common", isAi: true, exp: "False."}
+                            ], 
+                            eval: "The answer is correct. Ethmoid sinusitis is most common in children." 
+                        },
+                        { 
+                            q: "In a child of 4 years the commonest sinus infection occurs in?", 
+                            opts: [
+                                {text: "Maxillary sinus", exp: "Possible, but ethmoid is more common in young children."}, 
+                                {text: "Ethmoidal sinus", isCorrect: true, exp: "Correct. Ethmoids are well developed at birth and most commonly infected."}, 
+                                {text: "Frontal sinus", exp: "Not yet fully developed."}, 
+                                {text: "Sphenoidal sinus", exp: "Rare infection at this age."}, 
+                                {text: "All sinuses equally", isAi: true, exp: "False."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Ethmoidal sinusitis is the most common in children and that is because:", 
+                            opts: [
+                                {text: "Ethmoidal sinuses are the only developed sinuses till the age of 8 years", isCorrect: true, exp: "According to the source, this is the reason given. They are the first sinuses to develop and are well aerated."}, 
+                                {text: "Ethmoidal sinuses have a very poor drainage system", exp: "Not the primary reason; drainage is not poorer than others."}, 
+                                {text: "Maxillary sinus ostium is high", exp: "Not relevant to the predominance of ethmoiditis."}, 
+                                {text: "Frontal sinus is absent at birth", exp: "True but not the complete explanation for ethmoid predominance at age 4–8."}, 
+                                {text: "Sphenoid sinus is very small in childhood", isAi: true, exp: "True, but ethmoiditis is common because they are well developed and drain poorly? The source says “only developed sinuses”."}
+                            ], 
+                            eval: "According to the source, A is the answer. Modern understanding is that ethmoids are present at birth and most prone to infection, but A reflects the given reasoning." 
+                        },
+                        { 
+                            q: "In ethmoiditis, most common complication in children is:", 
+                            opts: [
+                                {text: "Brain abscess", exp: "Rare, frontal sinusitis more commonly leads to frontal lobe abscess."}, 
+                                {text: "Osteomyelitis of medial orbital wall", exp: "Possible, but the most common orbital complication is subperiosteal abscess."}, 
+                                {text: "Cavernous sinus thrombosis", exp: "Rare and severe, but not the most common."}, 
+                                {text: "Meningitis", exp: "Can occur, but subperiosteal abscess is the most common complication in children."}, 
+                                {text: "Subperiosteal abscess in the orbit", isCorrect: true, exp: "Correct. Ethmoiditis can erode the lamina papyracea leading to orbital subperiosteal abscess."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 10-year-old girl presented with pain between the eyes, frontal headache, discharge from the nose, post nasal drip, & high fever. What is the provisional diagnosis?", 
+                            opts: [
+                                {text: "Acute sphenoidal sinusitis", exp: "Presents with vertex or retro‑orbital pain, not typically between the eyes."}, 
+                                {text: "Chronic ethmoidal sinusitis", exp: "Would not present acutely with high fever."}, 
+                                {text: "Acute ethmoidal sinusitis", isCorrect: true, exp: "Correct. Pain between the eyes, frontal headache, purulent nasal discharge, and fever."}, 
+                                {text: "Sphenoidal tumour", exp: "No fever, chronic course."}, 
+                                {text: "Acute frontal sinusitis", exp: "Pain typically over the forehead, not between the eyes."}
+                            ], 
+                            eval: "The answer is correct. The location of pain and acute symptoms point to acute ethmoidal sinusitis." 
+                        },
+                        { 
+                            q: "Acute maxillary sinusitis in children, one of the following is true:", 
+                            opts: [
+                                {text: "Dental infection is present in 1 percent of cases", exp: "Dental aetiology is rare in children."}, 
+                                {text: "Localized tenderness over the sinus", isCorrect: true, exp: "Correct. Maxillary sinusitis often causes cheek tenderness."}, 
+                                {text: "More common than ethmoiditis in children", exp: "False; ethmoiditis is more common."}, 
+                                {text: "Is the sinus infected in periorbital cellulitis", exp: "Periorbital cellulitis is more often from ethmoiditis."}, 
+                                {text: "It rarely causes fever", isAi: true, exp: "False; acute sinusitis can cause fever."}
+                            ], 
+                            eval: "The answer is correct. Tenderness over the cheek is a common sign." 
+                        },
+                        { 
+                            q: "Which of the following is true regarding sinusitis?", 
+                            opts: [
+                                {text: "Surgery is the first-line treatment for acute infection", exp: "False; medical treatment is first‑line."}, 
+                                {text: "Antibiotics are rarely necessary for the treatment of bacterial sinusitis", exp: "False; indicated for severe or prolonged bacterial cases."}, 
+                                {text: "A patient presenting with acute sinusitis should undergo X-ray, CT, & MRI", exp: "Over‑investigation; not routinely needed."}, 
+                                {text: "Acute sinusitis usually resolves on its own without treatment", isCorrect: true, exp: "Correct. Most cases are viral and self‑limiting."}, 
+                                {text: "Fungal sinusitis is the most common form", isAi: true, exp: "False; bacterial and viral are far more common."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is true regarding pain due to acute sinusitis?", 
+                            opts: [
+                                {text: "It has a diurnal variation", isCorrect: true, exp: "Correct. Maxillary sinus pain often peaks in the morning and improves with drainage."}, 
+                                {text: "Not associated with otalgia", exp: "False; sinusitis can cause referred ear pain."}, 
+                                {text: "It is not related to the sinus involved", exp: "False; location correlates with the affected sinus."}, 
+                                {text: "It is agonizing in open type of sinusitis", exp: "Misleading; open ostia allow drainage, so pain is less."}, 
+                                {text: "Pain killers alone relieve it", exp: "Not always; treating the infection and decongestion are needed."}
+                            ], 
+                            eval: "The answer is correct. Diurnal variation is characteristic." 
+                        },
+                        { 
+                            q: "The most common three causative bacterial agents of acute sinusitis are:", 
+                            opts: [
+                                {text: "Streptococcus pneumoniae, Staphylococcus aureus, & Moraxella catarrhalis", exp: "S. aureus is not in the top three for acute sinusitis."}, 
+                                {text: "Streptococcus pneumoniae, Haemophilus influenzae, & Moraxella catarrhalis", isCorrect: true, exp: "Correct. These three account for the majority of acute bacterial sinusitis cases."}, 
+                                {text: "Streptococcus pneumoniae, Haemophilus influenzae, & anaerobic bacteria", exp: "Anaerobes are more common in chronic sinusitis."}, 
+                                {text: "Streptococcus pneumoniae, Haemophilus influenzae, & Staphylococcus aureus", exp: "S. aureus is less frequent than M. catarrhalis in acute sinusitis."}, 
+                                {text: "Staphylococcus aureus, Haemophilus influenzae, & Moraxella catarrhalis", exp: "Missing S. pneumoniae, which is the most common."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Fungal sinusitis suggests:", 
+                            opts: [
+                                {text: "Immunodeficiency", isCorrect: true, exp: "Correct. Invasive fungal sinusitis, especially mucormycosis, is strongly associated with immunocompromised states (diabetes, neutropenia)."}, 
+                                {text: "Allergic reaction", exp: "Allergic fungal sinusitis occurs in immunocompetent patients, but the general statement “fungal sinusitis suggests immunodeficiency” holds for invasive forms."}, 
+                                {text: "Bacterial superinfection", exp: "Not specifically."}, 
+                                {text: "Viral coinfection", exp: "Not specifically."}, 
+                                {text: "Anatomical anomaly", isAi: true, exp: "Not the primary suggestion; immune status is key."}
+                            ], 
+                            eval: "The answer is correct. Invasive fungal sinusitis is a marker of immunodeficiency." 
+                        },
+                        { 
+                            q: "Sinusitis complications except:", 
+                            opts: [
+                                {text: "Meningitis", exp: "Recognised complication."}, 
+                                {text: "Temporal lobe abscess", isCorrect: true, exp: "Correct exception. Frontal sinusitis leads to frontal lobe abscess; temporal lobe abscess is not typical of sinusitis."}, 
+                                {text: "Orbital cellulitis", exp: "Common complication of ethmoid sinusitis."}, 
+                                {text: "Osteomyelitis", exp: "Frontal bone osteomyelitis is a complication."}, 
+                                {text: "Cavernous sinus thrombosis", exp: "Rare but possible."}
+                            ], 
+                            eval: "The answer is correct. Temporal lobe abscess is not a standard complication; frontal lobe abscess is." 
+                        },
+                        { 
+                            q: "Foul discharge from the nose suggests:", 
+                            opts: [
+                                {text: "Foreign body", isCorrect: true, exp: "Correct. A retained nasal foreign body classically produces a unilateral, foul‑smelling discharge."}, 
+                                {text: "Allergic rhinitis", exp: "Typically clear rhinorrhoea, not foul."}, 
+                                {text: "Viral sinusitis", exp: "Mucopurulent but not characteristically foul‑smelling."}, 
+                                {text: "CSF leak", exp: "Clear, watery discharge, not foul."}, 
+                                {text: "Nasal polyp", isAi: true, exp: "Usually does not cause foul discharge unless secondarily infected."}
+                            ], 
+                            eval: "The answer is correct. Foreign body." 
+                        },
+                        { 
+                            q: "What is the most likely diagnosis in a patient with unilateral foul-smelling discharge from the nose?", 
+                            opts: [
+                                {text: "Acute sinusitis", exp: "Usually bilateral, not distinctly foul."}, 
+                                {text: "Nasal polyps", exp: "Not typically foul‑smelling."}, 
+                                {text: "Rhinitis medicamentosa", exp: "Not foul."}, 
+                                {text: "Foreign body", isCorrect: true, exp: "Correct. Unilateral, purulent, foul discharge is classic."}, 
+                                {text: "Allergic rhinitis", exp: "Clear, bilateral."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong regarding Wegener’s granulomatosis?", 
+                            opts: [
+                                {text: "Wegener’s granulomatosis is not fatal with no treatment", isCorrect: true, exp: "Wrong. Without treatment (immunosuppression), GPA is frequently fatal."}, 
+                                {text: "It’s a disease of small & medium sized vessels", exp: "True. Granulomatosis with polyangiitis involves small and medium vessels."}, 
+                                {text: "It presents with skin lesions, pulmonary, & renal involvement", exp: "True."}, 
+                                {text: "c-ANCA is commonly positive", isAi: true, exp: "True. PR3-ANCA (c-ANCA) is highly associated."}, 
+                                {text: "It frequently involves the upper respiratory tract", isAi: true, exp: "True. Sinonasal and pulmonary involvement are common."}
+                            ], 
+                            eval: "The answer is correct. Untreated GPA has a high mortality." 
+                        }
+                    ]},
                 ]
             },
             {
