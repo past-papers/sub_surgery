@@ -910,13 +910,945 @@
                             eval: "The answer is correct." 
                         }
                     ]},
-                    { t: "Glaucoma", qs: [] },
-                    { t: "Uveitis", qs: [] },
-                    { t: "Eye injuries", qs: [] },
-                    { t: "Loss of vision", qs: [] },
-                    { t: "Lids and Lacrimal systems", qs: [] },
-                    { t: "The orbit", qs: [] },
-                    { t: "Anatomy and others", qs: [] }
+                      { t: "Glaucoma", qs: [
+                        { 
+                            q: "All of the following are found in congenital glaucoma EXCEPT:", 
+                            opts: [
+                                {text: "Excessive watering of the eye and photophobia", exp: "Found; the classic triad includes epiphora, photophobia, and blepharospasm."}, 
+                                {text: "Haab’s striae", exp: "Found; breaks in Descemet’s membrane from globe enlargement."}, 
+                                {text: "Cupping of optic disc", exp: "Found; elevated IOP leads to optic nerve cupping, which can be reversible in infants."}, 
+                                {text: "Corneal hydrops", isCorrect: true, exp: "Corneal hydrops is an acute rupture of Descemet’s membrane with sudden stromal edema, typical of advanced keratoconus, not congenital glaucoma."}, 
+                                {text: "Elevated intraocular pressure", isAi: true, exp: "Found; it is the hallmark of congenital glaucoma and the cause of the ocular changes."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which is the eye drop that is green-capped and is used as first-line treatment together with IV acetazolamide for acute angle-closure glaucoma?", 
+                            opts: [
+                                {text: "Timolol", exp: "A beta blocker, not typically identified by a green cap; it lowers IOP by reducing aqueous production."}, 
+                                {text: "Pilocarpine", isCorrect: true, exp: "Correct. The green-capped miotic drop; it constricts the pupil to open the angle and is used after initial IOP lowering."}, 
+                                {text: "Brimonidine", isAi: true, exp: "An alpha-2 agonist, not the classic green-capped miotic."}, 
+                                {text: "Latanoprost", isAi: true, exp: "A prostaglandin analogue, not used acutely in angle closure."}, 
+                                {text: "Dorzolamide", isAi: true, exp: "A carbonic anhydrase inhibitor, not the standard miotic drop."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about glaucoma?", 
+                            opts: [
+                                {text: "All glaucoma is associated with increased IOP", isCorrect: true, exp: "This is wrong. Normal tension glaucoma has IOP consistently in the normal range."}, 
+                                {text: "Normal tension glaucoma can occur with IOP within the normal range", isAi: true, exp: "True."}, 
+                                {text: "Glaucoma is a progressive optic neuropathy", isAi: true, exp: "True."}, 
+                                {text: "Visual field loss is a characteristic feature", isAi: true, exp: "True."}, 
+                                {text: "Angle-closure glaucoma can present acutely", isAi: true, exp: "True."}
+                            ], 
+                            eval: "The answer is correct. In normal tension glaucoma, the patient is never found to have a pressure over the normal limits." 
+                        },
+                        { 
+                            q: "In treatment of glaucoma, all of the following are true except:", 
+                            opts: [
+                                {text: "Cycloplegia", isCorrect: true, exp: "Correct exception. Cycloplegics dilate the pupil and can worsen angle-closure glaucoma; they are not used as glaucoma therapy."}, 
+                                {text: "Subconjunctival steroids", exp: "Steroids can cause elevated IOP and are not a standard treatment; however, the question likely intends that all are true statements about glaucoma management except cycloplegia, so this option may be worded as a true fact (i.e., that steroids are not used) but the intended false statement is cycloplegia."}, 
+                                {text: "Steroid drops", exp: "Similar to above; they are not used for treating glaucoma."}, 
+                                {text: "Prostaglandin analogs", isAi: true, exp: "True; they are first-line agents that increase uveoscleral outflow."}, 
+                                {text: "Beta blockers", isAi: true, exp: "True; they reduce aqueous production."}
+                            ], 
+                            eval: "The answer is acceptable. Cycloplegics are not glaucoma treatments and can be dangerous in angle closure." 
+                        },
+                        { 
+                            q: "Optic disc edema can be found in all of the following except:", 
+                            opts: [
+                                {text: "Papilledema", exp: "Bilateral disc edema due to raised intracranial pressure."}, 
+                                {text: "Hypertensive retinopathy", exp: "Malignant hypertension causes disc edema."}, 
+                                {text: "Open-angle glaucoma", isCorrect: true, exp: "Correct exception. It causes progressive optic disc cupping and atrophy, not edema."}, 
+                                {text: "Central retinal vein occlusion", isAi: true, exp: "Can present with disc edema and retinal hemorrhages."}, 
+                                {text: "Anterior ischemic optic neuropathy", isAi: true, exp: "Non-arteritic AION presents with sectoral disc edema."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about anti-glaucoma drugs?", 
+                            opts: [
+                                {text: "Prostaglandin analogs increase uveoscleral outflow", isAi: true, exp: "True."}, 
+                                {text: "Beta blockers decrease aqueous production", isAi: true, exp: "True."}, 
+                                {text: "Carbonic anhydrase inhibitors reduce aqueous secretion", isAi: true, exp: "True."}, 
+                                {text: "Alpha-2 agonists reduce aqueous production and increase uveoscleral outflow", isAi: true, exp: "True."}, 
+                                {text: "Pilocarpine increases drainage via the uveoscleral canal", isCorrect: true, exp: "This is wrong. Pilocarpine increases trabecular outflow by miosis, not uveoscleral drainage."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about glaucoma?", 
+                            opts: [
+                                {text: "Glaucoma can be diagnosed solely by cup-to-disc ratio", isCorrect: true, exp: "Wrong. A large cup alone is not diagnostic; other features and tests are needed."}, 
+                                {text: "Visual field testing is essential for functional assessment", isAi: true, exp: "True."}, 
+                                {text: "Intraocular pressure is a major risk factor but not a diagnostic criterion alone", isAi: true, exp: "True."}, 
+                                {text: "Gonioscopy helps classify the type of glaucoma", isAi: true, exp: "True."}, 
+                                {text: "Optical coherence tomography aids in detecting structural damage", isAi: true, exp: "True."}
+                            ], 
+                            eval: "The answer is correct. Disk cup size is a definite diagnosis (Here equated to: Glaucoma can be diagnosed solely by cup-to-disc ratio)." 
+                        },
+                        { 
+                            q: "One of the following about congenital glaucoma is wrong:", 
+                            opts: [
+                                {text: "Presence of progressive hypermetropia is a poor sign", isCorrect: true, exp: "Wrong. Increasing axial length in congenital glaucoma causes progressive myopia, not hypermetropia."}, 
+                                {text: "Excessive tearing", exp: "True; epiphora is part of the classic triad."}, 
+                                {text: "Large cornea", exp: "True; buphthalmos causes corneal enlargement."}, 
+                                {text: "Corrected by surgery", exp: "True; goniotomy or trabeculotomy is definitive."}, 
+                                {text: "Photophobia is a common symptom", isAi: true, exp: "True; it is another component of the classic triad."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about closed-angle glaucoma?", 
+                            opts: [
+                                {text: "We must have pressure of 21 to diagnose it", isCorrect: true, exp: "Wrong. Diagnosis is based on angle configuration, symptoms, and gonioscopy; IOP may be normal between attacks."}, 
+                                {text: "Can be caused by large cataract", exp: "True; a swollen lens can push the iris forward (phacomorphic glaucoma)."}, 
+                                {text: "Peripheral iris obstructs the TM", exp: "True; that is the mechanism of angle closure."}, 
+                                {text: "It can present with headache and nausea", isAi: true, exp: "True."}, 
+                                {text: "Laser iridotomy is prophylactic for anatomically narrow angles", isAi: true, exp: "True."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Most common type of glaucoma:", 
+                            opts: [
+                                {text: "Primary open-angle glaucoma", isCorrect: true, exp: "Correct. It is the most prevalent form globally."}, 
+                                {text: "Primary closed-angle glaucoma", exp: "Less common, though more frequent in certain ethnic groups."}, 
+                                {text: "Secondary open-angle glaucoma", exp: "Less common."}, 
+                                {text: "Secondary closed-angle glaucoma", exp: "Less common."}, 
+                                {text: "Congenital glaucoma", isAi: true, exp: "Rare compared to adult-onset forms."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following are done for acute angle-closure glaucoma except:", 
+                            opts: [
+                                {text: "Beta blocker eye drops", exp: "Used to lower IOP acutely."}, 
+                                {text: "Pilocarpine", exp: "Miotic to open the angle after initial pressure reduction."}, 
+                                {text: "Mannitol", exp: "Intravenous hyperosmotic agent used in acute attack."}, 
+                                {text: "Surgical drainage", isCorrect: true, exp: "Correct exception. Drainage procedures like trabeculectomy are not emergency measures; laser iridotomy is the definitive treatment after medical control."}, 
+                                {text: "Acetazolamide", exp: "IV or oral carbonic anhydrase inhibitor to reduce aqueous production."}
+                            ], 
+                            eval: "The answer is correct. Surgical drainage is not part of initial emergency treatment." 
+                        },
+                        { 
+                            q: "All of the following are correct about primary open-angle glaucoma except:", 
+                            opts: [
+                                {text: "Poor response to medication", isCorrect: true, exp: "This is the exception. Most patients are controlled with topical medications initially."}, 
+                                {text: "Progressive visual loss", exp: "Correct, if untreated."}, 
+                                {text: "Open iridocorneal angle on gonioscopy", exp: "Correct; that defines open-angle."}, 
+                                {text: "Typically asymptomatic until late stages", isAi: true, exp: "Correct."}, 
+                                {text: "Intraocular pressure may be elevated", isAi: true, exp: "Correct, though normal tension glaucoma can have normal IOP."}
+                            ], 
+                            eval: "The answer is correct. POAG usually responds well to medical treatment; medications are first-line." 
+                        },
+                        { 
+                            q: "Which of the drugs and its use in ophthalmology is incorrect?", 
+                            opts: [
+                                {text: "Riboflavin used for staining in retinal surgery", isCorrect: true, exp: "Incorrect. Riboflavin is used as a photosensitizer in corneal cross-linking, not as a retinal stain."}, 
+                                {text: "Topical beta blockers are contraindicated in patients with heart block", exp: "Correct; they can cause bradycardia and heart block."}, 
+                                {text: "Acetazolamide causes severe hypokalemia", exp: "Correct; it can lead to hypokalemia and metabolic acidosis."}, 
+                                {text: "Latanoprost may cause increased iris pigmentation", isAi: true, exp: "Correct; it is a known side effect."}, 
+                                {text: "Pilocarpine is used in the treatment of acute angle-closure glaucoma", isAi: true, exp: "Correct; it is a miotic for pupil constriction."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is false about treatment of acute angle closure glaucoma?", 
+                            opts: [
+                                {text: "Anterior chamber paracentesis", isCorrect: true, exp: "False. It is not a standard recommended initial treatment; it carries risk and medical/laser therapy is preferred."}, 
+                                {text: "Intravenous acetazolamide", exp: "True; it rapidly lowers IOP."}, 
+                                {text: "Intravenous hyperosmolar agent", exp: "True; mannitol is used for rapid IOP reduction."}, 
+                                {text: "Pilocarpine", exp: "True; used once the IOP is lowered to relieve angle closure."}, 
+                                {text: "Laser Iridotomy", exp: "True; it is the definitive treatment to create an opening for aqueous passage."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following are risk factors for primary open angle glaucoma except:", 
+                            opts: [
+                                {text: "Old age", exp: "Risk factor."}, 
+                                {text: "Caucasian race", isCorrect: true, exp: "Correct exception. African descent has a higher prevalence and more severe course; Caucasian race is not the highest risk."}, 
+                                {text: "Myopia", exp: "Risk factor."}, 
+                                {text: "Family history", exp: "Strong risk factor."}, 
+                                {text: "Increase intraocular pressure", exp: "Major risk factor."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                    { t: "Uveitis", qs: [
+                        { 
+                            q: "One of the following is not characteristic of sarcoidosis uveitis:", 
+                            opts: [
+                                {text: "Mutton-fat keratic precipitates", exp: "Granulomatous KPs, typical of sarcoidosis."}, 
+                                {text: "Iris nodules", exp: "Busacca and Koeppe nodules are seen in granulomatous uveitis like sarcoidosis."}, 
+                                {text: "Snowball vitreous opacities", exp: "Inferior vitreous aggregates characteristic of intermediate uveitis, common in sarcoidosis."}, 
+                                {text: "Stellate keratic precipitates", isCorrect: true, exp: "Correct exception. Stellate KP distributed diffusely over the endothelium is classic for Fuchs heterochromic iridocyclitis, not sarcoidosis."}, 
+                                {text: "Candle wax drippings (periphlebitis)", exp: "Perivascular sheathing, associated with sarcoidosis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Most common presentation in Fuchs heterochromic iridocyclitis is:", 
+                            opts: [
+                                {text: "Floaters", exp: "Can be present due to vitreous opacities, but not the most common initial complaint."}, 
+                                {text: "Painful red eye", exp: "Rare; FHI is typically a quiet eye without pain or ciliary injection."}, 
+                                {text: "Cataract", isCorrect: true, exp: "Correct. Posterior subcapsular cataract is frequent and often the reason for visual decline."}, 
+                                {text: "Heterochromia iridis", isAi: true, exp: "Characteristic sign but often subtle and not the main complaint; vision loss from cataract brings the patient."}, 
+                                {text: "Elevated intraocular pressure", isAi: true, exp: "Can occur due to secondary glaucoma but not the most common presentation."}
+                            ], 
+                            eval: "The answer is correct. The most common presentation is decreased visual acuity, often due to cataract formation." 
+                        },
+                        { 
+                            q: "Which does NOT require emergency management?", 
+                            opts: [
+                                {text: "Anterior uveitis", isCorrect: true, exp: "Correct. It is typically managed urgently but does not demand immediate emergency intervention within hours like the others."}, 
+                                {text: "Orbital floor fracture", exp: "Can be an emergency if there is entrapment or oculocardiac reflex."}, 
+                                {text: "Corneal ulcer", exp: "Bacterial keratitis requires urgent treatment to prevent perforation."}, 
+                                {text: "Acute angle closure glaucoma", isAi: true, exp: "True ocular emergency."}, 
+                                {text: "Retinal artery occlusion", isAi: true, exp: "True emergency; vision loss may be irreversible after 90 minutes."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which one of the following most commonly causes posterior uveitis?", 
+                            opts: [
+                                {text: "CMV", exp: "Causes retinitis in immunocompromised, but not the most common cause of posterior uveitis overall."}, 
+                                {text: "Sarcoidosis", exp: "Common cause of panuveitis and intermediate uveitis, not the single most common posterior uveitis."}, 
+                                {text: "Syphilis", exp: "A less frequent cause."}, 
+                                {text: "Toxoplasmosis", isCorrect: true, exp: "Correct. It is the most frequent cause of infectious posterior uveitis worldwide."}, 
+                                {text: "Herpes simplex virus", isAi: true, exp: "Can cause acute retinal necrosis, but is much less common than toxoplasmosis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Not present in anterior uveitis:", 
+                            opts: [
+                                {text: "Hyphema", isCorrect: true, exp: "Correct. Blood in the anterior chamber is not a feature of anterior uveitis; it indicates trauma, rubeosis, or bleeding."}, 
+                                {text: "Posterior synechiae", exp: "Typical of anterior uveitis."}, 
+                                {text: "Keratic precipitates", exp: "Hallmark of anterior uveitis."}, 
+                                {text: "Cells in the anterior chamber", exp: "Essential sign of anterior chamber inflammation."}, 
+                                {text: "Flare in the anterior chamber", isAi: true, exp: "Protein exudation seen in anterior uveitis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Young male with red eye, photophobia, lacrimation and eye pain. Most likely diagnosis is:", 
+                            opts: [
+                                {text: "Anterior uveitis", isCorrect: true, exp: "Correct. The triad of pain, photophobia, and lacrimation with ciliary injection is classic."}, 
+                                {text: "Bacterial conjunctivitis", exp: "Discharge is prominent; photophobia and deep pain are not typical."}, 
+                                {text: "Glaucoma", exp: "Acute glaucoma presents with fixed mid-dilated pupil, cloudy cornea, nausea; lacrimation is not characteristic."}, 
+                                {text: "Corneal abrasion", isAi: true, exp: "Pain and lacrimation, but severe photophobia and circumcorneal flush are more typical of uveitis; fluorescein staining distinguishes."}, 
+                                {text: "Episcleritis", isAi: true, exp: "Sectoral redness and mild discomfort; severe photophobia and pain are not typical."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 50 year old male with history of low back pain came to the emergency department complaining of blurred vision, photophobia and red eye. On examination visual acuity was 6/12, ciliary flush + 3 cells in the anterior chamber and fine keratic precipitates were found. The best treatment option:", 
+                            opts: [
+                                {text: "Lubricant eye drops", exp: "Inadequate for active iritis."}, 
+                                {text: "Systemic antibiotics", exp: "No indication unless an infectious cause is identified; this presentation suggests HLA‑B27-associated anterior uveitis."}, 
+                                {text: "Topical steroids and cycloplegic agents", isCorrect: true, exp: "Correct. Steroids control inflammation, cycloplegics prevent synechiae and relieve pain."}, 
+                                {text: "Topical antibiotics", exp: "Not indicated in non-infectious uveitis."}, 
+                                {text: "Cyclosporin eye drops", exp: "Topical cyclosporine is used for dry eye, not acute anterior uveitis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient presents with blurring of vision and floaters in the right eye for 2 weeks. He has a history of Crohn's disease on sulfasalazine. The most expected ocular finding in this case should be:", 
+                            opts: [
+                                {text: "Relative afferent pupillary defect", exp: "Suggests optic nerve disease, not typical of Crohn's ocular involvement."}, 
+                                {text: "Retinal vascular sheathing", isCorrect: true, exp: "Correct. Crohn's disease is associated with retinal vasculitis, leading to perivascular sheathing."}, 
+                                {text: "Intermediate uveitis", exp: "Pars planitis can be associated with IBD but vascular sheathing is a more specific retinal finding given the floaters and underlying vasculitis."}, 
+                                {text: "Ciliary flush", exp: "Suggests anterior uveitis, which can occur but the question emphasizes floaters and blurring consistent with posterior segment inflammation and vasculitis."}, 
+                                {text: "Fixed mid dilated pupils", exp: "Not related."}
+                            ], 
+                            eval: "The answer is correct. Retinal vascular sheathing is a hallmark of retinal vasculitis associated with inflammatory bowel disease." 
+                        },
+                        { 
+                            q: "Regarding systemic uveitis, one of the following is false:", 
+                            opts: [
+                                {text: "Juvenile RA most commonly presents with polyarthritis", isCorrect: true, exp: "False. Oligoarticular JIA is the most common subtype associated with uveitis."}, 
+                                {text: "Sarcoidosis is associated with lymphadenopathy and ACE level", exp: "True."}, 
+                                {text: "CMV retinitis is an HIV defining disease", exp: "True."}, 
+                                {text: "Behcet disease is associated with painful ulcers", exp: "True (oral and genital aphthae)."}, 
+                                {text: "Toxoplasmosis is a common cause of posterior uveitis", isAi: true, exp: "True."}
+                            ], 
+                            eval: "The answer is correct. Most commonly presents with the oligoarticular type, which affects 4 or fewer joints and is more strongly associated with uveitis." 
+                        },
+                        { 
+                            q: "Which is incorrect about uveitis?", 
+                            opts: [
+                                {text: "Steroids are effective in treatment", exp: "Correct; they are the mainstay for non-infectious uveitis."}, 
+                                {text: "Can cause posterior synechiae", exp: "Correct; inflammation leads to adhesions."}, 
+                                {text: "Cells in anterior chamber are neutrophils", exp: "In acute uveitis, the cellular response can include neutrophils, but this is not always incorrect; however the most clearly false statement is that uveitis is mostly bacterial."}, 
+                                {text: "Mostly caused by bacterial infection", isCorrect: true, exp: "Incorrect. Most cases are idiopathic or immune-mediated; infectious causes (bacterial, viral, etc.) are less common."}, 
+                                {text: "You may see flare", exp: "Correct; protein leakage creates flare."}
+                            ], 
+                            eval: "The answer is correct. The majority of uveitis cases are non-infectious and immune-mediated." 
+                        }
+                    ]}   ,
+                  { t: "Eye injuries", qs: [
+                        { 
+                            q: "What is hypopyon?", 
+                            opts: [
+                                {text: "Collection of red blood cells in the anterior chamber", isAi: true, exp: "This describes a hyphema, not hypopyon."}, 
+                                {text: "Collection of white blood cells in the anterior chamber", isCorrect: true, exp: "Correct. Hypopyon is a sterile or infectious collection of white blood cells settling in the inferior anterior chamber."}, 
+                                {text: "Pus in the vitreous cavity", isAi: true, exp: "This describes vitreous abscess or endophthalmitis, not hypopyon."}, 
+                                {text: "Fibrin clot in the anterior chamber", isAi: true, exp: "Fibrin may accompany inflammation but hypopyon specifically refers to WBCs."}, 
+                                {text: "Inflammatory cells in the posterior chamber", isAi: true, exp: "Posterior chamber cells are not visible as a layered collection; hypopyon is in the anterior chamber."}
+                            ], 
+                            eval: "The answer is correct. Hypopyon is defined as a collection of white blood cells in the anterior chamber." 
+                        },
+                        { 
+                            q: "About hyphema, one is wrong:", 
+                            opts: [
+                                {text: "The source of blood is from iris & ciliary body", exp: "Correct. Bleeding typically arises from torn vessels at the iris root or ciliary body face."}, 
+                                {text: "Most often innocuous & transient", exp: "Correct. The majority of traumatic hyphemas resolve without permanent damage."}, 
+                                {text: "May be associated with traumatic uveitis", exp: "Correct. Blunt trauma can cause both hyphema and anterior uveitis."}, 
+                                {text: "Rebleeding is usually smaller than the original bleed", isCorrect: true, exp: "Incorrect. Secondary hemorrhage tends to be more extensive and carries a worse prognosis."}, 
+                                {text: "May complicate corneal blood stain", exp: "Correct. Corneal blood staining can occur with prolonged raised intraocular pressure and a large hyphema."}
+                            ], 
+                            eval: "The answer is correct. Rebleeding is typically larger, not smaller, than the initial bleed." 
+                        },
+                        { 
+                            q: "Which of the following is contraindicated to give in hyphema?", 
+                            opts: [
+                                {text: "Pilocarpine", isCorrect: true, exp: "Correct answer (contraindicated). Miosis constricts iris vessels and may promote rebleeding; ciliary spasm increases pain and inflammation."}, 
+                                {text: "Atropine", isAi: true, exp: "Not contraindicated; cycloplegia is often used to prevent ciliary spasm and iris movement."}, 
+                                {text: "Topical steroid", isAi: true, exp: "Steroids are indicated to treat traumatic iritis and reduce the risk of rebleeding."}, 
+                                {text: "Oral aminocaproic acid", isAi: true, exp: "An antifibrinolytic agent that can be used to prevent rebleeding, not contraindicated."}, 
+                                {text: "Cycloplegic agent", isAi: true, exp: "Cycloplegics like cyclopentolate are commonly administered to comfort and immobilize the iris."}
+                            ], 
+                            eval: "The answer is correct. Pilocarpine is contraindicated in hyphema because miosis may increase rebleeding risk and cause pain." 
+                        },
+                        { 
+                            q: "Laceration of the anterior chamber, all are aims of treatment except:", 
+                            opts: [
+                                {text: "Prevent secondary complications", exp: "A primary goal; complications like synechiae, glaucoma, and endophthalmitis must be avoided."}, 
+                                {text: "Prevent infection", exp: "Crucial; prophylactic antibiotics and wound closure reduce the risk of endophthalmitis."}, 
+                                {text: "Retain normal ocular anatomy", exp: "Anatomical restoration of the anterior chamber is a key aim."}, 
+                                {text: "Prevent loss of vision", exp: "The overarching purpose of repair."}, 
+                                {text: "Evisceration of the eye to avoid sympathetic ophthalmitis", isCorrect: true, exp: "Not an aim of primary repair; evisceration is a last resort in a blind, severely traumatized eye to reduce sympathetic ophthalmia risk, not a routine aim."}
+                            ], 
+                            eval: "The answer is correct. Evisceration is not an aim of treating an anterior chamber laceration; it is reserved for devastating injury." 
+                        },
+                        { 
+                            q: "Wrong about alkaline trauma to the cornea:", 
+                            opts: [
+                                {text: "Immediate irrigation with a lot of normal saline", exp: "Correct; immediate and copious irrigation is the most critical first step."}, 
+                                {text: "Acid penetrates more than alkali", isCorrect: true, exp: "Incorrect. Alkali penetrates deeper due to saponification; acid causes coagulative necrosis which limits penetration."}, 
+                                {text: "Alkali causes saponification of lipids", isAi: true, exp: "True; this reaction disrupts cell membranes and allows deep penetration."}, 
+                                {text: "Acid injuries cause coagulative necrosis", isAi: true, exp: "True; protein coagulation forms a barrier to further penetration."}, 
+                                {text: "Particulate matter should be removed from the fornices before irrigation", isAi: true, exp: "True; retained particles, especially lime, continue to cause injury and must be swept out."}
+                            ], 
+                            eval: "The answer is correct. Alkali penetrates more deeply than acid, making the statement false." 
+                        },
+                        { 
+                            q: "Which is the first step to do when dealing with chemical injury to the eye?", 
+                            opts: [
+                                {text: "Irrigation with copious amounts of saline or water", isCorrect: true, exp: "Correct. Immediate and continuous irrigation is the single most important emergency measure to limit damage."}, 
+                                {text: "Instillation of topical antibiotic", isAi: true, exp: "Important later to prevent infection, but not before thorough irrigation."}, 
+                                {text: "Checking visual acuity", isAi: true, exp: "Helpful for documentation but should never delay irrigation."}, 
+                                {text: "Patching the eye", isAi: true, exp: "Not indicated acutely; irrigation must be performed first."}, 
+                                {text: "Referral to an ophthalmologist", isAi: true, exp: "Necessary after initial irrigation but cannot substitute for immediate decontamination."}
+                            ], 
+                            eval: "The answer is correct. Copious irrigation is the first and most critical step in chemical eye injury." 
+                        },
+                        { 
+                            q: "Patient presented after sustaining a chemical injury to his eye (Alkali), what is the most appropriate management?", 
+                            opts: [
+                                {text: "Flood with saline for 10-20 mins", isCorrect: true, exp: "Correct. Immediate prolonged irrigation is the cornerstone of management."}, 
+                                {text: "Prescribe painkillers and discharge", exp: "Incorrect; inadequate treatment, will lead to ongoing damage."}, 
+                                {text: "Instill topical anesthetic drops before irrigation", isAi: true, exp: "Topical anesthetic may facilitate irrigation by relieving pain and blepharospasm, but irrigation itself must not be delayed if anesthetic is not immediately available."}, 
+                                {text: "Apply antibiotic ointment and pressure patch", isAi: true, exp: "This is done after thorough irrigation and assessment, not as the primary emergency step."}, 
+                                {text: "Perform immediate surgical debridement", isAi: true, exp: "Surgical intervention is reserved for severe necrosis, not the first step."}
+                            ], 
+                            eval: "The answer is correct. Flooding with saline for at least 10-20 minutes is the appropriate immediate management." 
+                        }
+                    ]},
+                    { t: "Loss of vision", qs: [
+                        { 
+                            q: "Which of these conditions is NOT a cause for painless vision loss?", 
+                            opts: [
+                                {text: "Optic neuritis", isCorrect: true, exp: "NOT painless; typically presents with pain on eye movement and decreased vision."}, 
+                                {text: "Central retinal artery occlusion", exp: "Causes sudden, painless vision loss."}, 
+                                {text: "Central retinal vein occlusion", exp: "Presents with painless visual loss, often with relative afferent pupillary defect if severe."}, 
+                                {text: "Retinal detachment", exp: "Usually painless loss of peripheral or central vision depending on macula involvement."}, 
+                                {text: "Vitreous hemorrhage", isAi: true, exp: "Sudden vitreous hemorrhage is painless, often with floaters and shadow."}
+                            ], 
+                            eval: "The answer is correct. Optic neuritis typically presents with pain, especially with eye movement, unlike the other options." 
+                        },
+                        { 
+                            q: "Which of the following is not painless vision loss?", 
+                            opts: [
+                                {text: "Hydrops keratoconus", isCorrect: true, exp: "Not painless; presents with acute corneal edema, pain, photophobia, and sudden visual deterioration."}, 
+                                {text: "Retinal detachment", exp: "Typically painless loss of vision."}, 
+                                {text: "Acute angle-closure glaucoma", isAi: true, exp: "Causes severe pain, headache, nausea, and blurred vision; not painless."}, 
+                                {text: "Optic neuritis", isAi: true, exp: "Typically painful with eye movement, not painless."}, 
+                                {text: "Vitreous hemorrhage", isAi: true, exp: "Usually painless; sudden floaters and visual loss without pain."}
+                            ], 
+                            eval: "The answer is correct. Acute hydrops in keratoconus is painful due to epithelial edema and stretching." 
+                        },
+                        { 
+                            q: "One of the following causes irreversible loss of vision which is treatable and unnoticeable by the patient:", 
+                            opts: [
+                                {text: "Uveitis", exp: "Usually symptomatic with pain, redness, photophobia, and often reversible vision loss if treated early."}, 
+                                {text: "Iritis", exp: "Typically painful with ciliary injection and photophobia; vision loss is often reversible."}, 
+                                {text: "Corneal ulcer", exp: "Causes pain, watering, and redness; vision loss may be reversible with treatment."}, 
+                                {text: "Closed-angle glaucoma", exp: "Acute attack is extremely painful with rapid vision loss; emergent and noticeable."}, 
+                                {text: "Open-angle glaucoma", isCorrect: true, exp: "Correct. It is insidious, painless, often unnoticed by the patient until advanced irreversible optic nerve damage occurs; treatable to slow progression."}
+                            ], 
+                            eval: "The answer is correct. Open-angle glaucoma is the classic example of asymptomatic, progressive, irreversible vision loss that is treatable." 
+                        },
+                        { 
+                            q: "Painless visual loss:", 
+                            opts: [
+                                {text: "Retinal detachment", isCorrect: true, exp: "Correct. Rhegmatogenous retinal detachment typically causes painless loss of peripheral vision (or central if macula detaches)."}, 
+                                {text: "Acute angle-closure glaucoma", isAi: true, exp: "Painful, with acute onset of severe eye pain and headache."}, 
+                                {text: "Corneal ulcer", isAi: true, exp: "Presents with pain, lacrimation, and foreign body sensation."}, 
+                                {text: "Optic neuritis", isAi: true, exp: "Usually painful, especially on eye movement."}, 
+                                {text: "Scleritis", isAi: true, exp: "Deep, boring pain that may radiate; not painless."}
+                            ], 
+                            eval: "The answer is correct. Retinal detachment is a classic cause of painless vision loss." 
+                        },
+                        { 
+                            q: "All present with sudden painful loss of vision except:", 
+                            opts: [
+                                {text: "Central retinal artery occlusion", isCorrect: true, exp: "Sudden, painless vision loss; the exception."}, 
+                                {text: "Anterior uveitis", exp: "Painful with photophobia and circumcorneal injection; vision loss is acute."}, 
+                                {text: "Acute closed-angle glaucoma", exp: "Severe pain, red eye, cloudy cornea, and rapid visual loss."}, 
+                                {text: "Optic neuritis", isAi: true, exp: "Pain on eye movement with acute visual decline."}, 
+                                {text: "Acute corneal hydrops", isAi: true, exp: "Painful acute corneal edema with sudden visual loss."}
+                            ], 
+                            eval: "The answer is correct. CRAO is typically painless, while all others listed present with pain." 
+                        },
+                        { 
+                            q: "All of the following associations are true regarding visual field defects except:", 
+                            opts: [
+                                {text: "Lateral geniculate body lesions, contralateral homonymous hemianopia", exp: "True. Lesions of the LGN produce a contralateral homonymous hemianopia."}, 
+                                {text: "Chiasmal lesions, bitemporal visual field defect", exp: "True. The classic pattern is bitemporal hemianopia."}, 
+                                {text: "Optic tract lesions, ipsilateral homonymous hemianopia", isCorrect: true, exp: "Incorrect. Optic tract lesions cause contralateral homonymous hemianopia, not ipsilateral."}, 
+                                {text: "Optic nerve lesions, monocular visual field defect", exp: "True. Damage to one optic nerve produces a visual field defect in that eye only."}, 
+                                {text: "Visual cortex lesion, contralateral macular sparing homonymous hemianopia", exp: "True. Occipital lobe lesions often spare the macula due to dual vascular supply."}
+                            ], 
+                            eval: "The answer seems correct. Optic tract lesions produce contralateral (not ipsilateral) homonymous hemianopia." 
+                        },
+                        { 
+                            q: "Main optic radiation:", 
+                            opts: [
+                                {text: "Contralateral congruous homonymous hemianopia", isCorrect: true, exp: "Correct. Complete optic radiation lesions produce a highly congruous contralateral homonymous hemianopia."}, 
+                                {text: "Contralateral incongruous homonymous hemianopia", isAi: true, exp: "Incongruity is more typical of optic tract lesions."}, 
+                                {text: "Bitemporal hemianopia", isAi: true, exp: "Typical of optic chiasm lesions, not optic radiation."}, 
+                                {text: "Ipsilateral homonymous hemianopia", isAi: true, exp: "Ipsilateral field defects are not produced by supranuclear pathways; homonymous defects are contralateral."}, 
+                                {text: "Monocular scotoma", isAi: true, exp: "Indicates optic nerve or retinal disease, not retrochiasmal."}
+                            ], 
+                            eval: "The answer is correct. The hallmark of a complete main optic radiation lesion is a contralateral congruous homonymous hemianopia." 
+                        },
+                        { 
+                            q: "Injury in the main optic radiation will cause:", 
+                            opts: [
+                                {text: "Contralateral homonymous hemianopia with macular sparing", exp: "More typical of occipital cortex lesions, not the main radiation itself."}, 
+                                {text: "Contralateral incongruous homonymous hemianopia", exp: "Incongruity suggests optic tract lesion, not the optic radiation."}, 
+                                {text: "Contralateral congruous homonymous hemianopia", isCorrect: true, exp: "Correct. Optic radiation lesions produce highly congruous contralateral homonymous hemianopia."}, 
+                                {text: "Bitemporal hemianopia", isAi: true, exp: "Indicates a chiasmal lesion."}, 
+                                {text: "Ipsilateral homonymous hemianopia", isAi: true, exp: "Retrochiasmal lesions always produce contralateral hemianopia."}
+                            ], 
+                            eval: "The answer is correct. Complete optic radiation damage yields a congruous contralateral homonymous hemianopia." 
+                        },
+                        { 
+                            q: "Right congruous homonymous hemianopia is caused by damage to:", 
+                            opts: [
+                                {text: "Optic chiasm", exp: "Lesions cause bitemporal hemianopia, not homonymous."}, 
+                                {text: "Right optic tract", exp: "A right optic tract lesion would cause left homonymous hemianopia."}, 
+                                {text: "Left optic tract", exp: "Produces right incongruous homonymous hemianopia, not congruous."}, 
+                                {text: "Left temporal optic radiation", exp: "The temporal (Meyer’s loop) part of the radiation carries superior retinal fibers; a lesion here gives a superior quadrantanopia, not a complete congruous hemianopia."}, 
+                                {text: "Left main radiation", isCorrect: true, exp: "Correct. A complete left optic radiation lesion produces a right congruous homonymous hemianopia."}
+                            ], 
+                            eval: "The answer is correct. A complete left optic radiation lesion results in a right congruous homonymous hemianopia." 
+                        },
+                        { 
+                            q: "Which of the following causes sudden painless unilateral vision loss?", 
+                            opts: [
+                                {text: "Central retinal vein occlusion", isCorrect: true, exp: "Can cause sudden painless unilateral vision loss; severity varies, but it is typically painless."}, 
+                                {text: "Cataract", exp: "Causes gradual, painless visual decline, not sudden."}, 
+                                {text: "Closed angle glaucoma", exp: "Acute attack is very painful, not painless."}, 
+                                {text: "Optic neuritis", exp: "Typically painful on eye movement, not painless."}, 
+                                {text: "Vitreous hemorrhage", isAi: true, exp: "Sudden vitreous hemorrhage is painless, but CRVO remains a classic answer for sudden painless unilateral visual loss."}
+                            ], 
+                            eval: "The answer is correct. CRVO presents with sudden painless vision loss." 
+                        },
+                        { 
+                            q: "One of the following isn't a cause of painful vision loss:", 
+                            opts: [
+                                {text: "Giant cell arteritis", exp: "Can cause painful vision loss (headache, scalp tenderness, jaw claudication, sometimes eye pain)."}, 
+                                {text: "Optic neuritis", exp: "Painful, especially with eye movement."}, 
+                                {text: "Acute anterior uveitis", exp: "Painful with photophobia and redness."}, 
+                                {text: "Acute closed angle glaucoma", exp: "Severe pain with nausea and blurred vision."}, 
+                                {text: "Rhegmatogenous retinal detachment", isCorrect: true, exp: "Typically painless vision loss; not associated with pain."}
+                            ], 
+                            eval: "The answer is correct. Rhegmatogenous retinal detachment is a painless cause of visual loss, while the others are painful." 
+                        }
+                    ]},
+                  { t: "Lids and Lacrimal systems", qs: [
+                        { 
+                            q: "Not present in 7th nerve palsy:", 
+                            opts: [
+                                {text: "Entropion", isCorrect: true, exp: "Correct. It is not a feature of seventh nerve palsy; lagophthalmos and ectropion may occur, but entropion is not caused by facial nerve weakness."}, 
+                                {text: "Depressed brow", exp: "Present due to loss of frontalis muscle action, causing brow ptosis."}, 
+                                {text: "Exposure keratitis", exp: "Present because of incomplete lid closure (lagophthalmos) and poor Bell’s phenomenon."}, 
+                                {text: "Lacrimation", exp: "Present; impaired lacrimal pump and corneal irritation cause epiphora."}, 
+                                {text: "Lagophthalmos", isAi: true, exp: "Present; it is the inability to close the eye, a classic feature of facial nerve palsy, so it is not the correct answer for “not present”."}
+                            ], 
+                            eval: "The answer is correct. Entropion is not a typical manifestation of seventh nerve palsy." 
+                        },
+                        { 
+                            q: "Where does the nasolacrimal duct open?", 
+                            opts: [
+                                {text: "Superior nasal meatus", exp: "Incorrect; drains posterior ethmoid sinuses."}, 
+                                {text: "Middle nasal meatus", exp: "Incorrect; drains frontal, maxillary, and anterior ethmoid sinuses."}, 
+                                {text: "Inferior nasal meatus", isCorrect: true, exp: "Correct. The nasolacrimal duct opens into the inferior meatus under the inferior turbinate."}, 
+                                {text: "Sphenoethmoidal recess", isAi: true, exp: "Incorrect; it drains the sphenoid sinus."}, 
+                                {text: "Nasopharynx directly", isAi: true, exp: "Incorrect; it does not open directly into the nasopharynx."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about entropion?", 
+                            opts: [
+                                {text: "Weakness of orbicularis oculi", exp: "Incorrect as a cause; entropion is usually associated with spasm or laxity, not weakness. Weakness of orbicularis oculi leads to ectropion, making this statement wrong too, but C is the primary intended choice."}, 
+                                {text: "Trachoma is a common cause", exp: "True; cicatricial entropion is a well-known complication."}, 
+                                {text: "Lead to lid eversion and epiphora and excessive tearing", isCorrect: true, exp: "This is wrong; entropion causes inward turning, not eversion. Eversion is ectropion."}, 
+                                {text: "It may be caused by horizontal eyelid laxity", isAi: true, exp: "True; horizontal laxity is a factor in involutional entropion."}, 
+                                {text: "Senile entropion involves lower eyelid", isAi: true, exp: "True; involutional entropion almost always affects the lower lid."}
+                            ], 
+                            eval: "The answer is correct. Entropion turns the eyelid inward, not outward (eversion). Note that 'weakness of orbicularis oculi' is also a wrong statement about entropion, but the intended answer is C." 
+                        },
+                        { 
+                            q: "All of the following are present in blepharitis except:", 
+                            opts: [
+                                {text: "Thick Meibomian secretions", exp: "Present in posterior blepharitis due to meibomian gland dysfunction."}, 
+                                {text: "Entropion", isCorrect: true, exp: "Correct exception. It is not a direct feature of blepharitis."}, 
+                                {text: "Dandruff on lashes", exp: "Present in seborrheic anterior blepharitis."}, 
+                                {text: "Loss of eyelashes", exp: "Can occur in chronic blepharitis (madarosis)."}, 
+                                {text: "Crusting and redness of lid margins", isAi: true, exp: "Present, these are classic signs of blepharitis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A patient complains of drooping of the upper eyelid, constricted pupil, and lack of sweating on the right side of the face. What is the diagnosis?", 
+                            opts: [
+                                {text: "Horner's syndrome", isCorrect: true, exp: "Correct. Ptosis, miosis, and anhidrosis are the classic triad."}, 
+                                {text: "Third nerve palsy", exp: "Would cause ptosis with a dilated pupil and down-and-out eye deviation, not miosis or anhidrosis."}, 
+                                {text: "Myasthenia gravis", exp: "Variable ptosis, no pupillary abnormality or anhidrosis."}, 
+                                {text: "Adie's tonic pupil", isAi: true, exp: "Presents with a dilated, poorly reactive pupil and no ptosis or anhidrosis."}, 
+                                {text: "Argyll Robertson pupil", isAi: true, exp: "Bilateral small pupils that accommodate but do not react to light; no ptosis or anhidrosis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of these are part of Basal Cell Carcinoma management except for:", 
+                            opts: [
+                                {text: "Radiation is the first step in treatment", isCorrect: true, exp: "This is the exception; surgical excision is the standard first-line treatment, not radiation."}, 
+                                {text: "It is found in 2/3 of the patient in the lower eyelid", exp: "True; the majority of periocular BCC occurs on the lower lid."}, 
+                                {text: "It constitutes 85-95% of eye malignancies", exp: "True; BCC is the most common eyelid malignancy."}, 
+                                {text: "Mohs micrographic surgery ensures margin control", isAi: true, exp: "True; it is often used for high-risk lesions to achieve complete excision."}, 
+                                {text: "Surgical excision is the primary treatment", isAi: true, exp: "True; complete surgical removal is the first-line management."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Entropion is caused by all of the following except for:", 
+                            opts: [
+                                {text: "Facial palsy", isCorrect: true, exp: "Correct exception. It leads to paralytic ectropion, not entropion."}, 
+                                {text: "Horizontal eyelid laxity", exp: "Causes involutional entropion, allowing the lid to roll inward."}, 
+                                {text: "Tight orbicularis oculi muscle", exp: "Spastic entropion due to orbicularis overaction."}, 
+                                {text: "Trachomatous scarring", isAi: true, exp: "True cause; cicatricial entropion results from conjunctival scarring."}, 
+                                {text: "Chemical burns", isAi: true, exp: "True cause; they induce cicatricial changes leading to entropion."}
+                            ], 
+                            eval: "The answer (based on standard knowledge) is correct. The source did not provide the answer, but it is almost certainly A. I've kept the blank as is and filled with the logical answer." 
+                        },
+                        { 
+                            q: "Which of these statements about the tarsal plate is incorrect?", 
+                            opts: [
+                                {text: "Does NOT include lash follicles", exp: "This is generally true; lash follicles are in the anterior lamella, not within the tarsal plate."}, 
+                                {text: "Upper part is 10mm", exp: "True; the superior tarsus is about 10 mm vertically."}, 
+                                {text: "Lower part is 4mm", exp: "True; the inferior tarsus is about 4 mm."}, 
+                                {text: "It contains cyst of zeiss", isCorrect: true, exp: "This is incorrect. Zeiss cysts are associated with sebaceous glands of the eyelash follicles (glands of Zeis), which are located at the lid margin, not within the tarsal plate. The tarsal plate contains meibomian glands."}, 
+                                {text: "It is composed of dense connective tissue", isAi: true, exp: "This is a correct statement; the tarsal plate is fibrous tissue."}
+                            ], 
+                            eval: "The answer is ambiguous in the source, but the tarsal plate does not contain cysts of Zeis; it contains meibomian glands. Therefore, D is the most chemically and anatomically incorrect statement." 
+                        },
+                        { 
+                            q: "One of the following doesn’t occur in ectropion:", 
+                            opts: [
+                                {text: "Weakness of orbicularis oculi", exp: "Occurs; it leads to paralytic ectropion."}, 
+                                {text: "Cicatricial changes", exp: "Can cause ectropion due to skin shortening and pulling the lid outward."}, 
+                                {text: "Medial canthi weakness", isCorrect: true, exp: "Correct exception. Weakness of the medial canthus more commonly contributes to punctal eversion and epiphora but is not a primary cause of ectropion; ectropion is due to horizontal lid laxity or orbicularis weakness."}, 
+                                {text: "Loose eyelid", exp: "Horizontal laxity is a major cause of involutional ectropion."}, 
+                                {text: "Epiphora", isAi: true, exp: "Occurs in ectropion due to punctal malposition and exposure."}
+                            ], 
+                            eval: "The answer is correct. Medial canthal weakness is not a standard direct cause of ectropion; the primary mechanisms are horizontal laxity, orbicularis weakness, and cicatricial changes." 
+                        },
+                        { 
+                            q: "Ptosis not caused by:", 
+                            opts: [
+                                {text: "Facial nerve palsy", isCorrect: true, exp: "Correct. It causes brow ptosis and inability to close the eye, not true blepharoptosis (drooping of the upper eyelid margin). Ptosis is not a feature."}, 
+                                {text: "Upper eyelid capillary hemangioma", exp: "Mechanical ptosis due to mass effect."}, 
+                                {text: "Horner's and 3rd nerve palsy", exp: "Both cause ptosis (Horner's with miosis, 3rd nerve with dilated pupil and ophthalmoplegia)."}, 
+                                {text: "Congenital ptosis", exp: "Obviously causes ptosis."}, 
+                                {text: "Jaw winking Marcus Gunn", isAi: true, exp: "Causes ptosis with synkinetic lid elevation on jaw movement."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about congenital ptosis?", 
+                            opts: [
+                                {text: "Levator muscle is normal", isCorrect: true, exp: "This is wrong; congenital ptosis is most often caused by a dystrophic levator muscle replaced by fibrous and adipose tissue."}, 
+                                {text: "It is usually due to dystrophic levator muscle", isAi: true, exp: "Correct statement."}, 
+                                {text: "It may be associated with superior rectus weakness", isAi: true, exp: "Correct; congenital ptosis can be associated with weakness of the superior rectus."}, 
+                                {text: "Poor lid crease is a typical sign", isAi: true, exp: "Correct; absence or poor formation of the lid crease is characteristic."}, 
+                                {text: "It can cause amblyopia from occlusion", isAi: true, exp: "Correct; significant ptosis can occlude the visual axis and lead to deprivation amblyopia."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is not a symptom of aqueous deficient dry eye?", 
+                            opts: [
+                                {text: "Gritting", exp: "Typical symptom of dry eye due to surface irregularity."}, 
+                                {text: "Photophobia", exp: "Common in dry eye."}, 
+                                {text: "Ocular fatigue", exp: "Asthenopic symptoms occur with tear film instability."}, 
+                                {text: "Worse in the morning", isCorrect: true, exp: "Correct. Aqueous deficient dry eye symptoms typically worsen later in the day; morning worsening is more suggestive of meibomian gland dysfunction or recurrent corneal erosion."}, 
+                                {text: "Decreased visual acuity", exp: "Blurred vision that improves with blinking occurs in dry eye."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common cause of eyelashes loss?", 
+                            opts: [
+                                {text: "Blepharitis", isCorrect: true, exp: "Correct. Chronic anterior blepharitis frequently causes madarosis (loss of lashes)."}, 
+                                {text: "Trachiasis", exp: "Misdirection of lashes, not primarily loss."}, 
+                                {text: "Ectropion", exp: "May lead to chronic conjunctivitis but not a primary cause of lash loss."}, 
+                                {text: "Entropion", exp: "Lashes rub against the globe but are not lost primarily."}, 
+                                {text: "Trichotillomania", isAi: true, exp: "Psychiatric condition of hair pulling, not the most common cause overall."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common cause of acquired ptosis?", 
+                            opts: [
+                                {text: "Myasthenia gravis", exp: "Causes variable ptosis, but not the most common cause of acquired ptosis."}, 
+                                {text: "Levator dehiscence (disinsertion)", isCorrect: true, exp: "Correct. Aponeurotic ptosis due to levator aponeurosis disinsertion is the most common cause of acquired ptosis, especially in the elderly."}, 
+                                {text: "3rd nerve palsy", exp: "A serious cause but much less common."}, 
+                                {text: "Congenital ptosis", exp: "Not acquired; present at birth."}, 
+                                {text: "Horner's syndrome", isAi: true, exp: "Causes mild ptosis but is far less common than aponeurotic ptosis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                    { t: "The orbit", qs: [
+                        { 
+                            q: "Which of the following is wrong about lacrimation?", 
+                            opts: [
+                                {text: "Lacrimal gland is located in the superomedial aspect of the orbit", isCorrect: true, exp: "Wrong; it is situated in the superolateral orbit."}, 
+                                {text: "Tears drain via the nasolacrimal duct into the inferior meatus", isAi: true, exp: "Correct."}, 
+                                {text: "The lacrimal gland secretes the aqueous layer of the tear film", isAi: true, exp: "Correct."}, 
+                                {text: "Reflex tearing is mediated by the facial nerve", isAi: true, exp: "Correct; the efferent limb is via the facial nerve (parasympathetic fibers)."}, 
+                                {text: "The lacrimal sac lies in the lacrimal fossa", isAi: true, exp: "Correct."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of these are true about Hertel exophthalmometer except for:", 
+                            opts: [
+                                {text: "A difference of 2 mm or more between the eyes is significant and abnormal", exp: "True; asymmetry ≥2 mm is considered abnormal."}, 
+                                {text: "It is used to test for proptosis", exp: "True; it measures axial globe position."}, 
+                                {text: "Measures the globe position of the eye by calculating the distance from the lateral orbital rim to the anterior lens", isCorrect: true, exp: "False; it measures to the corneal apex, not the lens."}, 
+                                {text: "The results should include baseline and actual measurements", exp: "True; base reading and the measurement are recorded."}, 
+                                {text: "A measurement of 26mm is considered moderate proptosis", exp: "True; normal is around 12–20 mm, with 26 mm indicating significant proptosis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "The most common primary malignant orbital tumor in pediatrics is?", 
+                            opts: [
+                                {text: "Retinoblastoma", exp: "Intraocular tumor, not primarily orbital."}, 
+                                {text: "Rhabdomyosarcoma", isCorrect: true, exp: "Correct. It is the most common primary orbital malignancy in children."}, 
+                                {text: "Neuroblastoma", exp: "Metastatic to orbit, not primary."}, 
+                                {text: "Optic nerve glioma", isAi: true, exp: "Benign or low-grade glioma, not the most common malignant tumor."}, 
+                                {text: "Leukemic infiltration", isAi: true, exp: "Malignant but hematopoietic, not primary orbital tissue."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about proptosis?", 
+                            opts: [
+                                {text: "The most common symptoms are the orbital symptoms", isCorrect: true, exp: "This is wrong; the most common symptom of proptosis is usually cosmetic appearance or diplopia, but the statement is vague; typical orbital symptoms include pain, pressure, and displacement. However, the given answer is this."}, 
+                                {text: "Axial proptosis suggests intraconal pathology", isAi: true, exp: "True; lesions within the muscle cone push the eye straight forward."}, 
+                                {text: "Pulsatile proptosis may occur with carotid-cavernous fistula", isAi: true, exp: "True."}, 
+                                {text: "Dysthyroid eye disease is a common cause", isAi: true, exp: "True; most common cause of bilateral proptosis in adults."}, 
+                                {text: "Pseudoproptosis can be due to high myopia", isAi: true, exp: "True; enlarged myopic globe simulates proptosis."}
+                            ], 
+                            eval: "The answer is somewhat vague but matches the source parameters." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about dysthyroid eye disease?", 
+                            opts: [
+                                {text: "Diplopia due to rectus paralysis", isCorrect: true, exp: "Wrong; diplopia in thyroid eye disease is due to restrictive myopathy, not paralysis."}, 
+                                {text: "Most common cause of bilateral proptosis in adults", exp: "Correct; thyroid eye disease is the leading cause."}, 
+                                {text: "Lid retraction is a common sign", isAi: true, exp: "True; Dalrymple's sign is eyelid retraction."}, 
+                                {text: "Enlargement of extraocular muscles on imaging", isAi: true, exp: "True; muscle belly enlargement with tendon sparing is characteristic."}, 
+                                {text: "Optic neuropathy can occur", isAi: true, exp: "True; compressive optic neuropathy is a serious complication."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is correct about orbital hemangioma?", 
+                            opts: [
+                                {text: "The most common orbital tumor in kids", isCorrect: true, exp: "Correct; infantile capillary hemangioma is the most common benign orbital tumor in children."}, 
+                                {text: "It is a malignant vascular tumor", isAi: true, exp: "Incorrect; it is benign."}, 
+                                {text: "Typically presents with pain and rapid growth", isAi: true, exp: "Not typical; often asymptomatic or slowly growing."}, 
+                                {text: "Requires immediate surgical excision", isAi: true, exp: "Incorrect; many regress spontaneously, propranolol is first-line."}, 
+                                {text: "Usually causes bone destruction", isAi: true, exp: "Incorrect; it does not typically destroy bone."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "A 70-year old female had head Injury, 2 weeks later she was presented to clinic with proptosis of the eyes, visual acuity was normal, your diagnosis is:", 
+                            opts: [
+                                {text: "Dysthyroid eye disease", exp: "Usually chronic, bilateral, not post-traumatic with short latency."}, 
+                                {text: "Orbital varix", exp: "Proptosis with Valsalva, not typically post-trauma."}, 
+                                {text: "Orbital hemangioma", exp: "Slow onset, not related to trauma."}, 
+                                {text: "Carotid cavernous fistula", isCorrect: true, exp: "Correct. Post-traumatic CCF presents with delayed proptosis, chemosis, and sometimes a bruit."}, 
+                                {text: "Dermoid cyst", exp: "Congenital, slowly growing, not post-traumatic."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "About orbital trauma, all of the following are true EXCEPT:", 
+                            opts: [
+                                {text: "Blowout fractures damage the medial wall and the base more than the lateral wall", exp: "True; medial wall and floor are thin."}, 
+                                {text: "Limitation of eye movements due to entrapments of inferior oblique", isCorrect: true, exp: "False; it is the inferior rectus that gets entrapped in floor fractures, not the inferior oblique."}, 
+                                {text: "Enophthalmos is indication of surgery", exp: "True; significant enophthalmos (>2 mm) warrants repair."}, 
+                                {text: "Inferior rectus entrapment causes vertical diplopia", isAi: true, exp: "True; restricted upgaze due to inferior rectus tethering."}, 
+                                {text: "Floor fractures are common in blowout injuries", isAi: true, exp: "True; the floor is the most common site."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "About orbital cellulitis which is wrong?", 
+                            opts: [
+                                {text: "We only give topical antibiotic", isCorrect: true, exp: "Wrong; orbital cellulitis requires systemic broad-spectrum IV antibiotics, not just topical."}, 
+                                {text: "Most common cause of proptosis in children", exp: "True; it is a leading cause."}, 
+                                {text: "Cause pain and decrease vision", exp: "True; pain, reduced vision, and motility restriction are features."}, 
+                                {text: "It requires systemic IV antibiotics", isAi: true, exp: "Correct statement."}, 
+                                {text: "CT imaging is used to assess for abscess", isAi: true, exp: "Correct; imaging is essential to detect subperiosteal or orbital abscess."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Unilateral proptosis in children most common cause:", 
+                            opts: [
+                                {text: "Orbital cellulitis", isCorrect: true, exp: "Correct. It is the most common cause of acute unilateral proptosis in children."}, 
+                                {text: "Dysthyroid eye disease", exp: "Rare in young children, usually adults."}, 
+                                {text: "Capillary hemangioma", exp: "Common orbital tumor, but cellulitis is a more frequent cause of acute proptosis."}, 
+                                {text: "Rhabdomyosarcoma", isAi: true, exp: "Important cause but less common than cellulitis overall."}, 
+                                {text: "Dermoid cyst", isAi: true, exp: "Presents more as a mass, often without acute proptosis."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "One will not cause exophthalmus:", 
+                            opts: [
+                                {text: "Endocrine", exp: "Thyroid eye disease is a common cause."}, 
+                                {text: "Tumors", exp: "Primary and secondary orbital tumors cause proptosis."}, 
+                                {text: "Cavernous sinus thrombosis", exp: "Congestion and venous engorgement can cause proptosis."}, 
+                                {text: "Sinusitis", exp: "Orbital cellulitis secondary to sinusitis causes proptosis."}, 
+                                {text: "Horner syndrome", isCorrect: true, exp: "Correct. It causes enophthalmos (apparent) due to ptosis, not true exophthalmos."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "All of the following differentiate orbital cellulitis from preseptal cellulitis, except:", 
+                            opts: [
+                                {text: "Absence of conjunctival hyperemia", exp: "Conjunctival injection may be present in both; but its absence is not a reliable differentiator."}, 
+                                {text: "Decrease in vision", exp: "Orbital cellulitis can impair vision; preseptal does not. This does differentiate."}, 
+                                {text: "The presence of fever", isCorrect: true, exp: "Fever can be present in both preseptal and orbital cellulitis, so it does not reliably differentiate."}, 
+                                {text: "Proptosis", exp: "Proptosis is a key sign of orbital involvement, absent in preseptal."}, 
+                                {text: "Decrease in extraocular motility", exp: "Motility restriction indicates orbital spread, absent in preseptal."}
+                            ], 
+                            eval: "The answer is correct. Fever does not separate them." 
+                        },
+                        { 
+                            q: "The most common primary site for orbital metastasis in children is:", 
+                            opts: [
+                                {text: "Kidney", exp: "Wilms tumor rarely metastasizes to the orbit."}, 
+                                {text: "Sympathetic chain (neuroblastoma)", isCorrect: true, exp: "Correct. Neuroblastoma is the most common metastatic tumor to the orbit in children."}, 
+                                {text: "Lung", exp: "Rare in children."}, 
+                                {text: "Retina (retinoblastoma)", exp: "Primary ocular, can extend but not distant metastasis to orbit."}, 
+                                {text: "Gastrointestinal system", exp: "Unlikely in children."}
+                            ], 
+                            eval: "The answer is correct." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about blowout fracture of the orbit?", 
+                            opts: [
+                                {text: "Enophthalmos is an early complication", isCorrect: true, exp: "This is wrong; enophthalmos is typically a late finding after edema resolves."}, 
+                                {text: "The medial wall and floor are most commonly involved", isAi: true, exp: "True."}, 
+                                {text: "Entrapment of inferior rectus may occur", isAi: true, exp: "True."}, 
+                                {text: "Emphysema may result from communication with ethmoid air cells", isAi: true, exp: "True; subcutaneous or orbital emphysema from ethmoid fractures."}, 
+                                {text: "Surgical repair is indicated for persistent diplopia or significant enophthalmos", isAi: true, exp: "True."}
+                            ], 
+                            eval: "The answer is correct. Enophthalmos appears late." 
+                        },
+                        { 
+                            q: "Which nerve arises outside the cone of extraocular muscles?", 
+                            opts: [
+                                {text: "Optic nerve", exp: "Within the cone (intraconal)."}, 
+                                {text: "Superior branch of oculomotor nerve", exp: "Intraconal, branches inside the cone."}, 
+                                {text: "Inferior branch of oculomotor nerve", exp: "Intraconal."}, 
+                                {text: "Trochlear nerve", isCorrect: true, exp: "Correct. It runs in the superolateral orbit outside the muscle cone to innervate the superior oblique."}, 
+                                {text: "Abducent nerve", exp: "Enters the cone to reach the lateral rectus."}
+                            ], 
+                            eval: "The answer is correct." 
+                        }
+                    ]},
+                  { t: "Anatomy and others", qs: [
+                        { 
+                            q: "What is the boundary between the retina and the ciliary body in the eye?", 
+                            opts: [
+                                {text: "Ora serrata", isCorrect: true, exp: "The ora serrata is the junction where the neural retina transitions to the non-pigmented epithelium of the ciliary body."}, 
+                                {text: "Limbus", isAi: true, exp: "The limbus is the junction of cornea and sclera, not retina and ciliary body."}, 
+                                {text: "Optic disc", isAi: true, exp: "The optic disc is where retinal ganglion cell axons exit the eye; it is the posterior pole landmark."}, 
+                                {text: "Pars plicata", isAi: true, exp: "Pars plicata is the anterior portion of the ciliary body, containing ciliary processes, anterior to the ora serrata."}, 
+                                {text: "Equator of the globe", isAi: true, exp: "The equator is the widest circumference of the eyeball, posterior to the ora serrata."}
+                            ], 
+                            eval: "The answer is correct. The ora serrata is the well-defined anatomical boundary between the retina and the ciliary body." 
+                        },
+                        { 
+                            q: "Most important for accommodation is:", 
+                            opts: [
+                                {text: "Anterior capsule", exp: "The anterior lens capsule provides a base for zonular attachment but is not the active driver of shape change."}, 
+                                {text: "Posterior capsule", exp: "The posterior capsule plays no active role in accommodation."}, 
+                                {text: "Ciliary body", isCorrect: true, exp: "The ciliary body contains the ciliary muscle, which contracts to relax zonular tension and allow the lens to become more convex for near focus."}, 
+                                {text: "Iris", exp: "The iris regulates pupil size, which affects depth of focus, but the primary mechanism of accommodation is ciliary muscle action."}, 
+                                {text: "Zonular fibers", isAi: true, exp: "Zonular fibers transmit the forces from the ciliary body to the lens; they are passive connective tissue structures, not the active element."}
+                            ], 
+                            eval: "The answer is correct. The ciliary body (ciliary muscle) is the essential active component for accommodation." 
+                        },
+                        { 
+                            q: "Which of the following statements about the orbital septum is true?", 
+                            opts: [
+                                {text: "It is 10mm in length", exp: "The orbital septum does not have a fixed length; it extends from the orbital rim to the tarsal plates and varies with individual anatomy."}, 
+                                {text: "It originates from the periosteum", isCorrect: true, exp: "The orbital septum arises from the periosteum of the orbital margin (arcus marginalis)."}, 
+                                {text: "It separates the eyelid from the orbital fat", isCorrect: true, exp: "The septum serves as a fibrous barrier that separates the preseptal eyelid structures from the orbital contents."}, 
+                                {text: "It is composed of the ethmoid bone", exp: "The ethmoid bone forms part of the medial orbital wall, not the septum."}, 
+                                {text: "It is a thin transparent mucous membrane", isAi: true, exp: "The orbital septum is a multilayered fibrous connective tissue sheet, not a mucous membrane."}
+                            ], 
+                            eval: "The source does not provide an answer. Both “It originates from the periosteum” and “It separates the eyelid from the orbital fat” are true statements about the orbital septum. In many examination contexts, “It originates from the periosteum” is the expected answer." 
+                        },
+                        { 
+                            q: "The orbital walls are composed of all the following bones except:", 
+                            opts: [
+                                {text: "Ethmoid bone", exp: "Part of the medial orbital wall; not the exception."}, 
+                                {text: "Frontal bone", exp: "Forms the orbital roof; not the exception."}, 
+                                {text: "Lacrimal bone", exp: "Small part of the anterior medial wall; not the exception."}, 
+                                {text: "Maxillary bone", exp: "Forms the orbital floor; not the exception."}, 
+                                {text: "Nasal bone", isCorrect: true, exp: "The nasal bone forms the bridge of the nose and is not part of the orbital walls."}
+                            ], 
+                            eval: "The answer is correct. The nasal bone is not a component of the orbit." 
+                        },
+                        { 
+                            q: "Direct Ophthalmoscope image is:", 
+                            opts: [
+                                {text: "Virtual, inverted, magnified", exp: "The direct ophthalmoscope produces an erect image."}, 
+                                {text: "Virtual, erect, magnified", isCorrect: true, exp: "The image is virtual, erect, and magnified approximately 15 times."}, 
+                                {text: "Real, inverted, magnified", exp: "This describes the image formed by an indirect ophthalmoscope."}, 
+                                {text: "Real, erect, magnified", exp: "A real, erect image is not produced by standard ophthalmoscopes."}, 
+                                {text: "Virtual, erect, minified", isAi: true, exp: "The image is magnified, not minified."}
+                            ], 
+                            eval: "The answer is correct. The direct ophthalmoscope yields a virtual, erect, magnified retinal image." 
+                        },
+                        { 
+                            q: "Light-near reflex dissociation occur in:", 
+                            opts: [
+                                {text: "Argyll Robertson pupil", isCorrect: true, exp: "Classic light-near dissociation: absent light reflex with preserved near reflex."}, 
+                                {text: "Horner syndrome", exp: "Light and near reflexes are both intact; the pupil is just miotic."}, 
+                                {text: "Adie tonic pupil", isAi: true, exp: "Also shows light-near dissociation due to aberrant reinnervation, but Argyll Robertson is the prototypical cause taught in this context."}, 
+                                {text: "Dorsal midbrain syndrome", isAi: true, exp: "Can cause light-near dissociation, but the selected source answer is Argyll Robertson."}, 
+                                {text: "Optic atrophy", isAi: true, exp: "Light reflex may be diminished, but near reflex is usually proportionally affected; not classic light-near dissociation."}
+                            ], 
+                            eval: "The answer is correct. Argyll Robertson pupil is the classical association." 
+                        },
+                        { 
+                            q: "A 5-month old child presents with Leukocoria. All are possible causes except:", 
+                            opts: [
+                                {text: "Retinoblastoma", exp: "Major cause of leukocoria in infants."}, 
+                                {text: "Corneal opacity", exp: "Large opacities can cause a white reflex."}, 
+                                {text: "Retinopathy of prematurity", exp: "Stage 5 ROP with retrolental fibroplasia gives leukocoria."}, 
+                                {text: "Toxoplasmosis", isCorrect: true, exp: "Congenital toxoplasmosis typically produces chorioretinal scars, not a white pupil; it is the least likely to present as leukocoria."}, 
+                                {text: "Cataract", exp: "Congenital cataract is a common cause of leukocoria."}
+                            ], 
+                            eval: "The source does not provide an answer. The most logical exception is Toxoplasmosis, as it rarely causes leukocoria; the other four are well-established causes." 
+                        },
+                        { 
+                            q: "All can present with leukocoria except:", 
+                            opts: [
+                                {text: "Congenital glaucoma", exp: "Corneal edema and buphthalmos can produce a leukocoric reflex."}, 
+                                {text: "Gout disease", isCorrect: true, exp: "Gout has no ocular manifestation that leads to leukocoria."}, 
+                                {text: "Congenital cataract", exp: "Classic cause of leukocoria."}, 
+                                {text: "Severe degree of premature disease of retina", exp: "Advanced retinopathy of prematurity leads to leukocoria."}, 
+                                {text: "Retinoblastoma", exp: "The most critical cause to exclude."}
+                            ], 
+                            eval: "The answer is correct. Gout does not present with leukocoria." 
+                        },
+                        { 
+                            q: "All of the following can cause amblyopia except:", 
+                            opts: [
+                                {text: "Esotropia", exp: "Strabismic amblyopia can develop from constant unilateral deviation."}, 
+                                {text: "Hemangioma of the upper eye lid", exp: "Occlusion of the visual axis leads to deprivation amblyopia."}, 
+                                {text: "Optic atrophy", isCorrect: true, exp: "Optic atrophy represents organic damage to the visual pathway, not a reversible functional suppression."}, 
+                                {text: "Patching of the eye of an infant", exp: "Prolonged occlusion therapy can cause iatrogenic deprivation amblyopia."}, 
+                                {text: "Corneal clouding", exp: "Form-vision deprivation amblyopia."}
+                            ], 
+                            eval: "The answer is correct. Optic atrophy is an organic cause of vision loss, not amblyopia." 
+                        },
+                        { 
+                            q: "Which of the following is wrong about CMV hepatitis?", 
+                            opts: [
+                                {text: "It is caused by cytomegalovirus", exp: "CMV is the causative virus."}, 
+                                {text: "It often occurs in immunocompromised patients", exp: "Reactivation in transplant recipients, HIV/AIDS, etc."}, 
+                                {text: "Liver biopsy may show owl's eye inclusion bodies", exp: "This is the characteristic cytopathic effect of CMV."}, 
+                                {text: "It is an AIDS-defining illness", isCorrect: true, exp: "The answer states this is the wrong statement. CMV retinitis and other end-organ diseases are AIDS-defining, but isolated CMV hepatitis is not consistently listed as a specific AIDS-defining illness."}, 
+                                {text: "It can cause transaminitis", isAi: true, exp: "CMV hepatitis causes elevated liver enzymes."}
+                            ], 
+                            eval: "The assigned answer is consistent with the fact that CMV hepatitis alone is not classically considered an AIDS-defining condition; the answer is kept as in the source." 
+                        },
+                        { 
+                            q: "Bilateral vitritis is most commonly associated with:", 
+                            opts: [
+                                {text: "Primary intraocular lymphoma", isCorrect: true, exp: "It frequently presents as bilateral vitritis, often masquerading as chronic uveitis."}, 
+                                {text: "Sarcoidosis", isAi: true, exp: "Can cause intermediate uveitis with vitritis, but the classic bilateral masquerade is lymphoma."}, 
+                                {text: "Toxoplasmosis", isAi: true, exp: "Typically causes focal unilateral retinochoroiditis, not primarily bilateral vitritis."}, 
+                                {text: "CMV retinitis", isAi: true, exp: "Presents with retinal necrosis and hemorrhages, not isolated vitritis."}, 
+                                {text: "Syphilis", isAi: true, exp: "Can produce panuveitis, but lymphoma is the iconic bilateral vitritis masquerade."}
+                            ], 
+                            eval: "The answer is correct. Primary intraocular/CNS lymphoma is a classic cause of bilateral vitritis." 
+                        },
+                        { 
+                            q: "Retrobulbar neuritis, all are true except:", 
+                            opts: [
+                                {text: "Usually affects adult women between the ages of 20 and 40", exp: "Optic neuritis peaks in this demographic."}, 
+                                {text: "Most cases show optic disc swelling", isCorrect: true, exp: "False. In retrobulbar neuritis, the inflammation is posterior to the globe, so the optic disc appears normal acutely."}, 
+                                {text: "Often associated with pain upon eye movement", exp: "Pain on eye movement is a hallmark."}, 
+                                {text: "Associated with color desaturation", exp: "Red desaturation is a typical finding."}, 
+                                {text: "Associated with relative afferent pupillary defect", exp: "RAPD is usually present."}
+                            ], 
+                            eval: "The answer is correct. Retrobulbar neuritis classically shows a normal optic disc, hence “the patient sees nothing, the doctor sees nothing.”" 
+                        }
+                    ]}
+                    
                 ]
             },
             {
