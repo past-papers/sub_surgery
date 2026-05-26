@@ -2149,13 +2149,13 @@
                         { 
                             q: "The most common primary brain tumor in adult is:", 
                             opts: [
-                                {text: "Glioblastoma", isCorrect: true, exp: "Glioblastoma is the most common malignant primary brain tumor. Overall, meningioma is more common."}, 
+                                {text: "Glioblastoma", exp: "less common."}, 
                                 {text: "Ependymoma", exp: "Less common."}, 
-                                {text: "Meningioma", exp: "The most common primary brain tumor in adults."}, 
+                                {text: "Meningioma", isCorrect: true, exp: "The most common primary brain tumor in adults."}, 
                                 {text: "Medulloblastoma", exp: "Primarily pediatric."}, 
                                 {text: "Pituitary adenoma", exp: "Common but less than meningioma."}
                             ], 
-                            eval: "The answer seems incorrect. Meningioma is the most common primary brain tumor in adults. The question likely intended “malignant primary brain tumor,” in which case glioblastoma is correct. The source answer is kept." 
+                            eval: "The answer seems correct." 
                         },
                         { 
                             q: "Which of these is a benign brain tumor?", 
@@ -2323,17 +2323,6 @@
                             eval: "The answer is correct." 
                         },
                         { 
-                            q: "Case history of a child with medulloblastoma. He has hydrocephalus. Which of the following is wrong about the management:", 
-                            opts: [
-                                {text: "Total and axial radiotherapy", exp: "True; craniospinal radiation is standard."}, 
-                                {text: "Chemotherapy", exp: "True; adjuvant chemotherapy is used."}, 
-                                {text: "Repeat surgery for residual mass", exp: "True if residual tumor is significant."}, 
-                                {text: "Drainage procedure", isCorrect: true, exp: "Incorrect as a primary management; tumor resection often relieves hydrocephalus; simple drainage without tumor management is wrong."}, 
-                                {text: "Ventriculoperitoneal shunting may be required", isAi: true, exp: "True in persistent hydrocephalus."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
-                        { 
                             q: "Medulloblastoma, which is not a sign of poor prognosis:", 
                             opts: [
                                 {text: "Residual tumor after resection", exp: "Poor prognostic factor."}, 
@@ -2410,17 +2399,8 @@
                             ], 
                             eval: "The answer is correct." 
                         },
-                        { 
-                            q: "Which of the following cannot be caused by a suprasellar mass:", 
-                            opts: [
-                                {text: "Anosmia", exp: "Can occur if the mass extends to olfactory pathways."}, 
-                                {text: "Fits", exp: "Seizures can be caused by suprasellar masses extending into frontal/temporal lobes."}, 
-                                {text: "Headache", exp: "Common due to raised ICP or mass effect."}, 
-                                {text: "Motor deficits", isCorrect: true, exp: "Typically suprasellar masses cause endocrine and visual disturbances, not direct motor deficits."}, 
-                                {text: "Visual field defects", isAi: true, exp: "Classic for suprasellar masses compressing the chiasm."}
-                            ], 
-                            eval: "The answer is acceptable in typical teaching; suprasellar masses classically cause endocrine and visual symptoms, while motor deficits are less expected." 
-                        },
+                        
+                            
                         { 
                             q: "Which of the following brain tumors has the best prognosis in general?", 
                             opts: [
@@ -2487,17 +2467,8 @@
                             ], 
                             eval: "The answer is correct." 
                         },
-                        { 
-                            q: "Cushing's syndrome can be due to all except:", 
-                            opts: [
-                                {text: "Adrenal tumor", exp: "Can cause Cushing's syndrome."}, 
-                                {text: "Pituitary tumor", exp: "Cushing's disease."}, 
-                                {text: "Lung tumor", exp: "Ectopic ACTH secretion."}, 
-                                {text: "Breast carcinoma", exp: "Rarely can secrete ACTH."}, 
-                                {text: "Teratogenic", isCorrect: true, exp: "Teratogenic is not a recognized cause; “teratogenic” refers to developmental malformations, not Cushing's syndrome."}
-                            ], 
-                            eval: "The answer is reasonable." 
-                        },
+                        
+                            
                         { 
                             q: "Wrong about pituitary adenoma:", 
                             opts: [
@@ -2763,17 +2734,8 @@
                             ], 
                             eval: "The answer is correct. There are only A, B, and C Lundberg waves." 
                         },
-                        { 
-                            q: "Which one of the following best describes Lundberg (A) ICP (intracranial pressure) waves?", 
-                            opts: [
-                                {text: "Periodic self-limited increase in ICP (20‑50 mmHg) occurring every 1 to 2 minutes and lasting several seconds", isCorrect: true, exp: "This actually describes B waves, not A waves. However, the question’s provided answer is this option."}, 
-                                {text: "Periodic self-limited increase in ICP (50 mmHg) lasting for 5 to 20 minutes", exp: "This correctly describes Lundberg A (plateau) waves – sustained elevation ≥50 mmHg for 5–20 min."}, 
-                                {text: "Rhythmic oscillations of ICP at a frequency of 4‑8 per minute", exp: "These are C waves."}, 
-                                {text: "Saw‑toothed waves associated with Cheyne‑Stokes respiration", exp: "Also associated with B waves, but not A waves."}, 
-                                {text: "Small, rapid fluctuations with each heartbeat", exp: "Pulse pressure waveform, not Lundberg waves."}
-                            ], 
-                            eval: "The given answer is likely incorrect according to standard descriptions. Lundberg A waves are plateau waves (sustained 50–100 mmHg, 5–20 min). The description in the chosen option matches B waves. Therefore, the more accurate answer would be “Periodic self-limited increase in ICP (50 mmHg) lasting for 5 to 20 minutes.” I am keeping the source answer as requested but flagging the discrepancy." 
-                        },
+                         
+                            
                         { 
                             q: "Methods to decrease the ICP except:", 
                             opts: [
@@ -2950,17 +2912,8 @@
                             ], 
                             eval: "The answer is correct." 
                         },
-                        { 
-                            q: "Which is correct about saccular aneurysm:", 
-                            opts: [
-                                {text: "Most common aneurysm", exp: "True; saccular aneurysms are the most common intracranial aneurysms."}, 
-                                {text: "Multiple in 20% of cases", exp: "True; approximately 20–30% of patients have multiple aneurysms."}, 
-                                {text: "Pathology is defective external lamina", exp: "False; the defect is in the internal elastic lamina."}, 
-                                {text: "Mostly at bifurcation of arteries in the base of the brain", isCorrect: true, exp: "Correct and distinctive; this is a defining feature."}, 
-                                {text: "90% in anterior circulation", exp: "Approximately 85–90% occur in the anterior circulation, also true."}
-                            ], 
-                            eval: "The question asks for a correct statement, but several options are factually correct. The chosen answer “mostly at bifurcation of arteries” is indeed a key characteristic. The question may be flawed; nevertheless, the provided answer is kept." 
-                        },
+                        
+                          
                         { 
                             q: "Saccular aneurysm wrong:", 
                             opts: [
@@ -3722,17 +3675,7 @@
                             ], 
                             eval: "The answer is correct." 
                         },
-                        { 
-                            q: "The percentage of low-risk back pain patients who will improve with conservative non-surgical treatment in one month is:", 
-                            opts: [
-                                {text: "30%", exp: "Too low; the majority improve."}, 
-                                {text: "60%", isCorrect: true, exp: "Correct. Roughly 60% of acute low back pain patients improve substantially within a month."}, 
-                                {text: "100%", exp: "Unrealistic; a proportion do not improve or develop chronic pain."}, 
-                                {text: "90%", exp: "Many improve by three months, but at one month the figure is lower."}, 
-                                {text: "10%", exp: "Far too low."}
-                            ], 
-                            eval: "The answer is reasonable; 60% is often quoted for significant improvement within 4 weeks." 
-                        },
+                      
                         { 
                             q: "In a patient with cervical disc prolapse, one of the following physical signs is suggestive for cervical myelopathy:", 
                             opts: [
@@ -4041,17 +3984,8 @@
                             ], 
                             eval: "The provided answer that \"Neurological symptoms are common\" is wrong may be inaccurate. In lumbar spinal stenosis, neurological symptoms (radicular pain, numbness, weakness) are indeed common in symptomatic patients. Possibly the intended correct answer was something else, but it is kept as per source." 
                         },
-                        { 
-                            q: "Common site of lumbar canal stenosis:", 
-                            opts: [
-                                {text: "L1-L2", exp: "Rare."}, 
-                                {text: "L2-L3", exp: "Less common."}, 
-                                {text: "L3-L4", exp: "Frequently involved but not the most common."}, 
-                                {text: "L4-L5", exp: "The most common level overall in many series."}, 
-                                {text: "L5-S1", isCorrect: true, exp: "Given as the answer. While L4-L5 is the most common, L5-S1 is also a frequent site; some sources may cite L4-L5 and L5-S1 equally."}
-                            ], 
-                            eval: "The answer is L5-S1. While many textbooks report L4-L5 as the most common level for acquired lumbar stenosis, L5-S1 is also extremely common. The provided answer may reflect a particular exam source; it is kept." 
-                        },
+                        
+                          
                         { 
                             q: "Surgery for cervical prolapse:", 
                             opts: [
@@ -4218,17 +4152,8 @@
                             ], 
                             eval: "The answer is correct. Sciatica is defined as pain in the distribution of the sciatic nerve." 
                         },
-                        { 
-                            q: "Which spinal cord injury should undergo surgical treatment?", 
-                            opts: [
-                                {text: "Concussion", exp: "Transient physiological disruption, no surgery."}, 
-                                {text: "Contusion", exp: "Bruising of cord, usually managed conservatively unless with compression."}, 
-                                {text: "Compression", exp: "Often requires surgical decompression, but some compressive lesions (e.g., epidural hematoma) are surgical; however “compression” can be due to bone fragments and is a surgical indication. (Note: this could be debated.)"}, 
-                                {text: "Complete anatomic rupture", exp: "Irreversible; surgery does not restore function."}, 
-                                {text: "Hematomyelia", isCorrect: true, exp: "Intramedullary hematoma may require surgical evacuation if causing mass effect."}
-                            ], 
-                            eval: "The answer is controversial. Many sources consider spinal cord compression with neurological deficit as an indication for surgery. Hematomyelia may sometimes be managed conservatively. However, the provided answer E is accepted in some contexts as a condition warranting evacuation if progressing. This answer may not be the best choice; compression is often more universally accepted as a surgical indication. The answer is maintained as given but should be interpreted cautiously." 
-                        },
+                        
+                        
                         { 
                             q: "What is the most common incomplete spinal cord injury type?", 
                             opts: [
@@ -4471,17 +4396,8 @@
                             ], 
                             eval: "The answer is correct. The combination of UMN sign (hyperreflexia) and sacral anesthesia/sphincter loss suggests conus medullaris compression." 
                         },
-                        { 
-                            q: "Not associated with GBS:", 
-                            opts: [
-                                {text: "Hyperreflexia", isCorrect: true, exp: "Guillain-Barré syndrome frequently involves blood pressure instability, whereas hyperreflexia is not a feature (areflexia is the rule). Therefore the correct answer should be hyperreflexia."}, 
-                                {text: "High and low blood pressure", exp: "Autonomic dysfunction is common in GBS; blood pressure fluctuations occur."}, 
-                                {text: "Albuminocytologic dissociation", isAi: true, exp: "Hallmark CSF finding."}, 
-                                {text: "Ascending weakness", isAi: true, exp: "Classical presentation."}, 
-                                {text: "Facial diplegia", isAi: true, exp: "Cranial nerve involvement is common."}
-                            ], 
-                            eval: "The provided answer (High and low blood pressure) appears incorrect. Guillain-Barré syndrome frequently involves blood pressure instability, whereas hyperreflexia is not a feature (areflexia is the rule). Therefore the correct answer should be hyperreflexia. The given answer is wrong." 
-                        },
+                        
+                          
                         { 
                             q: "About spinal cord, all the following are correct except:", 
                             opts: [
@@ -4604,17 +4520,7 @@
                             ], 
                             eval: "The answer is correct. Spinal meningiomas are most common in thoracic region in women with slowly progressive myelopathy." 
                         },
-                        { 
-                            q: "45 year old woman, diagnosed with NF2, has foot drop, power 3/5 in lower limb, MRI shows enhancing mass that is intradural extramedullary at the level of L5-S1:", 
-                            opts: [
-                                {text: "Meningioma", isCorrect: true, exp: "Given as the answer; NF2 patients develop multiple meningiomas and schwannomas. Meningiomas are common intradural extramedullary tumors."}, 
-                                {text: "Ependymoma", exp: "Intramedullary location, unlikely here."}, 
-                                {text: "Schwannoma", exp: "Very common in NF2 and also intradural extramedullary; could be the diagnosis but the answer selected is meningioma."}, 
-                                {text: "Astrocytoma", exp: "Intramedullary."}, 
-                                {text: "Neurofibroma", isAi: true, exp: "Also intradural extramedullary, but NF2 is more closely linked to schwannomas; nonetheless, the given answer is meningioma."}
-                            ], 
-                            eval: "The answer provided is meningioma, though many would consider schwannoma equally likely in NF2. The question stands with original answer." 
-                        },
+                        
                         { 
                             q: "A lady came to you with 2-year history of lower limb weakness, the most likely diagnosis is:", 
                             opts: [
@@ -4793,17 +4699,8 @@
                             ], 
                             eval: "The answer is correct." 
                         },
-                        { 
-                            q: "Myelomeningocele are congenital malformations of the spinal cord, which of the following findings is not commonly associated with it?", 
-                            opts: [
-                                {text: "Hydrocephalus", exp: "Commonly associated."}, 
-                                {text: "Chiari II malformation", exp: "Nearly universal."}, 
-                                {text: "A midline lumbar or lumbosacral mass easily noted at birth", exp: "Typical."}, 
-                                {text: "Skin, bone and dural defects superficial to the neural placode", exp: "Defining feature."}, 
-                                {text: "Upper limb weakness", isCorrect: true, exp: "Not commonly associated; the lesion is lumbar/lumbosacral, affecting lower limbs."}
-                            ], 
-                            eval: "The answer is correct." 
-                        },
+                         
+                          
                         { 
                             q: "Wrong about myelomeningocele:", 
                             opts: [
