@@ -10395,7 +10395,7 @@
                 ]
             }
         ];
-
+                              
         const colorsMap = {
             blue: { gradient: 'bg-gradient-to-r from-blue-600 to-indigo-600', text: 'text-blue-800 dark:text-blue-300', bg: 'bg-blue-50 dark:bg-blue-900/20', border: 'border-blue-200 dark:border-blue-800', btn: 'bg-blue-600 hover:bg-blue-700', progressBg: 'bg-blue-200/30', progressFill: 'bg-white' },
             purple: { gradient: 'bg-gradient-to-r from-purple-600 to-fuchsia-600', text: 'text-purple-800 dark:text-purple-300', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', btn: 'bg-purple-600 hover:bg-purple-700', progressBg: 'bg-purple-200/30', progressFill: 'bg-white' },
@@ -10439,13 +10439,36 @@
             { id: 5, req: TOTAL_QUESTIONS, icon: "6️⃣", label: "100% Master", msg: "Congrats on making it to the sixth year! You just got through the toughest year of med school. Be incredibly proud of yourself and have an amazing vacation. Wish you all the best!\n\nBest regards,\nMahmoud Ismail" }
         ];
 
+        // AI Provider Icons
         const ChatGPTIcon = ({ className }) => (
             <svg className={className} viewBox="0 0 24 24" fill="currentColor"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.073zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.5973 8.3829l2.02-1.1686a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.3927-.6813zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L8.909 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1686a.0804.0804 0 0 1-.038-.0567V6.055a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.44a.7948.7948 0 0 0-.3927.6813v6.7417zm1.0826-1.1212v-3.3685L12.3119 6.7l2.9228 1.6734v3.3685L12.3119 13.415l-2.9228-1.6734z"/></svg>
         );
-
+        const GeminiIcon = ({ className }) => (
+            <svg className={className} viewBox="0 0 24 24" fill="currentColor"><path d="M11.996 22L10.05 15.65L3.696 13.704L10.05 11.758L11.996 5.404L13.942 11.758L20.296 13.704L13.942 15.65L11.996 22ZM18.256 9.87L17.204 6.45L13.784 5.398L17.204 4.346L18.256 0.926L19.308 4.346L22.728 5.398L19.308 6.45L18.256 9.87Z" /></svg>
+        );
+        const DeepSeekIcon = ({ className }) => (
+            <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+        );
+        
         const BookmarkIcon = ({ className }) => (
             <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
         );
+
+        // Define AI Providers
+        const AI_PROVIDERS = {
+            chatgpt: {
+                id: 'chatgpt', name: 'ChatGPT', icon: ChatGPTIcon, url: 'https://chatgpt.com/',
+                color: 'text-emerald-500', bgClass: 'bg-[#10a37f] hover:bg-[#0e906f]', textClass: 'text-[#10a37f] dark:text-[#0d8a6a]'
+            },
+            gemini: {
+                id: 'gemini', name: 'Gemini', icon: GeminiIcon, url: 'https://gemini.google.com/app',
+                color: 'text-blue-500', bgClass: 'bg-blue-600 hover:bg-blue-700', textClass: 'text-blue-600 dark:text-blue-400'
+            },
+            deepseek: {
+                id: 'deepseek', name: 'DeepSeek', icon: DeepSeekIcon, url: 'https://chat.deepseek.com/',
+                color: 'text-indigo-500', bgClass: 'bg-indigo-600 hover:bg-indigo-700', textClass: 'text-indigo-600 dark:text-indigo-400'
+            }
+        };
 
         const { useState, useEffect } = React;
 
@@ -10463,6 +10486,13 @@
             const [markedIds, setMarkedIds] = useState(() => JSON.parse(localStorage.getItem('markedIds')) || []);
             const [earnedBadgeIds, setEarnedBadgeIds] = useState(() => JSON.parse(localStorage.getItem('earnedBadgeIds')) || []);
             
+            // New AI Configuration States
+            const [selectedAi, setSelectedAi] = useState(() => localStorage.getItem('selectedAi') || 'chatgpt');
+            const [showAiChoices, setShowAiChoices] = useState(() => {
+                const saved = localStorage.getItem('showAiChoices');
+                return saved !== null ? saved === 'true' : true;
+            });
+
             const [pendingBadgeAlerts, setPendingBadgeAlerts] = useState([]);
             const [showBadgeModal, setShowBadgeModal] = useState(false);
             
@@ -10489,7 +10519,9 @@
                 localStorage.setItem('hardIds', JSON.stringify(hardIds));
                 localStorage.setItem('markedIds', JSON.stringify(markedIds));
                 localStorage.setItem('earnedBadgeIds', JSON.stringify(earnedBadgeIds));
-            }, [globalAnswers, hardIds, markedIds, earnedBadgeIds]);
+                localStorage.setItem('selectedAi', selectedAi);
+                localStorage.setItem('showAiChoices', showAiChoices);
+            }, [globalAnswers, hardIds, markedIds, earnedBadgeIds, selectedAi, showAiChoices]);
 
             useEffect(() => {
                 if (isDarkMode) document.documentElement.classList.add('dark');
@@ -10736,14 +10768,40 @@
                 else setMarkedIds(prev => [...prev, qId]);
             };
 
-            const askChatGPTPerQuestion = () => {
+            const askAiPerQuestion = () => {
                 const q = activeQuiz[currentQIndex];
                 const optionsText = q.o.map((opt, i) => `${String.fromCharCode(65+i)}. ${opt}`).join('\n');
                 const prompt = `Question: ${q.q}\n\nOptions:\n${optionsText}\n\nExplain this question in detail, including why the correct answer is correct and why the other options are wrong. At the end, write a high-yield summary note to remember.`;
-                window.open(`https://chatgpt.com/?q=${encodeURIComponent(prompt)}`, '_blank');
+                const provider = AI_PROVIDERS[selectedAi];
+
+                if (selectedAi === 'chatgpt') {
+                    window.open(`https://chatgpt.com/?q=${encodeURIComponent(prompt)}`, '_blank');
+                } else {
+                    navigator.clipboard.writeText(prompt).then(() => {
+                        window.open(provider.url, '_blank');
+                        showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
+                    }).catch(() => {
+                        const ta = document.createElement('textarea');
+                        ta.value = prompt;
+                        ta.style.position = 'fixed';
+                        ta.style.opacity = '0';
+                        document.body.appendChild(ta);
+                        ta.focus();
+                        ta.select();
+                        try {
+                            document.execCommand('copy');
+                            window.open(provider.url, '_blank');
+                            showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
+                        } catch(e) {
+                            window.open(provider.url, '_blank');
+                            showAlert(`⚠️ Could not auto-copy.\n\n${provider.name} is opening. Please manually copy your questions and paste them.`);
+                        }
+                        document.body.removeChild(ta);
+                    });
+                }
             };
 
-            const generateTutorialWithChatGPT = (targetQs = null) => {
+            const generateTutorialWithAi = (targetQs = null) => {
                 const reviewQs = targetQs || flatQuestions.filter(q => hardOrWrongIds.includes(q.id));
                 if(reviewQs.length === 0) return;
 
@@ -10753,9 +10811,10 @@
                     prompt += `Q${i+1}: ${q.q}\nOptions:\n${optionsText}\n\n`;
                 });
 
+                const provider = AI_PROVIDERS[selectedAi];
                 navigator.clipboard.writeText(prompt).then(() => {
-                    window.open('https://chatgpt.com/', '_blank');
-                    showAlert('✅ Prompt copied to clipboard!\n\nChatGPT is opening — just paste (Ctrl+V) into the chat box.');
+                    window.open(provider.url, '_blank');
+                    showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
                 }).catch(() => {
                     const ta = document.createElement('textarea');
                     ta.value = prompt;
@@ -10766,17 +10825,17 @@
                     ta.select();
                     try {
                         document.execCommand('copy');
-                        window.open('https://chatgpt.com/', '_blank');
-                        showAlert('✅ Prompt copied to clipboard!\n\nChatGPT is opening — just paste (Ctrl+V) into the chat box.');
+                        window.open(provider.url, '_blank');
+                        showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
                     } catch(e) {
-                        window.open('https://chatgpt.com/', '_blank');
-                        showAlert('⚠️ Could not auto-copy.\n\nChatGPT is opening. Please manually copy your questions and paste them.');
+                        window.open(provider.url, '_blank');
+                        showAlert(`⚠️ Could not auto-copy.\n\n${provider.name} is opening. Please manually copy your questions and paste them.`);
                     }
                     document.body.removeChild(ta);
                 });
             };
 
-            const chatGptMainTopic = (mainIdx) => {
+            const askAiMainTopic = (mainIdx) => {
                 const topic = topicsData[mainIdx];
                 const hwIds = Array.from(new Set([...wrongIds, ...hardIds]));
                 const targetQs = flatQuestions.filter(q => q.main === topic.main && hwIds.includes(q.id));
@@ -10784,7 +10843,7 @@
                     showAlert(`You don't have any hard/wrong questions in ${topic.main} to generate a tutorial.`);
                     return;
                 }
-                generateTutorialWithChatGPT(targetQs);
+                generateTutorialWithAi(targetQs);
             };
 
             const navigateHome = () => {
@@ -10850,6 +10909,27 @@
                             <div className="fade-in text-slate-800 dark:text-slate-100">
                                 <div className="inline-block bg-black text-white px-4 py-2 rounded-lg text-sm font-semibold mb-6 shadow-sm">
                                     designed by Mahmoud Ismail
+                                </div>
+
+                                {/* AI Selection */}
+                                <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 transition-colors">
+                                    <div className="text-sm font-semibold text-slate-700 dark:text-slate-300">Choose your AI Assistant:</div>
+                                    <div className="flex bg-slate-100 dark:bg-slate-900 rounded-xl p-1 shadow-inner w-full sm:w-auto">
+                                        {Object.values(AI_PROVIDERS).map(provider => {
+                                            const CurrentIcon = provider.icon;
+                                            const isActive = selectedAi === provider.id;
+                                            return (
+                                                <button
+                                                    key={provider.id}
+                                                    onClick={() => setSelectedAi(provider.id)}
+                                                    className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${isActive ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-800 dark:text-white' : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}`}
+                                                >
+                                                    <CurrentIcon className={`w-4 h-4 ${isActive ? provider.color : ''}`} />
+                                                    {provider.name}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
 
                                 {/* DASHBOARD WIDGET */}
@@ -10949,12 +11029,12 @@
                                                 </div>
                                             </div>
                                         </button>
-                                        <button onClick={() => generateTutorialWithChatGPT(null)} className="flex-1 p-5 bg-[#10a37f] dark:bg-[#0d8a6a] rounded-2xl shadow-sm hover:shadow-md transition group text-white flex items-center justify-between">
+                                        <button onClick={() => generateTutorialWithAi(null)} className={`flex-1 p-5 rounded-2xl shadow-sm hover:shadow-md transition group text-white flex items-center justify-between ${AI_PROVIDERS[selectedAi].bgClass}`}>
                                             <div>
                                                 <h3 className="text-lg font-bold mb-1 flex items-center gap-2">
-                                                    <ChatGPTIcon className="w-6 h-6 text-white"/> ChatGPT Tutorial
+                                                    {React.createElement(AI_PROVIDERS[selectedAi].icon, { className: "w-6 h-6 text-white" })} {AI_PROVIDERS[selectedAi].name} Tutorial
                                                 </h3>
-                                                <p className="text-emerald-100 text-sm opacity-90">Generate guide for Hard/Wrong Qs</p>
+                                                <p className="text-white/80 text-sm opacity-90">Generate guide for Hard/Wrong Qs</p>
                                             </div>
                                         </button>
                                     </div>
@@ -11021,8 +11101,8 @@
                                                             <button onClick={() => resolveMainTopic(mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 hover:shadow-sm transition text-red-600 dark:text-red-400">
                                                                 🔥 Re-solve Hard
                                                             </button>
-                                                            <button onClick={() => chatGptMainTopic(mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-[#10a37f] text-white hover:bg-[#0e906f] transition flex items-center gap-1">
-                                                                <ChatGPTIcon className="w-4 h-4"/> Ask ChatGPT
+                                                            <button onClick={() => askAiMainTopic(mainIdx)} className={`text-xs font-bold px-3 py-2 rounded-lg text-white transition flex items-center gap-1 ${AI_PROVIDERS[selectedAi].bgClass}`}>
+                                                                {React.createElement(AI_PROVIDERS[selectedAi].icon, { className: "w-4 h-4" })} Ask {AI_PROVIDERS[selectedAi].name}
                                                             </button>
                                                             <div className="flex-grow"></div>
                                                             <button onClick={(e) => resetMainTopic(e, mainIdx)} className="text-xs font-bold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition">
@@ -11093,7 +11173,10 @@
                                     </h3>
 
                                     <div className="space-y-4">
-                                        {activeQuiz[currentQIndex].shuffledIndices.map((origIdx, renderIdx) => {
+                                        {activeQuiz[currentQIndex].shuffledIndices.filter(origIdx => {
+                                            const aiIndices = activeQuiz[currentQIndex].aiOptIndices || [];
+                                            return showAiChoices ? true : !aiIndices.includes(origIdx);
+                                        }).map((origIdx, renderIdx) => {
                                             const currentQ = activeQuiz[currentQIndex];
                                             const currentQId = currentQ.id;
                                             
@@ -11118,7 +11201,7 @@
                                             }
 
                                             return (
-                                                <div key={renderIdx} className="flex flex-col gap-1">
+                                                <div key={origIdx} className="flex flex-col gap-1">
                                                     <button onClick={() => handleOptionClick(origIdx)} className={btnClass} disabled={isAnswered}>
                                                         <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold border ${isAnswered ? (isCorrect ? 'bg-green-500 border-green-500 text-white' : (isSelected ? 'bg-red-500 border-red-500 text-white' : 'border-slate-300 dark:border-slate-600 text-slate-400')) : 'border-slate-300 dark:border-slate-500 text-slate-500 dark:text-slate-300'}`}>
                                                             {String.fromCharCode(65 + renderIdx)}
@@ -11131,7 +11214,7 @@
                                                             <div className={`p-3 rounded-lg border ${isCorrect ? 'bg-green-50/50 border-green-100 dark:bg-green-900/10 dark:border-green-800/50' : (isSelected ? 'bg-red-50/50 border-red-100 dark:bg-red-900/10 dark:border-red-800/50' : 'bg-slate-50 border-slate-100 dark:bg-slate-800 dark:border-slate-700')}`}>
                                                                 <span className="text-slate-700 dark:text-slate-300 leading-relaxed">
                                                                     {currentQ.aiOptIndices && currentQ.aiOptIndices.includes(origIdx) && (
-                                                                        <span className="text-purple-600 dark:text-purple-400 font-bold mr-1">✨ AI option: </span>
+                                                                        <span className={`${AI_PROVIDERS[selectedAi].color} font-bold mr-1`}>✨ AI option: </span>
                                                                     )}
                                                                     {currentQ.oExp[origIdx]}
                                                                 </span>
@@ -11150,22 +11233,40 @@
                                         </div>
                                     )}
 
+                                    {/* Ask AI & Explanation Toggles */}
                                     {((isResolveSession || isMarkedSession) ? sessionAnswers[activeQuiz[currentQIndex].id] !== undefined : globalAnswers[activeQuiz[currentQIndex].id] !== undefined) && (
                                         <div className="mt-4 flex justify-between items-center border-t border-slate-100 dark:border-slate-700 pt-4">
                                             <button onClick={() => setShowExplanation(!showExplanation)} className={`text-sm font-bold ${tColor.text} hover:opacity-80 transition flex items-center gap-1`}>
                                                 {showExplanation ? 'Hide Explanations ▲' : 'Show Explanations ▼'}
                                             </button>
-                                            <button onClick={askChatGPTPerQuestion} className="text-sm font-bold text-[#10a37f] dark:text-[#0d8a6a] hover:opacity-80 transition flex items-center gap-1">
-                                                <ChatGPTIcon className="w-4 h-4"/> Ask ChatGPT
+                                            <button onClick={askAiPerQuestion} className={`text-sm font-bold ${AI_PROVIDERS[selectedAi].textClass} hover:opacity-80 transition flex items-center gap-1`}>
+                                                {React.createElement(AI_PROVIDERS[selectedAi].icon, { className: "w-4 h-4" })} Ask {AI_PROVIDERS[selectedAi].name}
                                             </button>
                                         </div>
                                     )}
 
-                                    <div className="mt-6 flex items-center gap-2">
-                                        <input type="checkbox" id="markLater" checked={markedIds.includes(activeQuiz[currentQIndex].id)} onChange={toggleMark} className="w-5 h-5 text-amber-500 bg-slate-100 border-slate-300 rounded focus:ring-amber-500 dark:focus:ring-amber-600 dark:ring-offset-slate-800 dark:bg-slate-700 dark:border-slate-600 cursor-pointer"/>
-                                        <label htmlFor="markLater" className="text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-pointer select-none">
-                                            Mark this question to review later
-                                        </label>
+                                    <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                        <div className="flex items-center gap-2">
+                                            <input type="checkbox" id="markLater" checked={markedIds.includes(activeQuiz[currentQIndex].id)} onChange={toggleMark} className="w-5 h-5 text-amber-500 bg-slate-100 border-slate-300 rounded focus:ring-amber-500 dark:focus:ring-amber-600 dark:ring-offset-slate-800 dark:bg-slate-700 dark:border-slate-600 cursor-pointer"/>
+                                            <label htmlFor="markLater" className="text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-pointer select-none">
+                                                Mark this question to review later
+                                            </label>
+                                        </div>
+                                        {/* Toggle specifically to show/hide AI Generated Options dynamically */}
+                                        {activeQuiz[currentQIndex].aiOptIndices && activeQuiz[currentQIndex].aiOptIndices.length > 0 && (
+                                            <div className="flex items-center gap-2">
+                                                <input 
+                                                    type="checkbox" 
+                                                    id="toggleAiChoices" 
+                                                    checked={showAiChoices} 
+                                                    onChange={(e) => setShowAiChoices(e.target.checked)} 
+                                                    className={`w-5 h-5 ${AI_PROVIDERS[selectedAi].color.replace('text-', 'text-')} bg-slate-100 border-slate-300 rounded focus:ring-${AI_PROVIDERS[selectedAi].color.replace('text-', '')} cursor-pointer dark:bg-slate-700 dark:border-slate-600`}
+                                                />
+                                                <label htmlFor="toggleAiChoices" className="text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-pointer select-none">
+                                                    Show AI Generated Options
+                                                </label>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
@@ -11257,8 +11358,9 @@
                 </div>
             );
         };
+
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
 </body>
-</html>
+</html>                                                                              
