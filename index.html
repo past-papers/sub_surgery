@@ -219,10 +219,10 @@
 
         // NEW Background Unlock System: Nature first, then Calm
         const UNLOCK_TIERS = [
-            { id: 'nature', req: 1, icon: "🌿", label: "Nature", msg: "You unlocked the Nature background!" },
-            { id: 'calm', req: Math.ceil(TOTAL_QUESTIONS * 0.10), icon: "🌌", label: "Calm", msg: "You unlocked the Calm background!" },
-            { id: 'Geometric', req: Math.ceil(TOTAL_QUESTIONS * 0.30), icon: "🧊", label: "Geometric", msg: "You unlocked the Geometric background!" },
-            { id: 'gold', req: Math.ceil(TOTAL_QUESTIONS * 0.60), icon: "✨", label: "Gold", msg: "You unlocked the Premium Gold background!" },
+            { id: 'nature', req: 0, icon: "🌿", label: "Nature", msg: "You unlocked the Nature background!" },
+            { id: 'calm', req: Math.ceil(TOTAL_QUESTIONS * 0), icon: "🌌", label: "Calm", msg: "You unlocked the Calm background!" },
+            { id: 'Geometric', req: Math.ceil(TOTAL_QUESTIONS * 0), icon: "🧊", label: "Geometric", msg: "You unlocked the Geometric background!" },
+            { id: 'gold', req: Math.ceil(TOTAL_QUESTIONS * 0), icon: "✨", label: "Gold", msg: "You unlocked the Premium Gold background!" },
             { id: 'king', req: TOTAL_QUESTIONS, icon: "👑", label: "King Rank", msg: "Congratulations on completing all the questions! Your dedication and hard work have paid off immensely. Wishing you continued success and excellence in your medical journey and future career.\n\nBest regards,\nMahmoud Ismail" }
         ];
 
