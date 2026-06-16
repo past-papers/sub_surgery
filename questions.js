@@ -1,4 +1,4 @@
- const topicsData = [
+var topicsData = [
             {
                 main: "Ophthalmology",
                 color: "blue",
