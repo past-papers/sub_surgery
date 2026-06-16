@@ -154,49 +154,7 @@
         /** @jsxFrag React.Fragment */
         
         // SAMPLE TOPICS DATA
-        const topicsData = [
-            {
-                main: "General Surgery",
-                color: "blue",
-                subtopics: [
-                    {
-                        t: "Trauma & Basics",
-                        qs: [
-                            {
-                                q: "A 25-year-old male presents to the ER after a motor vehicle accident. He has a BP of 80/50 mmHg and a heart rate of 120 bpm. What is the most appropriate initial step in management?",
-                                opts: [
-                                    { text: "Administer IV antibiotics", isCorrect: false, exp: "Antibiotics are not the priority in acute hemorrhagic shock." },
-                                    { text: "Immediate exploratory laparotomy", isCorrect: false, exp: "Need to assess ABCs and resuscitate first before rushing to the OR unless indicated by specific findings (e.g., positive FAST in unstable patient)." },
-                                    { text: "Secure the airway and start fluid resuscitation", isCorrect: true, exp: "The ATLS protocol dictates starting with ABCDEs. Airway is always first, followed by breathing and circulation (fluid resuscitation)." },
-                                    { text: "Obtain a CT scan of the abdomen", isCorrect: false, exp: "Patient is hemodynamically unstable. Do not send an unstable patient to the CT scanner." }
-                                ],
-                                eval: "Assesses ATLS protocol basics in trauma."
-                            },
-                            {
-                                q: "Which of the following is the most common cause of early postoperative fever (within 24-48 hours)?",
-                                opts: [
-                                    { text: "Wound infection", isCorrect: false, exp: "Wound infections typically present between post-op days 5-7." },
-                                    { text: "Deep vein thrombosis", isCorrect: false, exp: "DVT usually presents later, around post-op days 5-7." },
-                                    { text: "Atelectasis", isCorrect: true, exp: "Atelectasis is the most common cause of fever on post-op days 1-2. Prevention includes incentive spirometry and early ambulation." },
-                                    { text: "Urinary tract infection", isCorrect: false, exp: "UTI typically presents around post-op day 3, often related to Foley catheters." }
-                                ],
-                                eval: "Assesses knowledge of the '5 Ws' of postoperative fever."
-                            },
-                            {
-                                q: "During a laparoscopic cholecystectomy, the 'Critical View of Safety' requires identification of which two structures?",
-                                opts: [
-                                    { text: "Common bile duct and hepatic artery", isCorrect: false, exp: "These must be avoided, not specifically isolated for clipping." },
-                                    { text: "Cystic duct and cystic artery", isCorrect: true, exp: "The critical view of safety ensures that only the cystic duct and cystic artery are seen entering the gallbladder, preventing bile duct injury." },
-                                    { text: "Common hepatic duct and cystic duct", isCorrect: false, exp: "Identifying the common hepatic duct is important but clipping it would be disastrous." },
-                                    { text: "Portal vein and common bile duct", isCorrect: false, exp: "These are deep structures of the portal triad that should not be in the direct operative field for standard cholecystectomy clipping." }
-                                ],
-                                eval: "Tests surgical anatomy and standard intraoperative safety protocols."
-                            }
-                        ]
-                    }
-                ]
-            }
-        ];
+        
 
         // Themes list as requested
         const BG_THEMES = [
