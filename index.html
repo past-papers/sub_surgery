@@ -18,16 +18,7 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: {
-                        medtech: {
-                            900: '#020617',
-                            800: '#0f172a',
-                            border: '#164e63',
-                            glow: '#06b6d4',
-                            text: '#22d3ee'
-                        }
-                    }
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
                 }
             }
         }
@@ -105,20 +96,186 @@
         @keyframes textGoldAnim { from { background-position: 0%; } to { background-position: 260%; } }
 
         /* ========================================================
-           PREMIUM THEME 2: NEURO-TECH (Replaced Nature)
+           PREMIUM THEME 2: MEDTECH (BioTech Neural)
            ======================================================== */
-        .medtech-bg-container { background-color: #020617; }
-        .medtech-canvas { width: 100%; height: 100%; object-fit: cover; }
-        .medtech-vignette {
-            position: absolute; inset: 0; z-index: 5; pointer-events: none;
-            background: radial-gradient(circle at center, transparent 0%, rgba(2, 6, 23, 0.85) 100%);
+        .medtech-bg {
+            background: radial-gradient(ellipse at 20% 0%, #0f172a 0%, #020617 40%, #000000 100%);
         }
-        
-        /* Specialized glowing text for MedTech theme */
+        .medtech-ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            pointer-events: none;
+            will-change: transform;
+            transform: translate3d(0,0,0);
+        }
+        .medtech-ambient-1 {
+            width: 70vw; height: 70vw; max-width: 800px; max-height: 800px;
+            background: radial-gradient(circle, rgba(6,182,212,0.18), transparent 70%);
+            top: -20%; left: -10%;
+            animation: medtechOrb1 18s ease-in-out infinite alternate;
+        }
+        .medtech-ambient-2 {
+            width: 60vw; height: 60vw; max-width: 700px; max-height: 700px;
+            background: radial-gradient(circle, rgba(59,130,246,0.14), transparent 70%);
+            bottom: -20%; right: -10%;
+            animation: medtechOrb2 22s ease-in-out infinite alternate;
+        }
+        .medtech-ambient-3 {
+            width: 50vw; height: 50vw; max-width: 600px; max-height: 600px;
+            background: radial-gradient(circle, rgba(45,212,191,0.1), transparent 70%);
+            top: 40%; left: 50%;
+            transform: translate(-50%, -50%);
+            animation: medtechOrb3 20s ease-in-out infinite alternate;
+        }
+        @keyframes medtechOrb1 {
+            0% { transform: translate3d(0,0,0) scale(1); }
+            100% { transform: translate3d(60px, 40px, 0) scale(1.15); }
+        }
+        @keyframes medtechOrb2 {
+            0% { transform: translate3d(0,0,0) scale(1); }
+            100% { transform: translate3d(-50px, -30px, 0) scale(1.2); }
+        }
+        @keyframes medtechOrb3 {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            100% { transform: translate(calc(-50% + 30px), calc(-50% - 40px)) scale(1.1); }
+        }
+        .medtech-grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(6,182,212,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6,182,212,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 3;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
         .medtech-text-gradient {
-            background: linear-gradient(to right, #67e8f9, #3b82f6);
-            -webkit-background-clip: text; background-clip: text; color: transparent;
-            text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+            background: linear-gradient(135deg, #67e8f9 0%, #60a5fa 30%, #34d399 60%, #67e8f9 100%);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: medtechGradientFlow 8s ease infinite;
+        }
+        @keyframes medtechGradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .medtech-scanline {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(6,182,212,0.015) 2px,
+                rgba(6,182,212,0.015) 4px
+            );
+            pointer-events: none;
+            z-index: 4;
+            opacity: 0.6;
+        }
+        /* MedTech UI */
+        .medtech-glass {
+            background: rgba(2, 6, 23, 0.75);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            box-shadow: 0 0 60px rgba(0, 100, 200, 0.08), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+        .medtech-glass-strong {
+            background: rgba(2, 6, 23, 0.85);
+            backdrop-filter: blur(32px);
+            -webkit-backdrop-filter: blur(32px);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            box-shadow: 0 0 80px rgba(0, 150, 255, 0.12), inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+        .medtech-btn {
+            background: rgba(6, 182, 212, 0.12);
+            border: 1px solid rgba(34, 211, 238, 0.35);
+            color: #cffafe;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .medtech-btn:hover {
+            background: rgba(6, 182, 212, 0.25);
+            border-color: rgba(34, 211, 238, 0.7);
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.15), inset 0 0 10px rgba(6,182,212,0.05);
+            transform: translateY(-1px);
+        }
+        .medtech-btn-primary {
+            background: linear-gradient(135deg, rgba(6,182,212,0.25), rgba(37,99,235,0.25));
+            border: 1px solid rgba(34,211,238,0.5);
+            color: #ecfeff;
+            box-shadow: 0 0 20px rgba(6,182,212,0.15);
+        }
+        .medtech-btn-primary:hover {
+            background: linear-gradient(135deg, rgba(6,182,212,0.4), rgba(37,99,235,0.4));
+            box-shadow: 0 0 40px rgba(6,182,212,0.25);
+            transform: translateY(-2px);
+        }
+        .medtech-btn-danger {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(248, 113, 113, 0.35);
+            color: #fecaca;
+        }
+        .medtech-btn-danger:hover {
+            background: rgba(239, 68, 68, 0.25);
+            border-color: rgba(248, 113, 113, 0.6);
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.15);
+        }
+        .medtech-btn-success {
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            color: #bbf7d0;
+        }
+        .medtech-btn-success:hover {
+            background: rgba(34, 197, 94, 0.25);
+            border-color: rgba(52, 211, 153, 0.6);
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.15);
+        }
+        .medtech-correct {
+            border-color: rgba(52, 211, 153, 0.6) !important;
+            background: rgba(6, 78, 59, 0.6) !important;
+            color: #a7f3d0 !important;
+            box-shadow: 0 0 20px rgba(52,211,153,0.15) !important;
+        }
+        .medtech-wrong {
+            border-color: rgba(248, 113, 113, 0.6) !important;
+            background: rgba(127, 29, 29, 0.6) !important;
+            color: #fecaca !important;
+            box-shadow: 0 0 20px rgba(248,113,113,0.15) !important;
+        }
+        .medtech-option-default {
+            border: 1px solid rgba(34, 211, 238, 0.15) !important;
+            background: rgba(2, 6, 23, 0.5) !important;
+            color: #ecfeff !important;
+        }
+        .medtech-option-default:hover {
+            border-color: rgba(34, 211, 238, 0.4) !important;
+            background: rgba(6, 182, 212, 0.1) !important;
+        }
+        .medtech-option-disabled {
+            border: 1px solid rgba(255,255,255,0.05) !important;
+            background: rgba(2,6,23,0.3) !important;
+            opacity: 0.4 !important;
+        }
+        .medtech-input {
+            background: rgba(2, 6, 23, 0.6) !important;
+            border: 1px solid rgba(34, 211, 238, 0.25) !important;
+            color: #ecfeff !important;
+        }
+        .medtech-input:focus {
+            border-color: rgba(34, 211, 238, 0.6) !important;
+            box-shadow: 0 0 15px rgba(6,182,212,0.15) !important;
+            outline: none !important;
+        }
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .medtech-ambient-1, .medtech-ambient-2, .medtech-ambient-3 { animation: none !important; }
         }
 
         /* ========================================================
@@ -157,7 +314,7 @@
 
         /* Stop animations if reduced motion is preferred */
         @media (prefers-reduced-motion: reduce) {
-            .gold-text-gradient, .bg-gradient-slider, .gold-bubble, .streaks-bg, .geo-scene, .geo-hero::before, .geo-orbit-line, .geo-sphere, .geo-red-capsule-top, .geo-pink-ring, .geo-cylinder, .geo-glass-platform, .geo-red-base, .geo-soft-shadow { animation: none !important; transform: none !important; }
+            .gold-text-gradient, .bg-gradient-slider, .gold-bubble, .streaks-bg, .nature-bg-image, .geo-scene, .geo-hero::before, .geo-orbit-line, .geo-sphere, .geo-red-capsule-top, .geo-pink-ring, .geo-cylinder, .geo-glass-platform, .geo-red-base, .geo-soft-shadow { animation: none !important; transform: none !important; }
         }
     </style>
 </head>
@@ -168,10 +325,13 @@
         /** @jsx React.createElement */
         /** @jsxFrag React.Fragment */
         
-        // Themes list with NeuroTech replacing Nature
+        // SAMPLE TOPICS DATA
+         
+
+        // Themes list with MedTech replacing Nature
         const BG_THEMES = [
             { id: 'basic', name: 'basic', type: 'gradient', light: ['217,100%,94%', '280,100%,96%', '180,100%,94%', '34,100%,94%'], dark: ['217,50%,15%', '280,50%,15%', '180,50%,15%', '34,50%,15%'] },
-            { id: 'medtech', name: 'NeuroTech', type: 'premium', icon: '🧬' },
+            { id: 'medtech', name: 'medtech', type: 'premium', icon: '🧬' },
             { id: 'calm', name: 'calm', type: 'premium', icon: '🌌' },
             { id: 'Geometric', name: 'Geometric', type: 'premium', icon: '🧊' },
             { id: 'gold', name: 'gold', type: 'premium', icon: '✨' },
@@ -183,42 +343,40 @@
             orange: { gradient: 'bg-gradient-to-r from-orange-500 to-amber-600', text: 'text-orange-800 dark:text-orange-300', bg: 'bg-orange-50 dark:bg-orange-900/20', border: 'border-orange-200 dark:border-orange-800', btn: 'bg-orange-500 hover:bg-orange-600', progressBg: 'bg-orange-200/30', progressFill: 'bg-white' },
             rose: { gradient: 'bg-gradient-to-r from-rose-500 to-red-600', text: 'text-rose-800 dark:text-rose-300', bg: 'bg-rose-50 dark:bg-rose-900/20', border: 'border-rose-200 dark:border-rose-800', btn: 'bg-rose-600 hover:bg-rose-700', progressBg: 'bg-rose-200/30', progressFill: 'bg-white' },
             slate: { gradient: 'bg-gradient-to-r from-slate-600 to-slate-700', text: 'text-slate-800 dark:text-slate-300', bg: 'bg-slate-50 dark:bg-slate-900/20', border: 'border-slate-200 dark:border-slate-800', btn: 'bg-slate-600 hover:bg-slate-700', progressBg: 'bg-slate-200/30', progressFill: 'bg-white' },
-            purple: { gradient: 'bg-gradient-to-r from-purple-500 to-fuchsia-600', text: 'text-purple-800 dark:text-purple-300', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', btn: 'bg-purple-600 hover:bg-purple-700', progressBg: 'bg-purple-200/30', progressFill: 'bg-white' }
+      purple: { gradient: 'bg-gradient-to-r from-purple-500 to-fuchsia-600', text: 'text-purple-800 dark:text-purple-300', bg: 'bg-purple-50 dark:bg-purple-900/20', border: 'border-purple-200 dark:border-purple-800', btn: 'bg-purple-600 hover:bg-purple-700', progressBg: 'bg-purple-200/30', progressFill: 'bg-white' }
         };
 
         const flatQuestions = [];
         let globalIdCounter = 0;
 
-        if (typeof topicsData !== 'undefined') {
-            topicsData.forEach((mainTopic) => {
-                mainTopic.subtopics.forEach((sub) => {
-                    sub.qs.forEach(q => {
-                        const o = q.opts.map(opt => opt.text);
-                        const a = q.opts.findIndex(opt => opt.isCorrect);
-                        const aiOptIndices = q.opts.reduce((acc, opt, i) => { if (opt.isAi) acc.push(i); return acc; }, []);
-                        const oExp = q.opts.map(opt => opt.exp);
-                        flatQuestions.push({
-                            id: `q_${globalIdCounter++}`,
-                            main: mainTopic.main,
-                            color: mainTopic.color,
-                            t: sub.t,
-                            q: q.q,
-                            o,
-                            a,
-                            aiOptIndices,
-                            oExp,
-                            evaluation: q.eval
-                        });
+        topicsData.forEach((mainTopic) => {
+            mainTopic.subtopics.forEach((sub) => {
+                sub.qs.forEach(q => {
+                    const o = q.opts.map(opt => opt.text);
+                    const a = q.opts.findIndex(opt => opt.isCorrect);
+                    const aiOptIndices = q.opts.reduce((acc, opt, i) => { if (opt.isAi) acc.push(i); return acc; }, []);
+                    const oExp = q.opts.map(opt => opt.exp);
+                    flatQuestions.push({
+                        id: `q_${globalIdCounter++}`,
+                        main: mainTopic.main,
+                        color: mainTopic.color,
+                        t: sub.t,
+                        q: q.q,
+                        o,
+                        a,
+                        aiOptIndices,
+                        oExp,
+                        evaluation: q.eval
                     });
                 });
             });
-        }
+        });
 
         const TOTAL_QUESTIONS = flatQuestions.length;
 
-        // NEW Background Unlock System
+        // NEW Background Unlock System: MedTech first, then Calm
         const UNLOCK_TIERS = [
-            { id: 'medtech', req: 0, icon: "🧬", label: "NeuroTech", msg: "You unlocked the NeuroTech background!" },
+            { id: 'medtech', req: 0, icon: "🧬", label: "BioTech", msg: "You unlocked the BioTech Neural background! An advanced medical-tech aesthetic for focused study sessions." },
             { id: 'calm', req: Math.ceil(TOTAL_QUESTIONS * 0), icon: "🌌", label: "Calm", msg: "You unlocked the Calm background!" },
             { id: 'Geometric', req: Math.ceil(TOTAL_QUESTIONS * 0), icon: "🧊", label: "Geometric", msg: "You unlocked the Geometric background!" },
             { id: 'gold', req: Math.ceil(TOTAL_QUESTIONS * 0), icon: "✨", label: "Gold", msg: "You unlocked the Premium Gold background!" },
@@ -243,159 +401,6 @@
         const { useState, useEffect, useRef } = React;
 
         // --- OPTIMIZED BACKGROUND COMPONENTS (React.memo PREVENTS LAG) ---
-
-        // NEW: MedTech / Neuro Background (High Performance Canvas Synapses)
-        const PremiumMedTechBg = React.memo(() => {
-            const canvasRef = useRef(null);
-
-            useEffect(() => {
-                const canvas = canvasRef.current;
-                if (!canvas) return;
-                
-                const ctx = canvas.getContext('2d');
-                let width, height, animationFrameId;
-                let nodes = [];
-                const mouse = { x: -1000, y: -1000, radius: 250 };
-                
-                // Color palette
-                const cCyan = 'rgba(6, 182, 212,'; // #06b6d4
-                const cBlue = 'rgba(59, 130, 246,'; // #3b82f6
-
-                const resize = () => {
-                    width = window.innerWidth;
-                    height = window.innerHeight;
-                    const dpr = window.devicePixelRatio || 1;
-                    canvas.width = width * dpr;
-                    canvas.height = height * dpr;
-                    ctx.scale(dpr, dpr);
-                    canvas.style.width = `${width}px`;
-                    canvas.style.height = `${height}px`;
-                    init();
-                };
-
-                class Node {
-                    constructor() {
-                        this.x = Math.random() * width;
-                        this.y = Math.random() * height;
-                        this.vx = (Math.random() - 0.5) * 0.4;
-                        this.vy = (Math.random() - 0.5) * 0.4;
-                        this.baseRadius = Math.random() * 2 + 1;
-                        this.radius = this.baseRadius;
-                        this.pulsePhase = Math.random() * Math.PI * 2;
-                        this.isBlue = Math.random() > 0.7;
-                    }
-                    update() {
-                        this.x += this.vx;
-                        this.y += this.vy;
-
-                        // Gentle bounce off edges
-                        if (this.x < 0 || this.x > width) this.vx *= -1;
-                        if (this.y < 0 || this.y > height) this.vy *= -1;
-
-                        // Mouse interaction (gentle attraction with friction to prevent clumping)
-                        let dx = mouse.x - this.x;
-                        let dy = mouse.y - this.y;
-                        let dist = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (dist < mouse.radius) {
-                            const force = (mouse.radius - dist) / mouse.radius;
-                            // Only apply gentle pull
-                            this.x += (dx / dist) * force * 0.3;
-                            this.y += (dy / dist) * force * 0.3;
-                            this.radius = this.baseRadius + force * 2;
-                        } else {
-                            this.radius = this.baseRadius;
-                        }
-                        
-                        // Pulsing radius effect
-                        this.pulsePhase += 0.02;
-                    }
-                    draw() {
-                        ctx.beginPath();
-                        const r = this.radius + Math.sin(this.pulsePhase) * 0.5;
-                        ctx.arc(this.x, this.y, Math.max(0.1, r), 0, Math.PI * 2);
-                        ctx.fillStyle = this.isBlue ? `${cBlue} 0.8)` : `${cCyan} 0.8)`;
-                        ctx.fill();
-                        
-                        // Add glow
-                        ctx.shadowBlur = 10;
-                        ctx.shadowColor = this.isBlue ? `${cBlue} 1)` : `${cCyan} 1)`;
-                        ctx.fill();
-                        ctx.shadowBlur = 0; // reset for lines
-                    }
-                }
-
-                const init = () => {
-                    nodes = [];
-                    // Adjust node count based on screen size to maintain performance
-                    const numNodes = window.innerWidth < 768 ? 30 : 60;
-                    for (let i = 0; i < numNodes; i++) nodes.push(new Node());
-                };
-
-                const animate = () => {
-                    // Draw deep tech background gradient
-                    const gradient = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, Math.max(width, height));
-                    gradient.addColorStop(0, '#0f172a'); // slate-800
-                    gradient.addColorStop(1, '#020617'); // slate-950
-                    ctx.fillStyle = gradient;
-                    ctx.fillRect(0, 0, width, height);
-
-                    // Update and draw connections (O(n^2) but n is small)
-                    const connectionDist = window.innerWidth < 768 ? 120 : 180;
-                    
-                    for (let i = 0; i < nodes.length; i++) {
-                        nodes[i].update();
-                        
-                        for (let j = i + 1; j < nodes.length; j++) {
-                            let dx = nodes[i].x - nodes[j].x;
-                            let dy = nodes[i].y - nodes[j].y;
-                            let dist = Math.sqrt(dx*dx + dy*dy);
-                            
-                            if (dist < connectionDist) {
-                                ctx.beginPath();
-                                const opacity = 1 - (dist / connectionDist);
-                                ctx.strokeStyle = `${cCyan} ${opacity * 0.4})`;
-                                ctx.lineWidth = opacity * 1.5;
-                                ctx.moveTo(nodes[i].x, nodes[i].y);
-                                ctx.lineTo(nodes[j].x, nodes[j].y);
-                                ctx.stroke();
-                            }
-                        }
-                        
-                        nodes[i].draw(); // Draw nodes on top of lines
-                    }
-
-                    animationFrameId = requestAnimationFrame(animate);
-                };
-
-                const handleMouseMove = (e) => { mouse.x = e.clientX; mouse.y = e.clientY; };
-                const handleTouchMove = (e) => { if (e.touches.length > 0) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; } };
-                const handleMouseLeave = () => { mouse.x = -1000; mouse.y = -1000; };
-
-                window.addEventListener('resize', resize);
-                window.addEventListener('mousemove', handleMouseMove, { passive: true });
-                window.addEventListener('touchmove', handleTouchMove, { passive: true });
-                window.addEventListener('mouseleave', handleMouseLeave);
-
-                resize();
-                animate();
-
-                return () => {
-                    window.removeEventListener('resize', resize);
-                    window.removeEventListener('mousemove', handleMouseMove);
-                    window.removeEventListener('touchmove', handleTouchMove);
-                    window.removeEventListener('mouseleave', handleMouseLeave);
-                    cancelAnimationFrame(animationFrameId);
-                };
-            }, []);
-
-            return (
-                <div className="premium-bg-layer medtech-bg-container">
-                    <canvas ref={canvasRef} className="medtech-canvas"></canvas>
-                    <div className="medtech-vignette"></div>
-                </div>
-            );
-        });
 
         const PremiumGoldBg = React.memo(() => {
             const dynamicLightRef = useRef(null);
@@ -455,6 +460,166 @@
                     <div ref={streaksOneRef} className="gld-streaks"></div>
                     <div ref={streaksTwoRef} className="gld-streaks second hidden md:block"></div>
                     <div className="gld-vignette"></div>
+                </div>
+            );
+        });
+
+        // BioTech Neural Background replacing Nature
+        const PremiumMedTechBg = React.memo(() => {
+            const canvasRef = useRef(null);
+
+            useEffect(() => {
+                const canvas = canvasRef.current;
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+                let width, height, animationFrameId;
+                const isMobile = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768;
+                const NODE_COUNT = isMobile ? 16 : 30;
+                const CONNECTION_DISTANCE = isMobile ? 85 : 130;
+                const MOUSE_RADIUS = 160;
+                
+                let nodes = [];
+                let mouse = { x: -1000, y: -1000 };
+                let mouseActive = false;
+                let frameCount = 0;
+
+                class Node {
+                    constructor() {
+                        this.x = Math.random() * width;
+                        this.y = Math.random() * height;
+                        this.baseX = this.x;
+                        this.baseY = this.y;
+                        this.vx = (Math.random() - 0.5) * 0.2;
+                        this.vy = (Math.random() - 0.5) * 0.2;
+                        this.radius = Math.random() * 1.2 + 0.4;
+                        this.phase = Math.random() * Math.PI * 2;
+                        this.pulseSpeed = 0.012 + Math.random() * 0.018;
+                    }
+                    update(time) {
+                        this.baseX += this.vx;
+                        this.baseY += this.vy;
+                        
+                        if (this.baseX < 0 || this.baseX > width) this.vx *= -1;
+                        if (this.baseY < 0 || this.baseY > height) this.vy *= -1;
+                        
+                        let offsetX = 0, offsetY = 0;
+                        if (mouseActive && !isMobile) {
+                            const dx = this.baseX - mouse.x;
+                            const dy = this.baseY - mouse.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < MOUSE_RADIUS && dist > 0) {
+                                const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS;
+                                offsetX = (dx / dist) * force * 12;
+                                offsetY = (dy / dist) * force * 12;
+                            }
+                        }
+                        
+                        this.x = this.baseX + Math.sin(time * this.pulseSpeed + this.phase) * 8 + offsetX;
+                        this.y = this.baseY + Math.cos(time * this.pulseSpeed + this.phase) * 8 + offsetY;
+                    }
+                    draw() {
+                        const pulse = 0.3 + Math.sin(Date.now() * 0.001 * this.pulseSpeed * 40 + this.phase) * 0.25;
+                        
+                        if (!isMobile) {
+                            const glow = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius * 5);
+                            glow.addColorStop(0, `rgba(6, 182, 212, ${pulse * 0.12})`);
+                            glow.addColorStop(1, 'rgba(6, 182, 212, 0)');
+                            ctx.fillStyle = glow;
+                            ctx.beginPath();
+                            ctx.arc(this.x, this.y, this.radius * 5, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                        
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(103, 232, 249, ${pulse + 0.15})`;
+                        ctx.fill();
+                    }
+                }
+
+                const resize = () => {
+                    width = window.innerWidth;
+                    height = window.innerHeight;
+                    canvas.width = width;
+                    canvas.height = height;
+                    init();
+                };
+
+                const init = () => {
+                    nodes = [];
+                    for (let i = 0; i < NODE_COUNT; i++) {
+                        nodes.push(new Node());
+                    }
+                };
+
+                const animate = () => {
+                    frameCount++;
+                    if (isMobile && frameCount % 2 !== 0) {
+                        animationFrameId = requestAnimationFrame(animate);
+                        return;
+                    }
+                    
+                    ctx.clearRect(0, 0, width, height);
+                    const time = Date.now() * 0.001;
+                    
+                    for (let i = 0; i < nodes.length; i++) {
+                        for (let j = i + 1; j < nodes.length; j++) {
+                            const dx = nodes[i].x - nodes[j].x;
+                            const dy = nodes[i].y - nodes[j].y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if (dist < CONNECTION_DISTANCE) {
+                                const opacity = (1 - dist / CONNECTION_DISTANCE) * 0.1;
+                                ctx.beginPath();
+                                ctx.moveTo(nodes[i].x, nodes[i].y);
+                                ctx.lineTo(nodes[j].x, nodes[j].y);
+                                ctx.strokeStyle = `rgba(6, 182, 212, ${opacity})`;
+                                ctx.lineWidth = 0.5;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    
+                    nodes.forEach(node => {
+                        node.update(time);
+                        node.draw();
+                    });
+                    
+                    animationFrameId = requestAnimationFrame(animate);
+                };
+
+                const handleMouseMove = (e) => {
+                    mouse.x = e.clientX;
+                    mouse.y = e.clientY;
+                    mouseActive = true;
+                };
+                const handleMouseLeave = () => { mouseActive = false; };
+
+                window.addEventListener('resize', resize);
+                if (!isMobile) {
+                    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+                    window.addEventListener('mouseleave', handleMouseLeave);
+                }
+
+                resize();
+                animate();
+
+                return () => {
+                    window.removeEventListener('resize', resize);
+                    window.removeEventListener('mousemove', handleMouseMove);
+                    window.removeEventListener('mouseleave', handleMouseLeave);
+                    cancelAnimationFrame(animationFrameId);
+                };
+            }, []);
+
+            return (
+                <div className="premium-bg-layer medtech-bg">
+                    <div className="medtech-ambient-orb medtech-ambient-1"></div>
+                    <div className="medtech-ambient-orb medtech-ambient-2"></div>
+                    <div className="medtech-ambient-orb medtech-ambient-3"></div>
+                    <canvas ref={canvasRef} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 2 }}></canvas>
+                    <div className="medtech-grid-overlay"></div>
+                    <div className="medtech-scanline"></div>
                 </div>
             );
         });
@@ -658,9 +823,9 @@
                 localStorage.setItem('bgTheme', bgTheme);
             }, [globalAnswers, hardIds, markedIds, unlockedTiers, selectedAi, showAiChoices, autoShowExplanation, singlePrompt, tutorialPrompt, bgTheme]);
 
+            // Force dark mode for all premium backgrounds to guarantee frosted glass readability
             const isPremium = bgTheme !== 'basic';
             const isMedTech = bgTheme === 'medtech';
-
             useEffect(() => {
                 if (isDarkMode || isPremium) document.documentElement.classList.add('dark');
                 else document.documentElement.classList.remove('dark');
@@ -694,10 +859,11 @@
                 if (newlyEarned.length > 0) {
                     setUnlockedTiers(prev => [...prev, ...newlyEarned.map(t => t.id)]);
                     setPendingBadgeAlerts(prev => [...prev, ...newlyEarned]);
-                    setShowBadgeModal(true);
+                    setShowBadgeModal(true); // Triggers immediately when unlocked
                 }
             }, [correctIds.length, unlockedTiers]);
 
+            const triggerBadgeModalIfAny = () => { if (pendingBadgeAlerts.length > 0) setShowBadgeModal(true); };
             const closeBadgeModal = () => { setShowBadgeModal(false); setPendingBadgeAlerts([]); };
             const showAlert = (message) => setDialog({ isOpen: true, message, type: 'alert', onConfirm: null });
             const showConfirm = (message, onConfirm) => setDialog({ isOpen: true, message, type: 'confirm', onConfirm });
@@ -718,8 +884,7 @@
             };
 
             const startSubtopic = (mainIdx, subIdx) => {
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 let qs = flatQuestions.filter(fq => fq.main === topic.main && fq.t === topic.subtopics[subIdx].t);
                 let unsolvedQs = qs.filter(q => globalAnswers[q.id] === undefined);
                 if (unsolvedQs.length === 0) { showAlert("You have solved all questions in this subtopic!"); return; }
@@ -737,8 +902,7 @@
             };
 
             const startTopicRandomMaster = (mainIdx) => {
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 const unsolvedQs = flatQuestions.filter(q => q.main === topic.main && globalAnswers[q.id] === undefined);
                 if(unsolvedQs.length === 0) { showAlert("You have solved all questions in this topic!"); return; }
                 const shuffled = [...unsolvedQs].sort(() => 0.5 - Math.random());
@@ -754,8 +918,7 @@
             };
 
             const reviewMainTopic = (mainIdx) => {
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 const solvedQs = flatQuestions.filter(q => q.main === topic.main && globalAnswers[q.id] !== undefined);
                 if(solvedQs.length === 0) { showAlert("You haven't solved any questions in this topic yet!"); return; }
                 setIsResolveSession(false); setIsMarkedSession(false);
@@ -770,8 +933,7 @@
             };
 
             const resolveMainTopic = (mainIdx) => {
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 const hwIds = Array.from(new Set([...wrongIds, ...hardIds]));
                 const reviewQs = flatQuestions.filter(q => q.main === topic.main && hwIds.includes(q.id)).sort(() => 0.5 - Math.random());
                 if (reviewQs.length === 0) { showAlert("No hard or wrong questions to review in this topic!"); return; }
@@ -795,8 +957,7 @@
 
             const resetMainTopic = (e, mainIdx) => {
                 e.stopPropagation();
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 showConfirm(`Are you sure you want to reset all progress for ${topic.main}?`, () => {
                     const idsToReset = flatQuestions.filter(q => q.main === topic.main).map(q => q.id);
                     setGlobalAnswers(prev => {
@@ -811,8 +972,7 @@
 
             const resetSubtopic = (e, mainIdx, subIdx) => {
                 e.stopPropagation();
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 const sub = topic.subtopics[subIdx];
                 showConfirm(`Are you sure you want to reset ${sub.t}?`, () => {
                     const idsToReset = flatQuestions.filter(q => q.main === topic.main && q.t === sub.t).map(q => q.id);
@@ -828,8 +988,7 @@
 
             const reviewSubtopic = (e, mainIdx, subIdx) => {
                 e.stopPropagation();
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 const sub = topic.subtopics[subIdx];
                 const solvedQs = flatQuestions.filter(q => q.main === topic.main && q.t === sub.t && globalAnswers[q.id] !== undefined);
                 if(solvedQs.length === 0) { showAlert("You haven't solved any questions in this subtopic yet!"); return; }
@@ -887,12 +1046,12 @@
                 else {
                     navigator.clipboard.writeText(prompt).then(() => {
                         window.open(provider.url, '_blank');
-                        showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
+                        showAlert(`✅ Prompt copied to clipboard!\\n\\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
                     }).catch(() => {
                         const ta = document.createElement('textarea'); ta.value = prompt; ta.style.position = 'fixed'; ta.style.opacity = '0';
                         document.body.appendChild(ta); ta.focus(); ta.select();
-                        try { document.execCommand('copy'); window.open(provider.url, '_blank'); showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`); } 
-                        catch(e) { window.open(provider.url, '_blank'); showAlert(`⚠️ Could not auto-copy.\n\n${provider.name} is opening. Please manually copy your questions and paste them.`); }
+                        try { document.execCommand('copy'); window.open(provider.url, '_blank'); showAlert(`✅ Prompt copied to clipboard!\\n\\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`); } 
+                        catch(e) { window.open(provider.url, '_blank'); showAlert(`⚠️ Could not auto-copy.\\n\\n${provider.name} is opening. Please manually copy your questions and paste them.`); }
                         document.body.removeChild(ta);
                     });
                 }
@@ -901,26 +1060,25 @@
             const generateTutorialWithAi = (targetQs = null) => {
                 const reviewQs = targetQs || flatQuestions.filter(q => hardOrWrongIds.includes(q.id));
                 if(reviewQs.length === 0) return;
-                let prompt = `${tutorialPrompt}\n\n`;
+                let prompt = `${tutorialPrompt}\\n\\n`;
                 reviewQs.forEach((q, i) => {
-                    const optionsText = q.o.map((opt, idx) => `${String.fromCharCode(65+idx)}. ${opt}`).join('\n');
-                    prompt += `Q${i+1}: ${q.q}\nOptions:\n${optionsText}\n\n`;
+                    const optionsText = q.o.map((opt, idx) => `${String.fromCharCode(65+idx)}. ${opt}`).join('\\n');
+                    prompt += `Q${i+1}: ${q.q}\\nOptions:\\n${optionsText}\\n\\n`;
                 });
                 const provider = AI_PROVIDERS[selectedAi];
                 navigator.clipboard.writeText(prompt).then(() => {
-                    window.open(provider.url, '_blank'); showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
+                    window.open(provider.url, '_blank'); showAlert(`✅ Prompt copied to clipboard!\\n\\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`);
                 }).catch(() => {
                     const ta = document.createElement('textarea'); ta.value = prompt; ta.style.position = 'fixed'; ta.style.opacity = '0';
                     document.body.appendChild(ta); ta.focus(); ta.select();
-                    try { document.execCommand('copy'); window.open(provider.url, '_blank'); showAlert(`✅ Prompt copied to clipboard!\n\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`); } 
-                    catch(e) { window.open(provider.url, '_blank'); showAlert(`⚠️ Could not auto-copy.\n\n${provider.name} is opening. Please manually copy your questions and paste them.`); }
+                    try { document.execCommand('copy'); window.open(provider.url, '_blank'); showAlert(`✅ Prompt copied to clipboard!\\n\\n${provider.name} is opening — just paste (Ctrl+V) into the chat box.`); } 
+                    catch(e) { window.open(provider.url, '_blank'); showAlert(`⚠️ Could not auto-copy.\\n\\n${provider.name} is opening. Please manually copy your questions and paste them.`); }
                     document.body.removeChild(ta);
                 });
             };
 
             const askAiMainTopic = (mainIdx) => {
-                const topic = typeof topicsData !== 'undefined' ? topicsData[mainIdx] : null;
-                if(!topic) return;
+                const topic = topicsData[mainIdx];
                 const hwIds = Array.from(new Set([...wrongIds, ...hardIds]));
                 const targetQs = flatQuestions.filter(q => q.main === topic.main && hwIds.includes(q.id));
                 if (targetQs.length === 0) { showAlert(`You don't have any hard/wrong questions in ${topic.main} to generate a tutorial.`); return; }
@@ -943,58 +1101,10 @@
             const getPercentage = (val, total) => total > 0 ? Math.round((val / total) * 100) : 0;
             const tColor = colorsMap[activeColorTheme] || colorsMap['slate'];
 
-            // DYNAMIC THEME CONFIGURATION FOR OVERRIDES
-            const ui = {
-                panel: isMedTech ? 'backdrop-blur-xl bg-medtech-800/40 border border-medtech-border/50 shadow-[0_4px_30px_rgba(6,182,212,0.15)] rounded-3xl' :
-                       isPremium ? 'backdrop-blur-2xl bg-black/60 border border-white/20 shadow-xl rounded-2xl' :
-                       'backdrop-blur-xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-700/80 shadow-md rounded-2xl',
-                
-                header: isMedTech ? 'bg-medtech-900/70 backdrop-blur-2xl border-medtech-glow/30' :
-                        isPremium ? 'bg-black/50 backdrop-blur-2xl border-white/10' : 
-                        'bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl border-slate-200/80 dark:border-slate-800/80',
-
-                innerBox: isMedTech ? 'bg-medtech-900/60 border border-medtech-border/40 rounded-2xl hover:border-medtech-glow/30 transition-colors' :
-                          isPremium ? 'bg-black/50 border border-white/10 rounded-xl' :
-                          'bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl',
-                
-                textClass: isMedTech ? 'text-medtech-text drop-shadow-sm' : 
-                           isPremium ? 'text-white' : 'text-slate-900 dark:text-white',
-                           
-                textMutedClass: isMedTech ? 'text-cyan-200/60' :
-                                isPremium ? 'text-white/70' : 'text-slate-600 dark:text-slate-300',
-                
-                btnRadius: isMedTech ? 'rounded-full' : 'rounded-lg',
-                
-                titleGradient: bgTheme === 'gold' ? 'gold-text-gradient' : 
-                               isMedTech ? 'medtech-text-gradient font-black' : '',
-                
-                quizOptBase: isMedTech ? 'w-full text-left p-4 rounded-3xl border-2 transition-all duration-300 flex items-start gap-4 backdrop-blur-md ' :
-                             'w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-start gap-3 backdrop-blur-md ',
-                             
-                quizOptUnanswered: isMedTech ? 'border-medtech-border/40 bg-medtech-900/40 hover:bg-medtech-800/80 hover:border-medtech-glow/50 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)] cursor-pointer text-cyan-50' :
-                                   isPremium ? 'border-white/20 bg-black/50 hover:bg-black/70 hover:border-white/40 cursor-pointer text-white' :
-                                   'border-slate-200 dark:border-slate-600 bg-white/60 dark:bg-slate-800/60 hover:bg-white dark:hover:bg-slate-700 cursor-pointer text-slate-800 dark:text-slate-100',
-                                   
-                quizOptCorrect: isMedTech ? 'border-teal-400 bg-teal-950/60 text-teal-50 shadow-[0_0_20px_rgba(45,212,191,0.2)]' :
-                                isPremium ? 'border-green-400 bg-green-900/60 text-white shadow-[0_0_15px_rgba(74,222,128,0.2)]' :
-                                'border-green-500 bg-green-50 dark:bg-green-900/30 text-green-900 dark:text-green-100',
-                                
-                quizOptWrong: isMedTech ? 'border-rose-500 bg-rose-950/60 text-rose-50 shadow-[0_0_20px_rgba(244,63,94,0.2)]' :
-                              isPremium ? 'border-red-400 bg-red-900/60 text-white shadow-[0_0_15px_rgba(248,113,113,0.2)]' :
-                              'border-red-400 bg-red-50 dark:bg-red-900/30 text-red-900 dark:text-red-100',
-                              
-                quizOptDisabled: isMedTech ? 'border-medtech-border/20 bg-black/30 opacity-40 text-cyan-100/50' :
-                                 isPremium ? 'border-white/5 bg-black/20 opacity-40 text-white' :
-                                 'border-slate-100/50 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30 opacity-50',
-                                 
-                progressTrack: isMedTech ? 'bg-medtech-900/80 border border-medtech-border/50' :
-                               isPremium ? 'bg-black/50 border border-white/10' :
-                               'bg-white/80 dark:bg-slate-700/80 border border-slate-200 dark:border-slate-600',
-            };
-
+            // Generate Dynamic Fixed Background Style (For basic theme)
             const getBgStyle = () => {
                 if (isPremium) return {}; 
-                const t = BG_THEMES[0];
+                const t = BG_THEMES[0]; // basic
                 const colors = isDarkMode ? t.dark : t.light;
                 const baseColor = isDarkMode ? '#0f172a' : '#f8fafc';
                 return {
@@ -1003,8 +1113,20 @@
                 };
             };
 
+            const getTitleClass = (baseClass) => {
+                if (bgTheme === 'gold') return `${baseClass} gold-text-gradient`;
+                if (isMedTech) return `${baseClass} medtech-text-gradient`;
+                return baseClass;
+            };
+
+            // Enhanced frosted glass classes for perfect readability
+            const panelClass = isMedTech ? 'medtech-glass' : (isPremium ? 'backdrop-blur-2xl bg-black/60 border border-white/20 shadow-xl' : 'backdrop-blur-xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-700/80 shadow-md');
+            const textClass = isMedTech ? 'text-cyan-50' : (isPremium ? 'text-white' : 'text-slate-900 dark:text-white');
+            const textMutedClass = isMedTech ? 'text-cyan-200/60' : (isPremium ? 'text-white/70' : 'text-slate-600 dark:text-slate-300');
+            const innerBoxClass = isMedTech ? 'bg-slate-950/50 border border-cyan-500/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]' : (isPremium ? 'bg-black/50 border border-white/10' : 'bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700');
+
             return (
-                <div className={`min-h-screen relative font-sans ${ui.textClass} bg-transparent`}>
+                <div className={`min-h-screen relative font-sans ${textClass} bg-transparent`}>
                     
                     {/* BACKGROUND RENDERER */}
                     {bgTheme === 'gold' && <PremiumGoldBg />}
@@ -1016,10 +1138,10 @@
                     {/* MAIN CONTENT WRAPPER */}
                     <div className="relative z-0 pb-12">
                         {/* HEADER */}
-                        <header className={`${ui.header} border-b shadow-md sticky top-0 z-20 transition-colors`}>
+                        <header className={`${isMedTech ? 'bg-slate-950/60 backdrop-blur-2xl border-cyan-500/20 shadow-[0_0_30px_rgba(0,150,255,0.08)]' : (isPremium ? 'bg-black/50 backdrop-blur-2xl border-white/10' : 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl border-slate-200/80 dark:border-slate-800/80')} border-b shadow-md sticky top-0 z-20 transition-colors`}>
                             <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-                                <h1 className={`text-xl font-bold flex items-center gap-2 ${ui.titleGradient}`}>
-                                    <svg className={`w-6 h-6 ${isMedTech ? 'text-medtech-glow' : 'text-blue-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                                <h1 className={`text-xl font-bold flex items-center gap-2 ${getTitleClass('')}`}>
+                                    <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
                                     Sub-Surgery
                                 </h1>
                                 <div className="flex items-center gap-2 sm:gap-4">
@@ -1034,7 +1156,7 @@
                                     )}
                                     
                                     {view !== 'menu' && (
-                                        <button onClick={navigateHome} className={`text-sm font-bold px-3 py-1.5 transition ${ui.btnRadius} ${isMedTech ? 'bg-cyan-500/20 hover:bg-cyan-500/40 border border-cyan-500/30 text-cyan-50 shadow-[0_0_10px_rgba(6,182,212,0.2)]' : isPremium ? 'bg-white/20 hover:bg-white/30 text-white' : 'bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600'}`}>
+                                        <button onClick={navigateHome} className={`text-sm font-bold px-3 py-1.5 rounded-lg transition ${isMedTech ? 'medtech-btn' : (isPremium ? 'bg-white/20 hover:bg-white/30 text-white' : 'bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600')}`}>
                                             Back Home
                                         </button>
                                     )}
@@ -1050,27 +1172,28 @@
                                     {/* Credits & Link Section */}
                                     <div className="flex flex-col gap-3 mb-6">
                                         <div className="flex flex-wrap gap-2">
-                                            <div className={`inline-block px-4 py-2 text-sm font-semibold shadow-sm ${ui.btnRadius} ${isMedTech ? 'bg-medtech-900/80 backdrop-blur-md text-medtech-text border border-medtech-border/50' : isPremium ? 'bg-black/60 backdrop-blur-md text-white border border-white/10' : 'bg-black text-white'}`}>
+                                            <div className={`inline-block px-4 py-2 rounded-lg text-sm font-semibold shadow-sm ${isMedTech ? 'medtech-glass text-cyan-100 border border-cyan-500/30' : (isPremium ? 'bg-black/60 backdrop-blur-md text-white border border-white/10' : 'bg-black text-white')}`}>
                                                 Designed by Mahmoud Ismail
                                             </div>
-                                            <div className={`inline-block px-4 py-2 text-sm font-semibold shadow-sm ${ui.btnRadius} ${isMedTech ? 'bg-medtech-900/80 backdrop-blur-md text-medtech-text border border-medtech-border/50' : isPremium ? 'bg-black/60 backdrop-blur-md text-white border border-white/10' : 'bg-black text-white'}`}>
+                                            <div className={`inline-block px-4 py-2 rounded-lg text-sm font-semibold shadow-sm ${isMedTech ? 'medtech-glass text-cyan-100 border border-cyan-500/30' : (isPremium ? 'bg-black/60 backdrop-blur-md text-white border border-white/10' : 'bg-black text-white')}`}>
                                                 Collected by nobdy
                                             </div>
-                                            <div className={`inline-block px-4 py-2 text-sm font-semibold shadow-sm ${ui.btnRadius} ${isMedTech ? 'bg-medtech-900/80 backdrop-blur-md text-medtech-text border border-medtech-border/50' : isPremium ? 'bg-black/60 backdrop-blur-md text-white border border-white/10' : 'bg-black text-white'}`}>
+                                            <div className={`inline-block px-4 py-2 rounded-lg text-sm font-semibold shadow-sm ${isMedTech ? 'medtech-glass text-cyan-100 border border-cyan-500/30' : (isPremium ? 'bg-black/60 backdrop-blur-md text-white border border-white/10' : 'bg-black text-white')}`}>
                                                 Corrected by nobody
                                             </div>
                                         </div>
                                         
-                                        <div className={`p-4 border shadow-sm flex flex-col sm:flex-row justify-between items-center gap-4 ${isMedTech ? 'bg-medtech-800/40 border-medtech-glow/30 text-cyan-50 rounded-2xl' : isPremium ? 'bg-blue-900/40 border-blue-500/30 text-white rounded-xl' : 'bg-blue-50 border-blue-200 text-blue-900 dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-100 rounded-xl'}`}>
+                                        <div className={`p-4 rounded-xl border shadow-sm flex flex-col sm:flex-row justify-between items-center gap-4 ${isMedTech ? 'medtech-glass border-cyan-500/30 text-cyan-100' : (isPremium ? 'bg-blue-900/40 border-blue-500/30 text-white' : 'bg-blue-50 border-blue-200 text-blue-900 dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-100')}`}>
                                             <div className="flex items-center gap-2 font-medium text-sm sm:text-base text-center sm:text-left">
-                                                <svg className={`w-5 h-5 flex-shrink-0 ${isMedTech ? 'text-medtech-glow' : 'text-blue-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                                <svg className="w-5 h-5 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                                 <span>For extra questions or corrections, please check this link.</span>
                                             </div>
+                                            {/* PUT YOUR LINK IN THE href ATTRIBUTE BELOW */}
                                             <a 
                                                 href="https://sillycattvseries.fandom.com/wiki/Larry" 
                                                 target="_blank" 
                                                 rel="noopener noreferrer" 
-                                                className={`whitespace-nowrap px-4 py-2 font-bold text-sm transition-colors ${ui.btnRadius} ${isMedTech ? 'bg-cyan-600 hover:bg-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.3)]' : isPremium ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-md' : 'bg-blue-600 hover:bg-blue-700 text-white shadow-md'}`}
+                                                className={`whitespace-nowrap px-4 py-2 rounded-lg font-bold text-sm transition-colors ${isMedTech ? 'medtech-btn-primary' : (isPremium ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-md' : 'bg-blue-600 hover:bg-blue-700 text-white shadow-md')}`}
                                             >
                                                 Visit Link
                                             </a>
@@ -1078,20 +1201,20 @@
                                     </div>
 
                                     {/* AI Selection */}
-                                    <div className={`p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 transition-colors ${ui.panel}`}>
+                                    <div className={`rounded-2xl p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 transition-colors ${panelClass}`}>
                                         <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
-                                            <div className={`text-sm font-semibold ${ui.textClass}`}>Choose your AI Assistant:</div>
-                                            <button onClick={openPromptModal} className={`p-1.5 rounded-full transition ${isMedTech ? 'text-cyan-200/70 hover:bg-cyan-500/20 hover:text-cyan-50 border border-transparent hover:border-cyan-500/30' : isPremium ? 'text-white/70 hover:bg-white/20' : 'text-slate-500 hover:bg-slate-200 dark:bg-slate-700/50 dark:hover:bg-slate-600'}`} title="Customize AI Prompts">
+                                            <div className={`text-sm font-semibold ${textClass}`}>Choose your AI Assistant:</div>
+                                            <button onClick={openPromptModal} className={`p-1.5 rounded-lg transition ${isMedTech ? 'text-cyan-300/70 hover:bg-cyan-500/20 hover:text-cyan-200' : (isPremium ? 'text-white/70 hover:bg-white/20' : 'text-slate-500 hover:bg-slate-200 dark:bg-slate-700/50 dark:hover:bg-slate-600')}`} title="Customize AI Prompts">
                                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                             </button>
                                         </div>
-                                        <div className={`flex p-1 shadow-inner w-full sm:w-auto ${ui.innerBox} ${isMedTech ? 'rounded-full' : ''}`}>
+                                        <div className={`flex rounded-xl p-1 shadow-inner w-full sm:w-auto ${innerBoxClass}`}>
                                             {Object.values(AI_PROVIDERS).map(provider => {
                                                 const CurrentIcon = provider.icon;
                                                 const isActive = selectedAi === provider.id;
                                                 return (
                                                     <button key={provider.id} onClick={() => setSelectedAi(provider.id)}
-                                                        className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold transition-all ${ui.btnRadius} ${isActive ? (isMedTech ? 'bg-cyan-500/20 text-cyan-50 border border-cyan-400/50 shadow-[0_0_10px_rgba(6,182,212,0.3)]' : isPremium ? 'bg-white text-black shadow-sm' : 'bg-white dark:bg-slate-700 shadow-sm text-slate-800 dark:text-white') : (isMedTech ? 'text-cyan-200/50 hover:text-cyan-100 hover:bg-cyan-500/10 border border-transparent' : isPremium ? 'text-white/60 hover:text-white' : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200')}`}
+                                                        className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all ${isActive ? (isMedTech ? 'bg-cyan-400 text-slate-950 shadow-[0_0_15px_rgba(6,182,212,0.4)]' : (isPremium ? 'bg-white text-black shadow-sm' : 'bg-white dark:bg-slate-700 shadow-sm text-slate-800 dark:text-white')) : (isMedTech ? 'text-cyan-300/60 hover:text-cyan-200' : (isPremium ? 'text-white/60 hover:text-white' : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'))}`}
                                                     >
                                                         <CurrentIcon className={`w-4 h-4 ${isActive && !isPremium ? provider.color : ''}`} />
                                                         {provider.name}
@@ -1102,49 +1225,49 @@
                                     </div>
 
                                     {/* DASHBOARD WIDGET */}
-                                    <div className={`p-6 mb-8 transition-colors ${ui.panel}`}>
-                                        <h2 className={`text-xl font-bold mb-4 ${ui.titleGradient}`}>📊 Your Dashboard</h2>
+                                    <div className={`rounded-2xl p-6 mb-8 transition-colors ${panelClass}`}>
+                                        <h2 className={`text-xl font-bold mb-4 ${getTitleClass('')}`}>📊 Your Dashboard</h2>
                                         
                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                                            <div className={`p-4 text-center ${ui.innerBox}`}>
-                                                <div className={`text-2xl font-black ${isMedTech ? 'text-cyan-300' : isPremium ? 'text-blue-300' : 'text-blue-600 dark:text-blue-400'}`}>
+                                            <div className={`p-4 rounded-xl text-center ${innerBoxClass}`}>
+                                                <div className={`text-2xl font-black ${isMedTech ? 'text-cyan-300' : (isPremium ? 'text-blue-300' : 'text-blue-600 dark:text-blue-400')}`}>
                                                     {totalAnswered} <span className="text-sm font-normal opacity-70">({getPercentage(totalAnswered, TOTAL_QUESTIONS)}%)</span>
                                                 </div>
-                                                <div className={`text-xs font-semibold uppercase mt-1 ${ui.textMutedClass}`}>Completed</div>
+                                                <div className={`text-xs font-semibold uppercase mt-1 ${textMutedClass}`}>Completed</div>
                                             </div>
-                                            <div className={`p-4 text-center ${isMedTech ? 'bg-teal-900/30 border border-teal-500/30 rounded-2xl' : isPremium ? 'bg-green-500/20 border border-green-500/30 rounded-xl' : 'bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800 rounded-xl'}`}>
-                                                <div className={`text-2xl font-black ${isMedTech ? 'text-teal-300' : isPremium ? 'text-green-300' : 'text-green-600 dark:text-green-400'}`}>
+                                            <div className={`p-4 rounded-xl text-center ${isMedTech ? 'bg-emerald-500/10 border border-emerald-500/30 shadow-[0_0_20px_rgba(34,197,94,0.08)]' : (isPremium ? 'bg-green-500/20 border border-green-500/30' : 'bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800')}`}>
+                                                <div className={`text-2xl font-black ${isMedTech ? 'text-emerald-300' : (isPremium ? 'text-green-300' : 'text-green-600 dark:text-green-400')}`}>
                                                     {correctIds.length} <span className="text-sm font-normal opacity-70">({getPercentage(correctIds.length, TOTAL_QUESTIONS)}%)</span>
                                                 </div>
-                                                <div className={`text-xs font-semibold uppercase mt-1 ${isMedTech ? 'text-teal-200/70' : isPremium ? 'text-green-200' : 'text-green-800 dark:text-green-300'}`}>Right</div>
+                                                <div className={`text-xs font-semibold uppercase mt-1 ${isMedTech ? 'text-emerald-300/80' : (isPremium ? 'text-green-200' : 'text-green-800 dark:text-green-300')}`}>Right</div>
                                             </div>
-                                            <div className={`p-4 text-center ${isMedTech ? 'bg-rose-900/30 border border-rose-500/30 rounded-2xl' : isPremium ? 'bg-red-500/20 border border-red-500/30 rounded-xl' : 'bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800 rounded-xl'}`}>
-                                                <div className={`text-2xl font-black ${isMedTech ? 'text-rose-300' : isPremium ? 'text-red-300' : 'text-red-600 dark:text-red-400'}`}>
+                                            <div className={`p-4 rounded-xl text-center ${isMedTech ? 'bg-red-500/10 border border-red-500/30 shadow-[0_0_20px_rgba(239,68,68,0.08)]' : (isPremium ? 'bg-red-500/20 border border-red-500/30' : 'bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800')}`}>
+                                                <div className={`text-2xl font-black ${isMedTech ? 'text-red-300' : (isPremium ? 'text-red-300' : 'text-red-600 dark:text-red-400')}`}>
                                                     {wrongIds.length} <span className="text-sm font-normal opacity-70">({getPercentage(wrongIds.length, TOTAL_QUESTIONS)}%)</span>
                                                 </div>
-                                                <div className={`text-xs font-semibold uppercase mt-1 ${isMedTech ? 'text-rose-200/70' : isPremium ? 'text-red-200' : 'text-red-800 dark:text-red-300'}`}>Wrong</div>
+                                                <div className={`text-xs font-semibold uppercase mt-1 ${isMedTech ? 'text-red-300/80' : (isPremium ? 'text-red-200' : 'text-red-800 dark:text-red-300')}`}>Wrong</div>
                                             </div>
-                                            <div className={`p-4 text-center ${isMedTech ? 'bg-amber-900/30 border border-amber-500/30 rounded-2xl' : isPremium ? 'bg-orange-500/20 border border-orange-500/30 rounded-xl' : 'bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-800 rounded-xl'}`}>
-                                                <div className={`text-2xl font-black ${isMedTech ? 'text-amber-300' : isPremium ? 'text-orange-300' : 'text-orange-600 dark:text-orange-400'}`}>
+                                            <div className={`p-4 rounded-xl text-center ${isMedTech ? 'bg-amber-500/10 border border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.08)]' : (isPremium ? 'bg-orange-500/20 border border-orange-500/30' : 'bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-800')}`}>
+                                                <div className={`text-2xl font-black ${isMedTech ? 'text-amber-300' : (isPremium ? 'text-orange-300' : 'text-orange-600 dark:text-orange-400')}`}>
                                                     {unansweredCount} <span className="text-sm font-normal opacity-70">({getPercentage(unansweredCount, TOTAL_QUESTIONS)}%)</span>
                                                 </div>
-                                                <div className={`text-xs font-semibold uppercase mt-1 ${isMedTech ? 'text-amber-200/70' : isPremium ? 'text-orange-200' : 'text-orange-800 dark:text-orange-300'}`}>Unanswered</div>
+                                                <div className={`text-xs font-semibold uppercase mt-1 ${isMedTech ? 'text-amber-300/80' : (isPremium ? 'text-orange-200' : 'text-orange-800 dark:text-orange-300')}`}>Unanswered</div>
                                             </div>
                                         </div>
                                         
                                         {/* BACKGROUNDS & REWARDS */}
-                                        <div className={`p-4 ${ui.innerBox}`}>
-                                            <div className={`flex flex-col sm:flex-row justify-between text-sm font-semibold mb-3 gap-2 opacity-90 ${isMedTech ? 'text-cyan-50' : ''}`}>
+                                        <div className={`p-4 rounded-xl ${innerBoxClass}`}>
+                                            <div className="flex flex-col sm:flex-row justify-between text-sm font-semibold mb-3 gap-2 opacity-90">
                                                 <span>Backgrounds Collection</span>
                                                 {nextUnlock && (
-                                                    <span className={`px-3 py-1 rounded-full text-xs border ${isMedTech ? 'bg-cyan-900/50 text-cyan-200 border-cyan-500/30' : isPremium ? 'bg-blue-900/50 text-blue-200 border-blue-500/30' : 'bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/50 dark:text-blue-300 dark:border-blue-800'}`}>
+                                                    <span className={`px-3 py-1 rounded-full text-xs border ${isMedTech ? 'bg-cyan-900/50 text-cyan-200 border-cyan-500/30' : (isPremium ? 'bg-blue-900/50 text-blue-200 border-blue-500/30' : 'bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/50 dark:text-blue-300 dark:border-blue-800')}`}>
                                                         Target: <strong>{nextUnlock.req - correctIds.length}</strong> more correct to unlock {nextUnlock.label}!
                                                     </span>
                                                 )}
                                             </div>
                                             <div className="flex items-center gap-3 overflow-x-auto pb-2 custom-scrollbar">
                                                 {/* Basic Background is always unlocked */}
-                                                <div onClick={() => setBgTheme('basic')} className={`flex-shrink-0 w-24 h-24 flex flex-col items-center justify-center p-2 border transition-transform cursor-pointer hover:scale-105 ${ui.btnRadius} ${bgTheme === 'basic' ? (isMedTech ? 'border-cyan-400 bg-cyan-900/40 shadow-[0_0_15px_rgba(6,182,212,0.3)]' : isPremium ? 'border-white bg-white/20' : 'border-blue-500 bg-blue-50 dark:bg-blue-900/40 shadow-md') : (isMedTech ? 'border-cyan-900/50 bg-black/40 text-cyan-200/50' : isPremium ? 'border-white/20 bg-black/40' : 'border-slate-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700')}`} title="Basic Gradient">
+                                                <div onClick={() => setBgTheme('basic')} className={`flex-shrink-0 w-24 h-24 flex flex-col items-center justify-center p-2 rounded-xl border transition-transform cursor-pointer hover:scale-105 ${bgTheme === 'basic' ? (isPremium ? 'border-white bg-white/20' : 'border-blue-500 bg-blue-50 dark:bg-blue-900/40 shadow-md') : (isPremium ? 'border-white/20 bg-black/40' : 'border-slate-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700')}`} title="Basic Gradient">
                                                     <span className="text-3xl drop-shadow-sm mb-1">⚪</span>
                                                     <span className={`text-[10px] font-bold ${bgTheme === 'basic' && !isPremium ? 'text-blue-700 dark:text-blue-300' : ''}`}>Basic</span>
                                                 </div>
@@ -1156,16 +1279,16 @@
 
                                                     if (earned) {
                                                         return (
-                                                            <div key={i} onClick={() => { if(!isKing) setBgTheme(tier.id); else showAlert(tier.msg); }} className={`flex-shrink-0 w-24 h-24 flex flex-col items-center justify-center p-2 border transition-transform cursor-pointer hover:scale-105 ${ui.btnRadius} ${isActiveBg ? (isMedTech ? 'border-cyan-400 bg-cyan-500/20 shadow-[0_0_15px_rgba(6,182,212,0.4)] text-cyan-50' : isPremium ? 'border-white bg-white/20 shadow-[0_0_15px_rgba(255,255,255,0.3)]' : 'border-blue-500 bg-blue-50 dark:bg-blue-900/40 shadow-md') : (isMedTech ? 'border-medtech-border/50 bg-medtech-900/40 text-cyan-200/60' : isPremium ? 'border-white/20 bg-black/40' : 'border-slate-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700')} ${isKing ? 'animate-pulse border-yellow-400/50 bg-yellow-500/10' : ''}`} title={tier.label}>
+                                                            <div key={i} onClick={() => { if(!isKing) setBgTheme(tier.id); else showAlert(tier.msg); }} className={`flex-shrink-0 w-24 h-24 flex flex-col items-center justify-center p-2 rounded-xl border transition-transform cursor-pointer hover:scale-105 ${isActiveBg ? (isPremium ? 'border-white bg-white/20 shadow-[0_0_15px_rgba(255,255,255,0.3)]' : 'border-blue-500 bg-blue-50 dark:bg-blue-900/40 shadow-md') : (isPremium ? 'border-white/20 bg-black/40' : 'border-slate-200 bg-slate-50 dark:bg-slate-800 dark:border-slate-700')} ${isKing ? 'animate-pulse border-yellow-400/50 bg-yellow-500/10' : ''}`} title={tier.label}>
                                                                 <span className="text-3xl drop-shadow-sm mb-1">{tier.icon}</span>
                                                                 <span className="text-[10px] font-bold text-center leading-tight">{tier.label}</span>
                                                             </div>
                                                         );
                                                     } else {
                                                         return (
-                                                            <div key={i} className={`flex-shrink-0 w-24 h-24 border flex flex-col items-center justify-center cursor-not-allowed ${ui.btnRadius} ${isMedTech ? 'bg-black/60 border-cyan-900/30' : isPremium ? 'bg-black/70 border-white/10' : 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800'}`} title={`Unlock at ${tier.req} correct answers`}>
+                                                            <div key={i} className={`flex-shrink-0 w-24 h-24 rounded-xl border flex flex-col items-center justify-center cursor-not-allowed ${isPremium ? 'bg-black/70 border-white/10' : 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800'}`} title={`Unlock at ${tier.req} correct answers`}>
                                                                 <span className="text-2xl mb-1 opacity-50">🔒</span>
-                                                                <span className={`text-[9px] font-bold text-center px-1 opacity-60 ${ui.textClass}`}>Locked</span>
+                                                                <span className={`text-[9px] font-bold text-center px-1 opacity-60 ${textClass}`}>Locked</span>
                                                             </div>
                                                         );
                                                     }
@@ -1175,11 +1298,11 @@
                                     </div>
 
                                     <div className="mb-4">
-                                        <h2 className={`text-2xl font-bold mb-2 ${ui.titleGradient}`}>Global Actions</h2>
+                                        <h2 className={`text-2xl font-bold mb-2 ${getTitleClass('')}`}>Global Actions</h2>
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                        <button onClick={startRandomMaster} className={`flex-1 p-6 ${isMedTech ? 'bg-gradient-to-r from-cyan-600 to-blue-700 border-cyan-400/50' : 'bg-gradient-to-r from-blue-600 to-indigo-700 border-transparent'} rounded-[1.5rem] shadow-sm hover:shadow-md transition text-left group border hover:border-white/40`}>
+                                        <button onClick={startRandomMaster} className={`flex-1 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-left group border ${isMedTech ? 'medtech-btn-primary border-cyan-400/50 hover:border-cyan-300' : 'bg-gradient-to-r from-blue-600 to-indigo-700 border-transparent hover:border-white/20'}`}>
                                             <div className="flex justify-between items-center">
                                                 <div>
                                                     <h3 className="text-xl font-bold text-white mb-1">Random Master Quiz</h3>
@@ -1190,13 +1313,13 @@
                                                 </div>
                                             </div>
                                         </button>
-                                        <button onClick={reviewSolvedQuestions} className={`flex-1 p-6 transition text-left group ${ui.panel} hover:border-white/40`}>
+                                        <button onClick={reviewSolvedQuestions} className={`flex-1 p-6 rounded-2xl shadow-sm transition text-left group ${panelClass} ${isMedTech ? 'hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.1)]' : 'hover:border-white/40'}`}>
                                             <div className="flex justify-between items-center">
                                                 <div>
-                                                    <h3 className={`text-xl font-bold mb-1 ${ui.textClass}`}>Review Solved Qs</h3>
-                                                    <p className={`text-sm ${ui.textMutedClass}`}>See answers for completed questions</p>
+                                                    <h3 className={`text-xl font-bold mb-1 ${textClass}`}>Review Solved Qs</h3>
+                                                    <p className={`text-sm ${textMutedClass}`}>See answers for completed questions</p>
                                                 </div>
-                                                <div className={`p-3 rounded-full transition ${isMedTech ? 'bg-cyan-500/10 group-hover:bg-cyan-500/20 text-cyan-300' : isPremium ? 'bg-white/20 group-hover:bg-white/30 text-white' : 'bg-slate-100 dark:bg-slate-700 group-hover:bg-slate-200 dark:group-hover:bg-slate-600 text-slate-700 dark:text-slate-200'}`}>
+                                                <div className={`p-3 rounded-full transition ${isMedTech ? 'bg-white/20 group-hover:bg-white/30 text-white' : (isPremium ? 'bg-white/20 group-hover:bg-white/30 text-white' : 'bg-slate-100 dark:bg-slate-700 group-hover:bg-slate-200 dark:group-hover:bg-slate-600 text-slate-700 dark:text-slate-200')}`}>
                                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                                                 </div>
                                             </div>
@@ -1205,7 +1328,7 @@
 
                                     {hardOrWrongIds.length > 0 && (
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                            <button onClick={resolveReviewQuestions} className={`flex-1 p-5 ${isMedTech ? 'bg-gradient-to-r from-rose-500/80 to-red-600/80 backdrop-blur-md border border-rose-400/50' : 'bg-gradient-to-r from-rose-500 to-red-600'} rounded-2xl shadow-sm hover:shadow-md transition text-left group`}>
+                                            <button onClick={resolveReviewQuestions} className={`flex-1 p-5 rounded-2xl shadow-sm hover:shadow-md transition text-left group ${isMedTech ? 'medtech-btn-danger' : 'bg-gradient-to-r from-rose-500 to-red-600'}`}>
                                                 <div className="flex justify-between items-center">
                                                     <div>
                                                         <h3 className="text-lg font-bold text-white mb-1">Re-solve Hard/Wrong</h3>
@@ -1213,7 +1336,7 @@
                                                     </div>
                                                 </div>
                                             </button>
-                                            <button onClick={() => generateTutorialWithAi(null)} className={`flex-1 p-5 rounded-2xl shadow-sm hover:shadow-md transition group text-white flex items-center justify-between ${isMedTech ? AI_PROVIDERS[selectedAi].bgClass.replace('bg-', 'bg-').concat('/80 backdrop-blur-md border border-white/20') : AI_PROVIDERS[selectedAi].bgClass}`}>
+                                            <button onClick={() => generateTutorialWithAi(null)} className={`flex-1 p-5 rounded-2xl shadow-sm hover:shadow-md transition group flex items-center justify-between ${isMedTech ? 'medtech-btn-primary text-white' : `text-white ${AI_PROVIDERS[selectedAi].bgClass}`}`}>
                                                 <div>
                                                     <h3 className="text-lg font-bold mb-1 flex items-center gap-2">
                                                         {React.createElement(AI_PROVIDERS[selectedAi].icon, { className: "w-6 h-6 text-white" })} {AI_PROVIDERS[selectedAi].name} Tutorial
@@ -1225,7 +1348,7 @@
                                     )}
 
                                     {markedIds.length > 0 && (
-                                        <button onClick={reviewMarkedQuestions} className={`w-full p-5 mb-4 ${isMedTech ? 'bg-amber-500/80 backdrop-blur-md border border-amber-400/50' : 'bg-amber-500 hover:bg-amber-600'} rounded-2xl shadow-sm transition text-left text-white flex justify-between items-center`}>
+                                        <button onClick={reviewMarkedQuestions} className={`w-full p-5 mb-4 rounded-2xl shadow-sm transition text-left flex justify-between items-center ${isMedTech ? 'medtech-btn-primary text-white bg-amber-500/20 border-amber-400/40 hover:bg-amber-500/30' : 'bg-amber-500 hover:bg-amber-600 text-white'}`}>
                                             <div>
                                                 <h3 className="text-lg font-bold mb-1 flex items-center gap-2">
                                                     <BookmarkIcon className="w-5 h-5"/> Review Marked Questions ({markedIds.length})
@@ -1237,18 +1360,18 @@
 
                                     {/* SMALL RESET ALL BUTTON */}
                                     <div className="flex justify-end mb-8">
-                                        <button onClick={resetAll} className={`text-xs font-semibold flex items-center gap-1 px-4 py-2 backdrop-blur-sm transition border ${ui.btnRadius} ${isMedTech ? 'text-rose-400 border-rose-500/30 bg-rose-500/10 hover:bg-rose-500/20' : isPremium ? 'text-red-400 border-red-500/30 bg-red-500/20 hover:bg-red-500/40' : 'text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 bg-white/80 hover:bg-red-50 dark:bg-slate-800/80 dark:hover:bg-red-900/30 border-red-200 dark:border-red-900/50'}`}>
+                                        <button onClick={resetAll} className={`text-xs font-semibold flex items-center gap-1 px-4 py-2 backdrop-blur-sm rounded-lg transition border ${isMedTech ? 'text-red-300 border-red-500/30 bg-red-500/15 hover:bg-red-500/30 hover:border-red-400/60' : (isPremium ? 'text-red-400 border-red-500/30 bg-red-500/20 hover:bg-red-500/40' : 'text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 bg-white/80 hover:bg-red-50 dark:bg-slate-800/80 dark:hover:bg-red-900/30 border-red-200 dark:border-red-900/50')}`}>
                                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
                                             Reset All Progress
                                         </button>
                                     </div>
 
                                     <div className="mb-4">
-                                        <h2 className={`text-2xl font-bold mb-2 ${ui.titleGradient}`}>Main Subjects</h2>
+                                        <h2 className={`text-2xl font-bold mb-2 ${getTitleClass('')}`}>Main Subjects</h2>
                                     </div>
 
                                     <div className="flex flex-col gap-4 mb-8">
-                                        {typeof topicsData !== 'undefined' && topicsData.map((topic, mainIdx) => {
+                                        {topicsData.map((topic, mainIdx) => {
                                             const topicQIds = flatQuestions.filter(q => q.main === topic.main).map(q => q.id);
                                             const totalQs = topicQIds.length;
                                             const answeredInTopic = topicQIds.filter(id => globalAnswers[id] !== undefined).length;
@@ -1256,67 +1379,67 @@
                                             const colorTheme = colorsMap[topic.color];
 
                                             return (
-                                                <div key={mainIdx} className={`transition overflow-hidden ${ui.panel}`}>
-                                                    <button onClick={() => setExpandedTopic(isExpanded ? null : mainIdx)} className={`w-full p-5 text-left flex justify-between items-center transition ${isMedTech ? 'bg-medtech-800/60 hover:bg-medtech-800/80 border-b border-cyan-900/50' : colorTheme.gradient} text-white`}>
+                                                <div key={mainIdx} className={`rounded-2xl transition overflow-hidden ${panelClass}`}>
+                                                    <button onClick={() => setExpandedTopic(isExpanded ? null : mainIdx)} className={`w-full p-5 text-left flex justify-between items-center transition ${isMedTech ? 'bg-gradient-to-r from-cyan-900 to-blue-900 border border-cyan-500/30' : colorTheme.gradient} text-white`}>
                                                         <div className="flex-grow">
-                                                            <h3 className={`font-bold text-xl mb-1 drop-shadow-md ${isMedTech ? 'text-cyan-50' : ''}`}>{topic.main}</h3>
+                                                            <h3 className="font-bold text-xl mb-1 drop-shadow-md">{topic.main}</h3>
                                                             <div className="flex items-center text-sm text-white/90 gap-4 font-medium">
-                                                                <span className={isMedTech ? 'text-cyan-200/80' : ''}>{answeredInTopic} / {totalQs} Answered</span>
+                                                                <span>{answeredInTopic} / {totalQs} Answered</span>
                                                             </div>
-                                                            <div className={`w-full ${isMedTech ? 'bg-black/50' : colorTheme.progressBg} h-1.5 mt-3 rounded-full overflow-hidden max-w-sm shadow-inner`}>
-                                                                <div className={`h-1.5 ${isMedTech ? 'bg-cyan-400 shadow-[0_0_10px_#22d3ee]' : colorTheme.progressFill}`} style={{width: `${getPercentage(answeredInTopic, totalQs)}%`}}></div>
+                                                            <div className={`w-full ${isMedTech ? 'bg-cyan-900/50' : colorTheme.progressBg} h-1.5 mt-3 rounded-full overflow-hidden max-w-sm shadow-inner`}>
+                                                                <div className={`h-1.5 ${isMedTech ? 'bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)]' : colorTheme.progressFill}`} style={{width: `${getPercentage(answeredInTopic, totalQs)}%`}}></div>
                                                             </div>
                                                         </div>
                                                         <div className="flex-shrink-0 ml-4">
-                                                            <svg className={`w-6 h-6 transform transition-transform ${isExpanded ? 'rotate-180 text-white' : 'text-white/80'} ${isMedTech ? 'text-cyan-400' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                                            <svg className={`w-6 h-6 transform transition-transform ${isExpanded ? 'rotate-180 text-white' : 'text-white/80'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                                         </div>
                                                     </button>
 
                                                     {isExpanded && (
-                                                        <div className={`border-t fade-in ${isMedTech ? 'bg-black/20 border-cyan-900/30' : isPremium ? 'bg-black/40 border-white/10' : `${colorTheme.bg} border-slate-200 dark:border-slate-700`}`}>
+                                                        <div className={`border-t fade-in ${isMedTech ? 'bg-slate-950/40 border-white/10' : `${colorTheme.bg} border-slate-200 dark:border-slate-700`}`}>
                                                             {/* Main Topic Controls */}
-                                                            <div className={`p-4 flex flex-wrap gap-2 border-b ${isMedTech ? 'border-cyan-900/30' : isPremium ? 'border-white/10' : 'border-white/20 dark:border-slate-700/30'}`}>
-                                                                <button onClick={() => startTopicRandomMaster(mainIdx)} className={`text-xs font-bold px-3 py-2 border hover:shadow-sm transition ${ui.btnRadius} ${isMedTech ? 'bg-cyan-900/30 border-cyan-500/30 text-cyan-100 hover:bg-cyan-800/50' : isPremium ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600'}`}>
+                                                            <div className={`p-4 flex flex-wrap gap-2 border-b ${isMedTech ? 'border-white/10' : 'border-white/20 dark:border-slate-700/30'}`}>
+                                                                <button onClick={() => startTopicRandomMaster(mainIdx)} className={`text-xs font-bold px-3 py-2 rounded-lg border hover:shadow-sm transition ${isMedTech ? 'medtech-btn' : (isPremium ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600')}`}>
                                                                     🎯 Random Solve
                                                                 </button>
-                                                                <button onClick={() => reviewMainTopic(mainIdx)} className={`text-xs font-bold px-3 py-2 border hover:shadow-sm transition ${ui.btnRadius} ${isMedTech ? 'bg-cyan-900/30 border-cyan-500/30 text-cyan-100 hover:bg-cyan-800/50' : isPremium ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600'}`}>
+                                                                <button onClick={() => reviewMainTopic(mainIdx)} className={`text-xs font-bold px-3 py-2 rounded-lg border hover:shadow-sm transition ${isMedTech ? 'medtech-btn' : (isPremium ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600')}`}>
                                                                     👀 Review Solved
                                                                 </button>
-                                                                <button onClick={() => resolveMainTopic(mainIdx)} className={`text-xs font-bold px-3 py-2 border hover:shadow-sm transition ${ui.btnRadius} ${isMedTech ? 'bg-rose-900/30 border-rose-500/30 text-rose-300 hover:bg-rose-900/50' : isPremium ? 'bg-red-500/20 border-red-500/50 text-red-300 hover:bg-red-500/30' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600 text-red-600 dark:text-red-400'}`}>
+                                                                <button onClick={() => resolveMainTopic(mainIdx)} className={`text-xs font-bold px-3 py-2 rounded-lg border hover:shadow-sm transition ${isMedTech ? 'medtech-btn-danger' : (isPremium ? 'bg-red-500/20 border-red-500/50 text-red-300 hover:bg-red-500/30' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600 text-red-600 dark:text-red-400')}`}>
                                                                     🔥 Re-solve Hard
                                                                 </button>
-                                                                <button onClick={() => askAiMainTopic(mainIdx)} className={`text-xs font-bold px-3 py-2 text-white transition flex items-center gap-1 ${ui.btnRadius} ${isMedTech ? AI_PROVIDERS[selectedAi].bgClass.replace('bg-', 'bg-').concat('/80 border border-white/20') : AI_PROVIDERS[selectedAi].bgClass}`}>
+                                                                <button onClick={() => askAiMainTopic(mainIdx)} className={`text-xs font-bold px-3 py-2 rounded-lg transition flex items-center gap-1 ${isMedTech ? 'medtech-btn-primary text-white' : `text-white ${AI_PROVIDERS[selectedAi].bgClass}`}`}>
                                                                     {React.createElement(AI_PROVIDERS[selectedAi].icon, { className: "w-4 h-4" })} Ask {AI_PROVIDERS[selectedAi].name}
                                                                 </button>
                                                                 <div className="flex-grow"></div>
-                                                                <button onClick={(e) => resetMainTopic(e, mainIdx)} className={`text-xs font-bold px-3 py-2 border transition ${ui.btnRadius} ${isMedTech ? 'bg-rose-500/10 hover:bg-rose-500/30 border-rose-500/30 text-rose-400' : isPremium ? 'bg-red-500/10 hover:bg-red-500/30 border-red-500/30 text-red-400' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20'}`}>
+                                                                <button onClick={(e) => resetMainTopic(e, mainIdx)} className={`text-xs font-bold px-3 py-2 rounded-lg border transition ${isMedTech ? 'medtech-btn-danger' : (isPremium ? 'bg-red-500/10 hover:bg-red-500/30 border-red-500/30 text-red-400' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20')}`}>
                                                                     Reset Topic
                                                                 </button>
                                                             </div>
 
                                                             {/* Subtopics List */}
-                                                            <div className={`divide-y ${isMedTech ? 'divide-cyan-900/30' : isPremium ? 'divide-white/10' : 'divide-white/40 dark:divide-slate-700/40'}`}>
+                                                            <div className={`divide-y ${isMedTech ? 'divide-white/10' : 'divide-white/40 dark:divide-slate-700/40'}`}>
                                                                 {topic.subtopics.map((sub, subIdx) => {
                                                                     const subQs = flatQuestions.filter(q => q.main === topic.main && q.t === sub.t);
                                                                     const subTotal = subQs.length;
                                                                     const subAns = subQs.filter(q => globalAnswers[q.id] !== undefined).length;
                                                                     
                                                                     return (
-                                                                        <div key={subIdx} className={`p-4 transition flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 ${isMedTech ? 'hover:bg-cyan-900/20' : isPremium ? 'hover:bg-white/10' : 'hover:bg-white/60 dark:hover:bg-slate-800/60'}`}>
+                                                                        <div key={subIdx} className={`p-4 transition flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 ${isMedTech ? 'hover:bg-cyan-500/5' : (isPremium ? 'hover:bg-white/10' : 'hover:bg-white/60 dark:hover:bg-slate-800/60')}`}>
                                                                             <div className="flex-grow">
-                                                                                <h4 className={`font-semibold ${isMedTech ? 'text-cyan-50' : isPremium ? 'text-white' : `${colorTheme.text.split(' ')[0]} dark:text-slate-200`}`}>{sub.t}</h4>
-                                                                                <p className={`text-xs mt-1 ${isMedTech ? 'text-cyan-200/50' : isPremium ? 'text-white/70' : 'text-slate-500 dark:text-slate-400'}`}>{subAns} / {subTotal} questions answered</p>
+                                                                                <h4 className={`font-semibold ${isMedTech ? 'text-cyan-100' : (isPremium ? 'text-white' : `${colorTheme.text.split(' ')[0]} dark:text-slate-200`)}`}>{sub.t}</h4>
+                                                                                <p className={`text-xs mt-1 ${isMedTech ? 'text-cyan-200/50' : (isPremium ? 'text-white/70' : 'text-slate-500 dark:text-slate-400')}`}>{subAns} / {subTotal} questions answered</p>
                                                                             </div>
                                                                             <div className="flex flex-wrap items-center gap-2">
-                                                                                <button onClick={() => startSubtopic(mainIdx, subIdx)} disabled={subTotal === 0} className={`text-xs font-bold px-4 py-2 text-white transition shadow-sm ${ui.btnRadius} ${subTotal === 0 ? (isMedTech ? 'bg-black/30 cursor-not-allowed text-cyan-100/30 border border-cyan-900/30' : isPremium ? 'bg-white/10 cursor-not-allowed text-white/30 border border-white/10' : 'bg-slate-300 dark:bg-slate-600 cursor-not-allowed') : (isMedTech ? 'bg-cyan-600 hover:bg-cyan-500 border border-cyan-400/50 shadow-[0_0_10px_rgba(6,182,212,0.3)]' : colorTheme.btn)}`}>
+                                                                                <button onClick={() => startSubtopic(mainIdx, subIdx)} disabled={subTotal === 0} className={`text-xs font-bold px-4 py-2 rounded-lg text-white transition shadow-sm ${subTotal === 0 ? (isMedTech ? 'bg-cyan-900/30 cursor-not-allowed text-cyan-400/30 border border-cyan-500/20' : (isPremium ? 'bg-white/10 cursor-not-allowed text-white/30 border border-white/10' : 'bg-slate-300 dark:bg-slate-600 cursor-not-allowed')) : (isMedTech ? 'medtech-btn-primary' : colorTheme.btn)}`}>
                                                                                     Solve
                                                                                 </button>
                                                                                 {subAns > 0 && (
                                                                                     <>
-                                                                                        <button onClick={(e) => reviewSubtopic(e, mainIdx, subIdx)} className={`text-xs font-semibold px-3 py-2 border hover:shadow-sm transition ${ui.btnRadius} ${isMedTech ? 'bg-cyan-900/30 border-cyan-500/30 text-cyan-200 hover:bg-cyan-800/50' : isPremium ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600'}`}>
+                                                                                        <button onClick={(e) => reviewSubtopic(e, mainIdx, subIdx)} className={`text-xs font-semibold px-3 py-2 rounded-lg border hover:shadow-sm transition ${isMedTech ? 'medtech-btn' : (isPremium ? 'bg-white/10 border-white/20 text-white hover:bg-white/20' : 'bg-white/80 dark:bg-slate-800 border-slate-200 dark:border-slate-600')}`}>
                                                                                             Review
                                                                                         </button>
-                                                                                        <button onClick={(e) => resetSubtopic(e, mainIdx, subIdx)} className={`text-xs font-semibold px-3 py-2 transition ${ui.btnRadius} ${isMedTech ? 'bg-rose-900/20 hover:bg-rose-900/40 text-rose-300 border border-rose-500/30' : isPremium ? 'bg-red-500/20 hover:bg-red-500/40 text-red-300 border border-red-500/30' : 'text-red-600 bg-red-50/80 hover:bg-red-100 dark:text-red-400 dark:bg-red-900/20 dark:hover:bg-red-900/40 border border-transparent'}`}>
+                                                                                        <button onClick={(e) => resetSubtopic(e, mainIdx, subIdx)} className={`text-xs font-semibold px-3 py-2 rounded-lg transition ${isMedTech ? 'medtech-btn-danger' : (isPremium ? 'bg-red-500/20 hover:bg-red-500/40 text-red-300 border border-red-500/30' : 'text-red-600 bg-red-50/80 hover:bg-red-100 dark:text-red-400 dark:bg-red-900/20 dark:hover:bg-red-900/40 border border-transparent')}`}>
                                                                                             Reset
                                                                                         </button>
                                                                                     </>
@@ -1339,19 +1462,19 @@
                             {view === 'quiz' && activeQuiz.length > 0 && (
                                 <div className="fade-in max-w-3xl mx-auto pt-6">
                                     <div className="mb-6">
-                                        <p className={`text-sm font-bold uppercase tracking-wider mb-1 ${isMedTech ? 'text-cyan-400 drop-shadow-sm' : isPremium ? 'text-white/80' : tColor.text}`}>
+                                        <p className={`text-sm font-bold uppercase tracking-wider mb-1 ${isMedTech ? 'text-white/80' : tColor.text}`}>
                                             {quizTitle} {isMarkedSession && "(Practice Mode)"}
                                         </p>
-                                        <h2 className={`text-2xl font-bold ${ui.titleGradient}`}>
-                                            Question {currentQIndex + 1} <span className={`text-lg font-normal ${isMedTech ? 'text-cyan-200/50' : isPremium ? 'text-white/60' : 'text-slate-400'}`}>of {activeQuiz.length}</span>
+                                        <h2 className={`text-2xl font-bold ${getTitleClass('')}`}>
+                                            Question {currentQIndex + 1} <span className={`text-lg font-normal ${isMedTech ? 'text-white/60' : 'text-slate-400'}`}>of {activeQuiz.length}</span>
                                         </h2>
                                     </div>
 
-                                    <div className={`w-full rounded-full h-2 mb-8 overflow-hidden shadow-inner ${ui.progressTrack}`}>
-                                        <div className={`h-full transition-all duration-300 ease-out ${isMedTech ? 'bg-cyan-400 shadow-[0_0_15px_#22d3ee]' : tColor.btn.split(' ')[0]}`} style={{ width: `${((currentQIndex + 1) / activeQuiz.length) * 100}%` }}></div>
+                                    <div className={`w-full rounded-full h-2 mb-8 overflow-hidden shadow-inner ${isMedTech ? 'bg-slate-950/70 border border-cyan-500/20' : (isPremium ? 'bg-black/50 border border-white/10' : 'bg-white/80 dark:bg-slate-700/80 border border-slate-200 dark:border-slate-600')}`}>
+                                        <div className={`h-full transition-all duration-300 ease-out ${isMedTech ? 'bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.5)]' : tColor.btn.split(' ')[0]}`} style={{ width: `${((currentQIndex + 1) / activeQuiz.length) * 100}%` }}></div>
                                     </div>
 
-                                    <div className={`p-6 md:p-8 mb-6 transition-colors ${ui.panel}`}>
+                                    <div className={`rounded-2xl p-6 md:p-8 mb-6 transition-colors ${panelClass}`}>
                                         <h3 className="text-lg md:text-xl font-medium leading-relaxed mb-6 drop-shadow-sm">
                                             {activeQuiz[currentQIndex].q}
                                         </h3>
@@ -1369,24 +1492,24 @@
                                                 const isCorrect = currentQ.a === origIdx;
                                                 const optionText = currentQ.o[origIdx];
                                                 
-                                                let btnClass = ui.quizOptBase;
+                                                let btnClass = "w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-start gap-3 backdrop-blur-md ";
                                                 
                                                 if (!isAnswered) {
-                                                    btnClass += ui.quizOptUnanswered;
+                                                    btnClass += isMedTech ? "border-cyan-500/20 bg-slate-950/50 hover:bg-cyan-950/40 hover:border-cyan-400/40 cursor-pointer text-cyan-50 medtech-option-default" : (isPremium ? "border-white/20 bg-black/50 hover:bg-black/70 hover:border-white/40 cursor-pointer text-white" : "border-slate-200 dark:border-slate-600 bg-white/60 dark:bg-slate-800/60 hover:bg-white dark:hover:bg-slate-700 cursor-pointer text-slate-800 dark:text-slate-100");
                                                 } else {
                                                     if (isCorrect) {
-                                                        btnClass += ui.quizOptCorrect;
+                                                        btnClass += isMedTech ? "medtech-correct" : (isPremium ? "border-green-400 bg-green-900/60 text-white shadow-[0_0_15px_rgba(74,222,128,0.2)]" : "border-green-500 bg-green-50 dark:bg-green-900/30 text-green-900 dark:text-green-100");
                                                     } else if (isSelected) {
-                                                        btnClass += ui.quizOptWrong;
+                                                        btnClass += isMedTech ? "medtech-wrong" : (isPremium ? "border-red-400 bg-red-900/60 text-white shadow-[0_0_15px_rgba(248,113,113,0.2)]" : "border-red-400 bg-red-50 dark:bg-red-900/30 text-red-900 dark:text-red-100");
                                                     } else {
-                                                        btnClass += ui.quizOptDisabled;
+                                                        btnClass += isMedTech ? "medtech-option-disabled" : (isPremium ? "border-white/5 bg-black/20 opacity-40 text-white" : "border-slate-100/50 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30 opacity-50");
                                                     }
                                                 }
 
                                                 return (
                                                     <div key={origIdx} className="flex flex-col gap-1">
                                                         <button onClick={() => handleOptionClick(origIdx)} className={btnClass} disabled={isAnswered}>
-                                                            <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold border shadow-sm ${isAnswered ? (isCorrect ? 'bg-green-500 border-green-400 text-white' : (isSelected ? 'bg-red-500 border-red-400 text-white' : (isMedTech ? 'border-medtech-border text-cyan-100/30 bg-black/50' : isPremium ? 'border-white/30 text-white/50 bg-black/50' : 'border-slate-300 dark:border-slate-600 text-slate-400 bg-white/50 dark:bg-slate-800/50'))) : (isMedTech ? 'border-cyan-500/50 text-cyan-100 bg-cyan-900/50' : isPremium ? 'border-white/50 text-white bg-white/10' : 'border-slate-300 dark:border-slate-500 text-slate-600 dark:text-slate-200 bg-white dark:bg-slate-700')}`}>
+                                                            <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold border shadow-sm ${isAnswered ? (isCorrect ? 'bg-emerald-500 border-emerald-400 text-white' : (isSelected ? 'bg-red-500 border-red-400 text-white' : (isMedTech ? 'border-cyan-500/30 text-cyan-400/50 bg-slate-950/80' : (isPremium ? 'border-white/30 text-white/50 bg-black/50' : 'border-slate-300 dark:border-slate-600 text-slate-400 bg-white/50 dark:bg-slate-800/50')))) : (isMedTech ? 'border-cyan-400/40 text-cyan-200 bg-cyan-950/50' : (isPremium ? 'border-white/50 text-white bg-white/10' : 'border-slate-300 dark:border-slate-500 text-slate-600 dark:text-slate-200 bg-white dark:bg-slate-700'))}`}>
                                                                 {String.fromCharCode(65 + renderIdx)}
                                                             </span>
                                                             <span className="mt-0.5 leading-snug drop-shadow-sm">{optionText}</span>
@@ -1394,10 +1517,10 @@
                                                         
                                                         {isAnswered && showExplanation && currentQ.oExp && currentQ.oExp[origIdx] && (
                                                             <div className="pl-12 pr-4 text-sm fade-in mt-1">
-                                                                <div className={`p-3 border backdrop-blur-md ${isMedTech ? 'rounded-2xl' : 'rounded-lg'} ${isCorrect ? (isMedTech ? 'bg-teal-900/30 border-teal-500/30 text-teal-100' : isPremium ? 'bg-green-900/40 border-green-500/30 text-green-50' : 'bg-green-50/80 border-green-200 dark:bg-green-900/20 dark:border-green-800/50') : (isSelected ? (isMedTech ? 'bg-rose-900/30 border-rose-500/30 text-rose-100' : isPremium ? 'bg-red-900/40 border-red-500/30 text-red-50' : 'bg-red-50/80 border-red-200 dark:bg-red-900/20 dark:border-red-800/50') : (isMedTech ? 'bg-black/30 border-cyan-900/30 text-cyan-100/70' : isPremium ? 'bg-black/40 border-white/10 text-white/80' : 'bg-slate-50/80 border-slate-200 dark:bg-slate-800/80 dark:border-slate-700'))}`}>
+                                                                <div className={`p-3 rounded-lg border backdrop-blur-md ${isCorrect ? (isMedTech ? 'bg-emerald-900/40 border-emerald-500/30 text-emerald-50' : (isPremium ? 'bg-green-900/40 border-green-500/30 text-green-50' : 'bg-green-50/80 border-green-200 dark:bg-green-900/20 dark:border-green-800/50')) : (isSelected ? (isMedTech ? 'bg-red-900/40 border-red-500/30 text-red-50' : (isPremium ? 'bg-red-900/40 border-red-500/30 text-red-50' : 'bg-red-50/80 border-red-200 dark:bg-red-900/20 dark:border-red-800/50')) : (isMedTech ? 'bg-black/40 border-white/10 text-white/80' : 'bg-slate-50/80 border-slate-200 dark:bg-slate-800/80 dark:border-slate-700'))}`}>
                                                                     <span className="leading-relaxed">
                                                                         {currentQ.aiOptIndices && currentQ.aiOptIndices.includes(origIdx) && (
-                                                                            <span className={`${isMedTech ? 'text-cyan-400' : AI_PROVIDERS[selectedAi].color} font-bold mr-1`}>✨ AI option: </span>
+                                                                            <span className={`${AI_PROVIDERS[selectedAi].color} font-bold mr-1`}>✨ AI option: </span>
                                                                         )}
                                                                         {currentQ.oExp[origIdx]}
                                                                     </span>
@@ -1411,35 +1534,35 @@
 
                                         {/* Evaluation Automatically displays if answered */}
                                         {((isResolveSession || isMarkedSession) ? sessionAnswers[activeQuiz[currentQIndex].id] !== undefined : globalAnswers[activeQuiz[currentQIndex].id] !== undefined) && activeQuiz[currentQIndex].evaluation && (
-                                            <div className={`mt-6 p-4 border text-sm fade-in shadow-sm backdrop-blur-md ${isMedTech ? 'rounded-2xl bg-indigo-950/40 border-indigo-500/30 text-indigo-100 shadow-[0_0_15px_rgba(99,102,241,0.1)]' : isPremium ? 'rounded-xl bg-indigo-900/50 border-indigo-400/30 text-indigo-100' : 'rounded-xl bg-indigo-50 dark:bg-indigo-900/30 border-indigo-200 dark:border-indigo-800 text-indigo-900 dark:text-indigo-200'}`}>
-                                                <strong className={`block mb-1 ${isMedTech ? 'text-indigo-300 drop-shadow-sm' : isPremium ? 'text-indigo-300' : 'text-indigo-700 dark:text-indigo-400'}`}>💡 Evaluation:</strong> {activeQuiz[currentQIndex].evaluation}
+                                            <div className={`mt-6 p-4 border rounded-xl text-sm fade-in shadow-sm backdrop-blur-md ${isMedTech ? 'bg-indigo-900/50 border-indigo-400/30 text-indigo-100' : 'bg-indigo-50 dark:bg-indigo-900/30 border-indigo-200 dark:border-indigo-800 text-indigo-900 dark:text-indigo-200'}`}>
+                                                <strong className={`block mb-1 ${isMedTech ? 'text-indigo-300' : 'text-indigo-700 dark:text-indigo-400'}`}>💡 Evaluation:</strong> {activeQuiz[currentQIndex].evaluation}
                                             </div>
                                         )}
 
                                         {/* Ask AI & Explanation Toggles */}
                                         {((isResolveSession || isMarkedSession) ? sessionAnswers[activeQuiz[currentQIndex].id] !== undefined : globalAnswers[activeQuiz[currentQIndex].id] !== undefined) && (
-                                            <div className={`mt-4 flex justify-between items-center border-t pt-4 ${isMedTech ? 'border-cyan-900/30' : isPremium ? 'border-white/10' : 'border-slate-200 dark:border-slate-700'}`}>
-                                                <button onClick={() => setShowExplanation(!showExplanation)} className={`text-sm font-bold hover:opacity-80 transition flex items-center gap-1 ${isMedTech ? 'text-cyan-400 drop-shadow-sm' : isPremium ? 'text-white drop-shadow-sm' : tColor.text}`}>
+                                            <div className={`mt-4 flex justify-between items-center border-t pt-4 ${isMedTech ? 'border-white/10' : 'border-slate-200 dark:border-slate-700'}`}>
+                                                <button onClick={() => setShowExplanation(!showExplanation)} className={`text-sm font-bold hover:opacity-80 transition flex items-center gap-1 ${isMedTech ? 'text-white drop-shadow-sm' : tColor.text}`}>
                                                     {showExplanation ? 'Hide Explanations ▲' : 'Show Explanations ▼'}
                                                 </button>
-                                                <button onClick={askAiPerQuestion} className={`text-sm font-bold ${isMedTech ? 'text-blue-400 drop-shadow-sm hover:text-blue-300' : isPremium ? AI_PROVIDERS[selectedAi].color : AI_PROVIDERS[selectedAi].textClass} hover:opacity-80 transition flex items-center gap-1 drop-shadow-sm`}>
+                                                <button onClick={askAiPerQuestion} className={`text-sm font-bold ${isMedTech ? AI_PROVIDERS[selectedAi].color : AI_PROVIDERS[selectedAi].textClass} hover:opacity-80 transition flex items-center gap-1 drop-shadow-sm`}>
                                                     {React.createElement(AI_PROVIDERS[selectedAi].icon, { className: "w-4 h-4" })} Ask {AI_PROVIDERS[selectedAi].name}
                                                 </button>
                                             </div>
                                         )}
 
                                         {/* Toggles (Mark, Show AI Options, Auto Show Explanation) */}
-                                        <div className={`mt-6 pt-4 border-t flex flex-col sm:flex-row flex-wrap justify-start gap-x-6 gap-y-3 ${isMedTech ? 'border-cyan-900/30' : isPremium ? 'border-white/10' : 'border-slate-200 dark:border-slate-700'}`}>
+                                        <div className={`mt-6 pt-4 border-t flex flex-col sm:flex-row flex-wrap justify-start gap-x-6 gap-y-3 ${isMedTech ? 'border-white/10' : 'border-slate-200 dark:border-slate-700'}`}>
                                             <div className="flex items-center gap-2">
-                                                <input type="checkbox" id="autoShowExp" checked={autoShowExplanation} onChange={(e) => setAutoShowExplanation(e.target.checked)} className={`w-5 h-5 text-blue-500 rounded focus:ring-blue-500 cursor-pointer ${isMedTech ? 'bg-black/50 border-cyan-800/50 focus:ring-cyan-400' : isPremium ? 'bg-black/50 border-white/30 focus:ring-blue-400' : 'bg-slate-100 border-slate-300 dark:focus:ring-blue-600 dark:ring-offset-slate-800 dark:bg-slate-800 dark:border-slate-600'}`}/>
-                                                <label htmlFor="autoShowExp" className={`text-sm font-semibold cursor-pointer select-none ${isMedTech ? 'text-cyan-50 drop-shadow-sm' : isPremium ? 'text-white/90 drop-shadow-sm' : 'text-slate-700 dark:text-slate-300'}`}>
+                                                <input type="checkbox" id="autoShowExp" checked={autoShowExplanation} onChange={(e) => setAutoShowExplanation(e.target.checked)} className={`w-5 h-5 text-blue-500 rounded focus:ring-blue-500 cursor-pointer ${isMedTech ? 'bg-black/50 border-cyan-500/30 focus:ring-cyan-400' : 'bg-slate-100 border-slate-300 dark:focus:ring-blue-600 dark:ring-offset-slate-800 dark:bg-slate-800 dark:border-slate-600'}`}/>
+                                                <label htmlFor="autoShowExp" className={`text-sm font-semibold cursor-pointer select-none ${isMedTech ? 'text-white/90 drop-shadow-sm' : 'text-slate-700 dark:text-slate-300'}`}>
                                                     Show explanation automatically
                                                 </label>
                                             </div>
                                             
                                             <div className="flex items-center gap-2">
-                                                <input type="checkbox" id="markLater" checked={markedIds.includes(activeQuiz[currentQIndex].id)} onChange={toggleMark} className={`w-5 h-5 text-amber-500 rounded focus:ring-amber-500 cursor-pointer ${isMedTech ? 'bg-black/50 border-cyan-800/50 focus:ring-amber-400' : isPremium ? 'bg-black/50 border-white/30 focus:ring-amber-400' : 'bg-slate-100 border-slate-300 dark:focus:ring-amber-600 dark:ring-offset-slate-800 dark:bg-slate-800 dark:border-slate-600'}`}/>
-                                                <label htmlFor="markLater" className={`text-sm font-semibold cursor-pointer select-none ${isMedTech ? 'text-cyan-50 drop-shadow-sm' : isPremium ? 'text-white/90 drop-shadow-sm' : 'text-slate-700 dark:text-slate-300'}`}>
+                                                <input type="checkbox" id="markLater" checked={markedIds.includes(activeQuiz[currentQIndex].id)} onChange={toggleMark} className={`w-5 h-5 text-amber-500 rounded focus:ring-amber-500 cursor-pointer ${isMedTech ? 'bg-black/50 border-white/30 focus:ring-amber-400' : 'bg-slate-100 border-slate-300 dark:focus:ring-amber-600 dark:ring-offset-slate-800 dark:bg-slate-800 dark:border-slate-600'}`}/>
+                                                <label htmlFor="markLater" className={`text-sm font-semibold cursor-pointer select-none ${isMedTech ? 'text-white/90 drop-shadow-sm' : 'text-slate-700 dark:text-slate-300'}`}>
                                                     Mark this question to review later
                                                 </label>
                                             </div>
@@ -1451,9 +1574,9 @@
                                                         id="toggleAiChoices" 
                                                         checked={showAiChoices} 
                                                         onChange={(e) => setShowAiChoices(e.target.checked)} 
-                                                        className={`w-5 h-5 ${AI_PROVIDERS[selectedAi].color.replace('text-', 'text-')} rounded cursor-pointer ${isMedTech ? 'bg-black/50 border-cyan-800/50 focus:ring-cyan-400' : isPremium ? 'bg-black/50 border-white/30' : 'bg-slate-100 border-slate-300 dark:bg-slate-800 dark:border-slate-600'}`}
+                                                        className={`w-5 h-5 ${AI_PROVIDERS[selectedAi].color.replace('text-', 'text-')} rounded cursor-pointer ${isMedTech ? 'bg-black/50 border-white/30' : 'bg-slate-100 border-slate-300 dark:bg-slate-800 dark:border-slate-600'}`}
                                                     />
-                                                    <label htmlFor="toggleAiChoices" className={`text-sm font-semibold cursor-pointer select-none ${isMedTech ? 'text-cyan-50 drop-shadow-sm' : isPremium ? 'text-white/90 drop-shadow-sm' : 'text-slate-700 dark:text-slate-300'}`}>
+                                                    <label htmlFor="toggleAiChoices" className={`text-sm font-semibold cursor-pointer select-none ${isMedTech ? 'text-white/90 drop-shadow-sm' : 'text-slate-700 dark:text-slate-300'}`}>
                                                         Show AI Generated Options
                                                     </label>
                                                 </div>
@@ -1462,15 +1585,15 @@
                                     </div>
 
                                     <div className="flex flex-wrap sm:flex-nowrap justify-between items-center gap-4">
-                                        <button onClick={prevQuestion} disabled={currentQIndex === 0} className={`px-4 py-3 font-medium disabled:opacity-30 transition drop-shadow-sm ${isMedTech ? 'text-cyan-300 hover:text-cyan-100' : isPremium ? 'text-white hover:text-white/80' : 'text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white'}`}>
+                                        <button onClick={prevQuestion} disabled={currentQIndex === 0} className={`px-4 py-3 font-medium disabled:opacity-30 transition drop-shadow-sm ${isMedTech ? 'text-white hover:text-white/80' : 'text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white'}`}>
                                             &larr; Previous
                                         </button>
                                         
                                         <div className="flex gap-2 w-full sm:w-auto">
-                                            <button onClick={toggleHard} className={`px-4 py-3 font-bold border transition flex items-center gap-2 flex-1 sm:flex-none justify-center ${ui.btnRadius} ${hardIds.includes(activeQuiz[currentQIndex].id) ? (isMedTech ? 'bg-cyan-400 text-black border-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.6)]' : isPremium ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.4)]' : 'bg-slate-800 text-white border-slate-800 dark:bg-white dark:text-slate-900 dark:border-white') : (isMedTech ? 'bg-black/40 text-cyan-50 border-cyan-500/50 hover:bg-cyan-900/50 backdrop-blur-md' : isPremium ? 'bg-black/60 text-white border-white/30 hover:bg-white/20 backdrop-blur-md' : 'bg-white/80 text-slate-700 border-slate-300 hover:bg-slate-100 dark:bg-slate-800/80 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 backdrop-blur-md')}`}>
+                                            <button onClick={toggleHard} className={`px-4 py-3 rounded-xl font-bold border transition flex items-center gap-2 flex-1 sm:flex-none justify-center ${hardIds.includes(activeQuiz[currentQIndex].id) ? (isMedTech ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.4)]' : (isPremium ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.4)]' : 'bg-slate-800 text-white border-slate-800 dark:bg-white dark:text-slate-900 dark:border-white')) : (isMedTech ? 'medtech-btn' : (isPremium ? 'bg-black/60 text-white border-white/30 hover:bg-white/20 backdrop-blur-md' : 'bg-white/80 text-slate-700 border-slate-300 hover:bg-slate-100 dark:bg-slate-800/80 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700 backdrop-blur-md'))}`}>
                                                 {hardIds.includes(activeQuiz[currentQIndex].id) ? 'Hard (Added)' : 'Mark Hard'}
                                             </button>
-                                            <button onClick={nextQuestion} className={`px-6 py-3 font-bold transition shadow-md flex-1 sm:flex-none justify-center flex items-center ${ui.btnRadius} ${isMedTech ? 'bg-cyan-600 hover:bg-cyan-500 text-white border border-cyan-400/50 shadow-[0_0_15px_rgba(6,182,212,0.3)]' : `${tColor.btn} text-white ${isPremium ? 'border border-white/20' : ''}`}`}>
+                                            <button onClick={nextQuestion} className={`px-6 py-3 rounded-xl font-bold transition shadow-md flex-1 sm:flex-none justify-center flex items-center text-white ${isMedTech ? 'medtech-btn-primary' : tColor.btn} ${isPremium ? 'border border-white/20' : ''}`}>
                                                 {currentQIndex === activeQuiz.length - 1 ? 'Finish' : 'Next'} &rarr;
                                             </button>
                                         </div>
@@ -1481,13 +1604,13 @@
                             {/* VIEW: RESULTS */}
                             {view === 'results' && (
                                 <div className="fade-in max-w-2xl mx-auto py-8">
-                                    <div className={`p-8 text-center ${ui.panel}`}>
-                                        <div className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 border ${isMedTech ? 'bg-cyan-900/30 border-cyan-500/50 shadow-[0_0_20px_rgba(6,182,212,0.3)]' : isPremium ? 'bg-white/10 border-white/20 shadow-inner' : `border-transparent ${tColor.bg}`}`}>
-                                            <svg className={`w-10 h-10 ${isMedTech ? 'text-cyan-400' : isPremium ? 'text-white' : tColor.text.split(' ')[0]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                    <div className={`rounded-2xl p-8 text-center ${panelClass}`}>
+                                        <div className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 border ${isMedTech ? 'bg-white/10 border-white/20 shadow-inner' : (isPremium ? 'border-transparent bg-white/10' : `border-transparent ${tColor.bg}`)}`}>
+                                            <svg className={`w-10 h-10 ${isMedTech ? 'text-white' : (isPremium ? 'text-white' : tColor.text.split(' ')[0])}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
                                         </div>
-                                        <h2 className={`text-3xl font-bold mb-8 drop-shadow-sm ${ui.titleGradient}`}>Session Completed!</h2>
+                                        <h2 className={`text-3xl font-bold mb-8 drop-shadow-sm ${getTitleClass('')}`}>Session Completed!</h2>
                                         
-                                        <button onClick={navigateHome} className={`px-8 py-4 backdrop-blur-md border font-bold transition shadow-md w-full sm:w-auto ${ui.btnRadius} ${isMedTech ? 'bg-cyan-600/20 hover:bg-cyan-600/40 text-cyan-50 border-cyan-400/50 shadow-[0_0_15px_rgba(6,182,212,0.2)]' : isPremium ? 'bg-white/20 hover:bg-white/30 text-white border-white/30' : 'bg-blue-600 text-white border-blue-700 hover:bg-blue-700'}`}>
+                                        <button onClick={navigateHome} className={`px-8 py-4 backdrop-blur-md border font-bold rounded-xl transition shadow-md w-full sm:w-auto ${isMedTech ? 'medtech-btn-primary' : (isPremium ? 'bg-white/20 hover:bg-white/30 text-white border-white/30' : 'bg-blue-600 text-white border-blue-700 hover:bg-blue-700')}`}>
                                             Back to Dashboard
                                         </button>
                                     </div>
@@ -1497,7 +1620,7 @@
                             {/* UNLOCK MODAL */}
                             {showBadgeModal && pendingBadgeAlerts.length > 0 && (
                                 <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 fade-in">
-                                    <div className={`border border-white/20 rounded-3xl p-8 max-w-sm w-full text-center shadow-[0_0_50px_rgba(255,255,255,0.1)] scale-up relative ${isMedTech ? 'bg-slate-950 border-cyan-500/50 shadow-[0_0_50px_rgba(6,182,212,0.2)]' : 'bg-slate-900'}`}>
+                                    <div className="bg-slate-900 border border-white/20 rounded-3xl p-8 max-w-sm w-full text-center shadow-[0_0_50px_rgba(255,255,255,0.1)] scale-up relative">
                                         <button onClick={closeBadgeModal} className="absolute top-4 right-4 text-white/50 hover:text-white">
                                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
                                         </button>
@@ -1517,7 +1640,7 @@
                                             </div>
                                         )}
 
-                                        <button onClick={closeBadgeModal} className={`w-full py-4 font-black transition shadow-[0_0_20px_rgba(255,255,255,0.3)] ${ui.btnRadius} ${isMedTech ? 'bg-cyan-400 hover:bg-cyan-300 text-slate-900' : 'bg-white text-black hover:bg-slate-200'}`}>
+                                        <button onClick={closeBadgeModal} className="w-full py-4 bg-white text-black font-black rounded-xl hover:bg-slate-200 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                                             Awesome!
                                         </button>
                                     </div>
@@ -1527,45 +1650,45 @@
                             {/* PROMPT CUSTOMIZATION MODAL */}
                             {showPromptModal && (
                                 <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 fade-in">
-                                    <div className={`p-6 w-full max-w-xl shadow-2xl scale-up max-h-[90vh] overflow-y-auto ${isMedTech ? 'bg-slate-950 border border-cyan-800/50 rounded-3xl' : isPremium ? 'bg-slate-900 border border-white/20 rounded-2xl' : 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl'}`}>
-                                        <h2 className={`text-2xl font-bold mb-1 flex items-center gap-2 ${isMedTech ? 'text-cyan-50' : isPremium ? 'text-white' : 'text-slate-800 dark:text-white'}`}>
+                                    <div className={`rounded-2xl p-6 w-full max-w-xl shadow-2xl scale-up max-h-[90vh] overflow-y-auto ${isMedTech ? 'bg-slate-950 border border-cyan-500/30' : (isPremium ? 'bg-slate-900 border border-white/20' : 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700')}`}>
+                                        <h2 className={`text-2xl font-bold mb-1 flex items-center gap-2 ${isMedTech ? 'text-white' : 'text-slate-800 dark:text-white'}`}>
                                             ⚙️ Customize AI Prompts
                                         </h2>
-                                        <p className={`text-sm mb-6 ${isMedTech ? 'text-cyan-200/60' : isPremium ? 'text-white/60' : 'text-slate-500 dark:text-slate-400'}`}>
+                                        <p className={`text-sm mb-6 ${isMedTech ? 'text-white/60' : 'text-slate-500 dark:text-slate-400'}`}>
                                             Change what the AI is asked to do. The question text will be added automatically.
                                         </p>
                                         
                                         <div className="mb-6">
-                                            <label className={`block text-sm font-bold mb-2 ${isMedTech ? 'text-cyan-100' : isPremium ? 'text-white/90' : 'text-slate-700 dark:text-slate-300'}`}>
+                                            <label className={`block text-sm font-bold mb-2 ${isMedTech ? 'text-white/90' : 'text-slate-700 dark:text-slate-300'}`}>
                                                 Single Question Prompt (Used during practice)
                                             </label>
                                             <textarea 
-                                                className={`w-full p-4 rounded-xl focus:ring-2 focus:outline-none transition resize-y min-h-[120px] ${isMedTech ? 'bg-black/50 border border-cyan-800/50 text-cyan-50 focus:ring-cyan-500' : isPremium ? 'bg-black/50 border border-white/20 text-white focus:ring-blue-500' : 'bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white focus:ring-blue-500'}`}
+                                                className={`w-full p-4 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition resize-y min-h-[120px] ${isMedTech ? 'medtech-input' : 'bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white'}`}
                                                 value={tempSinglePrompt}
                                                 onChange={(e) => setTempSinglePrompt(e.target.value)}
                                             ></textarea>
                                         </div>
 
                                         <div className="mb-8">
-                                            <label className={`block text-sm font-bold mb-2 ${isMedTech ? 'text-cyan-100' : isPremium ? 'text-white/90' : 'text-slate-700 dark:text-slate-300'}`}>
+                                            <label className={`block text-sm font-bold mb-2 ${isMedTech ? 'text-white/90' : 'text-slate-700 dark:text-slate-300'}`}>
                                                 Tutorial Prompt (Used for generating Hard/Wrong review guides)
                                             </label>
                                             <textarea 
-                                                className={`w-full p-4 rounded-xl focus:ring-2 focus:outline-none transition resize-y min-h-[120px] ${isMedTech ? 'bg-black/50 border border-cyan-800/50 text-cyan-50 focus:ring-cyan-500' : isPremium ? 'bg-black/50 border border-white/20 text-white focus:ring-blue-500' : 'bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white focus:ring-blue-500'}`}
+                                                className={`w-full p-4 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition resize-y min-h-[120px] ${isMedTech ? 'medtech-input' : 'bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white'}`}
                                                 value={tempTutorialPrompt}
                                                 onChange={(e) => setTempTutorialPrompt(e.target.value)}
                                             ></textarea>
                                         </div>
 
                                         <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-4">
-                                            <button onClick={resetPromptsToDefault} className={`text-sm font-semibold transition ${isMedTech ? 'text-cyan-500/80 hover:text-cyan-300' : isPremium ? 'text-white/50 hover:text-white' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'}`}>
+                                            <button onClick={resetPromptsToDefault} className={`text-sm font-semibold transition ${isMedTech ? 'text-white/50 hover:text-white' : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'}`}>
                                                 Reset to Defaults
                                             </button>
                                             <div className="flex gap-3 w-full sm:w-auto">
-                                                <button onClick={() => setShowPromptModal(false)} className={`flex-1 sm:flex-none px-5 py-2.5 font-bold transition ${ui.btnRadius} ${isMedTech ? 'bg-cyan-900/30 text-cyan-100 hover:bg-cyan-800/50 border border-cyan-800/50' : isPremium ? 'bg-white/10 text-white hover:bg-white/20 border border-white/20' : 'text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600'}`}>
+                                                <button onClick={() => setShowPromptModal(false)} className={`flex-1 sm:flex-none px-5 py-2.5 font-bold rounded-xl transition ${isMedTech ? 'medtech-btn' : 'text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600'}`}>
                                                     Cancel
                                                 </button>
-                                                <button onClick={savePrompts} className={`flex-1 sm:flex-none px-6 py-2.5 text-white font-bold transition shadow-sm border ${ui.btnRadius} ${isMedTech ? 'bg-cyan-600 hover:bg-cyan-500 border-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.3)]' : 'bg-blue-600 hover:bg-blue-700 border-blue-500'}`}>
+                                                <button onClick={savePrompts} className="flex-1 sm:flex-none px-6 py-2.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-sm border border-blue-500">
                                                     Save Changes
                                                 </button>
                                             </div>
@@ -1577,17 +1700,17 @@
                             {/* GLOBAL DIALOG */}
                             {dialog.isOpen && (
                                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 fade-in">
-                                    <div className={`p-6 max-w-sm w-full shadow-2xl scale-up border ${isMedTech ? 'bg-slate-950 border-cyan-800/50 text-cyan-50 rounded-3xl' : isPremium ? 'bg-slate-900 border-white/20 text-white rounded-2xl' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white rounded-2xl'}`}>
+                                    <div className={`rounded-2xl p-6 max-w-sm w-full shadow-2xl scale-up border ${isMedTech ? 'bg-slate-950 border-cyan-500/30 text-white' : (isPremium ? 'bg-slate-900 border-white/20 text-white' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white')}`}>
                                         <p className="text-lg font-semibold mb-6 whitespace-pre-wrap leading-relaxed">
                                             {dialog.message}
                                         </p>
                                         <div className="flex justify-end gap-3">
                                             {dialog.type === 'confirm' && (
-                                                <button onClick={() => setDialog({ ...dialog, isOpen: false })} className={`px-4 py-2 font-medium transition ${ui.btnRadius} ${isMedTech ? 'bg-cyan-900/30 hover:bg-cyan-800/50 text-cyan-100 border border-cyan-800/50' : isPremium ? 'bg-white/10 hover:bg-white/20 text-white border border-white/20' : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'}`}>
+                                                <button onClick={() => setDialog({ ...dialog, isOpen: false })} className={`px-4 py-2 font-medium rounded-xl transition ${isMedTech ? 'medtech-btn' : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'}`}>
                                                     Cancel
                                                 </button>
                                             )}
-                                            <button onClick={() => { if (dialog.onConfirm) dialog.onConfirm(); setDialog({ ...dialog, isOpen: false }); }} className={`px-5 py-2 text-white font-bold transition shadow-sm border ${ui.btnRadius} ${isMedTech ? 'bg-cyan-600 hover:bg-cyan-500 border-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.3)]' : 'bg-blue-600 hover:bg-blue-700 border-blue-500'}`}>
+                                            <button onClick={() => { if (dialog.onConfirm) dialog.onConfirm(); setDialog({ ...dialog, isOpen: false }); }} className="px-5 py-2 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-sm border border-blue-500">
                                                 {dialog.type === 'confirm' ? 'Confirm' : 'OK'}
                                             </button>
                                         </div>
